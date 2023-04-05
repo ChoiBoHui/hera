@@ -1,0 +1,129 @@
+/* * { outline: 1px solid #f00; } */
+/* common */
+.blind { display: none; } 
+section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 40px 0; } 
+
+
+/* Header Start */
+#header .container { width: 1200px; margin: 0 auto; position: relative; } 
+#header .gnb { display: flex; justify-content: center; } 
+#header h1 { font-size: 0; width: 120px; height: 22px; background: url(../img/logo.jpg) center center/contain no-repeat; margin: 35px 0; } 
+.nav_right { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
+#header .nav { justify-content: center; } 
+#header .nav_right { display: flex; } 
+#header .nav { display: flex; gap: 30px; color: #1d1d1f; } 
+#header .nav .main_menu { display: flex; padding: 0 0 20px 0; gap: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
+#header .nav .main_menu .light { font-family: montserrat; font-weight: 400; letter-spacing: 0; } 
+
+
+
+/* 스크롤 스몰 메뉴 */
+
+
+
+
+
+
+/* 스크롤 스몰 메뉴 */
+
+
+
+
+/* Header End */
+
+
+/* section Main_Visual Start */
+.main_visual .container { width: 1200px; margin: 0 auto; position: relative; } 
+/* Main_slider Start */
+.main_slider { margin: 34px 0 100px 0; } 
+.main_slider .slide { display: flex; } 
+.main_slider .itm01 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_01.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm02 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_02.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm03 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_03.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm04 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_04.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm05 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_05.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+/* inner Start */
+.main_slider .inner { margin: auto 0; } 
+.main_slider .inner .slogan { font-size: 42px; font-weight: 700; letter-spacing: -0.025rem; color: #1d1d1f; } 
+.main_slider .inner .tit { margin-bottom: 10px; } 
+.main_slider .inner .sub { margin-bottom: 30px; } 
+.main_slider .inner p { font-size: 20px; font-weight: 400; letter-spacing: -0.025rem; color: #1d1d1f; margin-bottom: 60px; } 
+.main_slider .btn_more { display: inline-block; background: #1d1d1f; padding: 11px 17px 8px 19px; color: #fff; } 
+/* slide_util Start */
+.main_visual .slide_util { position: absolute; display: flex; font-family: montserrat; font-size: 20px; font-weight: 400; color: #1d1d1f; bottom: 0; left: calc(100% - 582px); padding: 0 0 35px 0; } 
+/* slide_pager Start */
+.slide_util .slide_pager { display: flex; } 
+
+
+
+
+.slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; } 
+
+.slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
+
+.slide_util .slide_pager .bar_progress.on .bar_ing {width: 100%; transition: 3s;}
+
+
+
+
+.main_visual .slide_util .slide_pager .current_index { width: 26px; } 
+.main_visual .slide_util .slide_pager .total_index { color:#aaa; margin-right: 20px; } 
+.main_visual .slide_util .control_btn img { vertical-align: inherit; } 
+/* section Main_Visual End */
+
+
+/* section BEST Start */
+.best { margin: 0 0 100px 0; } 
+.best .container { position: relative; width: 1200px; margin: 0 auto; text-align: center; } 
+.best .product_slider { display: flex; gap: 30px; color: #1d1d1f; } 
+/* 슬라이드 버튼 시작 */
+.product_slide_arrows .hover_area_left { left: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px); } 
+.product_slide_arrows .hover_area_left .prev { opacity: 0; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); } 
+.product_slide_arrows .hover_area_left:hover .prev { opacity: 1; } 
+.product_slide_arrows .hover_area_right { right: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px); } 
+.product_slide_arrows .hover_area_right .next { opacity: 0; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); } 
+.product_slide_arrows .hover_area_right:hover .next { opacity: 1; } 
+/* 썸네일 시작 */
+.itm_thumbnail { width: 278px; margin: 0 auto; position: relative; overflow: hidden; margin: 0 0 20px 0; } 
+.thumbnail02 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s; } 
+.itm_thumbnail:hover .thumbnail02 { opacity: 1; } 
+.best .product_slider .cmlink_btn img { padding: 0 4px; } 
+/* 커스터머 버튼 시작 */
+.itm_thumbnail .cmlink_btn { position: absolute; top: 10px; right: 10px; opacity: 0; transition: 0.3s; } 
+.itm_thumbnail:hover .cmlink_btn { opacity: 1; } 
+/* 인포 시작 */
+.best .product_slider .itm_info .product_name { font-size: 16px; font-weight: 400; letter-spacing: -0.025rem; margin: 0 0 10px 0; line-height: 22px; } 
+/* 가격 시작 */
+.best .product_slider .itm_info .price_wrap { display: flex; justify-content: center; } 
+.best .product_slider .price_wrap .new_price { font-size: 18px; font-weight: 800; letter-spacing: 0rem; margin: 0 8px 0 0; } 
+.best .product_slider .price_wrap .new_price>span { display: inline-block; font-size: 15px; padding-left: 2px; transform: translateY(-1px); } 
+.best .product_slider .price_wrap .old_price { font-size: 14px; font-weight: 700; letter-spacing: 0rem; color: #b1b1b1; padding-top: 2px; text-decoration: line-through; } 
+/* section BEST End */
+
+
+/* section NEW Start */
+.new { border-top: 1px solid #e5e5e5; color: #1d1d1f; } 
+.new .container { width: 1200px; margin: 100px auto 40px auto; text-align: center; } 
+.new .product_detail { display: flex; gap: 30px; margin-bottom: 100px; } 
+.new .product_detail .product_info { text-align: left; flex: 1; margin: auto 0; } 
+.new .product_detail .product_info h3 { font-size: 28px; font-weight: 700; line-height: 36px; margin: 0 0 20px 0; } 
+.new .product_detail .product_info img { display: inline-block; margin: 0 0 5px 0; } 
+.new .product_detail .product_info .product_name { display: inline-block; font-size: 16px; font-weight: 700; margin: 0 0 8px 0; } 
+.new .product_detail .product_info .product_en { font-family: montserrat; font-size: 14px; font-weight: 400; color: #979797; margin-bottom: 40px; } 
+.new .product_detail .product_info .product_txt { font-size: 16px; font-weight: 400; color: #565658; line-height: 24px; margin: 0 0 60px 0; } 
+.new .product_detail .product_info .btn_more { display: inline-block; background: #fff; padding: 11px 17px 8px 19px; border: 1px solid #1d1d1f; color: #1d1d1f; transition: 0.3s; } 
+.new .product_detail .product_info .btn_more:hover { background: #1d1d1f; border: 1px solid #1d1d1f; color: #fff; } 
+.new .product_detail img { flex: 1; } 
+/* section NEW End */
+
+
+/* Footer Start */
+#footer { background: #3e3e3e; color: #ededed; } 
+#footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
+#footer .logo_footer { font-size: 0; width: 100px; height: 18px; background: url(../img/../img/logo_footer.jpg) center center/contain no-repeat; margin: 40px auto 30px auto; } 
+#footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
+#footer .footer_utils li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
+#footer .footer_utils .lang img { margin: 0 0 0 7px; padding-bottom: 2px; } 
+#footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
+#footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
+/* Footer End */
