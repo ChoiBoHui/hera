@@ -17,7 +17,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* Header Start */
 #header .container { width: 1200px; margin: 0 auto; position: relative; } 
 #header .gnb { display: flex; justify-content: center; } 
-#header h1 { font-size: 0; width: 120px; height: 22px; background: url(../img/logo.jpg) center center/contain no-repeat; margin: 35px 0; } 
+#header h1 { width: 120px; height: 22px; margin: 35px 0; } 
 .nav_right { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
 #header .nav { justify-content: center; } 
 #header .nav_right { display: flex; } 
