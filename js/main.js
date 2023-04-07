@@ -1,16 +1,30 @@
 $(function () {
+    // 지금 제이쿼리로 작업중임.. 자스랑 섞어 쓰면 에러남..!
 
     //스크롤 시 메뉴 변경
 
     // $(window).on('scroll', function () {
-    //     var sct = $(window).scrollTop();
-    //     if (sct > 500) {
+    //     var scm = $(window).scrollTop();
+    //     if (scm > 500) {
     //         $('.toTop').fadeIn(300)
     //     } else {
     //         $('.toTop').fadeOut(1000)
     //     }
     // });
 
+    $(window).on('scroll', function () {
+        // console.log('scrolld')
+        // var scm = document.querySelector('.submenu');
+        // var scm = $('.header .nav');
+        var sch = $(window).scrollTop();
+        console.log(sch);
+
+        if (sch > 100) {
+            $('.header .nav').addClass('scroll')
+        } else {
+            $('.header .nav').removeClass('scroll')
+        }
+    });
 
 
 
@@ -24,6 +38,8 @@ $(function () {
 
 
     // main_visual 슬라이더 Start
+
+    // 시작시 함수 한번 초기화 해주는거!! 수빈이가 알려준거 써서 슬라이더 처음부터 제대로 돌아가게 해야함..!
     $('.main_slider').slick({
         arrows: false,
         autoplay: true,
