@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; }
+/* * { outline: 1px solid #f00; } */
 
 :root {
 
@@ -23,10 +23,11 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .nav { justify-content: center; } 
 .header .nav_right { display: flex; } 
 .header .nav { display: flex; gap: 30px; color: var(--color-g1); } 
-.header .nav .main_menu { display: flex; padding: 0 0 20px 0; gap: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
+.header .nav .main_menu { display: flex; gap: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
+.header .nav .main_menu>li {padding: 0 0 20px 0;}
 .header .nav .main_menu .light { font-family: montserrat; font-weight: 400; letter-spacing: 0; } 
 .header .nav .submenu {display: none;}
-.header .nav .main_menu>li:hover>.submenu {display: block; position: absolute; top: 100px; left: auto; background-color: #fff;}
+.header .nav .main_menu>li:hover>.submenu {display: flex; position: absolute; top: 126px; left: 0; width: 100%;  background-color: #fff;}
 
 
 /* scroll submenu Start */
