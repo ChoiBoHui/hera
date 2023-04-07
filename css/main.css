@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; } */
+* { outline: 1px solid #f00; }
 
 :root {
 
@@ -90,10 +90,10 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .best .product_slider { display: flex; gap: 30px; color: #1d1d1f; } 
 /* 슬라이드 버튼 시작 */
 .product_slide_arrows .hover_area_left { left: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px); } 
-.product_slide_arrows .hover_area_left .prev { opacity: 0; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); } 
+.product_slide_arrows .hover_area_left .prev { opacity: 0.5; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); cursor: pointer; } 
 .product_slide_arrows .hover_area_left:hover .prev { opacity: 1; } 
-.product_slide_arrows .hover_area_right { right: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px); } 
-.product_slide_arrows .hover_area_right .next { opacity: 0; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); } 
+.product_slide_arrows .hover_area_right { right: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px);  } 
+.product_slide_arrows .hover_area_right .next { opacity: 0.5; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); cursor: pointer;} 
 .product_slide_arrows .hover_area_right:hover .next { opacity: 1; } 
 /* 썸네일 시작 */
 .itm_thumbnail { width: 278px; margin: 0 auto; position: relative; overflow: hidden; margin: 0 0 20px 0; } 
