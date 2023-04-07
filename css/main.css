@@ -26,7 +26,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .nav .main_menu { display: flex; padding: 0 0 20px 0; gap: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
 .header .nav .main_menu .light { font-family: montserrat; font-weight: 400; letter-spacing: 0; } 
 .header .nav .submenu {display: none;}
-.header .nav .main_menu>li:hover>.submenu {display: block;}
+.header .nav .main_menu>li:hover>.submenu {display: block; position: absolute; top: 100px; left: auto; background-color: #fff;}
 
 
 /* scroll submenu Start */
