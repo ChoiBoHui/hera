@@ -1,13 +1,8 @@
 /* * { outline: 1px solid #f00; } */
 
-:root {
-
-    /* color */
-    /* g = gray */
-    --color-g1: #1d1d1f;
-
-
-}
+:root { /* color */
+ /* g = gray */
+ --color-g1: #1d1d1f; } 
 
 /* common */
 .blind { display: none; } 
@@ -19,20 +14,61 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .gnb { display: flex; justify-content: center; } 
 .header h1 { width: 120px; height: 22px; margin: 35px 0; } 
 
-.nav_right { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
+.customer_menu { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
 .header .nav { justify-content: center; } 
-.header .nav_right { display: flex; } 
+.header .customer_menu { display: flex; } 
 .header .nav { display: flex; gap: 30px; color: var(--color-g1); } 
 .header .nav .main_menu { display: flex; gap: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
-.header .nav .main_menu>li {padding: 0 0 20px 0;}
-.header .nav .main_menu .light { font-family: montserrat; font-weight: 400; letter-spacing: 0; } 
+.header .nav .main_menu>li { padding: 0 0 20px 0; } 
+.header .nav .main_menu .mont { font-family: montserrat; font-size: 17px; font-weight: 500; letter-spacing: 0; transform: translateY(-2px); } 
 
 /* sub menu Start */
-.header .nav .submenu {display: block; }
+/* .header .nav .submenu { display: block; } */
+.header .nav .submenu .submenu_header { font-size: 16px; font-weight: 700; color: var(--color-g1); margin-bottom: 22px; } 
+.header .nav .submenu li { font-size: 15px; font-weight: 400; color: #979798; margin-bottom: 16px; } 
+.header .nav .submenu li a:hover { color: var(--color-g1); } 
+/* 서브메뉴 공통 적용 */
+
+/* 헤라 스토리 */
+.menu_story .submenu { display: none; height: 0; overflow-y: hidden; } 
+
+
+
+/* 일단 메이크업 부분부터 작업 중 */
+
+/* 메이크업 */
+.menu_makeup .submenu { position: absolute; display: flex; width: 100%; top: calc(100% - 126px); left: 0; margin-top: 126px; padding: 44px 0 42px 0 ; background-color: #fff; } 
+/* 요부분 나중에 위쪽에 서브메뉴 전체에 수정 */
+
+/* 신상 홍보용 배너 */
+.menu_makeup .submenu .pushMd { width: 282px; margin: 0 60px 0 0; } 
+.menu_makeup .submenu .pushMd img { margin-bottom: 14px; } 
+.menu_makeup .submenu .pushMd p { font-family: Montserrat; font-weight: 400; font-size: 15px; text-indent: -1px; } 
+
+/* 서브메뉴 */
+.menu_makeup .submenu>ul { width: 224px; } 
+
+
+
+
+
+
+
+
+
+
+/* 스킨케어 */
+.menu_skincare .submenu { display: none; height: 0; overflow-y: hidden; } 
+
+
+/* 프래그런스 */
+.menu_fragrance .submenu { display: none; height: 0; overflow-y: hidden; } 
+
+
 
 
 /* scroll submenu Start */
-/* .header .nav.scroll {} */
+/* .header .nav.scroll { } */
 /* 여기 나중에 js 실행할때 작성 */
 
 
@@ -75,7 +111,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 .slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
 
-.slide_util .slide_pager .bar_progress.on .bar_ing {width: 100%; transition: 3s;}
+.slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 3s; } 
 
 
 
@@ -94,8 +130,8 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .product_slide_arrows .hover_area_left { left: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px); } 
 .product_slide_arrows .hover_area_left .prev { opacity: 0.5; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); cursor: pointer; } 
 .product_slide_arrows .hover_area_left:hover .prev { opacity: 1; } 
-.product_slide_arrows .hover_area_right { right: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px);  } 
-.product_slide_arrows .hover_area_right .next { opacity: 0.5; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); cursor: pointer;} 
+.product_slide_arrows .hover_area_right { right: 0; padding: 80px 0 200px 0; position: absolute; top: calc(0% + 114px); } 
+.product_slide_arrows .hover_area_right .next { opacity: 0.5; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); cursor: pointer; } 
 .product_slide_arrows .hover_area_right:hover .next { opacity: 1; } 
 /* 썸네일 시작 */
 .itm_thumbnail { width: 278px; margin: 0 auto; position: relative; overflow: hidden; margin: 0 0 20px 0; } 
