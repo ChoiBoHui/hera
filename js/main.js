@@ -1,34 +1,24 @@
+// 제이쿼리로 작업중임.. 자스랑 섞어 쓰면 에러남..!
 $(function () {
-    // 지금 제이쿼리로 작업중임.. 자스랑 섞어 쓰면 에러남..!
-
     //스크롤 시 메뉴 변경
 
     // $(window).on('scroll', function () {
-    //     var scm = $(window).scrollTop();
-    //     if (scm > 500) {
-    //         $('.toTop').fadeIn(300)
+    //     // console.log('scrolld')
+    //     // var scm = document.querySelector('.submenu');
+    //     // var scm = $('.header .nav');
+    //     var sch = $(window).scrollTop();
+    //     console.log(sch);
+
+    //     if (sch > 100) {
+    //         $('.header .nav').addClass('scroll')
     //     } else {
-    //         $('.toTop').fadeOut(1000)
+    //         $('.header .nav').removeClass('scroll')
     //     }
     // });
 
-    $(window).on('scroll', function () {
-        // console.log('scrolld')
-        // var scm = document.querySelector('.submenu');
-        // var scm = $('.header .nav');
-        var sch = $(window).scrollTop();
-        console.log(sch);
+    // 우선 보이는 상태로 css 먼저 작업 후 진행
 
-        if (sch > 100) {
-            $('.header .nav').addClass('scroll')
-        } else {
-            $('.header .nav').removeClass('scroll')
-        }
-    });
-
-
-
-    //스크롤 시 메뉴 변경
+    //스크롤 시 메뉴 변경 끝
 
 
 

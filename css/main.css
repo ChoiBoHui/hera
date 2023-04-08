@@ -26,13 +26,14 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .nav .main_menu { display: flex; gap: 30px; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
 .header .nav .main_menu>li {padding: 0 0 20px 0;}
 .header .nav .main_menu .light { font-family: montserrat; font-weight: 400; letter-spacing: 0; } 
-.header .nav .submenu {display: none;}
-.header .nav .main_menu>li:hover>.submenu {display: flex; position: absolute; top: 126px; left: 0; width: 100%;  background-color: #fff;}
+
+/* sub menu Start */
+.header .nav .submenu {display: block; }
 
 
 /* scroll submenu Start */
-.header .nav.scroll {position: fixed; top: 0; left: auto; background: #fff;}
-
+/* .header .nav.scroll {} */
+/* 여기 나중에 js 실행할때 작성 */
 
 
 
