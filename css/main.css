@@ -7,16 +7,23 @@
 /* common */
 .blind { display: none; } 
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 40px 0; } 
-
+/* 영문 서체 변경 */
 .mont { font-family: montserrat; } 
 
 
-/* Header Start */
-.header .container { width: 1200px; margin: 0 auto; position: relative; z-index: 10; } 
-.header .gnb { display: flex; justify-content: center; } 
-.header h1 { width: 120px; height: 22px; margin: 35px 0; } 
+/* 서브메뉴 열리면 뒤쪽 흐림 bg */
+/* .backdrop { position: fixed; top: 0; left: 0; background: #000; width: 100vw; height: 100vh; opacity: 0.5; z-index: 1; }  */
+/* 하려고 하였으나,.. hover로 메뉴를 작동하는 pc 버전에서는 어려워 보임 */
 
-.customer_menu { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
+/* Header Start */
+.header .topmenu {position: relative;  background-color: #fff;  z-index: 10;}
+.header .gnb {position: relative; display: flex; justify-content: center; } 
+/* 아래 container는 사실상 customer_menu만 적용됨 */
+.header .container { display: flex; width: 1200px; margin: 0 auto; } 
+.header h1 { width: 120px; height: 22px; margin: 35px 0; } 
+.header  .customer_menu { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
+
+/* nav Start */
 .header .nav { justify-content: center; } 
 .header .customer_menu { display: flex; } 
 .header .nav { display: flex; gap: 30px; color: var(--color-g1); } 
@@ -28,38 +35,39 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .nav .main_menu .mont { font-size: 17px; font-weight: 500; letter-spacing: 0; transform: translateY(-2px); } 
 
 /* sub menu Start */
-/* .header .nav .submenu { display: block; } */
+/* 서브메뉴 공통적용 & hover */
+.nav .main_menu>li .submenu { position: absolute; display: flex; width: 100%; max-height: 0vh; opacity: 0; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff; overflow-y: hidden; transition: max-height 1.0s ease; } 
+.nav .main_menu>li:hover .submenu { max-height: 100vh; opacity: 1; } 
+
+/* 서브메뉴 텍스트 */
 .header .nav .submenu .submenu_header { font-size: 16px; font-weight: 700; color: var(--color-g1); margin-bottom: 22px; } 
 .header .nav .submenu li { font-size: 15px; font-weight: 400; color: #979798; margin-bottom: 16px; } 
 .header .nav .submenu li a:hover { color: var(--color-g1); } 
 
-/* 서브메뉴 공통 적용 */
-.nav .main_menu>li .submenu { position: absolute; display: flex; width: 100%; max-height: 0vh; opacity: 0; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff;  overflow-y: hidden; transition: max-height 1.0s ease; } 
-.nav .main_menu>li:hover .submenu { max-height: 100vh; opacity: 1; } 
-
 /* 신상 홍보용 배너 */
-.nav .submenu .pushMd { width: 282px; margin: 0 60px 0 0; } 
-.nav .submenu .pushMd img { margin-bottom: 14px; } 
-.nav .submenu .pushMd p { font-family: Montserrat; font-weight: 400; font-size: 15px; text-indent: -1px; } 
-/* 서브메뉴 영역 */
-.nav .submenu>* { width: 224px; padding: 44px 0 42px 0; } 
+.nav .submenu .container .pushMd { width: 282px; margin: 0 60px 0 0; } 
+.nav .submenu .container .pushMd img { margin-bottom: 14px; } 
+.nav .submenu .container .pushMd p { font-family: Montserrat; font-weight: 400; font-size: 15px; text-indent: -1px; } 
+
+/* 서브메뉴 간격 */
+.nav .submenu .container>* { width: 224px; padding: 44px 0 42px 0; } 
+
+
 
 
 
 /* 헤라 스토리 */
 /* .menu_story .submenu>div { width: 224px; } */
-.nav .main_menu>li.scroll { } 
 
-
-/* 일단 메이크업 부분부터 작업 중 */
+/* 헤라 스토리 메뉴에 호버했을때 배경 흐림효과를 작업하던 중 제이쿼리를 써야한다고 봤음 */
+/* .menu_story::after {content: ""; position: fixed; display: none; top: 129px; left: 0; width: 100vw; height: 100vh; background-color: #000; opacity: 0; z-index: -1;}
+.menu_story:hover::after  { display: block; opacity: 0.5;} */
 
 /* 메이크업 */
 .menu_makeup .submenu { } 
 
-
 /* 스킨케어 */
 .menu_skincare .submenu { } 
-
 
 /* 프래그런스 */
 .menu_fragrance .submenu { } 
@@ -78,8 +86,11 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 
 
+/* nav End */
 
 /* Header End */
+
+
 
 
 /* section Main_Visual Start */
