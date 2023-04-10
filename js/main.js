@@ -4,7 +4,7 @@ $(function () {
 
     // $(window).on('scroll', function () {
     //     // console.log('scrolld')
-    //     // var scm = document.querySelector('.submenu');
+    //     // var scm = $('.submenu');
     //     // var scm = $('.header .nav');
     //     var sch = $(window).scrollTop();
     //     console.log(sch);
@@ -15,7 +15,6 @@ $(function () {
     //         $('.header .nav').removeClass('scroll')
     //     }
     // });
-
     // 우선 보이는 상태로 css 먼저 작업 후 진행
 
     //스크롤 시 메뉴 변경 끝

@@ -8,6 +8,8 @@
 .blind { display: none; } 
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 40px 0; } 
 
+.mont { font-family: montserrat; } 
+
 
 /* Header Start */
 .header .container { width: 1200px; margin: 0 auto; position: relative; z-index: 10; } 
@@ -23,49 +25,44 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .nav .main_menu>li>a { position: relative; } 
 .header .nav .main_menu>li>a::after { content: ""; position: absolute; top: calc(100% + 13px); left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
 .header .nav .main_menu>li>a:hover::after { width: 100%; } 
-.header .nav .main_menu .mont { font-family: montserrat; font-size: 17px; font-weight: 500; letter-spacing: 0; transform: translateY(-2px); } 
+.header .nav .main_menu .mont { font-size: 17px; font-weight: 500; letter-spacing: 0; transform: translateY(-2px); } 
 
 /* sub menu Start */
 /* .header .nav .submenu { display: block; } */
 .header .nav .submenu .submenu_header { font-size: 16px; font-weight: 700; color: var(--color-g1); margin-bottom: 22px; } 
 .header .nav .submenu li { font-size: 15px; font-weight: 400; color: #979798; margin-bottom: 16px; } 
 .header .nav .submenu li a:hover { color: var(--color-g1); } 
+
 /* 서브메뉴 공통 적용 */
+.nav .main_menu>li .submenu { position: absolute; display: flex; width: 100%; max-height: 0vh; opacity: 0; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff;  overflow-y: hidden; transition: max-height 1.0s ease; } 
+.nav .main_menu>li:hover .submenu { max-height: 100vh; opacity: 1; } 
+
+/* 신상 홍보용 배너 */
+.nav .submenu .pushMd { width: 282px; margin: 0 60px 0 0; } 
+.nav .submenu .pushMd img { margin-bottom: 14px; } 
+.nav .submenu .pushMd p { font-family: Montserrat; font-weight: 400; font-size: 15px; text-indent: -1px; } 
+/* 서브메뉴 영역 */
+.nav .submenu>* { width: 224px; padding: 44px 0 42px 0; } 
+
+
 
 /* 헤라 스토리 */
-/* .menu_story .submenu { display: none; height: 0; overflow-y: hidden; } */
-
+/* .menu_story .submenu>div { width: 224px; } */
+.nav .main_menu>li.scroll { } 
 
 
 /* 일단 메이크업 부분부터 작업 중 */
 
 /* 메이크업 */
-.menu_makeup .submenu { position: absolute; display: flex; width: 100%; top: calc(100% - 126px); left: 0; margin-top: 126px; padding: 44px 0 42px 0; background-color: #fff; } 
-/* 요부분 나중에 위쪽에 서브메뉴 전체에 수정 */
-
-/* 신상 홍보용 배너 */
-.menu_makeup .submenu .pushMd { width: 282px; margin: 0 60px 0 0; } 
-.menu_makeup .submenu .pushMd img { margin-bottom: 14px; } 
-.menu_makeup .submenu .pushMd p { font-family: Montserrat; font-weight: 400; font-size: 15px; text-indent: -1px; } 
-
-/* 서브메뉴 */
-.menu_makeup .submenu>ul { width: 224px; } 
-
-
-
-
-
-
-
-
+.menu_makeup .submenu { } 
 
 
 /* 스킨케어 */
-/* .menu_skincare .submenu { display: none; height: 0; overflow-y: hidden; } */
+.menu_skincare .submenu { } 
 
 
 /* 프래그런스 */
-/* .menu_fragrance .submenu { display: none; height: 0; overflow-y: hidden; } */
+.menu_fragrance .submenu { } 
 
 
 
