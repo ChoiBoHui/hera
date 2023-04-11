@@ -59,9 +59,9 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* 헤라 스토리 */
 /* .menu_story .submenu>div { width: 224px; } */
 
-/* 헤라 스토리 메뉴에 호버했을때 배경 흐림효과를 작업하던 중 제이쿼리를 써야한다고 봤음 */
-/* .menu_story::after {content: ""; position: fixed; display: none; top: 129px; left: 0; width: 100vw; height: 100vh; background-color: #000; opacity: 0; z-index: -1;}
-.menu_story:hover::after  { display: block; opacity: 0.5;} */
+/* 헤라 스토리 메뉴에 호버했을때 배경 흐림효과를 작업하던 중 제이쿼리를 써야하는 것 같음 */
+.menu_story::after {content: ""; position: fixed; display: none; top: 129px; left: 0; width: 100vw; height: 100vh; background-color: #000; opacity: 0; z-index: -1;}
+.menu_story:hover::after  { display: block; opacity: 0.5;}
 
 /* 메이크업 */
 .menu_makeup .submenu { } 
