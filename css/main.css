@@ -12,21 +12,21 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 
 /* 서브메뉴 열리면 뒤쪽 흐림 bg */
-/* .backdrop { position: fixed; top: 0; left: 0; background: #000; width: 100vw; height: 100vh; opacity: 0.5; z-index: 1; }  */
+/* .backdrop { position: fixed; top: 0; left: 0; background: #000; width: 100vw; height: 100vh; opacity: 0.5; z-index: 1; } */
 /* 하려고 하였으나,.. hover로 메뉴를 작동하는 pc 버전에서는 어려워 보임 */
 
 /* Header Start */
-.header .topmenu {position: relative;  background-color: #fff;  z-index: 1;}
-.header .gnb {position: relative; display: flex; justify-content: center; } 
+.header .topmenu { position: relative; background-color: #fff; z-index: 1; } 
+.header .gnb { position: relative; display: flex; justify-content: center; } 
 /* 아래 container는 사실상 customer_menu만 적용됨 */
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
 .header h1 { width: 120px; height: 22px; margin: 35px 0; } 
-.header  .customer_menu { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
+.header .customer_menu { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
 
 /* nav Start */
 .header .nav { justify-content: center; } 
 .header .customer_menu { display: flex; } 
-.header .nav { display: flex; gap: 30px; color: var(--color-g1); }
+.header .nav { display: flex; gap: 30px; color: var(--color-g1); } 
 .header .nav .main_menu { display: flex; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
 .header .nav .main_menu>li { padding: 0 15px 20px 15px; } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
@@ -38,11 +38,13 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
-.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; opacity: 0; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff; overflow-y: hidden;  } 
-.nav .main_menu>li:hover .submenu { max-height: 100vh; opacity: 1; }
- /* 아래처럼 .container 에 별도로 display 옵션을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
-.nav .main_menu>li .submenu .container {display: none;}
-.nav .main_menu>li:hover .submenu .container {display: flex;}
+.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff; overflow-y: hidden; } 
+.nav .main_menu>li:hover .submenu { max-height: 100vh; } 
+/* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
+.nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
+.nav .main_menu>li:hover .submenu .container { opacity: 1; } 
+
+
 
 /* 서브메뉴 텍스트 */
 .header .nav .submenu .submenu_header { font-size: 16px; font-weight: 700; color: var(--color-g1); margin-bottom: 22px; } 
@@ -65,8 +67,8 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* .menu_story .submenu>div { width: 224px; } */
 
 /* 헤라 스토리 메뉴에 호버했을때 배경 흐림효과를 작업하던 중 제이쿼리를 써야하는 것 같음 */
-.menu_story .back::after {content: ""; position: fixed; display: none; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #000; opacity: 0; z-index: -1;}
-.menu_story:hover .back::after  { display: block; opacity: 0.5;}
+.menu_story .back::after { content: ""; position: fixed; display: none; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #000; opacity: 0; z-index: -1; } 
+.menu_story:hover .back::after { display: block; opacity: 0.5; } 
 
 /* 메이크업 */
 .menu_makeup .submenu { } 
