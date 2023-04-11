@@ -11,10 +11,6 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .mont { font-family: montserrat; } 
 
 
-/* 서브메뉴 열리면 뒤쪽 흐림 bg */
-/* .backdrop { position: fixed; top: 0; left: 0; background: #000; width: 100vw; height: 100vh; opacity: 0.5; z-index: 1; } */
-/* 하려고 하였으나,.. hover로 메뉴를 작동하는 pc 버전에서는 어려워 보임 */
-
 /* Header Start */
 .header .topmenu { position: relative; background-color: #fff; z-index: 1; } 
 .header .gnb { position: relative; display: flex; justify-content: center; } 
@@ -71,13 +67,13 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .main_menu>li:hover .submenu::after { display: block; opacity: 0.5; } 
 
 /* 메이크업 */
-.menu_makeup .submenu { } 
+/* .menu_makeup .submenu { }  */
 
 /* 스킨케어 */
-.menu_skincare .submenu { } 
+/* .menu_skincare .submenu { }  */
 
 /* 프래그런스 */
-.menu_fragrance .submenu { } 
+/* .menu_fragrance .submenu { }  */
 
 
 
