@@ -20,6 +20,18 @@ $(function () {
     //스크롤 시 메뉴 변경 끝
 
 
+    // 메뉴 호버 Start
+    $(".nav").on({
+        "mouseover": function () {
+            console.log("Mouse Over");
+        },
+        "mouseout": function () {
+            console.log("Mouse Out");
+        }
+    });
+
+
+
 
 
 
