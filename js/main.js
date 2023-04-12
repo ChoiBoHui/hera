@@ -21,15 +21,27 @@ $(function () {
 
 
     // 메뉴 호버 Start
+    // $(".nav").on({
+    //     "mouseover": function () {
+    //         console.log("Mouse Over");
+    //     },
+    //     "mouseout": function () {
+    //         console.log("Mouse Out");
+    //     }
+    // });
+
+    let topmenu = $('.header .topmenu');
     $(".nav").on({
         "mouseover": function () {
             console.log("Mouse Over");
+            topmenu.addClass('active')
         },
         "mouseout": function () {
             console.log("Mouse Out");
+            topmenu.removeClass('active')
         }
     });
-
+    // 나중에 에러 뜰수도 있는데, 작동하고나면 멈춰! 한번 해줘야함
 
 
 
