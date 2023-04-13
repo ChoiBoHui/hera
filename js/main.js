@@ -21,24 +21,14 @@ $(function () {
 
 
     // 메뉴 호버 Start
-    // $(".nav").on({
-    //     "mouseover": function () {
-    //         console.log("Mouse Over");
-    //     },
-    //     "mouseout": function () {
-    //         console.log("Mouse Out");
-    //     }
-    // });
-
     let main_menu = $('.header .main_menu');
-    let nav = $('.header .nav');
+    // let backdrop = $('.backdrop');
+    let nav = $('.nav');
+
     $(main_menu).on({
         "mouseover": function () {
             // console.log("Mouse Over");
-            // nav.addClass('active')
-            if (main_menu.hasClass("submenu")) {
-                nav.addClass('active')
-            }
+            nav.addClass('active')
         },
         "mouseout": function () {
             // console.log("Mouse Out");
@@ -48,6 +38,20 @@ $(function () {
     // 나중에 에러 뜰수도 있는데, 작동하고나면 멈춰! 한번 해줘야함
 
     // main_menu 안에 submenu가 존제할 때 nav에 클레스 active를 붙여라! 아니면 안붙여도 된다. 로 풀면 좋을 것 같음.
+
+    // $(main_menu).on({
+    //     "mouseover": function () {
+    //         // console.log("Mouse Over");
+    //         // nav.addClass('active')
+    //         if (main_menu.hasClass("submenu")) {
+    //             nav.addClass('active')
+    //         }
+    //     },
+    //     "mouseout": function () {
+    //         // console.log("Mouse Out");
+    //         nav.removeClass('active')
+    //     }
+    // });
 
 
 
