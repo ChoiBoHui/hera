@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; }
+/* * { outline: 1px solid #f00; } */
 
 :root { /* color */
  /* g = gray */
@@ -21,6 +21,8 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 /* nav Start */
 .header .nav { justify-content: center; } 
+.header .nav.active::after {content: ""; position: fixed; top: 20vh; left: 0; width: 100vw; height: 80vh; background-color: #000; opacity: 0.5; z-index: -1;}
+/* 메뉴에 마우스 오버 했을때 backdrop 깔리는거 높이(tpo, height) 임의로 해둔거라 수정 해야함 */
 .header .customer_menu { display: flex; } 
 .header .nav { display: flex; gap: 30px; color: var(--color-g1); } 
 .header .nav .main_menu { display: flex; font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 

@@ -30,20 +30,24 @@ $(function () {
     //     }
     // });
 
-    let topmenu = $('.header .topmenu');
-    $(".nav").on({
+    let main_menu = $('.header .main_menu');
+    let nav = $('.header .nav');
+    $(main_menu).on({
         "mouseover": function () {
-            console.log("Mouse Over");
-            topmenu.addClass('active')
+            // console.log("Mouse Over");
+            // nav.addClass('active')
+            if (main_menu.hasClass("submenu")) {
+                nav.addClass('active')
+            }
         },
         "mouseout": function () {
-            console.log("Mouse Out");
-            topmenu.removeClass('active')
+            // console.log("Mouse Out");
+            nav.removeClass('active')
         }
     });
     // 나중에 에러 뜰수도 있는데, 작동하고나면 멈춰! 한번 해줘야함
 
-
+    // main_menu 안에 submenu가 존제할 때 nav에 클레스 active를 붙여라! 아니면 안붙여도 된다. 로 풀면 좋을 것 같음.
 
 
 
