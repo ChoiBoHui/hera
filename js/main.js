@@ -19,6 +19,23 @@ $(function () {
 
     //스크롤 시 메뉴 변경 끝
 
+    // topbanner 슬라이더 Start
+    $('.banner_slider').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        // useTransform: false,
+    });
+
+    // 슬라이더 버튼
+    // $('.product_slide_arrows .hover_area_left .prev').on('click', function () {
+    //     $('.product_slider').slick('slickPrev')
+    // });
+    // $('.product_slide_arrows .hover_area_right .next').on('click', function () {
+    //     $('.product_slider').slick('slickNext')
+    // });
+    // topbanner 슬라이더 End
+
 
     // 메뉴 호버 Start
     let main_menu = $('.header .main_menu');
@@ -54,10 +71,6 @@ $(function () {
     // });
 
 
-
-
-
-
     // main_visual 슬라이더 Start
 
     // 시작시 함수 한번 초기화 해주는거!! 수빈이가 알려준거 써서 슬라이더 처음부터 제대로 돌아가게 해야함..!
@@ -78,6 +91,7 @@ $(function () {
     $('.main_slider').on('beforeChange', function () {
         $('.slide_util .slide_pager .bar_progress').removeClass('on')
     });
+    // main_visual 슬라이더 End
 
     // best 슬라이더 Start
     $('.product_slider').slick({
@@ -94,4 +108,6 @@ $(function () {
     $('.product_slide_arrows .hover_area_right .next').on('click', function () {
         $('.product_slider').slick('slickNext')
     });
+    // best 슬라이더 End
+
 })
