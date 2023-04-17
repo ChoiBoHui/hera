@@ -204,8 +204,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 
 /* Footer Start */
-#footer { width: 100%; background: #3e3e3e; color: #ededed; } 
-/* width값을 안넣어도 괜찮은데, 다른 해상도에서 bg컬러가 일부만 적용되는 경우가 있어 100%를 줬음 */
+#footer { background: #3e3e3e; color: #ededed; }
 #footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
 #footer .logo_footer { font-size: 0; width: 100px; height: 18px; background: url(../img/../img/logo_footer.jpg) center center/contain no-repeat; margin: 40px auto 30px auto; } 
 #footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
