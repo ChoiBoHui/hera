@@ -1,6 +1,6 @@
 // 제이쿼리로 작업중임.. 자스랑 섞어 쓰면 에러남..!
 $(function () {
-    //스크롤 시 메뉴 변경
+    //스크롤 시 메뉴 변경 Start
 
     // $(window).on('scroll', function () {
     //     // console.log('scrolld')
@@ -17,7 +17,14 @@ $(function () {
     // });
     // 우선 보이는 상태로 css 먼저 작업 후 진행
 
-    //스크롤 시 메뉴 변경 끝
+    //스크롤 시 메뉴 변경 End
+
+    // 서브메뉴가 열려 있을 때 스크롤하면 닫히게 해야 함
+    $(window).on('scroll', function () {
+        $(".nav").removeClass("active")
+        $(".nav .main_menu>li").removeClass("active")
+    });
+
 
     // topbanner 슬라이더 Start
     $('.banner_slider').slick({
@@ -74,19 +81,23 @@ $(function () {
     //     }
     // });
 
-    // 해당 메뉴 hover시 backdrop필터가 깔리는 부분은 위와같은 다양한 시도에도 불구하고 끝내 답을 찾지 못하여 chat GPT를 이용해서 코드를 작성하였음을 알립니다.
-    $(".menu").on({
-        "mouseover": function () {
+
+    $(".main_menu>li").on({
+        "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
                 $(".nav").addClass("active");
-                console.log("여기 서브메뉴 있음")
+                console.log("mouse enter");
             }
+            $(this).addClass("active");
         },
-        "mouseout": function () {
+        "mouseleave": function () {
             $(".nav").removeClass("active");
-            console.log("마우스 아웃됐음")
+            console.log("mouse leave");
+            $(this).removeClass("active");
         }
     });
+    // 해당 메뉴 hover시 backdrop필터가 깔리는 부분은 위와같은 다양한 시도에도 불구하고 끝내 답을 찾지 못하여 chat GPT를 이용해서 코드를 작성하였음을 알립니다.
+    // 메뉴 호버 End
 
 
 

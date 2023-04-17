@@ -58,10 +58,12 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff; overflow-y: hidden; outline: 1px solid #fff; } 
 /* 여기 outline 준 이유는 backdrop 필터가 전체 블러로 적용되게 하기 위함 */
 /* outline 높이 만큼 영 거슬리면 px 만져서 공간 조절 해줄 것!! */
-.nav .main_menu>li:hover .submenu { max-height: 100vh; } 
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
-.nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
-.nav .main_menu>li:hover .submenu .container { opacity: 1; } 
+.nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; }
+
+/* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
+.nav .main_menu>li.active .submenu { max-height: 100vh; } 
+.nav .main_menu>li.active .submenu .container { opacity: 1; } 
 
 
 
