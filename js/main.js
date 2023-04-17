@@ -19,7 +19,7 @@ $(function () {
 
     //스크롤 시 메뉴 변경 End
 
-    // 서브메뉴가 열려 있을 때 스크롤하면 닫히게 해야 함
+    // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
     $(window).on('scroll', function () {
         $(".nav").removeClass("active")
         $(".nav .main_menu>li").removeClass("active")
@@ -41,6 +41,9 @@ $(function () {
     $('.topbanner .area_right').on('click', function () {
         $('.banner_slider').slick('slickNext')
     });
+
+    // 슬라이더 close 캐쉬 작업 해야함!!!
+
     // topbanner 슬라이더 End
 
 
@@ -99,7 +102,8 @@ $(function () {
     // 해당 메뉴 hover시 backdrop필터가 깔리는 부분은 위와같은 다양한 시도에도 불구하고 끝내 답을 찾지 못하여 chat GPT를 이용해서 코드를 작성하였음을 알립니다.
     // 메뉴 호버 End
 
-
+    // 서브메뉴 높이에 따라 backdrop 높이가 변경되게 해야함!(높이 관련 style 부분 건드려야 할듯)
+    // 부드럽게 열리고 닫히게 하는 코드도 함께 넣을 것!!
 
 
 
