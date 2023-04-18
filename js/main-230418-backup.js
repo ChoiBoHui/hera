@@ -25,6 +25,7 @@ $(function () {
         $(".nav .main_menu>li").removeClass("active")
     });
 
+
     // topbanner 슬라이더 Start
     $('.banner_slider').slick({
         arrows: false,
@@ -42,6 +43,32 @@ $(function () {
     });
 
     // topbanner popup close 버튼 쿠키 작업
+    // var getCookie = $.cookie('popup');
+    // var date = new Date();
+    // date.setTime(date.getTime() + 60 * 60 * 1000);
+
+    // // if (!getCookie) {
+    // //     $('.popup').show();
+    // // }
+    // // $('.popup .close_btn').on('click', function () {
+    // //     $.cookie('popup', 'value', { expires: 1 });
+    // //     $('.popup').hide();
+    // // });
+
+    // console.log(date)
+    // // console.log($.cookie('popup'));
+
+
+    // if (!getCookie) {
+    //     $('.popup').show();
+    // }
+    // $('.popup .close_btn').on('click', function () {
+    //     $.cookie('popup', 'value', { expires: date });
+    //     $('.popup').hide();
+    // });
+    // //출처: https://offbyone.tistory.com/176 [쉬고 싶은 개발자:티스토리]
+
+
     var toggleMainPopup = function () {
 
         /* 스토리지 제어 함수 정의 */
@@ -52,7 +79,6 @@ $(function () {
                 var date = new Date();
                 // date = date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
                 date = date.setTime(date.getTime() + exp * 60 * 1000);
-                // 현재 1분으로 세팅
 
                 // 로컬 스토리지에 저장하기
                 // (값을 따로 저장하지 않고 만료 시간을 저장)
@@ -67,6 +93,7 @@ $(function () {
                 return parseInt(localStorage.getItem(name)) > now
             }
         };
+
 
         // 쿠키 읽고 화면 보이게
         if (handleStorage.getStorage("today")) {
@@ -88,11 +115,52 @@ $(function () {
     });
     // 출처 : https://songsong.dev/entry/%EC%98%A4%EB%8A%98-%ED%95%98%EB%A3%A8-%EB%B3%B4%EC%A7%80-%EC%95%8A%EA%B8%B0-%ED%8C%9D%EC%97%85-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
+
+
+
+
     // topbanner 슬라이더 End
 
 
 
     // 메뉴 호버 Start
+    // let main_menu = $('.header .main_menu');
+    // let nav = $('.nav');
+
+    // $(main_menu).on({
+    //     "mouseover": function () {
+    //         // console.log("Mouse Over");
+    //         nav.addClass('active')
+    //     },
+    //     "mouseout": function () {
+    //         // console.log("Mouse Out");
+    //         nav.removeClass('active')
+    //     }
+    // });
+    // 나중에 에러 뜰수도 있는데, 작동하고나면 멈춰! 한번 해줘야함
+
+    // main_menu 안에 submenu가 존제할 때 nav에 클레스 active를 붙여라! 아니면 안붙여도 된다. 로 풀면 좋을 것 같음.
+
+    // let main_menu = $('.header .main_menu');
+    // let nav = $('.nav');
+    // let has_submenu = $('.header .main_menu>li')
+
+    // $(main_menu).on({
+    //     "mouseover": function () {
+    //         if (has_submenu.find('submenu')) {
+    //             nav.addClass('active')
+    //         }
+    //         else {
+    //             nav.removeClass('active')
+    //         }
+    //     },
+    //     "mouseout": function () {
+    //         // console.log("Mouse Out");
+    //         nav.removeClass('active')
+    //     }
+    // });
+
+
     $(".main_menu>li").on({
         "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
@@ -107,7 +175,7 @@ $(function () {
             $(this).removeClass("active");
         }
     });
-    // 해당 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
+    // 해당 메뉴 hover시 backdrop필터가 깔리는 부분은 위와같은 다양한 시도에도 불구하고 끝내 답을 찾지 못하여 chat GPT를 이용해서 코드를 작성하였음을 알립니다.
     // 메뉴 호버 End
 
     // 서브메뉴 높이에 따라 backdrop 높이가 변경되게 해야함!(높이 관련 style 부분 건드려야 할듯)
