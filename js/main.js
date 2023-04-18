@@ -70,16 +70,16 @@ $(function () {
 
         // 쿠키 읽고 화면 보이게
         if (handleStorage.getStorage("today")) {
-            $(".popup").removeClass("on");
+            $(".topbanner").removeClass("active");
         } else {
-            $(".popup").addClass("on");
+            $(".topbanner").addClass("active");
         }
 
         // 오늘하루 보지 않기 버튼
-        $(".popup").on("click", ".close_btn", function () {
+        $(".topbanner").on("click", ".close_btn", function () {
             // 로컬 스토리지에 today라는 이름으로 1일(24시간 뒤) 동안 보이지 않게
             handleStorage.setStorage("today", 1);
-            $(this).parents(".popup.on").removeClass("on");
+            $(this).parents(".topbanner.active").removeClass("active");
         });
     }
 
