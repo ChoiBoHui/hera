@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; }  */
+/* * { outline: 1px solid #f00; } */
 
 :root { /* color */
  /* g = gray */
@@ -17,8 +17,8 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .gnb { position: relative; display: flex; justify-content: center; } 
 /* 아래 container는 사실상 customer_menu만 적용됨 */
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
-.header h1 { width: 120px; height: 22px; margin: 35px 0; } 
-.header .customer_menu { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
+.header h1 { width: 120px; height: 22px; margin: 34px 0; } 
+.header .customer_menu { position: absolute; top: calc(100% - 50%); right: 0; transform: translateY(-50%); gap: 11px; } 
 /* 고객서비스 메뉴 top값 재 계산 필요 */
 
 /* topbanner Start */
@@ -53,21 +53,22 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .nav .main_menu>li>a::after { content: ""; position: absolute; top: calc(100% + 13px); left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
 .header .nav .main_menu>li:hover>a::after { width: 100%; } 
 /* 이부분 원래 >li>a:hover 였는데, li로 바꾸니까 ::after가 유지는 되는데, 뒤쪽 메뉴가 자꾸 겹침 */
-.header .nav .main_menu .mont { font-size: 17px; font-weight: 500; letter-spacing: 0; transform: translateY(-2px); } 
+.header .nav .main_menu .mont { font-size: 17px; font-weight: 500; transform: translateY(-2px); color: var(--color-g1); } 
 
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
 .nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff; overflow-y: hidden; outline: 1px solid #fff; } 
 /* submenu background에 slideUp Down 추가 */
+/* 메뉴 호버할때마다 영문 폰트 번쩍거림 있음. 확인 필요. weight가 변하는건 아닌 것 같고, 글자가 두겹으로 겹쳐서 생기는 것 같은 효과 */
+/* submenu가 펼쳐질 때 마다 번쩍거림 생김 */
 
 /* 여기 outline 준 이유는 backdrop 필터가 전체 블러로 적용되게 하기 위함 */
 /* outline 높이 영 거슬리면 px 만져서 공간 조절 해줄 것!! */
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
 .nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
-
-/* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
-.nav .main_menu>li.active .submenu { max-height: 100vh; } 
 .nav .main_menu>li.active .submenu .container { opacity: 1; } 
+.nav .main_menu>li.active .submenu { max-height: 100vh; } 
+/* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
 
 
 

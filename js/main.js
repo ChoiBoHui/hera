@@ -94,6 +94,9 @@ $(function () {
 
 
     // 메뉴 호버 Start   
+
+    // .gnbCurtain의 top값을 header높이가 변경됨에 따라 반응하게 하기.
+    // .gnbCurtain의 top값이 .main_menu>li에 hover될 때 마다 .header의 높이값에 맞춰 변경
     // let headerHiehgt = $(".header").innerHeight();
     // 처음 dom형성시 탑배너가 display : none;이기 때문에 topbanner를 제외한 topmenu의 높이값만을 가져옴.
     // 그리고 높이값이 변경됨에따라 변하지 않고, 한번 고정된 값을 계속해서 가져감. => 중간에 topbanner를 닫아도 그만큼의 높이가 빠지지 않음
@@ -102,14 +105,12 @@ $(function () {
     // let positionCurtain = $(activeCurtain).position;
     // .gnbCurtain에 .active가 붙을 때, .gnbCurtain의 top값이 .header의 height값이 된다.
 
-    // 
-
 
     $(".main_menu>li").on({
         "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
                 let headerHiehgt = $(".header").innerHeight();
-                console.log(headerHiehgt)
+                // console.log(headerHiehgt)
                 $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
             }
             $(this).addClass("active");
@@ -123,9 +124,6 @@ $(function () {
     // $(positionCurtain).css('top', headerHiehgt);
     // console.log(positionCurtain.top)
     // 해당 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
-
-    // .gnbCurtain의 top, hegith값을 header높이가 변경됨에 따라 반응하게 하기.
-    // .gnbCurtain의 top값이 .main_menu>li에 hover될 때 마다 .header의 높이값에 맞춰 변경
 
 
 
