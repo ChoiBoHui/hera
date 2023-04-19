@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; }
+/* * { outline: 1px solid #f00; } */
 
 :root { /* color */
  /* g = gray */
@@ -58,6 +58,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
 .nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff; overflow-y: hidden; } 
+/* 여기 아웃라인 있었음 */
 /* submenu background에 slideUp Down 추가 */
 /* 메뉴 호버할때마다 영문 폰트 번쩍거림 있음. 확인 필요. weight가 변하는건 아닌 것 같고, 글자가 두겹으로 겹쳐서 생기는 것 같은 효과 */
 /* submenu가 펼쳐질 때 마다 번쩍거림 생김 */
