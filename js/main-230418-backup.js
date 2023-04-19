@@ -161,26 +161,41 @@ $(function () {
     // });
 
 
+    // let headerHiehgt = $(".header").innerHeight();
+    // 처음 dom형성시 탑배너가 display : none;이기 때문에 topbanner를 제외한 topmenu의 높이값만을 가져옴.
+    // 그리고 높이값이 변경됨에따라 변하지 않고, 한번 고정된 값을 계속해서 가져감. => 중간에 topbanner를 닫아도 그만큼의 높이가 빠지지 않음
+    // console.log(headerHiehgt)
+    // let activeCurtain = $(".header .gnbCurtain.active");
+    // let positionCurtain = $(activeCurtain).position;
+    // .gnbCurtain에 .active가 붙을 때, .gnbCurtain의 top값이 .header의 height값이 된다.
+
+    // 
+
+
     $(".main_menu>li").on({
         "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
-                $(".nav").addClass("active");
-                // console.log("mouse enter");
+                let headerHiehgt = $(".header").innerHeight();
+                console.log(headerHiehgt)
+                $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
             }
             $(this).addClass("active");
         },
         "mouseleave": function () {
-            $(".nav").removeClass("active");
-            // console.log("mouse leave");
+            $(".gnbCurtain").removeClass("active");
             $(this).removeClass("active");
         }
     });
-    // 해당 메뉴 hover시 backdrop필터가 깔리는 부분은 위와같은 다양한 시도에도 불구하고 끝내 답을 찾지 못하여 chat GPT를 이용해서 코드를 작성하였음을 알립니다.
-    // 메뉴 호버 End
 
-    // 서브메뉴 높이에 따라 backdrop 높이가 변경되게 해야함!(높이 관련 style 부분 건드려야 할듯)
-    // 부드럽게 열리고 닫히게 하는 코드도 함께 넣을 것!!
+    // $(positionCurtain).css('top', headerHiehgt);
+    // console.log(positionCurtain.top)
+    // 해당 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
 
+    // .gnbCurtain의 top, hegith값을 header높이가 변경됨에 따라 반응하게 하기.
+    // .gnbCurtain의 top값이 .main_menu>li에 hover될 때 마다 .header의 높이값에 맞춰 변경
+
+
+    // after 요소의 높이값 수정하기(실패 -> 계획 변경 span태그 활용한 내용 위쪽)
     // console.log($(".header").innerHeight());
     // let headerHiehgt = $(".header").innerHeight();
     // console.log(headerHiehgt);
@@ -206,7 +221,7 @@ $(function () {
 
     // after요소는 DOM에 속해있지 않아 선택이 불가능함.
 
-
+    // 메뉴 호버 End
 
 
 

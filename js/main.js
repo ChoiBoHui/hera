@@ -86,6 +86,7 @@ $(function () {
     $(function () {
         toggleMainPopup();
     });
+    // 여기 들어간 달라펑션 중복되는거 아닌지 확인 필요!!
     // 출처 : https://songsong.dev/entry/%EC%98%A4%EB%8A%98-%ED%95%98%EB%A3%A8-%EB%B3%B4%EC%A7%80-%EC%95%8A%EA%B8%B0-%ED%8C%9D%EC%97%85-%EB%A7%8C%EB%93%A4%EA%B8%B0
 
     // topbanner 슬라이더 End
@@ -93,25 +94,34 @@ $(function () {
 
 
     // 메뉴 호버 Start   
-    let headerHiehgt = $(".header").innerHeight();
-    console.log(headerHiehgt);
-    let curtainPosition = $(".header .gnbCurtain").position();
+    // let headerHiehgt = $(".header").innerHeight();
+    // 처음 dom형성시 탑배너가 display : none;이기 때문에 topbanner를 제외한 topmenu의 높이값만을 가져옴.
+    // 그리고 높이값이 변경됨에따라 변하지 않고, 한번 고정된 값을 계속해서 가져감. => 중간에 topbanner를 닫아도 그만큼의 높이가 빠지지 않음
+    // console.log(headerHiehgt)
+    // let activeCurtain = $(".header .gnbCurtain.active");
+    // let positionCurtain = $(activeCurtain).position;
+    // .gnbCurtain에 .active가 붙을 때, .gnbCurtain의 top값이 .header의 height값이 된다.
+
+    // 
+
 
     $(".main_menu>li").on({
         "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
-                $(".gnbCurtain").addClass("active");
-                // console.log("mouse enter");
-                console.log(curtainPosition.top);
+                let headerHiehgt = $(".header").innerHeight();
+                console.log(headerHiehgt)
+                $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
             }
             $(this).addClass("active");
         },
         "mouseleave": function () {
             $(".gnbCurtain").removeClass("active");
-            // console.log("mouse leave");
             $(this).removeClass("active");
         }
     });
+
+    // $(positionCurtain).css('top', headerHiehgt);
+    // console.log(positionCurtain.top)
     // 해당 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
 
     // .gnbCurtain의 top, hegith값을 header높이가 변경됨에 따라 반응하게 하기.
