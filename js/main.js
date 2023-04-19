@@ -21,7 +21,7 @@ $(function () {
 
     // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
     $(window).on('scroll', function () {
-        $(".nav").removeClass("active")
+        $(".gnbCurtain").removeClass("active")
         $(".nav .main_menu>li").removeClass("active")
     });
 
@@ -92,27 +92,35 @@ $(function () {
 
 
 
-    // 메뉴 호버 Start
+    // 메뉴 호버 Start   
+    let headerHiehgt = $(".header").innerHeight();
+    console.log(headerHiehgt);
+    let curtainPosition = $(".header .gnbCurtain").position();
+
     $(".main_menu>li").on({
         "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
-                $(".nav").addClass("active");
+                $(".gnbCurtain").addClass("active");
                 // console.log("mouse enter");
+                console.log(curtainPosition.top);
             }
             $(this).addClass("active");
         },
         "mouseleave": function () {
-            $(".nav").removeClass("active");
+            $(".gnbCurtain").removeClass("active");
             // console.log("mouse leave");
             $(this).removeClass("active");
         }
     });
     // 해당 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
+
+    // .gnbCurtain의 top, hegith값을 header높이가 변경됨에 따라 반응하게 하기.
+    // .gnbCurtain의 top값이 .main_menu>li에 hover될 때 마다 .header의 높이값에 맞춰 변경
+
+
+
+
     // 메뉴 호버 End
-
-    // 서브메뉴 높이에 따라 backdrop 높이가 변경되게 해야함!(높이 관련 style 부분 건드려야 할듯)
-    // 부드럽게 열리고 닫히게 하는 코드도 함께 넣을 것!!
-
 
 
 
@@ -158,4 +166,4 @@ $(function () {
     });
     // best 슬라이더 End
 
-})
+});

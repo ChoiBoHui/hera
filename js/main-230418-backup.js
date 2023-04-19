@@ -181,6 +181,30 @@ $(function () {
     // 서브메뉴 높이에 따라 backdrop 높이가 변경되게 해야함!(높이 관련 style 부분 건드려야 할듯)
     // 부드럽게 열리고 닫히게 하는 코드도 함께 넣을 것!!
 
+    // console.log($(".header").innerHeight());
+    // let headerHiehgt = $(".header").innerHeight();
+    // console.log(headerHiehgt);
+
+    // let navAfter = $(".header .nav.active::after").position();
+    // console.log(navAfter.top);
+
+
+
+    // var $navAfter = $(".header .nav::after");
+    // var afterTop = $navAfter.position();
+    // ::after요소의 top값은 파악이 불가능 한 듯?
+
+    // console.log(afterTop.top);
+
+    // $(".main_menu>li").on({
+    //     "mouseenter": function () {
+    //         console.log(afterTop.top);
+    //     }
+    // });
+
+    // $(".header .nav.active::after").css("top", "200px");
+
+    // after요소는 DOM에 속해있지 않아 선택이 불가능함.
 
 
 

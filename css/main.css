@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; } */
+* { outline: 1px solid #f00; } 
 
 :root { /* color */
  /* g = gray */
@@ -19,9 +19,10 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
 .header h1 { width: 120px; height: 22px; margin: 35px 0; } 
 .header .customer_menu { position: absolute; top: calc(50% - 17px); right: 0; gap: 11px; } 
+/* 고객서비스 메뉴 top값 재 계산 필요 */
 
 /* topbanner Start */
-.topbanner.active {display: block;}
+.topbanner.active { display: block; } 
 .topbanner { display: none; height: 42px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 14px 0 13px 0; } 
 /* 새로고침하는데 배경이 번쩍 거려서 높이값을 줬음.. 확인해보니 display 속성이 none에서 block으로 바뀌는 과정에서 생기는 것 같음 */
 .topbanner .container { position: relative; display: block; width: 1200px; margin: 0 auto; text-align: center; } 
@@ -36,12 +37,15 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 /* nav Start */
 .header .nav { justify-content: center; } 
+
+/* .header .nav::after { content: ""; display: none; position: fixed; top: 100px; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: -1; -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
+.header .nav.active::after { display: block; }  */
+
 /* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
-.header .nav.active::after { content: ""; position: fixed; top: 129px; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: -1; -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
 /* 메뉴에 마우스 오버 했을때 backdrop 깔리는거 높이(top, height) 임의로 해둔거라 수정 해야함 */
-/* 블러 높이 스크립트 가서 header 높이 변경에따라 적용되게 해야함!! */
-
-
+/* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
+.gnbCurtain { content: ""; display: none; position: fixed; top: 100px; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: -1; -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
+.gnbCurtain.active { display: block; } 
 
 
 .header .customer_menu { display: flex; } 
@@ -58,10 +62,12 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
 .nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: calc(100% - 126px); left: 0; margin-top: 126px; background-color: #fff; overflow-y: hidden; outline: 1px solid #fff; } 
+/* submenu background에 slideUp Down 추가 */
+
 /* 여기 outline 준 이유는 backdrop 필터가 전체 블러로 적용되게 하기 위함 */
-/* outline 높이 만큼 영 거슬리면 px 만져서 공간 조절 해줄 것!! */
+/* outline 높이 영 거슬리면 px 만져서 공간 조절 해줄 것!! */
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
-.nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; }
+.nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
 
 /* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
 .nav .main_menu>li.active .submenu { max-height: 100vh; } 
@@ -94,7 +100,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* scroll submenu Start */
 /* .header .nav.scroll { } */
 /* 여기 나중에 js 실행할때 작성 */
-
+/* topbanner를 제외한 메뉴가 따라와야 하니까 topmenu만 스크롤하면 따라 붙게 해야함 */
 
 
 
