@@ -112,6 +112,8 @@ $(function () {
                 let headerHiehgt = $(".header").innerHeight();
                 // console.log(headerHiehgt)
                 $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
+            } else {
+                $(".gngnbCurtain").removeClass("active");
             }
             $(this).addClass("active");
         },
@@ -120,6 +122,7 @@ $(function () {
             $(this).removeClass("active");
         }
     });
+
 
     // $(positionCurtain).css('top', headerHiehgt);
     // console.log(positionCurtain.top)
