@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; } 
+/* * { outline: 1px solid #f00; } */
 
 :root { /* color */
  /* g = gray */
@@ -18,10 +18,12 @@ header { position: relative; z-index: 2; }
 .header .gnb { position: relative; display: flex; justify-content: center; } 
 /* 아래 container는 사실상 customer_menu만 적용됨 */
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
-.header h1 { width: 120px; height: 22px; margin: 34px 0; } 
+.header h1 { margin: 26px 0 10px 0; } 
+.header h1 a { display: block; padding: 8px; } 
+.header h1 a img { width: 120px; } 
 
 /* customer_menu Start */
-.header .customer_menu { position: absolute; top: calc(100% - 50%); right: -4px; transform: translateY(-50%); display: flex; gap: 6px; } 
+.header .customer_menu { position: absolute; top: calc(100% - 50%); right: -4px; transform: translateY(-50%); display: flex; gap: 4px; } 
 /* 디자인 가이드라인에 맞추기 위해 right에 4px줌 */
 /* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
 .header .customer_menu li a { display: block; padding: 4px; } 
@@ -90,7 +92,7 @@ header { position: relative; z-index: 2; }
 /* 신상 홍보용 배너 */
 .nav .submenu .container .pushMd { width: 282px; margin: 0 52px 0 0; padding: 44px 0 28px 0; } 
 .nav .submenu .container .pushMd img { width: 282px; height: 178px; } 
-.nav .submenu .container .pushMd p { font-family: Montserrat; font-weight: 400; font-size: 15px; text-indent: -1px; padding: 14px 0; } 
+.nav .submenu .container .pushMd p { font-family: Montserrat; font-weight: 400; letter-spacing: 0; font-size: 15px; text-indent: -1px; padding: 10px 0 14px 0; line-height: 20px; } 
 
 /* 서브메뉴 간격 */
 .nav .submenu .container>ul { width: 224px; padding: 36px 0 54px 0; } 
@@ -128,11 +130,11 @@ header { position: relative; z-index: 2; }
 /* Main_slider Start */
 .main_slider { margin: 34px 0 100px 0; } 
 .main_slider .slide { display: flex; } 
-.main_slider .itm01 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_01.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm02 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_02.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm03 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_03.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm04 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_04.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm05 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main_bg_05.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm01 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_01.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm02 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_02.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm03 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_03.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm04 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_04.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm05 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_05.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
 /* inner Start */
 .main_slider .inner { margin: auto 0; } 
 .main_slider .inner .slogan { font-size: 42px; font-weight: 700; letter-spacing: -0.025rem; color: #1d1d1f; } 
@@ -143,7 +145,7 @@ header { position: relative; z-index: 2; }
 /* slide_util Start */
 .main_visual .slide_util { position: absolute; display: flex; font-family: montserrat; font-size: 20px; font-weight: 400; color: #1d1d1f; bottom: 0; left: calc(100% - 582px); margin: 0 0 25px 0; } 
 /* slide_pager Start */
-.slide_util .slide_pager { display: flex;  align-items: center; } 
+.slide_util .slide_pager { display: flex; align-items: center; padding-right: 8px; } 
 .slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; } 
 .slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
 .slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 3s; } 
@@ -211,7 +213,10 @@ header { position: relative; z-index: 2; }
 /* Footer Start */
 #footer { background: #3e3e3e; color: #ededed; } 
 #footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
-#footer .logo_footer { font-size: 0; width: 100px; height: 18px; background: url(../img/../img/logo_footer.jpg) center center/contain no-repeat; margin: 40px auto 30px auto; } 
+#footer .logo_footer { margin: 40px auto 30px auto; } 
+#footer .logo_footer a img { width: 100px; } 
+
+
 #footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
 #footer .footer_utils li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
 #footer .footer_utils .lang img { margin: 0 0 0 7px; padding-bottom: 2px; } 
