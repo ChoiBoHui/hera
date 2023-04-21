@@ -158,7 +158,23 @@ $(function () {
     $('.main_slider').on('beforeChange', function () {
         $('.slide_util .slide_pager .bar_progress').removeClass('on')
     });
+
+    // 슬라이더 버튼
+    $('.main_visual .slide_util .control_btn .stop').on('click', function () {
+        $('.main_slider').slick('slickPause')
+    });
+    $('.main_visual .slide_util .control_btn .play').on('click', function () {
+        $('.main_slider').slick('slickPlay')
+    });
+    // 여기 토글클레스 새로 짜야할수도 있슴!! stop play 버튼 부분만
+    $('.main_visual .slide_util .control_btn .prev').on('click', function () {
+        $('.main_slider').slick('slickPrev')
+    });
+    $('.main_visual .slide_util .control_btn .next').on('click', function () {
+        $('.main_slider').slick('slickNext')
+    });
     // main_visual 슬라이더 End
+
 
     // best 슬라이더 Start
     $('.product_slider').slick({

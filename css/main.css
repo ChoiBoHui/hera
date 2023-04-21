@@ -34,6 +34,7 @@ header { position: relative; z-index: 2; }
 /* 새로고침하는데 배경이 번쩍 거려서 높이값을 줬음.. 확인해보니 display 속성이 none에서 block으로 바뀌는 과정에서 생기는 것 같음 */
 .topbanner .container { position: relative; display: block; width: 1200px; margin: 0 auto; text-align: center; } 
 .topbanner .container .banner_slider { width: 500px; margin: 0 auto; transform: translateY(1px); } 
+.topbanner .slide_util img { width: 16px; } 
 .topbanner .slide_util .area_left { position: absolute; top: calc(50% - 8px); left: calc(100% - 50% - 296px); cursor: pointer; } 
 .topbanner .slide_util .area_right { position: absolute; top: calc(50% - 8px); right: calc(100% - 50% - 296px); cursor: pointer; } 
 .topbanner .slide_util .close_btn { position: absolute; top: calc(50% - 8px); right: 0; cursor: pointer; } 
@@ -140,25 +141,25 @@ header { position: relative; z-index: 2; }
 .main_slider .inner p { font-size: 20px; font-weight: 400; letter-spacing: -0.025rem; color: #1d1d1f; margin-bottom: 60px; } 
 .main_slider .btn_more { display: inline-block; background: #1d1d1f; padding: 11px 17px 8px 19px; color: #fff; } 
 /* slide_util Start */
-.main_visual .slide_util { position: absolute; display: flex; font-family: montserrat; font-size: 20px; font-weight: 400; color: #1d1d1f; bottom: 0; left: calc(100% - 582px); padding: 0 0 35px 0; } 
+.main_visual .slide_util { position: absolute; display: flex; font-family: montserrat; font-size: 20px; font-weight: 400; color: #1d1d1f; bottom: 0; left: calc(100% - 582px); margin: 0 0 25px 0; } 
 /* slide_pager Start */
-.slide_util .slide_pager { display: flex; } 
-
-
-
-
+.slide_util .slide_pager { display: flex;  align-items: center; } 
 .slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; } 
-
 .slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
-
 .slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 3s; } 
 
-
-
-
 .main_visual .slide_util .slide_pager .current_index { width: 26px; } 
-.main_visual .slide_util .slide_pager .total_index { color:#aaa; margin-right: 20px; } 
-.main_visual .slide_util .control_btn img { vertical-align: inherit; } 
+.main_visual .slide_util .slide_pager .total_index { color:#aaa; } 
+.main_visual .slide_util .control_btn { display: flex; } 
+.main_visual .slide_util .control_btn>div { cursor: pointer; } 
+.main_visual .slide_util .control_btn .stop,
+.main_visual .slide_util .control_btn .play { padding: 6px 8px 6px 8px; } 
+.main_visual .slide_util .control_btn .stop img,
+.main_visual .slide_util .control_btn .play img { vertical-align: inherit; width: 14px; } 
+.main_visual .slide_util .control_btn .prev,
+.main_visual .slide_util .control_btn .next { padding: 6px; } 
+.main_visual .slide_util .control_btn .prev img,
+.main_visual .slide_util .control_btn .next img { vertical-align: inherit; width: 18px; } 
 /* section Main_Visual End */
 
 
