@@ -23,7 +23,7 @@ header { position: relative; z-index: 2; }
 .header h1 a img { width: 120px; } 
 
 /* customer_menu Start */
-.header .customer_menu { position: absolute; top: calc(100% - 50%); right: -4px; transform: translateY(-50%); display: flex; gap: 4px; } 
+.header .customer_menu { position: absolute; top: calc(100% - 50% + 9px); right: -4px; transform: translateY(-50%); display: flex; gap: 4px; } 
 /* 디자인 가이드라인에 맞추기 위해 right에 4px줌 */
 /* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
 .header .customer_menu li a { display: block; padding: 4px; } 
