@@ -57,7 +57,7 @@ header { position: relative; z-index: 2; }
 .header .nav .main_menu>li { padding: 4px; } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
 /* .header .nav .main_menu>li~li>a { } */
-.header .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; } 
+.header .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; } 
 /* 1~4번째 메뉴까지 선택 */
 .header .nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
 .header .nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
@@ -83,8 +83,8 @@ header { position: relative; z-index: 2; }
 
 
 /* 서브메뉴 텍스트 */
-.header .nav .submenu .submenu_header { font-size: 16px; font-weight: 700; color: var(--color-g1); margin-bottom: 6px; } 
-.header .nav .submenu .submenu_header>a { display: block; padding: 4px; } 
+.header .nav .submenu .submenu_header { margin-bottom: 6px; } 
+.header .nav .submenu .submenu_header>a { display: block; padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
 .header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li { padding: 4px; } 
 .header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a { display: block; font-size: 15px; font-weight: 400; color: #979798; padding: 4px; } 
 .header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a:hover { color: var(--color-g1); } 

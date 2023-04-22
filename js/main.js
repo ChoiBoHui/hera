@@ -105,7 +105,6 @@ $(function () {
     // let positionCurtain = $(activeCurtain).position;
     // .gnbCurtain에 .active가 붙을 때, .gnbCurtain의 top값이 .header의 height값이 된다.
 
-
     $(".main_menu>li").on({
         "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
@@ -122,14 +121,9 @@ $(function () {
             $(this).removeClass("active");
         }
     });
-
-
     // $(positionCurtain).css('top', headerHiehgt);
     // console.log(positionCurtain.top)
     // 해당 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
-
-
-
 
     // 메뉴 호버 End
 
@@ -137,9 +131,7 @@ $(function () {
 
 
 
-
     // main_visual 슬라이더 Start
-
     // 시작시 함수 한번 초기화 해주는거!! 수빈이가 알려준거 써서 슬라이더 처음부터 제대로 돌아가게 해야함..!
     $('.main_slider').slick({
         arrows: false,
@@ -150,7 +142,6 @@ $(function () {
         pauseOnFocus: false,
         pauseOnHover: false,
     });
-
     $('.main_slider').on('afterChange', function (e, s, c) {
         // console.log(e, s, c);
         $('.slide_util .slide_pager .current_index').text("0" + (c ? c + 1 : 1))
@@ -177,15 +168,6 @@ $(function () {
     $('.main_visual .slide_util .control_btn .next').on('click', function () {
         $('.main_slider').slick('slickNext')
     });
-
-
-
-
-
-
-
-
-
     // main_visual 슬라이더 End
 
 
@@ -200,7 +182,6 @@ $(function () {
         autoplay: false,
         // useTransform: false,
         slidesToShow: 4,
-        infinite: false,
     });
 
     // 슬라이더 버튼
@@ -210,6 +191,13 @@ $(function () {
     $('.product_slide_arrows .hover_area_right .next').on('click', function () {
         $('.product_slider').slick('slickNext')
     });
+
+    // 슬라이더 버튼 활성화 관련 짜야함
+
+
+
+
+
     // best 슬라이더 End
 
 });
