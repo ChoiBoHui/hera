@@ -149,19 +149,15 @@ header { position: relative; z-index: 2; }
 .slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; } 
 .slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
 .slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 3s; } 
-
 .main_visual .slide_util .slide_pager .current_index { width: 26px; } 
 .main_visual .slide_util .slide_pager .total_index { color:#aaa; } 
+.main_visual .slide_util .switch .pause { display: block; } 
+.main_visual .slide_util .switch.stop .pause { display: none; } 
+.main_visual .slide_util .switch .play { display: none; } 
+.main_visual .slide_util .switch.stop .play { display: block; } 
 .main_visual .slide_util .control_btn { display: flex; } 
-.main_visual .slide_util .control_btn>div { cursor: pointer; } 
-.main_visual .slide_util .control_btn .stop,
-.main_visual .slide_util .control_btn .play { padding: 6px 8px 6px 8px; } 
-.main_visual .slide_util .control_btn .stop img,
-.main_visual .slide_util .control_btn .play img { vertical-align: inherit; width: 14px; } 
-.main_visual .slide_util .control_btn .prev,
-.main_visual .slide_util .control_btn .next { padding: 6px; } 
-.main_visual .slide_util .control_btn .prev img,
-.main_visual .slide_util .control_btn .next img { vertical-align: inherit; width: 18px; } 
+.main_visual .slide_util .control_btn>div { padding: 6px; cursor: pointer; } 
+.main_visual .slide_util .control_btn img { vertical-align: inherit; width: 18px; } 
 /* section Main_Visual End */
 
 
