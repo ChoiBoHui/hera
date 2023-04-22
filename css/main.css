@@ -18,7 +18,7 @@ header { position: relative; z-index: 2; }
 .header .gnb { position: relative; display: flex; justify-content: center; } 
 /* 아래 container는 사실상 customer_menu만 적용됨 */
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
-.header h1 { margin: 26px 0 10px 0; } 
+.header h1 { margin: 20px 0 4px 0; } 
 .header h1 a { display: block; padding: 8px; } 
 .header h1 a img { width: 120px; } 
 
