@@ -177,18 +177,24 @@ $(function () {
 
 
     // best 슬라이더 Start
-    $('.product_slider').slick({
+    $('.best .product_slider').slick({
         arrows: false,
         autoplay: false,
         // useTransform: false,
+        dots: false,
+        appendDots: $('.best .product_slider .dots'),
+        dotsClass: 'custom-dots',
+        infinite: false,
         slidesToShow: 4,
+        slidesToScroll: 4,
+
     });
 
     // 슬라이더 버튼
-    $('.product_slide_arrows .hover_area_left .prev').on('click', function () {
+    $('.best .product_slide_arrows .btn_area .prev').on('click', function () {
         $('.product_slider').slick('slickPrev')
     });
-    $('.product_slide_arrows .hover_area_right .next').on('click', function () {
+    $('.best .product_slide_arrows .btn_area .next').on('click', function () {
         $('.product_slider').slick('slickNext')
     });
 
