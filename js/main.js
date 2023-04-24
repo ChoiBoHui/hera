@@ -191,10 +191,10 @@ $(function () {
     });
 
     // 슬라이더 버튼
-    $('.best .product_slide_arrows .btn_area .prev').on('click', function () {
+    $('.best .product_slide_arrows .btn_area.left .hoverArea').on('click', function () {
         $('.product_slider').slick('slickPrev')
     });
-    $('.best .product_slide_arrows .btn_area .next').on('click', function () {
+    $('.best .product_slide_arrows .btn_area.right .hoverArea').on('click', function () {
         $('.product_slider').slick('slickNext')
     });
 
