@@ -105,26 +105,44 @@ $(function () {
     // let positionCurtain = $(activeCurtain).position;
     // .gnbCurtain에 .active가 붙을 때, .gnbCurtain의 top값이 .header의 height값이 된다.
 
-    $(".main_menu>li").on({
-        "mouseenter": function () {
-            if ($(this).has(".submenu").length > 0) {
-                let headerHiehgt = $(".header").innerHeight();
-                // console.log(headerHiehgt)
-                $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
-            } else {
-                $(".gngnbCurtain").removeClass("active");
-            }
-            $(this).addClass("active");
-        },
-        "mouseleave": function () {
-            $(".gnbCurtain").removeClass("active");
-            $(this).removeClass("active");
-        }
-    });
+    // $(".main_menu>li").on({
+    //     "mouseenter": function () {
+    //         if ($(this).has(".submenu").length > 0) {
+    //             let headerHiehgt = $(".header").innerHeight();
+    //             // console.log(headerHiehgt)
+    //             $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
+    //         } else {
+    //             $(".gngnbCurtain").removeClass("active");
+    //         }
+    //         $(this).addClass("active");
+    //     },
+    //     "mouseleave": function () {
+    //         $(".gnbCurtain").removeClass("active");
+    //         $(this).removeClass("active");
+    //     }
+    // });
     // $(positionCurtain).css('top', headerHiehgt);
     // console.log(positionCurtain.top)
-    // 해당 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
+    // 위의 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
 
+    $(".main_menu>li").mouseenter(function () {
+        let submenu = $(".main_menu>li>a").siblings(".submenu").length;
+        let headerHiehgt = $(".header").innerHeight();
+
+
+        $(this).addClass("active").siblings().removeClass("active");
+
+        if (submenu > 0) {
+            $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
+        } else {
+            $(".gnbCurtain").removeClass("active");
+        }
+    });
+
+    $(".main_menu>li").mouseleave(function () {
+        $(".main_menu li").removeClass("active");
+        $(".gnbCurtain").removeClass("active");
+    });
     // 메뉴 호버 End
 
 
@@ -187,6 +205,7 @@ $(function () {
         infinite: false,
         slidesToShow: 4,
         slidesToScroll: 4,
+        variableWidth: true,
 
     });
 
