@@ -126,9 +126,9 @@ $(function () {
     // 위의 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
 
     $(".main_menu>li").mouseenter(function () {
-        let submenu = $(".main_menu>li > a").siblings(".submenu").length;
+        let submenu = $(".main_menu>li>a").siblings(".submenu").length;
         let headerHiehgt = $(".header").innerHeight();
-
+        console.log(submenu)
 
         $(this).addClass("active").siblings().removeClass("active");
 
@@ -139,10 +139,13 @@ $(function () {
         }
     });
 
-    $(".main_menu>li").mouseleave(function () {
+    $(".main_menu").mouseleave(function () {
         $(".main_menu li").removeClass("active");
         $(".gnbCurtain").removeClass("active");
     });
+    // 미선이언니한테 이부분에서 오류가 난다고 확인 부탁드리기!
+
+
     // 메뉴 호버 End
 
 
