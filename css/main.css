@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; }  */
+/* * { outline: 1px solid #f00; } */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -176,8 +176,10 @@ header { position: relative; z-index: 2; }
 /* 슬라이드 버튼 시작 */
 /* .product_slide_arrows .btn_area { position: absolute; top: calc(0% + 114px); } */
 .product_slide_arrows .btn_area { position: absolute; top: 187px; } 
-.product_slide_arrows .btn_area.left { left: 0; } 
-.product_slide_arrows .btn_area.right { right: 0; } 
+.product_slide_arrows .btn_area.left { left: 0; display: block; } 
+.product_slide_arrows .btn_area.left.hide { display: none; } 
+.product_slide_arrows .btn_area.right { right: 0; display: block; } 
+.product_slide_arrows .btn_area.right.hide { display: none; } 
 .product_slide_arrows .hoverArea { padding: 15px; cursor: pointer; background-color: #fff; opacity: 0.5; transition: opacity 0.3s; box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.08); } 
 .product_slide_arrows .hoverArea:hover { opacity: 1; } 
 .product_slide_arrows .hoverArea>img { width: 18px; } 

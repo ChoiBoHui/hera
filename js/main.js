@@ -126,7 +126,7 @@ $(function () {
     // 위의 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
 
     $(".main_menu>li").mouseenter(function () {
-        let submenu = $(".main_menu>li>a").siblings(".submenu").length;
+        let submenu = $(".main_menu>li > a").siblings(".submenu").length;
         let headerHiehgt = $(".header").innerHeight();
 
 
@@ -189,11 +189,6 @@ $(function () {
     // main_visual 슬라이더 End
 
 
-
-
-
-
-
     // best 슬라이더 Start
     $('.best .product_slider').slick({
         arrows: false,
@@ -204,9 +199,8 @@ $(function () {
         dotsClass: 'custom-dots',
         infinite: false,
         slidesToShow: 4,
-        // slidesToScroll: 4,
+        slidesToScroll: 4,
         variableWidth: true,
-
     });
 
     // 슬라이더 버튼
@@ -217,12 +211,27 @@ $(function () {
         $('.product_slider').slick('slickNext')
     });
 
-    // 슬라이더 버튼 활성화 관련 짜야함
+    // 슬라이드 위치에 따른 버튼 활성화
+    let bestSlideFirstItm = $(".best .product_slider .itm01");
+    let bestSlideLastItm = $(".best .product_slider .itm12");
+    let btnAreaLeft = $(".best .product_slide_arrows .btn_area.left");
+    let btnAreaRight = $(".best .product_slide_arrows .btn_area.right");
 
+    $('.best .product_slider').on('afterChange', function () {
+        if (bestSlideFirstItm.hasClass("slick-active")) {
+            btnAreaLeft.addClass('hide');
+            // console.log("y");
+        } else {
+            btnAreaLeft.removeClass('hide');
+            // console.log("n");
+        }
 
-
-
-
+        if (bestSlideLastItm.hasClass("slick-active")) {
+            btnAreaRight.addClass('hide');
+        } else {
+            btnAreaRight.removeClass('hide');
+        }
+    });
     // best 슬라이더 End
 
 });
