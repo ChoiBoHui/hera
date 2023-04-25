@@ -204,7 +204,7 @@ $(function () {
         dotsClass: 'custom-dots',
         infinite: false,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        // slidesToScroll: 4,
         variableWidth: true,
 
     });
