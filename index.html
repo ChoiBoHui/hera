@@ -205,7 +205,8 @@
                             <figure>메인 비주얼 이미지</figure>
                             <div class="inner">
                                 <div class="slogan">
-                                    <div class="tit">내 피부처럼 가벼운 벨벳티 스킨</div>
+                                    <div class="tit">내 피부처럼 가벼운</div>
+                                    <div class="sub">벨벳티 스킨</div>
                                 </div>
                                 <p>블랙 쿠션</p>
                                 <a href="" class="btn_more">자세히 보기</a>
@@ -215,9 +216,11 @@
                             <figure>메인 비주얼 이미지</figure>
                             <div class="inner">
                                 <div class="slogan">
-                                    <div class="tit">일상에서의 강력하고 세심한 선 케어</div>
+                                    <div class="tit">세련된 뉴트럴 컬러와</div>
+                                    <div class="sub">가벼운 레이어로 완성하는</div>
+                                    <div class="sub">헤라의 2023 S/S 룩</div>
                                 </div>
-                                <p>NEW UV프로텍터 액티브 선 밤</p>
+                                <p>NEW 센슈얼 파우더 매트 리퀴드 & 쿼드 아이 컬러</p>
                                 <a href="" class="btn_more">자세히 보기</a>
                             </div>
                         </div>
@@ -308,16 +311,20 @@
                             </a>
                         </figure>
                         <!-- 제품명 텍스트에 br 따로 안넣고, 단어별로 끊어서 일정 영역 넘어가면 밑으로 내려가게 수정해야함 -->
-                        <figure class="best_itm itm03">
+                        <figure class="best_itm itm03 soldout">
                             <a href="">
                                 <div href="" class="itm_thumbnail">
+                                    <span class="soldoutCover"></span>
+                                    <!-- soldout태그 하면서 메뉴에서 겪었던 폰트 번쩍임이 있었음, 해당 태그 배치를 위로 올리고, z-index로 조절하니까 해결됨 -->
+                                    <!-- 이거 그냥 ::before로 적용할까 싶음 -->
                                     <img src="./img/main/best_03.jpg" alt="" class="thumbnail01" />
                                     <img src="./img/main/best_03_hover.jpg" alt="" class="thumbnail02" />
                                     <span class="blind">클릭 시 상품 페이지로 이동</span>
-                                    <div class="cmlink_btn">
-                                        <img src="./img/icon/icon_wishlist.svg" alt="">
-                                    </div>
                                 </div>
+                                <div class="soldoutTag mont">Sold Out</div>
+                                <!-- <div class="cmlink_btn">
+                                    <img src="./img/icon/icon_wishlist.svg" alt="">
+                                </div> -->
                                 <div class="itm_info">
                                     <div class="product_name">블랙 쿠션 SPF 34 PA++</div>
                                     <div class="price_wrap">
@@ -326,11 +333,12 @@
                                 </div>
                             </a>
                         </figure>
-                        <figure class="best_itm itm04">
+                        <figure class="best_itm itm04 newProduct">
                             <a href="">
                                 <div href="" class="itm_thumbnail">
                                     <img src="./img/main/best_04.jpg" alt="" class="thumbnail01" />
                                     <img src="./img/main/best_04_hover.jpg" alt="" class="thumbnail02" />
+                                    <div class="newTag mont">NEW</div>
                                     <span class="blind">클릭 시 상품 페이지로 이동</span>
                                     <div class="cmlink_btn">
                                         <img src="./img/icon/icon_wishlist.svg" alt="">
