@@ -164,12 +164,11 @@ header { position: relative; z-index: 2; }
 .main_visual .slide_util .switch .play { display: none; } 
 .main_visual .slide_util .switch.stop .play { display: block; } 
 .main_visual .slide_util .control_btn { display: flex; } 
-.main_visual .slide_util .control_btn>div { padding: 6px; cursor: pointer; } 
+.main_visual .slide_util .control_btn>div {  cursor: pointer; } 
+.main_visual .slide_util .control_btn .switch>div { padding: 6px; } 
+.main_visual .slide_util .control_btn>div~div { padding: 6px; } 
 .main_visual .slide_util .control_btn img { vertical-align: inherit; width: 18px; } 
 /* section Main_Visual End */
-
-
-
 
 
 

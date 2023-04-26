@@ -183,6 +183,8 @@ $(function () {
     $('.main_visual .slide_util .control_btn .play').on('click', function () {
         $('.main_slider').slick('slickPlay')
     });
+
+
     $('.main_visual .slide_util .control_btn .prev').on('click', function () {
         $('.main_slider').slick('slickPrev')
     });
