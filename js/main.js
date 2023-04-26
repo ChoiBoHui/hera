@@ -121,8 +121,6 @@ $(function () {
             $(this).removeClass("active");
         }
     });
-    $(positionCurtain).css('top', headerHiehgt);
-    console.log(positionCurtain.top)
     // 위의 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
 
 
