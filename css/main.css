@@ -7,6 +7,7 @@
 
 /* common */
 .blind { display: none; } 
+/* 디스플레이 논 말고, 폼태그에서 캡션 없애는 방식으로 바꿔야함 */
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 40px 0; } 
 /* 영문 서체 변경 */
 .mont { font-family: montserrat; letter-spacing: 0; } 
