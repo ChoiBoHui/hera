@@ -17,6 +17,7 @@
         <!-- 여기 탑배너 넣어야함 -->
         <!-- header Start -->
         <header class="header">
+            <span class="gnbCurtain"></span>
             <div class="topbanner">
                 <div class="container">
                     <div class="banner_slider">
@@ -175,11 +176,10 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="mont instagallary"><a href="">#HERA</a></li>
-                        <li class="mont eventmenu"><a href="">Event</a></li>
+                        <li class="menu_instagallary EN"><a href="">#HERA</a></li>
+                        <li class="menu_event EN"><a href="">Event</a></li>
                     </ul>
                 </div>
-                <span class="gnbCurtain"></span>
                 <!-- z-index 불편하게 gnbCurtain이 왜 여기 있냐면, header가 없어지는 경우, 함께 없어질 기능이기 때문! 그래서 js가 좀 복잡해져도 넣어뒀습니다! :) -->
                 <!-- 이거 위치 옮겨도 똑같은거보니.. submenu 위치를 바꿔야 하는가 싶고.. -->
             </div>
@@ -317,7 +317,6 @@
                                 <div href="" class="itm_thumbnail">
                                     <!-- <span class="soldoutCover"></span> -->
                                     <!-- soldout태그 하면서 메뉴에서 겪었던 폰트 번쩍임이 있었음, 해당 태그 배치를 위로 올리고, z-index로 조절하니까 해결됨 -->
-                                    <!-- 이거 그냥 ::before로 적용할까 싶음 -->
                                     <img src="./img/main/best_03.jpg" alt="" class="thumbnail01" />
                                     <img src="./img/main/best_03_hover.jpg" alt="" class="thumbnail02" />
                                     <span class="blind">클릭 시 상품 페이지로 이동</span>
