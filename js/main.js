@@ -122,7 +122,7 @@ $(function () {
         }
     });
     // 위의 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
-
+    // 
 
 
     // $(".main_menu>li").mouseenter(function () {
