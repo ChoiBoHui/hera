@@ -11,7 +11,6 @@
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 40px 0; } 
 /* 영문 서체 변경 */
 .mont { font-family: montserrat; letter-spacing: 0; } 
-.newTag { font-size: 14px; font-weight: 600; color: #fff; background-color: var(--color-g1); padding: 1px 3px 1px 3px; } 
 
 
 /* Header Start */
@@ -181,7 +180,6 @@ header { position: relative; z-index: 2; }
 /* .best .product_slider .best_itm { width: 308px; } */
 
 /* 슬라이드 버튼 시작 */
-/* .product_slide_arrows .btn_area { position: absolute; top: calc(0% + 114px); } */
 .product_slide_arrows .btn_area { position: absolute; top: 187px; } 
 .product_slide_arrows .btn_area.left { left: 0; display: block; } 
 .product_slide_arrows .btn_area.left.hide { display: none; } 
@@ -193,13 +191,14 @@ header { position: relative; z-index: 2; }
 
 /* 썸네일 시작 */
 .itm_thumbnail { width: 278px; margin: 0 auto; position: relative; overflow: hidden; margin: 0 0 20px 0; } 
-
-.soldout .itm_thumbnail .soldoutCover { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; opacity: 0.7; z-index: 1; } 
-
-
-.thumbnail02 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s; } 
+.itm_thumbnail .thumbnail02 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s; } 
 .itm_thumbnail:hover .thumbnail02 { opacity: 1; } 
-.best .product_slider .newProduct .newTag { position: absolute; top: 10px; left: 10px; }  
+/* 상품 태그 */
+.best .product_slider .newProduct .itm_thumbnail::after { content: "NEW"; position: absolute; top: 10px; left: 10px; font-family: montserrat; letter-spacing: 0; font-size: 14px; font-weight: 600; color: #fff; background-color: var(--color-g1); padding: 1px 3px 1px 3px; } 
+.best .product_slider .soldout .itm_thumbnail::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; opacity: 0.7; z-index: 1; } 
+.best .product_slider .soldout .itm_thumbnail::after { content: "Sold Out"; position: absolute; top: 10px; left: 10px; font-family: montserrat; letter-spacing: -0.04rem; font-size: 14px; font-weight: 500; color: #bebebf; background-color: #fff; border: 1px solid #bebebf; padding: 0 3px 0 2px; z-index: 1; } 
+.best .product_slider .soldout .itm_info { color: #bebebf; } 
+
 
 /* 커스터머 버튼 시작 */
 .itm_thumbnail .cmlink_btn { position: absolute; top: 10px; right: 10px; opacity: 0; transition: 0.3s; } 
