@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; } */
+* { outline: 1px solid #f00; }
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -55,7 +55,7 @@ header { position: relative; z-index: 2; }
 .gnbCurtain.active { display: block; } 
 
 
-.header .nav .main_menu { display: flex; } 
+.header .nav .main_menu { display: flex; justify-content: center;} 
 .header .nav .main_menu>li { padding: 4px; } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
 /* .header .nav .main_menu>li~li>a { } */
