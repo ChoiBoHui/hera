@@ -55,7 +55,7 @@ header { position: relative; z-index: 2; }
 .gnbCurtain.active { display: block; } 
 
 
-.header .nav .main_menu { display: flex; justify-content: center;} 
+.header .nav .main_menu { display: flex; justify-content: center; } 
 .header .nav .main_menu>li { padding: 4px; } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
 /* .header .nav .main_menu>li~li>a { } */
@@ -173,7 +173,6 @@ header { position: relative; z-index: 2; }
 .best .container { position: relative; width: 1200px; margin: 0 auto; text-align: center; } 
 .best .product_slider { color: #1d1d1f; } 
 .best .product_slider .slick-track { display: flex; gap: 29px; } 
-/* .best .product_slider .best_itm { width: 308px; } */
 
 /* 슬라이드 버튼 시작 */
 .product_slide_arrows .btn_area { position: absolute; top: 187px; } 
@@ -197,13 +196,14 @@ header { position: relative; z-index: 2; }
 
 
 /* 커스터머 버튼 시작 */
-.itm_thumbnail .cmlink_btn { position: absolute; top: 10px; right: 10px; opacity: 0; transition: 0.3s; } 
-.itm_thumbnail:hover .cmlink_btn { opacity: 1; } 
+.itm_thumbnail .cmlink_btn { position: absolute; display: flex; bottom: 0; left: calc(100% - 50%); transform: translateX(-50%); opacity: 0; visibility: hidden; transition: 0.3s; } 
+.itm_thumbnail:hover .cmlink_btn { opacity: 1; visibility: visible; } 
+.itm_thumbnail .cmlink_btn>div {padding: 4px;}
 .best .product_slider .cmlink_btn img { width: 20px; } 
 /* 추후 수정 예정 */
 
 /* 인포 시작 */
-.best .product_slider .itm_info .product_name { font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; margin: 0 auto 10px auto; line-height: 22px; word-break: keep-all; width: 240px;} 
+.best .product_slider .itm_info .product_name { font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; margin: 0 auto 8px auto; line-height: 22px; word-break: keep-all; width: 240px; } 
 
 /* 가격 시작 */
 .best .product_slider .itm_info .price_wrap { display: flex; justify-content: center; } 
