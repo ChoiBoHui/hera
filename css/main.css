@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; } */
+* { outline: 1px solid #f00; }
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -17,10 +17,13 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 header { position: relative; z-index: 2; } 
 .header { background-color: #fff; } 
 .header .topmenu { position: relative; background-color: #fff; z-index: 1; } 
+.header .topmenu.scroll {position: fixed; top: 0; left: 0; right: 0; height: 58px;}
 .header .gnb { position: relative; display: flex; justify-content: center; } 
+.header .topmenu.scroll .gnb {position: fixed; top: -15px; left: 0; right: 0;}
 /* 아래 container는 사실상 customer_menu만 적용됨 */
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
 .header h1 { margin: 20px 0 4px 0; } 
+.header .topmenu.scroll h1 {margin: 20px auto auto 0;}
 .header h1 a { display: block; padding: 8px; } 
 .header h1 a img { width: 120px; } 
 
@@ -33,15 +36,13 @@ header { position: relative; z-index: 2; }
 /* customer_menu End */
 
 /* topbanner Start */
-.topbanner.active { display: block; } 
-.topbanner { display: none; height: 42px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 14px 0 13px 0; } 
+.topbanner { display: block; height: 38px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 12px 0 11px 0; } 
 /* 새로고침하는데 배경이 번쩍 거려서 높이값을 줬음.. 확인해보니 display 속성이 none에서 block으로 바뀌는 과정에서 생기는 것 같음 */
 .topbanner .container { position: relative; display: block; width: 1200px; margin: 0 auto; text-align: center; } 
 .topbanner .container .banner_slider { width: 500px; margin: 0 auto; transform: translateY(1px); } 
 .topbanner .slide_util img { width: 16px; } 
 .topbanner .slide_util .area_left { position: absolute; top: calc(50% - 8px); left: calc(100% - 50% - 296px); cursor: pointer; } 
 .topbanner .slide_util .area_right { position: absolute; top: calc(50% - 8px); right: calc(100% - 50% - 296px); cursor: pointer; } 
-.topbanner .slide_util .close_btn { position: absolute; top: calc(50% - 8px); right: 0; cursor: pointer; } 
 
 
 
@@ -51,6 +52,8 @@ header { position: relative; z-index: 2; }
 .header .nav { justify-content: center; } 
 /* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
 /* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
+/* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; }  */
+
 .gnbCurtain { content: ""; display: none; position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
 .gnbCurtain.active { display: block; } 
 
@@ -63,6 +66,7 @@ header { position: relative; z-index: 2; }
 /* 1~4번째 메뉴까지 선택 */
 .header .nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
 .header .nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
+.header .nav .main_menu>li.mont>a::after { top: calc(100% + 1px); } 
 .header .nav .main_menu>li:hover>a::after { width: calc(100% - 24px); } 
 /* 이부분 원래 >li>a:hover 였는데, li로 바꾸니까 ::after가 유지는 되는데, 뒤쪽 메뉴가 자꾸 겹침 */
 .header .main_menu .mont { transform: translateY(-2px); } 
@@ -71,16 +75,15 @@ header { position: relative; z-index: 2; }
 
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
-.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 115px; left: 0; background-color: #fff; overflow-y: hidden; } 
-/* 여기 아웃라인 있었음 */
+.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 115px; left: 0; background-color: #fff; overflow-y: hidden; outline: hidden; } 
+/* submenu 아래로 나오는 블러 효과를 깔끔하게 처리하기위해 서브메뉴에 아웃라인을 추가함 */
 /* submenu background에 slideUp Down 추가 */
-/* 메뉴 호버할때마다 영문 폰트 번쩍거림 있음. 확인 필요. weight가 변하는건 아닌 것 같고, 글자가 두겹으로 겹쳐서 생기는 것 같은 효과 */
-/* submenu가 펼쳐질 때 마다 번쩍거림 생김 */
+/* .topmenu.scroll .nav .main_menu>li .submenu { top: 53px; }  */
 
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
 .nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
 .nav .main_menu>li.active .submenu .container { opacity: 1; } 
-.nav .main_menu>li.active .submenu { max-height: 100vh; } 
+.nav .main_menu>li.active .submenu { max-height: 100vh; outline: 1px solid #fff; } 
 /* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
 
 
@@ -106,18 +109,6 @@ header { position: relative; z-index: 2; }
 .menu_story .brandSubmenu { margin-left: 334px; } 
 .menu_story .brandSubmenu>* { width: 224px; } 
 
-/* scroll submenu Start */
-/* .header .nav.scroll { } */
-/* 여기 나중에 js 실행할때 작성 */
-/* topbanner를 제외한 메뉴가 따라와야 하니까 topmenu만 스크롤하면 따라 붙게 해야함 */
-
-
-
-/* scroll submenu End */
-
-
-
-/* nav End */
 
 /* Header End */
 
@@ -241,7 +232,7 @@ header { position: relative; z-index: 2; }
 
 /* section LATEST ARTICLES Start */
 .articles { padding-top: 116px; margin-bottom: 116px; } 
-.articles .container { width: 1200px; margin: 0 auto; text-align: center;} 
+.articles .container { width: 1200px; margin: 0 auto; text-align: center; } 
 
 
 

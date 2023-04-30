@@ -2,19 +2,20 @@
 $(function () {
     //스크롤 시 메뉴 변경 Start
 
-    // $(window).on('scroll', function () {
-    //     // console.log('scrolld')
-    //     // var scm = $('.submenu');
-    //     // var scm = $('.header .nav');
-    //     var sch = $(window).scrollTop();
-    //     console.log(sch);
+    $(window).on('scroll', function () {
+        // console.log('scrolld')
+        var topmenu = $('.header .topmenu');
+        // var gnb = $('.header .gnb');
+        // var nav = $('.header .nav');
+        var sch = $(window).scrollTop();
+        console.log(sch);
 
-    //     if (sch > 100) {
-    //         $('.header .nav').addClass('scroll')
-    //     } else {
-    //         $('.header .nav').removeClass('scroll')
-    //     }
-    // });
+        if (sch > 100) {
+            topmenu.addClass('scroll');
+        } else {
+            topmenu.removeClass('scroll');
+        }
+    });
     // 우선 보이는 상태로 css 먼저 작업 후 진행
 
     //스크롤 시 메뉴 변경 End
@@ -40,56 +41,6 @@ $(function () {
     $('.topbanner .area_right').on('click', function () {
         $('.banner_slider').slick('slickNext')
     });
-
-    // topbanner popup close 버튼 쿠키 작업
-    var toggleMainPopup = function () {
-
-        /* 스토리지 제어 함수 정의 */
-        var handleStorage = {
-            // 스토리지에 데이터 쓰기(이름, 만료일)
-            setStorage: function (name, exp) {
-                // 만료 시간 구하기(exp를 ms단위로 변경)
-                var date = new Date();
-                // date = date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
-                date = date.setTime(date.getTime() + exp * 60 * 1000);
-                // 현재 1분으로 세팅
-
-                // 로컬 스토리지에 저장하기
-                // (값을 따로 저장하지 않고 만료 시간을 저장)
-                localStorage.setItem(name, date)
-            },
-            // 스토리지 읽어오기
-            getStorage: function (name) {
-                var now = new Date();
-                now = now.setTime(now.getTime());
-                // 현재 시각과 스토리지에 저장된 시각을 각각 비교하여
-                // 시간이 남아 있으면 true, 아니면 false 리턴
-                return parseInt(localStorage.getItem(name)) > now
-            }
-        };
-
-        // 쿠키 읽고 화면 보이게
-        if (handleStorage.getStorage("today")) {
-            $(".topbanner").removeClass("active");
-        } else {
-            $(".topbanner").addClass("active");
-        }
-
-        // 오늘하루 보지 않기 버튼
-        $(".topbanner").on("click", ".close_btn", function () {
-            // 로컬 스토리지에 today라는 이름으로 1일(24시간 뒤) 동안 보이지 않게
-            handleStorage.setStorage("today", 1);
-            $(this).parents(".topbanner.active").removeClass("active");
-        });
-    }
-
-    $(function () {
-        toggleMainPopup();
-    });
-    // 여기 들어간 달라펑션 중복되는거 아닌지 확인 필요!!
-    // 출처 : https://songsong.dev/entry/%EC%98%A4%EB%8A%98-%ED%95%98%EB%A3%A8-%EB%B3%B4%EC%A7%80-%EC%95%8A%EA%B8%B0-%ED%8C%9D%EC%97%85-%EB%A7%8C%EB%93%A4%EA%B8%B0
-
-    // topbanner 슬라이더 End
 
 
 
