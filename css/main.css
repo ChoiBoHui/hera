@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; }
+/* * { outline: 1px solid #f00; } */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -167,7 +167,7 @@ header { position: relative; z-index: 2; }
 
 
 /* section BEST Start */
-.best { margin-bottom: 112px; } 
+.best { padding-bottom: 112px; } 
 .best .container { position: relative; width: 1200px; margin: 0 auto; text-align: center; } 
 .best .product_slider { color: #1d1d1f; } 
 .best .product_slider .slick-track { display: flex; gap: 29px; } 
@@ -218,12 +218,10 @@ header { position: relative; z-index: 2; }
 /* section BEST End */
 
 
-
-
 /* section NEW Start */
-.new { color: #1d1d1f; border-bottom: 1px solid #e5e5e5; } 
+.new { color: #1d1d1f; border-bottom: 1px solid #e5e5e5; padding-bottom: 120px; } 
 .new .container { width: 1200px; margin: 0 auto; text-align: center; } 
-.new .product_detail { display: flex; gap: 30px; margin-bottom: 100px; } 
+.new .product_detail { display: flex; gap: 30px; } 
 .new .product_detail .product_info { text-align: left; flex: 1; margin: auto 0; letter-spacing: -0.025rem; transform: translateY(-2px); } 
 .new .product_detail .product_info h3 { font-size: 28px; font-weight: 700; line-height: 35px; margin: 0 0 19px 0; letter-spacing: -0.04rem; } 
 .new .product_detail .product_info img { display: inline-block; margin: 0 0 5px 0; } 
@@ -233,8 +231,6 @@ header { position: relative; z-index: 2; }
 .new .product_detail .product_info .btn_more { display: inline-block; background: #fff; padding: 10px 17px 7px 19px; border: 1px solid #1d1d1f; color: #1d1d1f; transition: 0.3s; } 
 .new .product_detail .product_info .btn_more:hover { background: #1d1d1f; border: 1px solid #1d1d1f; color: #fff; } 
 .new .product_detail img { flex: 1; } 
-
-
 .product_info .product_name::before { content: "NEW"; display: inline-block; top: 10px; left: 10px; font-family: montserrat; letter-spacing: -0.02rem; font-size: 14px; font-weight: 500; color: #fff; background-color: var(--color-g1); padding: 1px 3px 1px 3px; margin-right: 8px; transform: translateY(-1px); } 
 /* section NEW End */
 
@@ -244,8 +240,8 @@ header { position: relative; z-index: 2; }
 
 
 /* section LATEST ARTICLES Start */
-.articles { padding-top: 120px; margin-bottom: 120px; } 
-.articles .container { width: 1200px; margin: 0 auto; } 
+.articles { padding-top: 116px; margin-bottom: 116px; } 
+.articles .container { width: 1200px; margin: 0 auto; text-align: center;} 
 
 
 
