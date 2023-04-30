@@ -237,6 +237,12 @@ $(function () {
             btnAreaRight.removeClass('hide');
         }
     });
+
+    $('.best_itm .thumbnail_area .cmlink_btn .addWishlist').on('click', function () {
+        $(this).toggleClass('plusWish');
+    });
+
+
     // best 슬라이더 End
 
 });
