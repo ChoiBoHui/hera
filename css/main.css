@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; } */
+* { outline: 1px solid #f00; }
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -125,7 +125,7 @@ header { position: relative; z-index: 2; }
 
 
 /* section Main_Visual Start */
-.main_visual {margin-bottom: 116px;}
+.main_visual { margin-bottom: 116px; } 
 .main_visual .container { width: 1200px; margin: 0 auto; position: relative; } 
 /* Main_slider Start */
 .main_slider { margin: 34px 0 0 0; } 
@@ -172,7 +172,7 @@ header { position: relative; z-index: 2; }
 .best .product_slider { color: #1d1d1f; } 
 .best .product_slider .slick-track { display: flex; gap: 29px; } 
 .best .product_slider .best_itm { position: relative; } 
-.best .product_slider .slick-list {margin-bottom: 34px;}
+.best .product_slider .slick-list { margin-bottom: 34px; } 
 
 /* 슬라이드 버튼 시작 */
 .product_slide_arrows .btn_area { position: absolute; top: 187px; } 
@@ -212,8 +212,8 @@ header { position: relative; z-index: 2; }
 
 /* 네비게이션 dots 커스텀 */
 .custom-dots { display: flex; justify-content: center; } 
-.custom-dots>li { padding: 4px;  border-radius: 0; cursor: pointer; } 
-.custom-dots>li>button { display: block; width: 8px; height: 8px; font-size: 0; border: none; outline: 0; border-radius: 0; cursor: pointer;} 
+.custom-dots>li { padding: 4px; border-radius: 0; cursor: pointer; } 
+.custom-dots>li>button { display: block; width: 8px; height: 8px; font-size: 0; border: none; outline: 0; border-radius: 0; cursor: pointer; } 
 .custom-dots>li.slick-active>button { background-color: var(--color-g1); } 
 /* section BEST End */
 
@@ -244,8 +244,8 @@ header { position: relative; z-index: 2; }
 
 
 /* section LATEST ARTICLES Start */
-.articles {padding-top: 120px; margin-bottom: 120px;}
-
+.articles { padding-top: 120px; margin-bottom: 120px; } 
+.articles .container { width: 1200px; margin: 0 auto; } 
 
 
 
