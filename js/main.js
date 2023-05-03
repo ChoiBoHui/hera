@@ -56,7 +56,6 @@ $(function () {
     // let activeCurtain = $(".header .gnbCurtain.active");
     // let positionCurtain = $(activeCurtain).position;
     // .gnbCurtain에 .active가 붙을 때, .gnbCurtain의 top값이 .header의 height값이 된다.
-
     $(".main_menu>li").on({
         "mouseenter": function () {
             if ($(this).has(".submenu").length > 0) {
@@ -96,7 +95,6 @@ $(function () {
     //     $(".gnbCurtain").removeClass("active");
     // });
     // 미선이언니한테 이부분에서 오류가 난다고 확인 부탁드리기!
-
 
     // 메뉴 호버 End
 
