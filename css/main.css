@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; }
+/* * { outline: 1px solid #f00; } */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -21,8 +21,8 @@ header { position: relative; z-index: 2; }
 .header .gnb { position: relative; display: flex; justify-content: center; } 
 /* .header .topmenu.scroll .gnb {} */
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
-.header h1 { margin: 20px 0 4px 0; } 
-.header .topmenu.scroll h1 {margin: 0; position: absolute; top: 0; left: 50%; transform: translateX(calc(-50% - 540px));}
+.header h1 { margin: 20px 0 3px 0; } 
+.header .topmenu.scroll h1 {margin: 0; position: absolute; top: 10px; left: 50%; transform: translateX(calc(-50% - 540px));}
 .header h1 a { display: block; padding: 8px; } 
 .header h1 a img { width: 120px; } 
 
@@ -30,7 +30,7 @@ header { position: relative; z-index: 2; }
 .header .customer_menu { position: absolute; top: calc(100% - 50% + 9px); right: calc(100% - 50%); transform: translate(calc(50% + 526px),-50%); display: flex; gap: 4px; } 
 /* 디자인 가이드라인에 맞추기 위해 right에 4px줌 */
 /* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
-.header .topmenu.scroll .customer_menu {top: calc(100% - 50%); transform: translate(calc(50% + 526px),50%);}
+.header .topmenu.scroll .customer_menu {top: calc(100% - 50% + 1px); transform: translate(calc(50% + 526px),50%);}
 .header .customer_menu li a { display: block; padding: 4px; } 
 .header .customer_menu img { width: 20px; } 
 /* customer_menu End */
@@ -58,27 +58,28 @@ header { position: relative; z-index: 2; }
 .gnbCurtain.active { display: block; } 
 
 
-.header .nav .main_menu { display: flex; justify-content: center; } 
-.header .nav .main_menu>li { padding: 4px; } 
+.nav .main_menu { display: flex; justify-content: center; } 
+.nav .main_menu>li { padding: 4px; } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
-/* .header .nav .main_menu>li~li>a { } */
-.header .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
+/* .nav .main_menu>li~li>a { } */
+.nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
 /* 1~4번째 메뉴까지 선택 */
-.header .nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
-.header .nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
-.header .nav .main_menu>li.mont>a::after { top: calc(100% + 1px); } 
-.header .nav .main_menu>li:hover>a::after { width: calc(100% - 24px); } 
+.nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; }
+.topmenu.scroll .nav .main_menu>li>a {padding: 18px 12px 14px 12px;}
+.nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
+.nav .main_menu>li.mont>a::after { top: calc(100% + 1px); } 
+.nav .main_menu>li:hover>a::after { width: calc(100% - 24px); } 
 /* 이부분 원래 >li>a:hover 였는데, li로 바꾸니까 ::after가 유지는 되는데, 뒤쪽 메뉴가 자꾸 겹침 */
-.header .main_menu .mont { transform: translateY(-2px); } 
-.header .main_menu .mont>a { font-size: 17px; font-weight: 500; color: var(--color-g1); } 
+.nav .main_menu .mont { transform: translateY(-2px); } 
+.nav .main_menu .mont>a { font-size: 17px; font-weight: 500; color: var(--color-g1); } 
 
 
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
-.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 115px; left: 0; background-color: #fff; overflow-y: hidden; outline: hidden; } 
+.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 115px; left: 0; background-color: #fff; overflow-y: hidden; outline: none; } 
 /* submenu 아래로 나오는 블러 효과를 깔끔하게 처리하기위해 서브메뉴에 아웃라인을 추가함 */
 /* submenu background에 slideUp Down 추가 */
-/* .topmenu.scroll .nav .main_menu>li .submenu { top: 53px; }  */
+.topmenu.scroll .nav .main_menu .submenu { top: 57px; } 
 
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
 .nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
@@ -96,7 +97,7 @@ header { position: relative; z-index: 2; }
 .header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a:hover { color: var(--color-g1); } 
 
 /* 신상 홍보용 배너 */
-.nav .submenu .container .pushMd { width: 282px; margin: 0 52px 0 0; padding: 44px 0 28px 0; } 
+.nav .submenu .container .pushMd { width: 282px; margin: 0 52px 0 0; padding: 43px 0 28px 0; } 
 .nav .submenu .container .pushMd img { width: 282px; height: 178px; } 
 .nav .submenu .container .pushMd p { font-family: Montserrat; font-weight: 400; letter-spacing: 0; font-size: 15px; text-indent: -1px; padding: 10px 0 14px 0; line-height: 20px; } 
 
@@ -139,7 +140,7 @@ header { position: relative; z-index: 2; }
 .main_visual .slide_util { position: absolute; display: flex; font-family: montserrat; font-size: 20px; font-weight: 400; color: #1d1d1f; bottom: 0; left: calc(100% - 582px); margin: 0 0 25px 0; } 
 /* slide_pager Start */
 .slide_util .slide_pager { display: flex; align-items: center; padding-right: 8px; } 
-.slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; } 
+.slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; transform: translateY(-1px); } 
 .slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
 .slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 3s; } 
 .main_visual .slide_util .slide_pager .current_index { width: 26px; } 
@@ -152,7 +153,7 @@ header { position: relative; z-index: 2; }
 .main_visual .slide_util .control_btn>div { cursor: pointer; } 
 .main_visual .slide_util .control_btn .switch>div { padding: 6px; } 
 .main_visual .slide_util .control_btn>div~div { padding: 6px; } 
-.main_visual .slide_util .control_btn img { vertical-align: inherit; width: 18px; } 
+.main_visual .slide_util .control_btn img { vertical-align: inherit; width: 18px; transform: translateY(1px); } 
 /* section Main_Visual End */
 
 
@@ -166,7 +167,7 @@ header { position: relative; z-index: 2; }
 .best .product_slider .slick-list { margin-bottom: 34px; } 
 
 /* 슬라이드 버튼 시작 */
-.product_slide_arrows .btn_area { position: absolute; top: 187px; } 
+.product_slide_arrows .btn_area { position: absolute; top: 182px; } 
 .product_slide_arrows .btn_area.left { left: 0; display: block; } 
 .product_slide_arrows .btn_area.left.hide { display: none; } 
 .product_slide_arrows .btn_area.right { right: 0; display: block; } 
@@ -176,7 +177,7 @@ header { position: relative; z-index: 2; }
 .product_slide_arrows .hoverArea>img { width: 18px; } 
 
 /* 썸네일 시작 */
-.thumbnail_area .itm_thumbnail { width: 278px; margin: 0 auto; position: relative; overflow: hidden; margin: 0 0 20px 0; } 
+.thumbnail_area .itm_thumbnail { width: 278px; margin: 0 auto; position: relative; overflow: hidden; margin: 0 0 17px 0; } 
 .thumbnail_area .itm_thumbnail .thumbnail02 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s; } 
 .thumbnail_area:hover .itm_thumbnail .thumbnail02 { opacity: 1; } 
 /* 상품 태그 */
@@ -193,7 +194,7 @@ header { position: relative; z-index: 2; }
 .best_itm .thumbnail_area .cmlink_btn .addWishlist.plusWish { background: url(../img/icon/icon_wishlist_full.svg) center center/20px no-repeat; } 
 
 /* 인포 시작 */
-.best .product_slider .itm_info .product_name { font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; margin: 0 auto 8px auto; line-height: 22px; word-break: keep-all; width: 240px; } 
+.best .product_slider .itm_info .product_name { font-size: 16px; font-weight: 700; letter-spacing: -0.025rem; margin: 0 auto 8px auto; line-height: 23px; word-break: keep-all; width: 240px; } 
 
 /* 가격 시작 */
 .best .product_slider .itm_info .price_wrap { display: flex; justify-content: center; } 
