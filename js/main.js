@@ -45,7 +45,7 @@ $(function () {
 
 
     // 메뉴 호버 Start   
-
+    // 추후에 탑배너와 같은 다른 요소들이 추가될 경우를 생각해서
     // .gnbCurtain의 top값을 header높이가 변경됨에 따라 반응하게 하기.
     // .gnbCurtain의 top값이 .main_menu>li에 hover될 때 마다 .header의 높이값에 맞춰 변경
     // let headerHiehgt = $(".header").innerHeight();
