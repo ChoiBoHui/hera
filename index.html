@@ -58,15 +58,16 @@
                                 <!-- 여기 밑에 검색창 있음 -->
                                 <div class="globalnav_searchfield">
                                     <form action="" onsubmit="return check();">
-                                        <div>
+                                        <div class="container">
                                             <input type="text" class="globalnav_searchfield-input"
-                                                placeholder="검색어를 입력해 주세요." aria-label="">
+                                                placeholder="검색어를 입력해 주세요." aria-label="" autofocus>
                                             <input type="hidden" class="globalnav_searchfield-src" name="src"
                                                 value="globalnav">
                                             <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
                                                 type="button" disabled aria-hidden="true">삭제</button>
                                             <button class="globalnav_searchfield-submit" aria-label="검색어 제출"
                                                 aria-hidden="true" type="submit">검색</button>
+                                            <!-- 회원가입 할때 썼던 방법으로 캡션이나 라벨 같은거 적용할 것 -->
                                         </div>
                                     </form>
                                 </div>
