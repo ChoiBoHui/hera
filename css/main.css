@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; } */
+/* * { outline: 1px solid #f00; }  */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -17,23 +17,49 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 header { position: relative; z-index: 2; } 
 .header { background-color: #fff; } 
 .header .topmenu { position: relative; background-color: #fff; z-index: 1; } 
-.header .topmenu.scroll {position: fixed; top: 0; left: 0; right: 0;}
-.header .gnb { position: relative; display: flex; justify-content: center; } 
-/* .header .topmenu.scroll .gnb {} */
+.header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; } 
+.header .topmenu .gnb { position: relative; display: flex; height: 61px; justify-content: center; } 
+.header .topmenu.scroll .gnb { position: absolute; top: 0; left: 0; right: 0; height: 0; } 
 .header .container { display: flex; width: 1200px; margin: 0 auto; } 
-.header h1 { margin: 20px 0 3px 0; } 
-.header .topmenu.scroll h1 {margin: 0; position: absolute; top: 10px; left: 50%; transform: translateX(calc(-50% - 540px));}
+.header h1 { position: absolute; top: 0; left: calc(100% - 50%); transform: translateX(-50%); margin: 20px 0 3px 0; } 
+.header .topmenu.scroll h1 { top: 10px; left: 50%; transform: translateX(calc(-50% - 540px)); margin: 0; } 
 .header h1 a { display: block; padding: 8px; } 
 .header h1 a img { width: 120px; } 
 
 /* customer_menu Start */
-.header .customer_menu { position: absolute; top: calc(100% - 50% + 9px); right: calc(100% - 50%); transform: translate(calc(50% + 526px),-50%); display: flex; gap: 4px; } 
+.header .customer_menu { display: flex; gap: 4px; margin: auto -4px 8px auto; } 
 /* 디자인 가이드라인에 맞추기 위해 right에 4px줌 */
 /* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
-.header .topmenu.scroll .customer_menu {top: calc(100% - 50% + 1px); transform: translate(calc(50% + 526px),50%);}
+.header .topmenu.scroll .customer_menu { margin: 15px -4px 8px auto;} 
 .header .customer_menu li a { display: block; padding: 4px; } 
 .header .customer_menu img { width: 20px; } 
 /* customer_menu End */
+
+
+
+
+
+
+/* search form Start */
+.globalnav_searchfield { position: fixed; top: 0; left: 0; background: #fff; outline: 1px solid #f00; } 
+/* .customer_menu .search_icon.open .globalnav_searchfield { opacity: 1; visibility: visible; } */
+/* 나중에 제이쿼리로 서치폼 클릭하면 열리는 부분 */
+
+
+
+
+
+
+
+
+/* search form End */
+
+
+
+
+
+
+
 
 /* topbanner Start */
 .topbanner { display: block; height: 38px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 12px 0 11px 0; } 
@@ -52,7 +78,7 @@ header { position: relative; z-index: 2; }
 .header .nav { justify-content: center; } 
 /* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
 /* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
-/* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; }  */
+/* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; } */
 
 .gnbCurtain { content: ""; display: none; position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
 .gnbCurtain.active { display: block; } 
@@ -64,8 +90,8 @@ header { position: relative; z-index: 2; }
 /* .nav .main_menu>li~li>a { } */
 .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
 /* 1~4번째 메뉴까지 선택 */
-.nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; }
-.topmenu.scroll .nav .main_menu>li>a {padding: 18px 12px 14px 12px;}
+.nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
+.topmenu.scroll .nav .main_menu>li>a { padding: 18px 12px 14px 12px; } 
 .nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
 .nav .main_menu>li.mont>a::after { top: calc(100% + 1px); } 
 .nav .main_menu>li:hover>a::after { width: calc(100% - 24px); } 
