@@ -1,14 +1,13 @@
 // 제이쿼리로 작업중임.. 자스랑 섞어 쓰면 에러남..!
 $(function () {
     //스크롤 시 메뉴 변경 Start
-
     $(window).on('scroll', function () {
         // console.log('scrolld')
         var topmenu = $('.header .topmenu');
         // var gnb = $('.header .gnb');
         // var nav = $('.header .nav');
         var sch = $(window).scrollTop();
-        console.log(sch);
+        // console.log(sch);
 
         if (sch > 100) {
             topmenu.addClass('scroll');
@@ -16,10 +15,21 @@ $(function () {
             topmenu.removeClass('scroll');
         }
     });
-    // 우선 보이는 상태로 css 먼저 작업 후 진행
-    // 여기 나중에 새로고침 했을 때, 리사이즈 함수를 쓰던지 해서 스크롤값이 100보다 크면 자동으로 클레스 scroll 붙겠끔 수정해야함
-
     //스크롤 시 메뉴 변경 End
+
+    // 새로고침후 스크롤 위치 인식 Start
+    window.onload = function () {
+        var sch = $(window).scrollTop();
+        var topmenu = $('.header .topmenu');
+        console.log("[window 이벤트를 최초 실행 합니다!]");
+        console.log(sch);
+        if (sch > 100) {
+            topmenu.addClass('scroll');
+        } else {
+            topmenu.removeClass('scroll');
+        }
+    }
+    // 새로고침후 스크롤 위치 인식 End
 
     // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
     $(window).on('scroll', function () {
@@ -42,8 +52,6 @@ $(function () {
     $('.topbanner .area_right').on('click', function () {
         $('.banner_slider').slick('slickNext')
     });
-
-
 
     // 메뉴 호버 Start   
     // 추후에 탑배너와 같은 다른 요소들이 추가될 경우를 생각해서
@@ -73,8 +81,6 @@ $(function () {
         }
     });
     // 위의 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
-    // 
-
 
     // $(".main_menu>li").mouseenter(function () {
     //     let submenu = $(".main_menu>li>a").siblings(".submenu").length;
@@ -142,6 +148,8 @@ $(function () {
         $('.main_slider').slick('slickNext')
     });
     // main_visual 슬라이더 End
+
+
 
 
     // best 슬라이더 Start
