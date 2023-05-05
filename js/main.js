@@ -108,6 +108,29 @@ $(function () {
 
 
 
+    // 서치폼 Start
+
+    $('.search_icon_area').on('click', function () {
+        $('.globalnav_searchfield').toggleClass('open');
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 서치폼 End
+
+
+
+
     // main_visual 슬라이더 Start
     // 시작시 함수 한번 초기화 해주는거!! 수빈이가 알려준거 써서 슬라이더 처음부터 제대로 돌아가게 해야함..!
     // 온 로드 됐을때 페이저 부분 움직이게 하는 방법 사용 추천(위에 스크롤 gnb 해결한 방법이랑 같음)
