@@ -111,11 +111,10 @@ $(function () {
     // 서치폼 Start
 
     $('.search_icon_area').on('click', function () {
-        $('.globalnav_searchfield').toggleClass('open');
-    })
-
-
-
+        $('.globalnav_searchfield').toggleClass("open");
+        $('.gnbCurtain').toggleClass("active");
+        // 지금은 gnbCurtain만 스크롤하면 닫히게 돼 있어서 어긋나는 경우가 있음.
+    });
 
 
 
