@@ -107,13 +107,10 @@ $(function () {
 
 
 
-
-
-
-
     // 서치폼 Start
     let gnbSearchField = $('.globalnav_searchfield');
     let searchTextArea = $('.globalnav_searchfield-input');
+    // searchTextArea.val('');
     let searchHidden = $('.globalnav_searchfield-src');
     let searchReset = $('.globalnav_searchfield-reset');
     let searchSubmit = $('.globalnav_searchfield-submit');
@@ -130,7 +127,7 @@ $(function () {
         $('.gnbCurtain').removeClass("active");
     });
 
-    // 텍스트 삭제 버튼
+
     searchTextArea.on('keyup focus', function () {
         searchReset.removeAttr("disabled", "aria-hidden").css({ opacity: '1', visibility: 'visible' });
         console.log(searchTextArea.val());
@@ -140,24 +137,37 @@ $(function () {
         } else {
             searchReset.removeAttr("disabled", "aria-hidden").css({ opacity: '1', visibility: 'visible' });
         }
+
     });
+
+    searchReset.on('click', function () {
+        searchTextArea.val('');
+        return false;
+    })
     // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
+
     searchTextArea.on('blur', function () {
         searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
     });
     // 검색어 입력창에서 포커스가 해제 됐을 때 리셋 버튼 숨김
-    searchReset.on('click touchstart', function () {
-        searchTextArea.val('');
-        searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
-        console.log(searchTextArea.val());
-        return false;
-    });
+
+    // searchReset.on('click touchstart', function () {
+    //     $('#search-input').value("바뀌어랏");
+    //     searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
+    //     console.log($('#search-input').val());
+    //     console.log(this);
+    //     // 이거 안뜸.. 여기서 문제가 생김..
+    //     return false;
+    // });
+
     // 리셋 버튼을 클릭했을 때 인풋 텍스트 value를 비우고, 리셋 버튼을 숨김
+    // 아무리.. 수정해봐도.. input창.. valut가 바뀌질 않아..
+
     // let frmvalue = searchTextArea.val();
     // console.log(frmvalue)
 
 
-    // 닫기 버튼 눌렀다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
+    // 검색창이 닫혔다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
 
 
     // 검색후 hidden 값 얼랏창 띄우기
@@ -165,8 +175,6 @@ $(function () {
 
     // 추천 검색어도 hidden으로 넣어줘야하나?
     // => 이렇게되면 추천검색어를 글릭 하면 자동으로 submit 버튼이 클릭된 걸로 인식하게 해야하나..?
-
-
 
 
 
