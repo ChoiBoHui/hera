@@ -112,20 +112,52 @@ $(function () {
 
 
     // 서치폼 Start
+    let gnbSearchField = $('.globalnav_searchfield');
+    let searchTextArea = $('.globalnav_searchfield-input');
+    let searchHidden = $('.globalnav_searchfield-src');
+    let searchReset = $('.globalnav_searchfield-reset');
+    let searchSubmit = $('.globalnav_searchfield-submit');
+    let searchClose = $('.globalnav_searchfield-close');
+
     $('.search_icon_area').on('click', function () {
-        $('.globalnav_searchfield').addClass("open");
+        gnbSearchField.addClass("open");
         $('.gnbCurtain').addClass("active");
         // 지금은 gnbCurtain만 스크롤하면 닫히게 돼 있어서 어긋나는 경우가 있음.
     });
     // 서치폼 닫기 버튼
-    $('.globalnav_searchfield-close').on('click', function () {
-        $('.globalnav_searchfield').removeClass("open");
+    searchClose.on('click', function () {
+        gnbSearchField.removeClass("open");
         $('.gnbCurtain').removeClass("active");
     });
-    // 닫기 버튼 눌렀다가 다시 창이 열릴때 검색어 입력창 초기화 해야 할듯?
-
 
     // 텍스트 삭제 버튼
+    searchTextArea.on('keyup focus', function () {
+        searchReset.removeAttr("disabled", "aria-hidden").css({ opacity: '1', visibility: 'visible' });
+        console.log(searchTextArea.val());
+        // apple 에서는 attr이랑 css값 둘 다 사용하던데 이유가 있을까..?
+        if ($(this).val().length == 0) {
+            searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
+        } else {
+            searchReset.removeAttr("disabled", "aria-hidden").css({ opacity: '1', visibility: 'visible' });
+        }
+    });
+    // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
+    searchTextArea.on('blur', function () {
+        searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
+    });
+    // 검색어 입력창에서 포커스가 해제 됐을 때 리셋 버튼 숨김
+    searchReset.on('click touchstart', function () {
+        searchTextArea.val('');
+        searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
+        console.log(searchTextArea.val());
+        return false;
+    });
+    // 리셋 버튼을 클릭했을 때 인풋 텍스트 value를 비우고, 리셋 버튼을 숨김
+    // let frmvalue = searchTextArea.val();
+    // console.log(frmvalue)
+
+
+    // 닫기 버튼 눌렀다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
 
 
     // 검색후 hidden 값 얼랏창 띄우기

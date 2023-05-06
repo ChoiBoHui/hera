@@ -55,13 +55,13 @@ header { position: relative; z-index: 2; }
 .globalnav_searchfield-input:focus { border: 1px solid #1d1d1f; background-color: #fff; } 
 
 /* 검색결과 지우기 */
-.globalnav_searchfield-reset { position: absolute; top: 0; left: calc(100% - 50%); } 
+.globalnav_searchfield-reset { position: absolute; opacity: 0; visibility: hidden; top: 0; left: calc(100% - 50%); cursor: pointer; } 
 
 /* 검색 버튼 */
 .globalnav_searchfield-submit { cursor: pointer; }
 
 /* 검색창 닫기 */
-.globalnav_searchfield-close { font-size: 15px; cursor: pointer; } 
+.globalnav_searchfield-close { font-size: 15px; font-weight: 400; cursor: pointer; } 
 
 
 
