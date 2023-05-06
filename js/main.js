@@ -35,6 +35,7 @@ $(function () {
     $(window).on('scroll', function () {
         $(".gnbCurtain").removeClass("active")
         $(".nav .main_menu>li").removeClass("active")
+        $('.globalnav_searchfield').removeClass("open");
     });
 
     // topbanner 슬라이더 Start
@@ -108,24 +109,40 @@ $(function () {
 
 
 
-    // 서치폼 Start
 
+
+    // 서치폼 Start
     $('.search_icon_area').on('click', function () {
-        $('.globalnav_searchfield').toggleClass("open");
-        $('.gnbCurtain').toggleClass("active");
+        $('.globalnav_searchfield').addClass("open");
+        $('.gnbCurtain').addClass("active");
         // 지금은 gnbCurtain만 스크롤하면 닫히게 돼 있어서 어긋나는 경우가 있음.
     });
+    // 서치폼 닫기 버튼
+    $('.globalnav_searchfield-close').on('click', function () {
+        $('.globalnav_searchfield').removeClass("open");
+        $('.gnbCurtain').removeClass("active");
+    });
+    // 닫기 버튼 눌렀다가 다시 창이 열릴때 검색어 입력창 초기화 해야 할듯?
 
 
+    // 텍스트 삭제 버튼
 
 
+    // 검색후 hidden 값 얼랏창 띄우기
 
+
+    // 추천 검색어도 hidden으로 넣어줘야하나?
+    // => 이렇게되면 추천검색어를 글릭 하면 자동으로 submit 버튼이 클릭된 걸로 인식하게 해야하나..?
 
 
 
 
 
     // 서치폼 End
+
+
+
+
 
 
 

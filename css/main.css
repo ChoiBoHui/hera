@@ -58,10 +58,15 @@ header { position: relative; z-index: 2; }
 .globalnav_searchfield-reset { position: absolute; top: 0; left: calc(100% - 50%); } 
 
 /* 검색 버튼 */
-/* .globalnav_searchfield-submit { } */
+.globalnav_searchfield-submit { cursor: pointer; }
 
 /* 검색창 닫기 */
-.globalnav_searchfield-close { font-size: 15px; } 
+.globalnav_searchfield-close { font-size: 15px; cursor: pointer; } 
+
+
+
+
+
 
 
 /* search form End */
