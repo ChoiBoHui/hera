@@ -57,10 +57,12 @@
                                 </div>
                                 <!-- 여기 밑에 검색창 있음 -->
                                 <div class="globalnav_searchfield">
-                                    <form method="get" action="" onsubmit="return check();">
+                                    <form name="searchfrm" method="get" action="" onsubmit="return check();"
+                                        autocomplete="off">
                                         <div class="container input_area">
-                                            <input type="text" id="search-input" class="globalnav_searchfield-input"
-                                                name="search-input" placeholder="검색어를 입력해 주세요." aria-label="" autofocus>
+                                            <input type="text" id="searchInput" class="globalnav_searchfield-input"
+                                                name="searchInput" for="searchInput" placeholder="검색어를 입력해 주세요."
+                                                aria-label="" autofocus>
                                             <!-- js에서 검색창이 열렸을 때 autofocus 되게끔 설정해야함 -->
                                             <input type="hidden" class="globalnav_searchfield-src" name="src" value="">
                                             <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
