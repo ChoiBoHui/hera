@@ -129,45 +129,46 @@ $(function () {
 
 
     searchTextArea.on('keyup focus', function () {
-        searchReset.removeAttr("disabled", "aria-hidden").css({ opacity: '1', visibility: 'visible' });
+        searchReset.removeAttr("disabled", "aria-hidden = true").css({ opacity: '1', visibility: 'visible' });
         console.log(searchTextArea.val());
         // apple 에서는 attr이랑 css값 둘 다 사용하던데 이유가 있을까..?
         if ($(this).val().length == 0) {
-            searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
+            searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
         } else {
-            searchReset.removeAttr("disabled", "aria-hidden").css({ opacity: '1', visibility: 'visible' });
+            searchReset.removeAttr("disabled", "aria-hidden = true").css({ opacity: '1', visibility: 'visible' });
         }
 
     });
-
-    searchReset.on('click', function () {
-        searchTextArea.val('');
-        return false;
-    })
     // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
 
-    searchTextArea.on('blur', function () {
-        searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
-    });
-    // 검색어 입력창에서 포커스가 해제 됐을 때 리셋 버튼 숨김
-
-    // searchReset.on('click touchstart', function () {
-    //     $('#search-input').value("바뀌어랏");
-    //     searchReset.attr("disabled", "aria-hidden").css({ opacity: '0', visibility: 'hidden' });
-    //     console.log($('#search-input').val());
-    //     console.log(this);
-    //     // 이거 안뜸.. 여기서 문제가 생김..
-    //     return false;
+    // searchTextArea.on('blur', function () {
+    //     searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
     // });
+    // 검색어 입력창에서 포커스가 해제 됐을 때 리셋 버튼 숨김
+    // 이 부분은 서치폼에서는 필요 없음, 회원가입 폼에서는 생각해봐야 할 부분
+    // blur를 사용하면 리셋이 안먹음.. blur가 아니라 다른 방법을 찾아봐야 할수도..?
 
-    // 리셋 버튼을 클릭했을 때 인풋 텍스트 value를 비우고, 리셋 버튼을 숨김
-    // 아무리.. 수정해봐도.. input창.. valut가 바뀌질 않아..
+    searchReset.on('click touchstart', function () {
+        // alert('초기화!');
+        searchTextArea.val('');
+        searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
+        return false;
+    });
+    // 리셋 버튼 클릭 시 input value 삭제 후 버튼 숨김
 
-    // let frmvalue = searchTextArea.val();
-    // console.log(frmvalue)
+
+
+
+
+
+
+    // 여기는 클레스 없어지면 벨류만 0으로 만들면 될 것 같음!
 
 
     // 검색창이 닫혔다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
+
+
+
 
 
     // 검색후 hidden 값 얼랏창 띄우기
