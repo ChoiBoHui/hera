@@ -112,6 +112,7 @@ $(function () {
     let searchTextArea = $('.globalnav_searchfield-input');
     let searchReset = $('.globalnav_searchfield-reset');
     let searchClose = $('.globalnav_searchfield-close');
+    let searchSubmit = $('.globalnav_searchfield-submit');
 
     $('.search_icon_area').on('click', function () {
         gnbSearchField.addClass("open");
@@ -126,21 +127,30 @@ $(function () {
         $('.gnbCurtain').removeClass("active");
     });
 
-    gnbSearchField.on('mouseleave', function () {
-        // 검색필드에서 마우스가 떠났을때
-        // 1) 검색어 입력창 value 초기화 하기
-        // 2) 리셋버튼 삭제하기
-        // 3) 서치필드 클레스 없애기
-        // 4) gnb커튼 클레스 없애기
-        searchTextArea.val('');
-        searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
-        gnbSearchField.removeClass("open");
-        // 서치필드 닫히는거 스르륵 닫히게 수정 할 것!!
-        // 생각해보니까 그러면 리셋버튼도 그냥 addClass, removeClass 써서 작동하게 하면 되지 않을까?
-        $('.gnbCurtain').removeClass("active");
-    });
+    // gnbSearchField.on('mouseleave', function () {
+    //     // 검색필드에서 마우스가 떠났을때
+    //     // 1) 검색어 입력창 value 초기화 하기
+    //     // 2) 리셋버튼 삭제하기
+    //     // 3) 서치필드 클레스 없애기
+    //     // 4) gnb커튼 클레스 없애기
+    //     searchTextArea.val('');
+    //     searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
+    //     gnbSearchField.removeClass("open");
+    //     // 서치필드 닫히는거 스르륵 닫히게 수정 할 것!!
+    //     // 생각해보니까 그러면 리셋버튼도 그냥 addClass, removeClass 써서 작동하게 하면 되지 않을까?
+    //     $('.gnbCurtain').removeClass("active");
+    // });
     // 검색창이 닫혔다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
 
+
+
+    searchTextArea.on('focus', function () {
+        searchSubmit.addClass('on');
+    });
+    searchTextArea.on('blur', function () {
+        searchSubmit.removeClass('on');
+    });
+    // submit 버튼 조작
 
     searchTextArea.on('keyup focus', function () {
         searchReset.removeAttr("disabled", "aria-hidden = true").css({ opacity: '1', visibility: 'visible' });
@@ -151,9 +161,9 @@ $(function () {
         } else {
             searchReset.removeAttr("disabled", "aria-hidden = true").css({ opacity: '1', visibility: 'visible' });
         }
-
     });
     // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
+
 
     // searchTextArea.on('blur', function () {
     //     searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
@@ -290,9 +300,11 @@ function check() {
     // 여기 src가 index에 있는 hidden(name) 임
     console.log(searchfrm.src.value);
     // 확인
-    // alert(searchfrm.src.value);
+    alert("입력하신 겁색어는 " + searchfrm.src.value);
+    // submit 버튼 작동 확인용
+    // 어차피 창 넘어갈꺼니까 input 값 초기화 안함
 
     // 이후 액션은 개발자 부분
     return false;
     // 폼태그 for, name이 하는 일을 확실하게 복습 할 것!!
-}
+};

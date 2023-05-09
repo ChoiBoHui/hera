@@ -27,8 +27,8 @@ header { position: relative; z-index: 2; }
 .header h1 a img { width: 120px; } 
 
 /* customer_menu Start */
-.header .customer_menu { display: flex; gap: 4px; margin: auto -4px 8px auto; } 
-/* 디자인 가이드라인에 맞추기 위해 right에 4px줌 */
+.header .customer_menu { display: flex; gap: 4px; margin: auto -7px 8px auto; } 
+/* 디자인 가이드라인에 맞추기 위해 right에 -7px줌 */
 /* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
 .header .topmenu.scroll .customer_menu { margin: 15px -4px 8px auto; } 
 .header .customer_menu li>* { display: block; padding: 4px; } 
@@ -42,26 +42,28 @@ header { position: relative; z-index: 2; }
 
 
 /* search form Start */
-.globalnav_searchfield * { outline: 1px solid #f00; } 
+/* .globalnav_searchfield * { outline: 1px solid #f00; } */
  
-.globalnav_searchfield { position: fixed; opacity: 0; visibility: hidden; top: 100px; left: 0; right: 0; background: rgba(255, 255, 255, 1); z-index: 1; outline: 0px solid #f00; height: 300px; } 
+.globalnav_searchfield { position: fixed; opacity: 0; visibility: hidden; top: 100px; left: 0; right: 0; background: rgba(255, 255, 255, 1); z-index: 1; height: 300px; } 
 .globalnav_searchfield.open { opacity: 1; visibility: visible; } 
 /* 나중에 제이쿼리로 서치폼 클릭하면 열리는 부분 */
-.header .topmenu.scroll .globalnav_searchfield { top: 57px; } 
+.header .topmenu.scroll .globalnav_searchfield { top: 0; } 
 /* 스크롤돼서 탑배너 없을때 위치 top */
-.globalnav_searchfield .container { justify-content: center; padding: 25px 0 25px 0; margin-bottom: 40px; } 
+.globalnav_searchfield .container { position: relative; justify-content: center; padding: 25px 0 25px 0; margin-bottom: 40px; } 
 /* 검색어 입력창 */
-.globalnav_searchfield-input { width: 854px; height: 40px; color: var(--color-g1); background-color: #f8f8f9; border-radius: 20px; font-size: 15px; font-weight: 500; font-family: apple; outline: none; border: none; padding-left: 24px; } 
-.globalnav_searchfield-input:focus { border: 1px solid #1d1d1f; background-color: #fff; } 
+.globalnav_searchfield-input { width: 854px; height: 40px; color: #bebebf; background-color: #f8f8f9; border-radius: 20px; font-size: 15px; font-weight: 500; font-family: apple; outline: none; border: none; padding-left: 41px; } 
+.globalnav_searchfield-input:focus { border: 1px solid #1d1d1f; background-color: #fff; color: var(--color-g1); } 
 
 /* 검색결과 지우기 */
 .globalnav_searchfield-reset { position: absolute; opacity: 0; visibility: hidden; top: 0; left: calc(100% - 50%); cursor: pointer; } 
 
 /* 검색 버튼 */
-.globalnav_searchfield-submit { cursor: pointer; }
+.globalnav_searchfield-submit { cursor: pointer; position: absolute; top: calc(100% - 50%); left: 174px; transform: translateY(-50%); background-color: transparent; outline: none; border: none; } 
+.globalnav_searchfield-submit::before { content: ""; display: block; background-image: url(../img/icon/icon_search_bebebf.svg); background-size: 20px, 20px; background-repeat: no-repeat; background-position: center; width: 40px; height: 40px; } 
+.globalnav_searchfield-submit.on::before { background-image: url(../img/icon/icon_search.svg); } 
 
 /* 검색창 닫기 */
-.globalnav_searchfield-close { font-size: 15px; font-weight: 400; cursor: pointer; } 
+.globalnav_searchfield-close { position: absolute; top: calc(100% - 50%); right: 0; transform: translate(6px, -50%); font-size: 15px; font-weight: 400; cursor: pointer; padding: 4px; } 
 
 
 
