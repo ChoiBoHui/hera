@@ -63,11 +63,11 @@ header { position: relative; z-index: 2; }
 
 /* 추천 검색어 */
 .globalnav_searchfield .container { width: 1200px; margin: 0 auto; padding: 15px 0 29px 0; } 
-.globalnav_searchfield .recommend_product { width: 854px; margin: 0 auto;} 
+.globalnav_searchfield .recommend_product { width: 854px; margin: 0 auto; } 
 .globalnav_searchfield .rcmd_title { display: block; color: #bebebf; margin-bottom: 14px; padding-left: 14px; } 
 .globalnav_searchfield .rcmd_product_list { color: var(--color-g1); } 
-.globalnav_searchfield .rcmd_product_list>li {padding-left: 5px;}
-.globalnav_searchfield .rcmd_product_list>li>a {display: inline-block; font-size: 17px; color: var(--color-g1); font-weight: 700; padding: 9px; } 
+.globalnav_searchfield .rcmd_product_list>li { padding-left: 5px; } 
+.globalnav_searchfield .rcmd_product_list>li>a { display: inline-block; font-size: 17px; color: var(--color-g1); font-weight: 700; padding: 9px; } 
 /* search form End */
 
 
@@ -268,7 +268,7 @@ header { position: relative; z-index: 2; }
 /* section LATEST ARTICLES Start */
 .articles { padding-top: 116px; margin-bottom: 116px; } 
 .articles .container { width: 1200px; margin: 0 auto; text-align: center; } 
-
+.contents_box { display: flex; gap: 30px; } 
 
 
 
@@ -281,6 +281,13 @@ header { position: relative; z-index: 2; }
 /* section LATEST ARTICLES End */
 
 
+
+/* section instagram_gallery Start */
+.instagram_gallery { padding-top: 116px; margin-bottom: 116px; } 
+.instagram_gallery .container { width: 1200px; margin: 0 auto; text-align: center; } 
+
+
+/* section instagram_gallery End */
 
 
 
