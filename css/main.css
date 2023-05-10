@@ -8,7 +8,7 @@
 /* common */
 .blind { display: none; } 
 /* 디스플레이 논 말고, 폼태그에서 캡션 없애는 방식으로 바꿔야함 */
-section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 35px 0; } 
+section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 35px 0; color: var(--color-g1); } 
 /* 영문 서체 변경 */
 .mont { font-family: montserrat; letter-spacing: 0; } 
 
@@ -262,28 +262,23 @@ header { position: relative; z-index: 2; }
 
 
 
-
-
-
 /* section LATEST ARTICLES Start */
-.articles { padding-top: 116px; margin-bottom: 116px; } 
+.articles { padding: 116px 0 114px 0; } 
 .articles .container { width: 1200px; margin: 0 auto; text-align: center; } 
 .contents_box { display: flex; gap: 30px; } 
-
-
-
-
-
-
-
-
-
+.contents_box figure { overflow: hidden; } 
+.contents_box figure img { transition: scale 0.5s; } 
+.contents_box figure img:hover { scale: 115%; } 
+.contents_box .inner { padding: 20px; } 
+.contents_box .inner .title { font-weight: 700; font-size: 16px; letter-spacing: -0.025rem; color: var(--color-g1); margin-bottom: 3px; } 
+.contents_box .inner .subtitle { font-family: montserrat; font-weight: 400; font-size: 14px; letter-spacing: 0; color: #979798; margin-bottom: 12px; } 
+.contents_box .inner .intro { font-weight: 400; font-size: 16px; letter-spacing: -0.025rem; color: #424245; } 
 /* section LATEST ARTICLES End */
 
 
 
 /* section instagram_gallery Start */
-.instagram_gallery { padding-top: 116px; margin-bottom: 116px; } 
+.instagram_gallery {padding: 0 0 116px 0; } 
 .instagram_gallery .container { width: 1200px; margin: 0 auto; text-align: center; } 
 
 
