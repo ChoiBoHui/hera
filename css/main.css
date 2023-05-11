@@ -278,13 +278,12 @@ header { position: relative; z-index: 2; }
 
 
 /* section instagram_gallery Start */
-.instagram_gallery { padding: 0 0 116px 0; } 
+.instagram_gallery { padding: 0 0 120px 0; } 
 .instagram_gallery .container { width: 1200px; margin: 0 auto; text-align: center; } 
 .instagram_gallery h2 { margin: 0 0 14px 0; } 
 .instagram_gallery .subtitle { font-family: montserrat; font-size: 16px; font-weight: 600; color: #424245; letter-spacing: -0.025rem; margin-bottom: 8px; } 
 .instagram_gallery .gallery_link { font-family: montserrat; font-size: 14px; font-weight: 400; color: #424245; letter-spacing: 0; padding: 6px; margin-bottom: 30px; } 
 .instagram_gallery .gallery_link img { width: 17px; margin: 0 4px 1px 0; } 
-
 
 /* gallery_area Start */
 .gallery_area { display: grid; height: 586px; column-gap: 10px; row-gap: 10px; } 
@@ -299,13 +298,12 @@ header { position: relative; z-index: 2; }
 .gallery_area .snsitm_06 { grid-column: 3/4; grid-row: 2/3; } 
 .gallery_area .snsitm_07 { grid-column: 4/5; grid-row: 2/3; } 
 
-
-
-
 /* 이미지 영역 */
-.gallery_area .snsitm .img_area .addcart { position: absolute; opacity: 0; visibility: hidden; top: 10px; left: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 26px; padding: 3px; transition: opacity 0.3s; } 
+.gallery_area .snsitm .img_area .thumbnail { transition: transform 0.3s; } 
+.gallery_area .snsitm:hover .img_area .thumbnail {  transform: translateY(-20px); } 
+.gallery_area .snsitm .img_area .addcart { position: absolute; opacity: 0; visibility: hidden; top: 10px; left: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 26px; padding: 3px; transition: opacity 0.3s, background 0.3s; } 
 .gallery_area .snsitm:hover .img_area .addcart { opacity: 1; visibility: visible; } 
-
+.gallery_area .snsitm .img_area .addcart:hover { background-color: rgba(0, 0, 0, 1); } 
 
 /* 텍스트 영역 */
 .gallery_area .snsitm .inner { position: absolute; bottom: -91px; left: 0; right: 0; height: 91px; background-color: #fff; padding: 17px 20px 15px 20px; border: 1px solid #efefef; transition: bottom 0.3s; } 
@@ -316,6 +314,28 @@ header { position: relative; z-index: 2; }
 
 
 
+
+/* sns modal Start */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* sns modal End */
 
 
 
@@ -328,7 +348,7 @@ header { position: relative; z-index: 2; }
 
 
 /* Footer Start */
-#footer { background: #3e3e3e; color: #ededed; } 
+#footer { background: var(--color-g1); color: #ededed; } 
 #footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
 #footer .logo_footer { margin: 40px auto 30px auto; } 
 #footer .logo_footer a img { width: 100px; } 
