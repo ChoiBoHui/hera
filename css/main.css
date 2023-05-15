@@ -300,7 +300,7 @@ header { position: relative; z-index: 2; }
 
 /* 이미지 영역 */
 .gallery_area .snsitm .img_area .thumbnail { transition: transform 0.3s; } 
-.gallery_area .snsitm:hover .img_area .thumbnail {  transform: translateY(-20px); } 
+.gallery_area .snsitm:hover .img_area .thumbnail { transform: translateY(-20px); } 
 .gallery_area .snsitm .img_area .addcart { position: absolute; opacity: 0; visibility: hidden; top: 10px; left: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 26px; padding: 3px; transition: opacity 0.3s, background 0.3s; } 
 .gallery_area .snsitm:hover .img_area .addcart { opacity: 1; visibility: visible; } 
 .gallery_area .snsitm .img_area .addcart:hover { background-color: rgba(0, 0, 0, 1); } 
@@ -316,7 +316,11 @@ header { position: relative; z-index: 2; }
 
 
 /* sns modal Start */
-/* 모달은 제이쿼리 플러그인을 사용해서 제작될 예정 */
+.snsModal { display: block; } 
+.snsModal .modalCurtain { position: fixed; background: rgba(255, 255, 255, 0.8); top: 0; bottom: 0; left: 0; right: 0; } 
+.snsModal .snsModalField { position: fixed; top: calc(100% - 50%); left: calc(100% - 50%); transform: translate(-50%, -50%); width: 854px; height: 628px; background: #fff; box-shadow: 0 4px 24px 5px rgba(0, 0, 0, 0.08); } 
+.snsModal .snsModalField .modalCloseBtn { position: absolute; top: 6px; right: 8px; width: 24px; background: transparent; border: none; outline: hidden; padding: 4px; cursor: pointer; } 
+.snsModal .snsModalField .snsModalFrame { position: absolute; display: block; top: 30px; left: 30px; width: calc(854px - 60px); height: calc(628px - 60px); background-color: rgba(0, 0, 0, 0.08); } 
 
 
 
