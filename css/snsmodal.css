@@ -1,0 +1,37 @@
+ .modal { display: flex; width: 794px; height: 568px; } 
+
+
+
+
+ /* leftArea Start */
+ .snsArea { } 
+
+
+
+
+
+
+
+
+
+
+
+/* rightArea Start */
+ .productArea { } 
+
+
+
+
+ /* 썸네일 시작 */
+.productArea .product_thumbnail { position: relative; width: 278px; } 
+ 
+
+ /* 커스터머 버튼 시작 */
+.productArea .product_thumbnail .cmlink_btn { position: absolute; top: 1px; right: 0; opacity: 0; visibility: hidden; transition: 0.3s; } 
+.productArea .product_thumbnail:hover .cmlink_btn { opacity: 1; visibility: visible; } 
+.productArea .product_thumbnail .cmlink_btn .addWishlist { padding: 7px; cursor: pointer; } 
+.productArea .product_thumbnail .cmlink_btn .addWishlist>img { width: 20px; } 
+.productArea .product_thumbnail .cmlink_btn .addWishlist.plusWish { background: url(../img/icon/icon_wishlist_full.svg) center center/20px no-repeat; } 
+
+/* 제품 타이틀 시작 */
+.productArea .product_title { font-size: 14px; } 
