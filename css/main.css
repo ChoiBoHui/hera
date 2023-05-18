@@ -317,11 +317,12 @@ header { position: relative; z-index: 2; }
 
 
 /* sns modal Start */
-.snsModal { display: block; } 
+.snsModal { display: none; } 
+.snsModal.open { display: block; } 
 .snsModal .modalCurtain { position: fixed; background: rgba(255, 255, 255, 0.8); top: 0; bottom: 0; left: 0; right: 0; z-index: 998;} 
 .snsModal .snsModalField { position: fixed; top: calc(100% - 50%); left: calc(100% - 50%); transform: translate(-50%, -50%); width: 854px; height: 628px; background: #fff; box-shadow: 0 4px 24px 5px rgba(0, 0, 0, 0.08); z-index: 999;} 
 .snsModal .snsModalField .modalCloseBtn { position: absolute; top: 6px; right: 8px; width: 24px; background: transparent; border: none; outline: hidden; padding: 4px; cursor: pointer; } 
-.snsModal .snsModalField .snsModalFrame { position: absolute; display: block; top: 30px; left: 30px; width: calc(854px - 60px); height: calc(628px - 60px); background-color: rgba(0, 0, 0, 0.08); } 
+.snsModal .snsModalField .snsModalFrame { position: absolute; display: block; top: 30px; left: 30px; width: calc(854px - 60px); height: calc(628px - 60px);  } 
 
 
 
