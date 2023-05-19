@@ -1,35 +1,108 @@
+
+
+// (function () {
+//     //변수
+//     let delay = 100;
+//     let timer = null;
+//     var we = '';
+
+//     /* [html 최초 로드 및 이벤트 상시 대기 실시] */
+//     window.onload = function () {
+//         console.log("[window 로드 이벤트를 최초 실행 합니다!]");
+//         clearTimeout(timer);
+//         timer = setTimeout(function () {
+//             we = document.querySelector('.we');
+//             console.log(innerWidth);
+//             if (window.innerWidth > 1024) {
+//                 we.style.color = 'blue';
+//             } else if (window.innerWidth > 768) {
+//                 we.style.color = 'red';
+//             } else {
+//                 we.style.color = 'green';
+//             }
+//         });
+//     };
+
+//     window.addEventListener('resize', function () {
+
+//         clearTimeout(timer);
+//         timer = setTimeout(function () {
+//             we = document.querySelector('.we');
+//             console.log(innerWidth);
+//             if (window.innerWidth > 1024) {
+//                 we.style.color = 'blue';
+//             } else if (window.innerWidth > 768) {
+//                 we.style.color = 'red';
+//             } else {
+//                 we.style.color = 'green';
+//             }
+//         }, delay);
+
+//         /* [html 화면 사이즈 변경 이벤트 감지] */
+//         window.onresize = function () {
+//             setTimeout(function () {
+//                 console.log("[window 사이즈가 변경 되었습니다!]");
+//             }, delay)
+//             return false;
+//         };
+//     });
+// })();
+
 // 제이쿼리로 작업중임.. 자스랑 섞어 쓰면 에러남..!
 $(function () {
-    //스크롤 시 메뉴 변경 Start
-    $(window).on('scroll', function () {
-        // console.log('scrolld')
-        var topmenu = $('.header .topmenu');
-        // var gnb = $('.header .gnb');
-        // var nav = $('.header .nav');
-        var sch = $(window).scrollTop();
-        // console.log(sch);
+    let WW = window.innerWidth;
 
-        if (sch > 100) {
-            topmenu.addClass('scroll');
-        } else {
-            topmenu.removeClass('scroll');
-        }
+    tabletHeader();
+
+    function tabletHeader() {
+        if (WW >= 1024) {
+            //스크롤 시 메뉴 변경 Start
+            $(window).on('scroll', function () {
+                var topmenu = $('.header .topmenu');
+                var sch = $(window).scrollTop();
+                if (sch > 100) {
+                    topmenu.addClass('scroll');
+                } else {
+                    topmenu.removeClass('scroll');
+                }
+            })
+            //스크롤 시 메뉴 변경 End
+
+            // 새로고침후 스크롤 위치 인식 Start
+            window.onload = function () {
+                var sch = $(window).scrollTop();
+                var topmenu = $('.header .topmenu');
+                console.log("[window 이벤트를 최초 실행 합니다!]");
+                console.log(sch);
+                if (sch > 100) {
+                    topmenu.addClass('scroll');
+
+                } else {
+                    topmenu.removeClass('scroll');
+                }
+            }
+            // 새로고침후 스크롤 위치 인식 End
+        };
+        // else 생략 768 모바일 버전 필요 시 작성
+    };
+
+
+
+    // $(window).resize(function () {
+    //     tabletHeader();
+    // });
+
+    let delay = 100;
+    $(window).on('resize', function () {
+        setTimeout(function () {
+            console.log("[window 사이즈가 변경되었습니다!2]");
+        }, delay);
+        return false;
     });
-    //스크롤 시 메뉴 변경 End
+    // 리사이즈 되었을 때 해당 함수가 작동한다!! 는 부분 작업해야함
 
-    // 새로고침후 스크롤 위치 인식 Start
-    window.onload = function () {
-        var sch = $(window).scrollTop();
-        var topmenu = $('.header .topmenu');
-        console.log("[window 이벤트를 최초 실행 합니다!]");
-        console.log(sch);
-        if (sch > 100) {
-            topmenu.addClass('scroll');
-        } else {
-            topmenu.removeClass('scroll');
-        }
-    }
-    // 새로고침후 스크롤 위치 인식 End
+
+
 
     // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
     $(window).on('scroll', function () {
@@ -297,7 +370,18 @@ $(function () {
     });
     // snsModal End
 
+
+
+
+
 });
+
+// window.addEventListener('resize', function () {
+//     // let WW = window.innerWidth;
+//     tabletHeader();
+// });
+
+
 
 function check() {
     let searchfrm = document.searchfrm;

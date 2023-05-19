@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; } */
+* { outline: 1px solid #f00; }
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -350,6 +350,7 @@ header { position: relative; z-index: 2; }
 
 .tablet { display: none; position: fixed; top: 0; left: 0; font-size: 14px; font-weight: 400; background: #f00; color: #fff; z-index: 999; } 
 .mobile { display: none; position: fixed; top: 0; left: 0; font-size: 14px; font-weight: 400; background: #0ff; color: #000; z-index: 999; } 
+.we { display: block; position: fixed; top: 0; right: 0; font-size: 14px; font-weight: 400; background: #fff;  z-index: 999; } 
 
 
 /* 모바일 용 */
