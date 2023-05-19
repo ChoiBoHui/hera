@@ -1,5 +1,4 @@
 $(function () {
-
     // sns 슬라이더 Start
     $('.modal .snsArea .snsSlider').slick({
         arrows: false,
@@ -17,8 +16,4 @@ $(function () {
     $('.modal .productArea .cmlink_btn .addWishlist').on('click', function () {
         $(this).toggleClass('plusWish');
     });
-
-
-
-
 });

@@ -283,9 +283,21 @@ $(function () {
 
 
     // 지금은 모달창 디자인 작업중이라 디자인 완료 후 변경할 예정
+    // 모달 닫기
     $('.snsModal .modalCloseBtn').on('click', function () {
-        $('.snsModal').removeClass('open')
+        $('.snsModal').fadeOut();
+        $('.snsModal').removeClass('open');
     });
+
+    // 모달 오픈
+    // 퍼블 과정에서는 형태만 만들어져 있지만, 개발 과정에서 각 아이템에 맞는 번호를 찾아서 띄워주는 형식으로 진행됨 (=> 배열 활용해서 흉내 내볼 수 있지 않을까?)
+    $('.snsitm').on('click', function () {
+        $('.snsModal').fadeIn();
+        $('.snsModal').addClass('open');
+    });
+
+
+
 
 
 
