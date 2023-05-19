@@ -1,0 +1,140 @@
+/* 태블릿 용 */
+@media (max-width: 1024px) {
+.tablet {display: block;}
+
+section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 35px 0; color: var(--color-g1); } 
+/* 영문 서체 변경 */
+.mont { font-family: montserrat; letter-spacing: 0; } 
+
+
+/* Header Start */
+header { position: relative; z-index: 2; } 
+.header { background-color: #fff; } 
+.header .topmenu { position: relative; background-color: #fff; z-index: 1; } 
+.header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; } 
+.header .topmenu .gnb { position: relative; display: flex; height: 61px; justify-content: center; } 
+.header .topmenu.scroll .gnb { position: absolute; top: 0; left: 0; right: 0; height: 0; } 
+.header .container { display: flex; width: 1200px; margin: 0 auto; } 
+.header h1 { position: absolute; top: 0; left: calc(100% - 50%); transform: translateX(-50%); margin: 20px 0 3px 0; } 
+.header .topmenu.scroll h1 { top: 10px; left: 50%; transform: translateX(calc(-50% - 540px)); margin: 0; } 
+.header h1 a { display: block; padding: 8px; } 
+.header h1 a img { width: 120px; } 
+
+/* customer_menu Start */
+.header .customer_menu { display: flex; gap: 4px; margin: auto -7px 8px auto; } 
+/* 디자인 가이드라인에 맞추기 위해 right에 -7px줌 */
+/* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
+.header .topmenu.scroll .customer_menu { margin: 15px -4px 8px auto; } 
+.header .customer_menu>li>a { display: block; padding: 4px; } 
+.header .customer_menu .search_icon_area { cursor: pointer; display: block; padding: 4px; } 
+.header .customer_menu img { width: 20px; } 
+/* customer_menu End */
+
+
+
+/* search form Start */ 
+.globalnav_searchfield { position: fixed; opacity: 0; visibility: hidden; top: 38px; left: 0; right: 0; background: rgba(255, 255, 255, 1); z-index: 1; } 
+.globalnav_searchfield.open { opacity: 1; visibility: visible; } 
+/* 나중에 제이쿼리로 서치폼 클릭하면 열리는 부분 */
+.header .topmenu.scroll .globalnav_searchfield { top: 0; } 
+/* 스크롤돼서 탑배너 없을때 위치 top */
+.globalnav_searchfield .input_area { position: relative; display: flex; width: 1200px; justify-content: center; padding: 25px 0 25px 0; margin: 0 auto; } 
+/* 검색어 입력창 */
+.globalnav_searchfield-input { width: 854px; height: 40px; color: #bebebf; background-color: #f8f8f9; border-radius: 20px; font-size: 15px; font-weight: 500; font-family: apple; outline: none; border: none; padding-left: 41px; } 
+.globalnav_searchfield-input:focus { border: 1px solid #1d1d1f; background-color: #fff; color: var(--color-g1); } 
+
+/* 검색결과 지우기 */
+.globalnav_searchfield-reset { position: absolute; opacity: 0; visibility: hidden; top: calc(100% - 50%); right: 179px; transform: translateY(-50%); background-color: transparent; outline: none; border: none; cursor: pointer; } 
+.globalnav_searchfield-reset::before { content: ""; display: block; background-image: url(../img/icon/btn_close.svg); background-size: 14px, 12px; background-repeat: no-repeat; background-position: center; width: 40px; height: 40px; } 
+
+/* 검색 버튼 */
+.globalnav_searchfield-submit { position: absolute; top: calc(100% - 50%); left: 174px; transform: translateY(-50%); background-color: transparent; outline: none; border: none; cursor: pointer; } 
+.globalnav_searchfield-submit::before { content: ""; display: block; background-image: url(../img/icon/icon_search_bebebf.svg); background-size: 20px, 20px; background-repeat: no-repeat; background-position: center; width: 40px; height: 40px; } 
+.globalnav_searchfield-submit.on::before { background-image: url(../img/icon/icon_search.svg); } 
+
+/* 검색창 닫기 */
+.globalnav_searchfield-close { position: absolute; top: calc(100% - 50%); right: 0; transform: translate(5px, -50%); font-size: 15px; font-weight: 400; cursor: pointer; padding: 4px; } 
+
+/* 추천 검색어 */
+.globalnav_searchfield .container { width: 1200px; margin: 0 auto; padding: 15px 0 29px 0; } 
+.globalnav_searchfield .recommend_product { width: 854px; margin: 0 auto; } 
+.globalnav_searchfield .rcmd_title { display: block; color: #bebebf; margin-bottom: 14px; padding-left: 14px; } 
+.globalnav_searchfield .rcmd_product_list { color: var(--color-g1); } 
+.globalnav_searchfield .rcmd_product_list>li { padding-left: 5px; } 
+.globalnav_searchfield .rcmd_product_list>li>a { display: inline-block; font-size: 17px; color: var(--color-g1); font-weight: 700; padding: 9px; } 
+/* search form End */
+
+
+
+/* topbanner Start */
+.topbanner { display: block; height: 38px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 12px 0 11px 0; } 
+/* 새로고침하는데 배경이 번쩍 거려서 높이값을 줬음.. 확인해보니 display 속성이 none에서 block으로 바뀌는 과정에서 생기는 것 같음 */
+.topbanner .container { position: relative; display: block; width: 100%; margin: 0 auto; text-align: center; } 
+.topbanner .container .banner_slider { width: 500px; margin: 0 auto; transform: translateY(1px); } 
+.topbanner .slide_util img { width: 16px; } 
+.topbanner .slide_util .area_left { position: absolute; top: calc(50% - 8px); left: calc(100% - 50% - 296px); cursor: pointer; } 
+.topbanner .slide_util .area_right { position: absolute; top: calc(50% - 8px); right: calc(100% - 50% - 296px); cursor: pointer; } 
+/* topbanner End */
+
+/* nav Start */
+.header .nav { justify-content: center; } 
+/* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
+/* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
+/* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; } */
+
+.gnbCurtain { content: ""; display: none; position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
+.gnbCurtain.active { display: block; } 
+
+
+.nav .main_menu { display: flex; justify-content: center; } 
+.nav .main_menu>li { padding: 4px; } 
+/* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
+/* .nav .main_menu>li~li>a { } */
+.nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
+/* 1~4번째 메뉴까지 선택 */
+.nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
+.topmenu.scroll .nav .main_menu>li>a { padding: 18px 12px 14px 12px; } 
+.nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
+.nav .main_menu>li.mont>a::after { top: calc(100% + 1px); } 
+.nav .main_menu>li:hover>a::after { width: calc(100% - 24px); } 
+/* 이부분 원래 >li>a:hover 였는데, li로 바꾸니까 ::after가 유지는 되는데, 뒤쪽 메뉴가 자꾸 겹침 */
+.nav .main_menu .mont { transform: translateY(-2px); } 
+.nav .main_menu .mont>a { font-size: 17px; font-weight: 500; color: var(--color-g1); } 
+
+
+/* sub menu Start */
+/* 서브메뉴 공통적용 & hover */
+.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 115px; left: 0; background-color: #fff; overflow-y: hidden; outline: none; } 
+/* submenu 아래로 나오는 블러 효과를 깔끔하게 처리하기위해 서브메뉴에 아웃라인을 추가함 */
+/* submenu background에 slideUp Down 추가 */
+.topmenu.scroll .nav .main_menu .submenu { top: 57px; } 
+
+/* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
+.nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
+.nav .main_menu>li.active .submenu .container { opacity: 1; } 
+.nav .main_menu>li.active .submenu { max-height: 100vh; outline: 1px solid #fff; } 
+/* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
+
+
+
+/* 서브메뉴 텍스트 */
+.header .nav .submenu .submenu_header { margin-bottom: 6px; } 
+.header .nav .submenu .submenu_header>a { display: block; padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
+.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li { padding: 4px; } 
+.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a { display: block; font-size: 15px; font-weight: 400; color: #979798; padding: 4px; } 
+.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a:hover { color: var(--color-g1); } 
+
+/* 신상 홍보용 배너 */
+.nav .submenu .container .pushMd { width: 282px; margin: 0 52px 0 0; padding: 43px 0 28px 0; } 
+.nav .submenu .container .pushMd img { width: 282px; height: 178px; } 
+.nav .submenu .container .pushMd p { font-family: Montserrat; font-weight: 400; letter-spacing: 0; font-size: 15px; text-indent: -1px; padding: 10px 0 14px 0; line-height: 20px; } 
+
+/* 서브메뉴 간격 */
+.nav .submenu .container>ul { width: 224px; padding: 36px 0 54px 0; } 
+
+/* 헤라 스토리 */
+.menu_story .submenu .container .brandSubmenu { display: flex; width: auto; padding: auto; } 
+.menu_story .brandSubmenu { margin-left: 334px; } 
+.menu_story .brandSubmenu>* { width: 224px; } 
+/* Header End */
+}
