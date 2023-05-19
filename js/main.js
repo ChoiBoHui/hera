@@ -282,7 +282,7 @@ $(function () {
 
 
 
-    // 지금은 모달창 디자인 작업중이라 디자인 완료 후 변경할 예정
+    // snsModal Start
     // 모달 닫기
     $('.snsModal .modalCloseBtn').on('click', function () {
         $('.snsModal').fadeOut();
@@ -295,19 +295,7 @@ $(function () {
         $('.snsModal').fadeIn();
         $('.snsModal').addClass('open');
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // snsModal End
 
 });
 

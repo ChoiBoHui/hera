@@ -314,9 +314,6 @@ header { position: relative; z-index: 2; }
 
 
 
-
-
-
 /* sns modal Start */
 .snsModal { display: none; } 
 .snsModal.open { display: block; } 
@@ -324,47 +321,24 @@ header { position: relative; z-index: 2; }
 .snsModal .snsModalField { position: fixed; top: calc(100% - 50%); left: calc(100% - 50%); transform: translate(-50%, -50%); width: 854px; height: 628px; background: #fff; box-shadow: 0 4px 24px 5px rgba(0, 0, 0, 0.08); z-index: 999;} 
 .snsModal .snsModalField .modalCloseBtn { position: absolute; top: 6px; right: 8px; width: 24px; background: transparent; border: none; outline: hidden; padding: 4px; cursor: pointer; } 
 .snsModal .snsModalField .snsModalFrame { position: absolute; display: block; top: 30px; left: 30px; width: calc(854px - 60px); height: calc(628px - 60px);  } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* sns modal End */
-
-
-
 
 /* section instagram_gallery End */
 
 
 
-
-
-
 /* Footer Start */
-#footer { background: var(--color-g1); color: #ededed; } 
-#footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
-#footer .logo_footer { margin: 40px auto 30px auto; } 
-#footer .logo_footer a img { width: 100px; } 
+.footer { background: var(--color-g1); color: #ededed; } 
+.footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
+.footer .logo_footer { margin: 40px auto 30px auto; } 
+.footer .logo_footer a img { width: 100px; } 
 
-#footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
-#footer .footer_utils li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
-#footer .footer_utils .lang img { margin: 0 0 0 7px; padding-bottom: 2px; } 
-#footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
-#footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
+.footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
+.footer .footer_utils li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
+/* .footer .footer_utils .language img { padding: 4px; width: 16px; margin-left: 4px; transform: translateY(-2px); }  */
+.footer .footer_utils .language {cursor: pointer;}
+.footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
+.footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
 /* Footer End */
 
 
