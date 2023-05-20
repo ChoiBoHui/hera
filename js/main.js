@@ -50,56 +50,64 @@
 
 // 제이쿼리로 작업중임.. 자스랑 섞어 쓰면 에러남..!
 $(function () {
-    let WW = window.innerWidth;
+    // let WW = window.innerWidth;
+    // let WW = $(window).innerWidth();
+    // 스크롤바가 생길 경우, 제외하고 1024px 이하이면 적용 된다.
 
+    // chat gpt에 굴복한 부분..
     tabletHeader();
-
     function tabletHeader() {
-        if (WW >= 1024) {
-            //스크롤 시 메뉴 변경 Start
-            $(window).on('scroll', function () {
+
+        //스크롤 시 메뉴 변경 Start
+        $(window).on('scroll', function () {
+            if ($(window).innerWidth() > 1024) {
                 var topmenu = $('.header .topmenu');
                 var sch = $(window).scrollTop();
                 if (sch > 100) {
                     topmenu.addClass('scroll');
-                } else {
-                    topmenu.removeClass('scroll');
-                }
-            })
-            //스크롤 시 메뉴 변경 End
-
-            // 새로고침후 스크롤 위치 인식 Start
-            window.onload = function () {
-                var sch = $(window).scrollTop();
-                var topmenu = $('.header .topmenu');
-                console.log("[window 이벤트를 최초 실행 합니다!]");
-                console.log(sch);
-                if (sch > 100) {
-                    topmenu.addClass('scroll');
-
                 } else {
                     topmenu.removeClass('scroll');
                 }
             }
-            // 새로고침후 스크롤 위치 인식 End
-        };
-        // else 생략 768 모바일 버전 필요 시 작성
+        });
+        // //스크롤 시 메뉴 변경 End
+
+        // // 새로고침후 스크롤 위치 인식 Start
+        $(window).on('load', function () {
+            if ($(window).innerWidth() > 1024) {
+                var sch = $(window).scrollTop();
+                var topmenu = $('.header .topmenu');
+                console.log("[window 이벤트를 최초 실행합니다!]");
+                console.log(sch);
+                if (sch > 100) {
+                    topmenu.addClass('scroll');
+                } else {
+                    topmenu.removeClass('scroll');
+                }
+            }
+        });
+        // 새로고침후 스크롤 위치 인식 End
+
+        // 아래 코드로 어찌어찌 작동은 되나, 반복되는 변수가 왜 지역변수로만 작동이 되는지 모르겠음. 왜 밖에두면 작동을 안하지..?
+        $(window).on('resize', function () {
+            if ($(window).innerWidth() <= 1024) {
+                var topmenu = $('.header .topmenu');
+                $(window).off('scroll');
+                topmenu.removeClass('scroll');
+            } else {
+                $(window).on('scroll', function () {
+                    var topmenu = $('.header .topmenu');
+                    var sch = $(window).scrollTop();
+                    if (sch > 100) {
+                        topmenu.addClass('scroll');
+                    } else {
+                        topmenu.removeClass('scroll');
+                    }
+                });
+            };
+        });
     };
 
-
-
-    // $(window).resize(function () {
-    //     tabletHeader();
-    // });
-
-    let delay = 100;
-    $(window).on('resize', function () {
-        setTimeout(function () {
-            console.log("[window 사이즈가 변경되었습니다!2]");
-        }, delay);
-        return false;
-    });
-    // 리사이즈 되었을 때 해당 함수가 작동한다!! 는 부분 작업해야함
 
 
 

@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; }
+/* * { outline: 1px solid #f00; } */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -334,9 +334,13 @@ header { position: relative; z-index: 2; }
 .footer .logo_footer a img { width: 100px; } 
 
 .footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
-.footer .footer_utils li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
+.footer .footer_utils>li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
 /* .footer .footer_utils .language img { padding: 4px; width: 16px; margin-left: 4px; transform: translateY(-2px); } */
-.footer .footer_utils .language { cursor: pointer; } 
+.footer .footer_utils .language { position: relative; cursor: pointer; } 
+.footer .footer_utils .languageLink { display: block; position: absolute; bottom: 20px; left: 23px; border: 1px solid #ff0; text-align: left;} 
+/* .footer .footer_utils .languageLink:hover { display: block; }  */
+.footer .footer_utils .languageLink>li>a {line-height: 22px;}
+
 .footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
 .footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
 /* Footer End */
@@ -350,7 +354,7 @@ header { position: relative; z-index: 2; }
 
 .tablet { display: none; position: fixed; top: 0; left: 0; font-size: 14px; font-weight: 400; background: #f00; color: #fff; z-index: 999; } 
 .mobile { display: none; position: fixed; top: 0; left: 0; font-size: 14px; font-weight: 400; background: #0ff; color: #000; z-index: 999; } 
-.we { display: block; position: fixed; top: 0; right: 0; font-size: 14px; font-weight: 400; background: #fff;  z-index: 999; } 
+.we { display: block; position: fixed; top: 0; right: 0; font-size: 14px; font-weight: 400; background: #fff; z-index: 999; } 
 
 
 /* 모바일 용 */
