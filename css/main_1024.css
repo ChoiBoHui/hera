@@ -1,6 +1,5 @@
 /* 태블릿 용 */
-@media (max-width: 1024px) {
-.tablet {display: block;}
+@media (max-width: 1024px) {.tablet { display: block; } 
 
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 35px 0; color: var(--color-g1); } 
 /* 영문 서체 변경 */
@@ -10,12 +9,12 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* Header Start */
 header { position: relative; z-index: 2; } 
 .header { background-color: #fff; } 
-.header .topmenu { position: relative; background-color: #fff; z-index: 1; } 
+.header .topmenu { position: fixed; top: 0; left: 0; background-color: #fff; z-index: 1; } 
 .header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; } 
 .header .topmenu .gnb { position: relative; display: flex; height: 61px; justify-content: center; } 
 .header .topmenu.scroll .gnb { position: absolute; top: 0; left: 0; right: 0; height: 0; } 
-.header .container { display: flex; width: 1200px; margin: 0 auto; } 
-.header h1 { position: absolute; top: 0; left: calc(100% - 50%); transform: translateX(-50%); margin: 20px 0 3px 0; } 
+.header .container { display: flex; width: 100%; margin: 0 auto; } 
+.header h1 { position: absolute; top: 0; left: calc(100% - 50%); transform: translateX(-50%); margin: 20px 0 3px 0; z-index: 1; } 
 .header .topmenu.scroll h1 { top: 10px; left: 50%; transform: translateX(calc(-50% - 540px)); margin: 0; } 
 .header h1 a { display: block; padding: 8px; } 
 .header h1 a img { width: 120px; } 
@@ -136,5 +135,4 @@ header { position: relative; z-index: 2; }
 .menu_story .submenu .container .brandSubmenu { display: flex; width: auto; padding: auto; } 
 .menu_story .brandSubmenu { margin-left: 334px; } 
 .menu_story .brandSubmenu>* { width: 224px; } 
-/* Header End */
-}
+/* Header End */}
