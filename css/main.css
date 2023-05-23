@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00; } 
+/* * { outline: 1px solid #f00; }  */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -176,7 +176,7 @@ header { position: relative; z-index: 2; }
 .slide_util .slide_pager { display: flex; align-items: center; padding-right: 8px; } 
 .slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; transform: translateY(-1px); } 
 .slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
-.slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 3s; } 
+.slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 4s; } 
 .main_visual .slide_util .slide_pager .current_index { width: 26px; } 
 .main_visual .slide_util .slide_pager .total_index { color:#aaa; } 
 .main_visual .slide_util .switch .pause { display: block; } 

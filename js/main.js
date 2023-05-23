@@ -16,6 +16,11 @@ $(function () {
                 } else {
                     topmenu.removeClass('scroll');
                 }
+
+                // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
+                $(".gnbCurtain").removeClass("active")
+                $(".nav .main_menu>li").removeClass("active")
+                $('.globalnav_searchfield').removeClass("open");
             });
         } else {
             const topmenu = $('.header .topmenu');
@@ -24,20 +29,14 @@ $(function () {
         }
     };
 
+    // 함수 호출
     headerScrollEvent();
 
+    // 리사이즈 됐을 때
     $(window).on('resize', function () {
         headerScrollEvent();
     });
 
-
-
-    // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
-    $(window).on('scroll', function () {
-        $(".gnbCurtain").removeClass("active")
-        $(".nav .main_menu>li").removeClass("active")
-        $('.globalnav_searchfield').removeClass("open");
-    });
 
     // topbanner 슬라이더 Start
     $('.banner_slider').slick({
@@ -193,7 +192,7 @@ $(function () {
     $('.main_slider').slick({
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         fade: true,
         // useTransform: false,
         pauseOnFocus: false,
