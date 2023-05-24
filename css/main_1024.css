@@ -1,7 +1,8 @@
 /* 태블릿 용 */
 @media (max-width: 1200px){
  .tablet { display: block; } 
- body {width: 100%; overflow-x: hidden;}
+ html {overflow-x: hidden;}
+ body {width: 100%;}
 
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 35px 0; color: var(--color-g1); } 
 /* 영문 서체 변경 */

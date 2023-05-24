@@ -5,6 +5,7 @@
  /* g = gray */
  --color-g1: #1d1d1f; } 
 
+@media (min-width: 1201px) {
 /* common */
 .blind { display: none; } 
 /* 디스플레이 논 말고, 폼태그에서 캡션 없애는 방식으로 바꿔야함 */
@@ -344,7 +345,7 @@ header { position: relative; z-index: 2; }
 .footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
 .footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
 /* Footer End */
-
+}
 
 
 /* 태블릿 및 모바일용 css 별도 빼서 작업함(한군데 하니까 너무 복잡해서 우선 따로 작업 후 합칠 예정) */
