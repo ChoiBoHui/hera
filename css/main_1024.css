@@ -1,5 +1,5 @@
 /* 태블릿 용 */
-@media (max-width: 1024px){
+@media (max-width: 1200px){
  .tablet { display: block; } 
  body {width: 100%; overflow-x: hidden;}
 
