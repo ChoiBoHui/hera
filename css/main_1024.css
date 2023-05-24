@@ -1,6 +1,5 @@
 /* 태블릿 용 */
-@media (max-width: 1200px){
-html {overflow-x: hidden; width: 100%;}
+@media (max-width: 1200px) {html { overflow-x: hidden; width: 100%; } 
 .tablet { display: block; } 
 
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 35px 0; color: var(--color-g1); } 
@@ -12,12 +11,12 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 header { position: relative; z-index: 2; } 
 .header { background-color: #fff; } 
 .header .topmenu { position: fixed; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.5); z-index: 1; width: 100%; } 
-/* .header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; }  */
+/* .header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; } */
 .header .topmenu .gnb { position: relative; display: flex; height: 61px; justify-content: center; } 
-/* .header .topmenu.scroll .gnb { position: absolute; top: 0; left: 0; right: 0; height: 0; }  */
+/* .header .topmenu.scroll .gnb { position: absolute; top: 0; left: 0; right: 0; height: 0; } */
 .header .container { display: flex; width: 100%; margin: 0 auto; } 
 .header h1 { position: fixed; top: 0; left: 0; transform: translateX(0); margin: 0; z-index: 1; } 
-/* .header .topmenu.scroll h1 { top: 10px; left: 50%; transform: translateX(calc(-50% - 540px)); margin: 0; }  */
+/* .header .topmenu.scroll h1 { top: 10px; left: 50%; transform: translateX(calc(-50% - 540px)); margin: 0; } */
 .header h1 a { display: block; padding: 8px; margin: auto 0 auto auto; } 
 .header h1 a img { width: auto; height: 16px; } 
 
@@ -25,7 +24,7 @@ header { position: relative; z-index: 2; }
 .header .customer_menu { display: flex; gap: 4px; margin: auto 0 auto auto; } 
 /* 디자인 가이드라인에 맞추기 위해 right에 -7px줌 */
 /* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
-/* .header .topmenu.scroll .customer_menu { margin: 15px -4px 8px auto; }  */
+/* .header .topmenu.scroll .customer_menu { margin: 15px -4px 8px auto; } */
 .header .customer_menu>li>a { display: block; padding: 4px; } 
 .header .customer_menu .search_icon_area { cursor: pointer; display: block; padding: 4px; } 
 .header .customer_menu img { width: 20px; } 
@@ -37,7 +36,7 @@ header { position: relative; z-index: 2; }
 .globalnav_searchfield { position: fixed; opacity: 0; visibility: hidden; top: 38px; left: 0; right: 0; background: rgba(255, 255, 255, 1); z-index: 1; } 
 .globalnav_searchfield.open { opacity: 1; visibility: visible; } 
 /* 나중에 제이쿼리로 서치폼 클릭하면 열리는 부분 */
-/* .header .topmenu.scroll .globalnav_searchfield { top: 0; }  */
+/* .header .topmenu.scroll .globalnav_searchfield { top: 0; } */
 /* 스크롤돼서 탑배너 없을때 위치 top */
 .globalnav_searchfield .input_area { position: relative; display: flex; width: 100%; justify-content: center; padding: 25px 0 25px 0; margin: 0 auto; } 
 /* 검색어 입력창 */
@@ -72,13 +71,14 @@ header { position: relative; z-index: 2; }
 /* 새로고침하는데 배경이 번쩍 거려서 높이값을 줬음.. 확인해보니 display 속성이 none에서 block으로 바뀌는 과정에서 생기는 것 같음 */
 .topbanner .container { position: relative; display: block; width: 100%; margin: 0 auto; text-align: center; } 
 .topbanner .container .banner_slider { width: 500px; margin: 0 auto; transform: translateY(1px); } 
-.topbanner .slide_util img { width: 16px; } 
+.topbanner .slide_util { display: none; } 
+/* .topbanner .slide_util img { width: 16px; } 
 .topbanner .slide_util .area_left { position: absolute; top: calc(50% - 8px); left: calc(100% - 50% - 296px); cursor: pointer; } 
-.topbanner .slide_util .area_right { position: absolute; top: calc(50% - 8px); right: calc(100% - 50% - 296px); cursor: pointer; } 
+.topbanner .slide_util .area_right { position: absolute; top: calc(50% - 8px); right: calc(100% - 50% - 296px); cursor: pointer; } */
 /* topbanner End */
 
 /* nav Start */
-.header .nav {position: fixed; left: 0; top: 60px; justify-content: center; width: 80%; height: 100%; background: rgba(255, 255, 255, 0.5); } 
+.header .nav { position: fixed; left: 0; top: 60px; justify-content: center; width: 80%; height: 100%; background: rgba(255, 255, 255, 0.5); } 
 /* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
 /* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
 /* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; } */
@@ -94,7 +94,7 @@ header { position: relative; z-index: 2; }
 .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
 /* 1~4번째 메뉴까지 선택 */
 .nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
-/* .topmenu.scroll .nav .main_menu>li>a { padding: 18px 12px 14px 12px; }  */
+/* .topmenu.scroll .nav .main_menu>li>a { padding: 18px 12px 14px 12px; } */
 .nav .main_menu>li>a::after { display: none; } 
 .nav .main_menu>li.mont>a::after { display: none; } 
 .nav .main_menu>li:hover>a::after { display: none; } 
@@ -107,7 +107,7 @@ header { position: relative; z-index: 2; }
 .nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 115px; left: 0; background-color: #fff; overflow-y: hidden; outline: none; } 
 /* submenu 아래로 나오는 블러 효과를 깔끔하게 처리하기위해 서브메뉴에 아웃라인을 추가함 */
 /* submenu background에 slideUp Down 추가 */
-/* .topmenu.scroll .nav .main_menu .submenu { top: 57px; }  */
+/* .topmenu.scroll .nav .main_menu .submenu { top: 57px; } */
 
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
 .nav .main_menu>li .submenu .container { opacity: 0; transition-property: opacity; transition-duration: 0.5s; transition-delay: 0.1s; } 
@@ -207,5 +207,4 @@ header { position: relative; z-index: 2; }
 /* section BEST End */
 
 
-
-} 
+}
