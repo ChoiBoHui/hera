@@ -22,6 +22,7 @@ $(function () {
                 $(".nav .main_menu>li").removeClass("active")
                 $('.globalnav_searchfield').removeClass("open");
             });
+
         } else {
             const topmenu = $('.header .topmenu');
             $(window).off('scroll');
@@ -29,20 +30,53 @@ $(function () {
         }
     };
 
+    // 메뉴 호버 Start   
+    function gnbHoverEvent() {
+        let WW = $(window).innerWidth();
+        if (WW >= 1200) {
+            $(".main_menu>li").on({
+                'mouseenter': function () {
+                    if ($(this).has(".submenu").length > 0) {
+                        let headerHiehgt = $(".header").innerHeight();
+                        // console.log(headerHiehgt)
+                        $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
+                    } else {
+                        $(".gngnbCurtain").removeClass("active");
+                    }
+                    $(this).addClass("active").siblings().removeClass("active");
+                },
+                'mouseleave': function () {
+                    $(".gnbCurtain").removeClass("active");
+                    $(this).removeClass("active");
+                }
+            });
+
+        } else {
+            $(".main_menu>li").off('mouseenter').removeClass("active");
+            $(".gnbCurtain").removeClass("active");
+        }
+    };
+
+
     // 함수 호출
     headerScrollEvent();
+    gnbHoverEvent()
 
     // 리사이즈 됐을 때
     $(window).on('resize', function () {
         headerScrollEvent();
+        gnbHoverEvent()
     });
+
+
+
 
 
     // topbanner 슬라이더 Start
     $('.banner_slider').slick({
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         // useTransform: false,
     });
 
@@ -54,56 +88,6 @@ $(function () {
         $('.banner_slider').slick('slickNext')
     });
 
-    // 메뉴 호버 Start   
-    // 추후에 탑배너와 같은 다른 요소들이 추가될 경우를 생각해서
-    // .gnbCurtain의 top값을 header높이가 변경됨에 따라 반응하게 하기.
-    // .gnbCurtain의 top값이 .main_menu>li에 hover될 때 마다 .header의 높이값에 맞춰 변경
-    // let headerHiehgt = $(".header").innerHeight();
-    // 처음 dom형성시 탑배너가 display : none;이기 때문에 topbanner를 제외한 topmenu의 높이값만을 가져옴.
-    // 그리고 높이값이 변경됨에따라 변하지 않고, 한번 고정된 값을 계속해서 가져감. => 중간에 topbanner를 닫아도 그만큼의 높이가 빠지지 않음
-    // console.log(headerHiehgt)
-    // let activeCurtain = $(".header .gnbCurtain.active");
-    // let positionCurtain = $(activeCurtain).position;
-    // .gnbCurtain에 .active가 붙을 때, .gnbCurtain의 top값이 .header의 height값이 된다.
-    $(".main_menu>li").on({
-        "mouseenter": function () {
-            if ($(this).has(".submenu").length > 0) {
-                let headerHiehgt = $(".header").innerHeight();
-                // console.log(headerHiehgt)
-                $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
-            } else {
-                $(".gngnbCurtain").removeClass("active");
-            }
-            $(this).addClass("active").siblings().removeClass("active");
-        },
-        "mouseleave": function () {
-            $(".gnbCurtain").removeClass("active");
-            $(this).removeClass("active");
-        }
-    });
-    // 위의 메뉴 호버 부분은 chat GPT를 참고해서 코드를 작성하였음.
-
-    // $(".main_menu>li").mouseenter(function () {
-    //     let submenu = $(".main_menu>li>a").siblings(".submenu").length;
-    //     let headerHiehgt = $(".header").innerHeight();
-    //     console.log(submenu)
-
-    //     $(this).addClass("active").siblings().removeClass("active");
-
-    //     if (submenu > 0) {
-    //         $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
-    //     } else {
-    //         $(".gnbCurtain").removeClass("active");
-    //     }
-    // });
-
-    // $(".main_menu").mouseleave(function () {
-    //     $(".main_menu li").removeClass("active");
-    //     $(".gnbCurtain").removeClass("active");
-    // });
-    // 미선이언니한테 이부분에서 오류가 난다고 확인 부탁드리기!
-
-    // 메뉴 호버 End
 
 
 
@@ -164,12 +148,6 @@ $(function () {
     });
     // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
 
-    // searchTextArea.on('blur', function () {
-    //     searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
-    // });
-    // 검색어 입력창에서 포커스가 해제 됐을 때 리셋 버튼 숨김
-    // 이 부분은 서치폼에서는 필요 없음, 회원가입 폼에서는 생각해봐야 할 부분
-    // blur를 사용하면 리셋이 안먹음.. blur가 아니라 다른 방법을 찾아봐야 할수도..?
 
     searchReset.on('click touchstart', function () {
         // alert('초기화!');
@@ -178,11 +156,6 @@ $(function () {
         return false;
     });
     // 리셋 버튼 클릭 시 input value 삭제 후 버튼 숨김
-
-    // 추천 검색어도 hidden으로 넣어줘야하나?
-    // => 이렇게되면 추천검색어를 클릭 하면 자동으로 submit 버튼이 클릭된 걸로 인식(=> 추천 검색어가 인풋 텍스트 창 value로 입력되게끔 하면 되지 않을까?)
-    // 서치폼 End (submit(input type: hidden) 부분 제일 하단에 추가 있음)
-
 
 
 
@@ -302,12 +275,6 @@ $(function () {
 
 
 });
-
-// window.addEventListener('resize', function () {
-//     // let WW = window.innerWidth;
-//     tabletHeader();
-// });
-
 
 
 function check() {
