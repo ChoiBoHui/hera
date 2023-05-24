@@ -61,33 +61,35 @@ $(function () {
     // 함수 호출
     headerScrollEvent();
     gnbHoverEvent()
+    topbannerEvent()
 
     // 리사이즈 됐을 때
     $(window).on('resize', function () {
         headerScrollEvent();
         gnbHoverEvent()
+        topbannerEvent()
+        // 슬릭 슬라이더는 리사이즈에서 제외될 수 있음
     });
 
 
 
 
+    function topbannerEvent() {
+        // topbanner 슬라이더 Start
+        $('.banner_slider').slick({
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 4000
+        });
 
-    // topbanner 슬라이더 Start
-    $('.banner_slider').slick({
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        // useTransform: false,
-    });
-
-    // 슬라이더 버튼
-    $('.topbanner .area_left').on('click', function () {
-        $('.banner_slider').slick('slickPrev')
-    });
-    $('.topbanner .area_right').on('click', function () {
-        $('.banner_slider').slick('slickNext')
-    });
-
+        // 슬라이더 버튼
+        $('.topbanner .area_left').on('click', function () {
+            $('.banner_slider').slick('slickPrev')
+        });
+        $('.topbanner .area_right').on('click', function () {
+            $('.banner_slider').slick('slickNext')
+        });
+    };
 
 
 
@@ -216,6 +218,22 @@ $(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
     });
 
     // 슬라이더 버튼
