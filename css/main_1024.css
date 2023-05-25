@@ -1,6 +1,8 @@
 /* 태블릿 용 */
-@media (max-width: 1200px) {html { overflow-x: hidden; width: 100%; } 
-.tablet { display: block; } 
+@media (max-width: 1200px) {
+html { overflow-x: hidden; width: 100%; } 
+body { overflow-x: hidden; width: 100%; }
+/* .tablet { display: block; }  */
 
 section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-spacing: 0; margin: 0 0 35px 0; color: var(--color-g1); } 
 /* 영문 서체 변경 */
@@ -78,7 +80,7 @@ header { position: relative; z-index: 2; }
 /* topbanner End */
 
 /* nav Start */
-.header .nav { position: fixed; left: 0; top: 60px; justify-content: center; width: 80%; height: 100%; background: rgba(255, 255, 255, 0.5); } 
+.header .nav { display: none; position: fixed; left: 0; top: 60px; justify-content: center; width: 80%; height: 100%; background: rgba(255, 255, 255, 0.5); } 
 /* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
 /* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
 /* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; } */
@@ -205,6 +207,5 @@ header { position: relative; z-index: 2; }
 .custom-dots>li>button { display: block; width: 8px; height: 8px; font-size: 0; border: none; outline: 0; border-radius: 0; cursor: pointer; } 
 .custom-dots>li.slick-active>button { background-color: var(--color-g1); } 
 /* section BEST End */
-
 
 }
