@@ -256,13 +256,15 @@ $(function () {
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
+                        variableWidth: false,
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 1,
+                        slidesToScroll: 2,
+                        variableWidth: false,
                     }
                 }
             ]
