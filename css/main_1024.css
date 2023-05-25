@@ -19,7 +19,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .header .container { display: flex; width: 100%; margin: 0 auto; } 
 .header h1 { position: static; top: 0; left: 0; transform: translateX(0); margin: 0; z-index: 1; } 
 .header .topmenu.scroll h1 { top: 0; left: 0; transform: translateX(0); margin: 0; }
-.header h1 a { display: inline-block; padding: 8px; margin: auto 0 auto auto; } 
+.header h1 a { display: inline-block; padding: 8px; margin: 0; } 
 .header h1 a img { width: auto; height: 16px; } 
 
 /* customer_menu Start */
@@ -69,10 +69,9 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 /* topbanner Start */
-.topbanner { display: block; height: 38px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 12px 0 11px 0; } 
-/* 새로고침하는데 배경이 번쩍 거려서 높이값을 줬음.. 확인해보니 display 속성이 none에서 block으로 바뀌는 과정에서 생기는 것 같음 */
+.topbanner { display: block; height: 38px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 12px 0; } 
 .topbanner .container { position: relative; display: block; width: 100%; margin: 0 auto; text-align: center; } 
-.topbanner .container .banner_slider { width: 500px; margin: 0 auto; transform: translateY(1px); } 
+.topbanner .container .banner_slider { width: 100%; margin: 0 auto; transform: translateY(0); } 
 .topbanner .slide_util { display: none; } 
 /* .topbanner .slide_util img { width: 16px; } 
 .topbanner .slide_util .area_left { position: absolute; top: calc(50% - 8px); left: calc(100% - 50% - 296px); cursor: pointer; } 
