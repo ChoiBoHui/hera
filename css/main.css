@@ -37,6 +37,9 @@ header { position: relative; z-index: 2; }
 .header .customer_menu img { width: 20px; } 
 /* customer_menu End */
 
+/* menutrigger Start */
+.header .topmenu .menutrigger { display: none;}
+/* menutrigger End */
 
 
 /* search form Start */ 
