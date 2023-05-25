@@ -12,7 +12,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 /* Header Start */
 header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; } 
 .header { background-color: #fff; } 
-.header .topmenu { position: static; display: flex; justify-content: space-between; background-color: rgba(255, 255, 255, 0.5); z-index: 1; width: 100%; } 
+.header .topmenu { position: static; display: flex; justify-content: space-between; background-color: rgba(255, 255, 255, 0.5); z-index: 1; width: 100%; padding: 14px 16px 14px 16px; } 
 .header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; }
 .header .topmenu .gnb { position: relative; display: flex; height: auto; justify-content: center; } 
 .header .topmenu.scroll .gnb { position: static; top: 0; left: 0; right: 0; height: 0; }
