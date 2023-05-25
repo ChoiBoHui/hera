@@ -6,9 +6,34 @@ $(function () {
 
     //스크롤 시 메뉴 변경
     function headerScrollEvent() {
-        let WW = $(window).innerWidth();
-        if (WW >= 1200) {
-            $(window).on('scroll', function () {
+        // let WW = $(window).innerWidth();
+        // if (WW >= 1200) {
+        //     $(window).on('scroll', function () {
+        //         const topmenu = $('.header .topmenu');
+        //         let sch = $(window).scrollTop();
+        //         if (sch > 100) {
+        //             topmenu.addClass('scroll');
+        //         } else {
+        //             topmenu.removeClass('scroll');
+        //         }
+
+        //         // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
+        //         $(".gnbCurtain").removeClass("active")
+        //         $(".nav .main_menu>li").removeClass("active")
+        //         $('.globalnav_searchfield').removeClass("open");
+        //     });
+
+        // } else {
+        // const topmenu = $('.header .topmenu');
+        // // $(window).off('scroll');
+        // topmenu.removeClass('scroll');
+        // };
+
+
+        $(window).on('scroll', function () {
+            let WW = $(window).innerWidth();
+
+            if (WW >= 1200) {
                 const topmenu = $('.header .topmenu');
                 let sch = $(window).scrollTop();
                 if (sch > 100) {
@@ -21,13 +46,17 @@ $(function () {
                 $(".gnbCurtain").removeClass("active")
                 $(".nav .main_menu>li").removeClass("active")
                 $('.globalnav_searchfield').removeClass("open");
-            });
 
-        } else {
-            const topmenu = $('.header .topmenu');
-            $(window).off('scroll');
-            topmenu.removeClass('scroll');
-        }
+            } else {
+                const topmenu = $('.header .topmenu');
+                let sch = $(window).scrollTop();
+                if (sch > 38) {
+                    topmenu.addClass('scroll');
+                } else {
+                    topmenu.removeClass('scroll');
+                }
+            }
+        });
     };
 
     // 메뉴 호버 Start   

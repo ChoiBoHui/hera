@@ -10,23 +10,23 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 
 
 /* Header Start */
-header { position: relative; z-index: 2; } 
+header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; } 
 .header { background-color: #fff; } 
-.header .topmenu { position: fixed; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.5); z-index: 1; width: 100%; } 
-/* .header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; } */
-.header .topmenu .gnb { position: relative; display: flex; height: 61px; justify-content: center; } 
-/* .header .topmenu.scroll .gnb { position: absolute; top: 0; left: 0; right: 0; height: 0; } */
+.header .topmenu { position: static; display: flex; justify-content: space-between; background-color: rgba(255, 255, 255, 0.5); z-index: 1; width: 100%; } 
+.header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; }
+.header .topmenu .gnb { position: relative; display: flex; height: auto; justify-content: center; } 
+.header .topmenu.scroll .gnb { position: static; top: 0; left: 0; right: 0; height: 0; }
 .header .container { display: flex; width: 100%; margin: 0 auto; } 
-.header h1 { position: fixed; top: 0; left: 0; transform: translateX(0); margin: 0; z-index: 1; } 
-/* .header .topmenu.scroll h1 { top: 10px; left: 50%; transform: translateX(calc(-50% - 540px)); margin: 0; } */
-.header h1 a { display: block; padding: 8px; margin: auto 0 auto auto; } 
+.header h1 { position: static; top: 0; left: 0; transform: translateX(0); margin: 0; z-index: 1; } 
+.header .topmenu.scroll h1 { top: 0; left: 0; transform: translateX(0); margin: 0; }
+.header h1 a { display: inline-block; padding: 8px; margin: auto 0 auto auto; } 
 .header h1 a img { width: auto; height: 16px; } 
 
 /* customer_menu Start */
 .header .customer_menu { display: flex; gap: 4px; margin: auto 0 auto auto; } 
 /* 디자인 가이드라인에 맞추기 위해 right에 -7px줌 */
 /* 추후 디자인에 크게 영향을 안 미칠 것 같으면 0으로 변경 예정 */
-/* .header .topmenu.scroll .customer_menu { margin: 15px -4px 8px auto; } */
+.header .topmenu.scroll .customer_menu { margin: auto; }
 .header .customer_menu>li>a { display: block; padding: 4px; } 
 .header .customer_menu .search_icon_area { cursor: pointer; display: block; padding: 4px; } 
 .header .customer_menu img { width: 20px; } 
