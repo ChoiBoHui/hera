@@ -1,4 +1,4 @@
-/* * { outline: 1px solid #f00; }  */
+/* * { outline: 1px solid #f00; } */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
 
 :root { /* color */
@@ -38,7 +38,7 @@ header { position: relative; z-index: 2; }
 /* customer_menu End */
 
 /* menutrigger Start */
-.header .topmenu .menutrigger { display: none;}
+.header .topmenu .menutrigger { display: none; } 
 /* menutrigger End */
 
 
@@ -117,7 +117,7 @@ header { position: relative; z-index: 2; }
 
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
-.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 115px; left: 0; background-color: #fff; overflow-y: hidden; outline: none; } 
+.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 0vh; top: 114px; left: 0; background-color: #fff; overflow-y: hidden; outline: none; } 
 /* submenu 아래로 나오는 블러 효과를 깔끔하게 처리하기위해 서브메뉴에 아웃라인을 추가함 */
 /* submenu background에 slideUp Down 추가 */
 .topmenu.scroll .nav .main_menu .submenu { top: 57px; } 
@@ -149,6 +149,11 @@ header { position: relative; z-index: 2; }
 .menu_story .submenu .container .brandSubmenu { display: flex; width: auto; padding: auto; } 
 .menu_story .brandSubmenu { margin-left: 334px; } 
 .menu_story .brandSubmenu>* { width: 224px; } 
+
+
+/* 모바일용 추가 메뉴 */
+.header .nav .responsive_addmenu { display: none; } 
+
 /* Header End */
 
 
