@@ -140,13 +140,13 @@ html {overflow-y: hidden;}
 
 
 /* 서브메뉴 공통적용 & hover */
-.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 100%; height: 100%; top: 60px; right: 0; background-color: rgba(255, 255, 255, 0.5); overflow-y: auto; overflow-x: hidden; outline: none; } 
+.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 100%; height: 100%; top: 0; right: 0;  background-color: rgba(255, 255, 255, 0.5); overflow-y: hidden; overflow-x: hidden; outline: none; } 
 /* submenu 아래로 나오는 블러 효과를 깔끔하게 처리하기위해 서브메뉴에 아웃라인을 추가함 */
 /* submenu background에 slideUp Down 추가 */
 .topmenu.scroll .nav .main_menu .submenu { top: 0; }
 
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
-.nav .main_menu>li .submenu .container { opacity: 1; transition-property: none; padding: 0 16px;  } 
+.nav .main_menu>li .submenu .container {position: absolute; top: 0; left: 0; right: 0; width: 100%; height: calc(100% - 60px); opacity: 1; transition-property: none; padding: 0 16px; margin-top: 60px; overflow-y: auto;   } 
 .nav .main_menu>li.active .submenu .container { opacity: 1; } 
 .nav .main_menu>li.active .submenu { max-height: 100vh; outline: none; } 
 /* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
