@@ -11,6 +11,7 @@ section h2 { font-family: montserrat; font-size: 28px; font-weight: 700; letter-
 /* Header Start */
 header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; } 
 .header { background-color: #fff; } 
+.header .topmenuWrap {height: auto;}
 .header .topmenu { position: static; display: flex; background-color: rgba(255, 255, 255, 1); z-index: 1; width: 100%; padding: 13px 16px 13px 16px; } 
 .header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; } 
 .header .topmenu .gnb { position: relative; display: flex; height: auto; justify-content: center; align-items: center; } 
@@ -94,18 +95,19 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 /* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
 /* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; } */
 
-.gnbCurtain { content: ""; display: block; position: fixed; top: 0; left: 0; z-index: 1; width: 100%; height: 100% !important; background-color: rgba(0, 0, 0, 0.5); -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
+.gnbCurtain { content: ""; display: none; position: fixed; top: 0 !important; left: 0; z-index: 1; width: 100%; height: 100% !important; background-color: rgba(0, 0, 0, 0.5); -ms-backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); -moz-backdrop-filter: blur(6px); -o-backdrop-filter: blur(6px); backdrop-filter: blur(6px); } 
 .gnbCurtain.active { display: block; } 
 
 
 .nav .main_menu { display: block; justify-content: center; } 
+.topmenu.scroll .nav .main_menu {padding-top: 0; } 
 .nav .main_menu>li { padding: 4px; } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
 /* .nav .main_menu>li~li>a { } */
 .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
 /* 1~4번째 메뉴까지 선택 */
-.nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
-/* .topmenu.scroll .nav .main_menu>li>a { padding: 18px 12px 14px 12px; } */
+.nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px; } 
+.topmenu.scroll .nav .main_menu>li>a {padding: 14px 12px; } 
 .nav .main_menu>li>a::after { display: none; } 
 .nav .main_menu>li.mont>a::after { display: none; } 
 .nav .main_menu>li:hover>a::after { display: none; } 
@@ -152,7 +154,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 /* 모바일용 추가 메뉴 */
 .header .nav .responsive_addmenu {position: absolute; display: block; bottom: 0; left: 0;}
 .nav .responsive_addmenu .addmenu_list>li {padding: 4px;}
-.nav .responsive_addmenu .addmenu_list>li>a {display: inline-block; font-size: 16px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px; }
+.nav .responsive_addmenu .addmenu_list>li>a {display: inline-block; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px; }
 
 
 /* Header End */ 

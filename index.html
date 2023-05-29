@@ -48,190 +48,193 @@
                     </div>
                 </div>
             </div>
-            <div class="topmenu">
-                <h1>
-                    <a href="" class="logo">
-                        <img src="./img/az/logo.svg" alt="HERA HOME">
-                    </a>
-                </h1>
-                <div class="gnb">
-                    <div class="container">
-                        <ul class="customer_menu">
-                            <li class="search_icon">
-                                <div class="search_icon_area">
-                                    <img src="./img/icon/icon_search.svg" alt="">
-                                </div>
-                                <!-- 여기 밑에 검색창 있음 -->
-                                <div class="globalnav_searchfield">
-                                    <form name="searchfrm" method="get" action="" onsubmit="return check();"
-                                        autocomplete="off">
-                                        <div class="input_area">
-                                            <input type="text" id="searchInput" class="globalnav_searchfield-input"
-                                                name="searchInput" for="searchInput" placeholder="검색어를 입력해 주세요."
-                                                aria-label="">
-                                            <!-- js에서 검색창이 열렸을 때 autofocus 되게끔 설정해야함 -->
-                                            <input type="hidden" class="globalnav_searchfield-src" name="src" value="">
-                                            <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
-                                                type="button"></button>
-                                            <button class="globalnav_searchfield-submit" aria-label="검색어 제출"
-                                                aria-hidden="true" type="submit"></button>
-                                            <div class="globalnav_searchfield-close">닫기</div>
-                                            <!-- 회원가입 할때 썼던 방법으로 캡션이나 라벨 같은거 적용할 것 -->
+            <div class="topmenuWrap">
+                <div class="topmenu">
+                    <h1>
+                        <a href="" class="logo">
+                            <img src="./img/az/logo.svg" alt="HERA HOME">
+                        </a>
+                    </h1>
+                    <div class="gnb">
+                        <div class="container">
+                            <ul class="customer_menu">
+                                <li class="search_icon">
+                                    <div class="search_icon_area">
+                                        <img src="./img/icon/icon_search.svg" alt="">
+                                    </div>
+                                    <!-- 여기 밑에 검색창 있음 -->
+                                    <div class="globalnav_searchfield">
+                                        <form name="searchfrm" method="get" action="" onsubmit="return check();"
+                                            autocomplete="off">
+                                            <div class="input_area">
+                                                <input type="text" id="searchInput" class="globalnav_searchfield-input"
+                                                    name="searchInput" for="searchInput" placeholder="검색어를 입력해 주세요."
+                                                    aria-label="">
+                                                <!-- js에서 검색창이 열렸을 때 autofocus 되게끔 설정해야함 -->
+                                                <input type="hidden" class="globalnav_searchfield-src" name="src"
+                                                    value="">
+                                                <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
+                                                    type="button"></button>
+                                                <button class="globalnav_searchfield-submit" aria-label="검색어 제출"
+                                                    aria-hidden="true" type="submit"></button>
+                                                <div class="globalnav_searchfield-close">닫기</div>
+                                                <!-- 회원가입 할때 썼던 방법으로 캡션이나 라벨 같은거 적용할 것 -->
+                                            </div>
+                                        </form>
+                                        <div class="container">
+                                            <div class="recommend_product">
+                                                <div class="rcmd_title">추천 검색어</div>
+                                                <ul class="rcmd_product_list">
+                                                    <li><a href="">블랙 쿠션
+                                                        </a></li>
+                                                    <li><a href="">블랙 파운데이션
+                                                        </a></li>
+                                                    <li><a href="">프레쉬 누드 틴트</a></li>
+                                                    <li><a href="">루즈홀릭</a></li>
+                                                    <li><a href="">선크림</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </form>
+                                    </div>
+                                </li>
+                                <li class="offlineStore"><a href=""><img src="./img/icon/icon_store.svg" alt=""></a>
+                                </li>
+                                <li class="wishlist"><a href=""><img src="./img/icon/icon_wishlist.svg" alt=""></a></li>
+                                <li><a href=""><img src="./img/icon/icon_myaccount.svg" alt=""></a></li>
+                                <li><a href=""><img src="./img/icon/icon_cart.svg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menutrigger"><img src="./img/icon/icon_menu.svg" alt=""></div>
+                    <div class="nav">
+                        <ul class="main_menu">
+                            <li class="menu_story">
+                                <a href="">헤라 스토리</a>
+                                <div class="submenu">
                                     <div class="container">
-                                        <div class="recommend_product">
-                                            <div class="rcmd_title">추천 검색어</div>
-                                            <ul class="rcmd_product_list">
-                                                <li><a href="">블랙 쿠션
-                                                    </a></li>
-                                                <li><a href="">블랙 파운데이션
-                                                    </a></li>
-                                                <li><a href="">프레쉬 누드 틴트</a></li>
-                                                <li><a href="">루즈홀릭</a></li>
-                                                <li><a href="">선크림</a></li>
-                                            </ul>
-                                        </div>
+                                        <ul class="brandSubmenu">
+                                            <li class="submenu_header"><a href="">브랜드 소개</a></li>
+                                            <li class="submenu_header"><a href="">에이 크루</a></li>
+                                            <li class="submenu_header"><a href="">캠페인 라이브러리</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
-                            <li class="offlineStore"><a href=""><img src="./img/icon/icon_store.svg" alt=""></a></li>
-                            <li class="wishlist"><a href=""><img src="./img/icon/icon_wishlist.svg" alt=""></a></li>
-                            <li><a href=""><img src="./img/icon/icon_myaccount.svg" alt=""></a></li>
-                            <li><a href=""><img src="./img/icon/icon_cart.svg" alt=""></a></li>
+                            <li class="menu_makeup">
+                                <a href="">메이크업</a>
+                                <div class="submenu">
+                                    <div class="container">
+                                        <div class="pushMd">
+                                            <a href="">
+                                                <img src="./img/header/submenu_pr_makeup.jpg" alt="">
+                                                <p>BLACK CUSHION</p>
+                                            </a>
+                                        </div>
+                                        <ul class="menu_face">
+                                            <li class="submenu_header"><a href="">페이스</a></li>
+                                            <li><a href="">파운데이션</a></li>
+                                            <li><a href="">쿠션</a></li>
+                                            <li><a href="">베이스 &amp; 프라이머</a></li>
+                                            <li><a href="">파우더 &amp; 픽서</a></li>
+                                            <li><a href="">컨실러</a></li>
+                                            <li><a href="">브러시 &amp; 어플리케이터</a></li>
+                                        </ul>
+                                        <ul class="menu_lip">
+                                            <li class="submenu_header"><a href="">립</a></li>
+                                            <li><a href="">립스틱</a></li>
+                                            <li><a href="">틴트</a></li>
+                                            <li><a href="">립 밤 &amp; 글로스</a></li>
+                                        </ul>
+                                        <ul class="menu_eye">
+                                            <li class="submenu_header"><a href="">아이</a></li>
+                                            <li><a href="">아이섀도</a></li>
+                                            <li><a href="">마스카라</a></li>
+                                            <li><a href="">아이브로우</a></li>
+                                            <li><a href="">아이라이너</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu_skincare">
+                                <a href="">스킨케어</a>
+                                <div class="submenu">
+                                    <div class="container">
+                                        <div class="pushMd">
+                                            <a href="">
+                                                <img src="./img/header/submenu_pr_skincare.jpg" alt="">
+                                                <p>UV PROTECTOR MULTI-DEFENSE FRESH SPF50+/PA++++</p>
+                                            </a>
+                                        </div>
+                                        <ul class="menu_productLine">
+                                            <li class="submenu_header"><a href="">제품라인</a></li>
+                                            <li><a href="">클렌징</a></li>
+                                            <li><a href="">시그니아</a></li>
+                                            <li><a href="">에이지 어웨이</a></li>
+                                            <li><a href="">하이드로 리플렉팅</a></li>
+                                            <li><a href="">하이드로-듀 플럼핑</a></li>
+                                            <li><a href="">옴므</a></li>
+                                            <li><a href="">UV프로텍터</a></li>
+                                        </ul>
+                                        <ul class="menu_skinConcern">
+                                            <li class="submenu_header"><a href="">피부 고민</a></li>
+                                            <li><a href="">수분 &amp; 보습</a></li>
+                                            <li><a href="">브라이트닝</a></li>
+                                            <li><a href="">피부보호 &amp; 차단</a></li>
+                                            <li><a href="">안티에이징</a></li>
+                                            <li><a href="">프리미엄 안티에이징</a></li>
+                                        </ul>
+                                        <ul class="menu_productType">
+                                            <li class="submenu_header"><a href="">제품 유형</a></li>
+                                            <li><a href="">클렌저</a></li>
+                                            <li><a href="">토너 &amp; 워터</a></li>
+                                            <li><a href="">에멀젼</a></li>
+                                            <li><a href="">세럼 &amp; 앰플</a></li>
+                                            <li><a href="">아이 케어</a></li>
+                                            <li><a href="">크림</a></li>
+                                            <li><a href="">UV 프로텍션</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu_fragrance">
+                                <a href="">프래그런스</a>
+                                <div class="submenu">
+                                    <div class="container">
+                                        <div class="pushMd">
+                                            <a href="">
+                                                <img src="./img/header/submenu_pr_fragrance.jpg" alt="">
+                                                <p>EXCEPTIONAL EAU DE PARFUM</p>
+                                            </a>
+                                        </div>
+                                        <ul class="menu_productLine">
+                                            <li class="submenu_header"><a href="">제품라인</a></li>
+                                            <li><a href="">익셉셔널</a></li>
+                                            <li><a href="">지일 &amp; 벨벳 나이트</a></li>
+                                        </ul>
+                                        <ul class="menu_productType">
+                                            <li class="submenu_header"><a href="">제품 유형</a></li>
+                                            <li><a href="">향수</a></li>
+                                            <li><a href="">바디</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mont instagallary"><a href="">#HERA</a></li>
+                            <li class="mont eventmenu"><a href="">Event</a></li>
                         </ul>
+                        <div class="responsive_addmenu">
+                            <ul class="addmenu_list">
+                                <li><a href="">로그인</a></li>
+                                <li><a href="">관심상품</a></li>
+                                <li><a href="">매장 찾기</a></li>
+                                <li><a href="">고객센터</a></li>
+                            </ul>
+                        </div>
                     </div>
+                    <!-- z-index 불편하게 gnbCurtain이 왜 여기 있냐면, header가 없어지는 경우, 함께 없어질 기능이기 때문! 그래서 js가 좀 복잡해져도 넣어뒀습니다! :) -->
+                    <span class="gnbCurtain"></span>
                 </div>
-                <div class="menutrigger"><img src="./img/icon/icon_menu.svg" alt=""></div>
-                <div class="nav">
-                    <ul class="main_menu">
-                        <li class="menu_story">
-                            <a href="">헤라 스토리</a>
-                            <div class="submenu">
-                                <div class="container">
-                                    <ul class="brandSubmenu">
-                                        <li class="submenu_header"><a href="">브랜드 소개</a></li>
-                                        <li class="submenu_header"><a href="">에이 크루</a></li>
-                                        <li class="submenu_header"><a href="">캠페인 라이브러리</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menu_makeup">
-                            <a href="">메이크업</a>
-                            <div class="submenu">
-                                <div class="container">
-                                    <div class="pushMd">
-                                        <a href="">
-                                            <img src="./img/header/submenu_pr_makeup.jpg" alt="">
-                                            <p>BLACK CUSHION</p>
-                                        </a>
-                                    </div>
-                                    <ul class="menu_face">
-                                        <li class="submenu_header"><a href="">페이스</a></li>
-                                        <li><a href="">파운데이션</a></li>
-                                        <li><a href="">쿠션</a></li>
-                                        <li><a href="">베이스 &amp; 프라이머</a></li>
-                                        <li><a href="">파우더 &amp; 픽서</a></li>
-                                        <li><a href="">컨실러</a></li>
-                                        <li><a href="">브러시 &amp; 어플리케이터</a></li>
-                                    </ul>
-                                    <ul class="menu_lip">
-                                        <li class="submenu_header"><a href="">립</a></li>
-                                        <li><a href="">립스틱</a></li>
-                                        <li><a href="">틴트</a></li>
-                                        <li><a href="">립 밤 &amp; 글로스</a></li>
-                                    </ul>
-                                    <ul class="menu_eye">
-                                        <li class="submenu_header"><a href="">아이</a></li>
-                                        <li><a href="">아이섀도</a></li>
-                                        <li><a href="">마스카라</a></li>
-                                        <li><a href="">아이브로우</a></li>
-                                        <li><a href="">아이라이너</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menu_skincare">
-                            <a href="">스킨케어</a>
-                            <div class="submenu">
-                                <div class="container">
-                                    <div class="pushMd">
-                                        <a href="">
-                                            <img src="./img/header/submenu_pr_skincare.jpg" alt="">
-                                            <p>UV PROTECTOR MULTI-DEFENSE FRESH SPF50+/PA++++</p>
-                                        </a>
-                                    </div>
-                                    <ul class="menu_productLine">
-                                        <li class="submenu_header"><a href="">제품라인</a></li>
-                                        <li><a href="">클렌징</a></li>
-                                        <li><a href="">시그니아</a></li>
-                                        <li><a href="">에이지 어웨이</a></li>
-                                        <li><a href="">하이드로 리플렉팅</a></li>
-                                        <li><a href="">하이드로-듀 플럼핑</a></li>
-                                        <li><a href="">옴므</a></li>
-                                        <li><a href="">UV프로텍터</a></li>
-                                    </ul>
-                                    <ul class="menu_skinConcern">
-                                        <li class="submenu_header"><a href="">피부 고민</a></li>
-                                        <li><a href="">수분 &amp; 보습</a></li>
-                                        <li><a href="">브라이트닝</a></li>
-                                        <li><a href="">피부보호 &amp; 차단</a></li>
-                                        <li><a href="">안티에이징</a></li>
-                                        <li><a href="">프리미엄 안티에이징</a></li>
-                                    </ul>
-                                    <ul class="menu_productType">
-                                        <li class="submenu_header"><a href="">제품 유형</a></li>
-                                        <li><a href="">클렌저</a></li>
-                                        <li><a href="">토너 &amp; 워터</a></li>
-                                        <li><a href="">에멀젼</a></li>
-                                        <li><a href="">세럼 &amp; 앰플</a></li>
-                                        <li><a href="">아이 케어</a></li>
-                                        <li><a href="">크림</a></li>
-                                        <li><a href="">UV 프로텍션</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menu_fragrance">
-                            <a href="">프래그런스</a>
-                            <div class="submenu">
-                                <div class="container">
-                                    <div class="pushMd">
-                                        <a href="">
-                                            <img src="./img/header/submenu_pr_fragrance.jpg" alt="">
-                                            <p>EXCEPTIONAL EAU DE PARFUM</p>
-                                        </a>
-                                    </div>
-                                    <ul class="menu_productLine">
-                                        <li class="submenu_header"><a href="">제품라인</a></li>
-                                        <li><a href="">익셉셔널</a></li>
-                                        <li><a href="">지일 &amp; 벨벳 나이트</a></li>
-                                    </ul>
-                                    <ul class="menu_productType">
-                                        <li class="submenu_header"><a href="">제품 유형</a></li>
-                                        <li><a href="">향수</a></li>
-                                        <li><a href="">바디</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mont instagallary"><a href="">#HERA</a></li>
-                        <li class="mont eventmenu"><a href="">Event</a></li>
-                    </ul>
-                    <div class="responsive_addmenu">
-                        <ul class="addmenu_list">
-                            <li><a href="">로그인</a></li>
-                            <li><a href="">관심상품</a></li>
-                            <li><a href="">매장 찾기</a></li>
-                            <li><a href="">고객센터</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- z-index 불편하게 gnbCurtain이 왜 여기 있냐면, header가 없어지는 경우, 함께 없어질 기능이기 때문! 그래서 js가 좀 복잡해져도 넣어뒀습니다! :) -->
-                <span class="gnbCurtain"></span>
             </div>
-
         </header>
 
 
