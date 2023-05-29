@@ -1,5 +1,5 @@
 /* 태블릿 용 */
-@media (max-width: 1200px) {html { overflow-x: hidden; width: 100%; } 
+@media (max-width: 1200px) { html { overflow-x: hidden; width: 100%; } 
 body { overflow-x: hidden; width: 100%; } 
 /* .tablet { display: block; } */
 
@@ -11,7 +11,7 @@ section h2 { font-family: montserrat; font-size: 28px; font-weight: 700; letter-
 /* Header Start */
 header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; } 
 .header { background-color: #fff; } 
-.header .topmenuWrap {height: auto;}
+.header .topmenuWrap { height: auto; } 
 .header .topmenu { position: static; display: flex; background-color: rgba(255, 255, 255, 1); z-index: 1; width: 100%; padding: 13px 16px 13px 16px; } 
 .header .topmenu.scroll { position: fixed; top: 0; left: 0; right: 0; } 
 .header .topmenu .gnb { position: relative; display: flex; height: auto; justify-content: center; align-items: center; } 
@@ -90,7 +90,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 /* nav Start */
-.header .nav { display: block; position: fixed; left: 0; top: 0; justify-content: center; width: calc(100% - 100px); height: 100%; background: rgba(255, 255, 255, 0.9); z-index: 2; } 
+.header .nav { display: block; position: fixed; right: 0; top: 0; justify-content: center; width: calc(100% - 100px); height: 100%; background: rgba(255, 255, 255, 0.9); padding: 60px 8px 20px 8px; z-index: 2; } 
 /* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
 /* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
 /* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; } */
@@ -100,17 +100,18 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 .nav .main_menu { display: block; justify-content: center; } 
-.topmenu.scroll .nav .main_menu {padding-top: 0; } 
+.topmenu.scroll .nav .main_menu { padding-top: 0; } 
 .nav .main_menu>li { padding: 4px; } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
 /* .nav .main_menu>li~li>a { } */
 .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
 /* 1~4번째 메뉴까지 선택 */
-.nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px; } 
-.topmenu.scroll .nav .main_menu>li>a {padding: 14px 12px; } 
-.nav .main_menu>li>a::after { display: none; } 
-.nav .main_menu>li.mont>a::after { display: none; } 
-.nav .main_menu>li:hover>a::after { display: none; } 
+.nav .main_menu>li>a { position: relative; display: block; padding: 8px 12px; } 
+.topmenu.scroll .nav .main_menu>li>a { padding: 8px 12px; } 
+.nav .main_menu>li>a::after { content: ""; position: absolute; top: calc(100% - 50%); left: auto; right: 0; transform: translate(0, -50%); display: block; width: 20px; height: 20px; background: url(../img/icon/btn_next.svg) center center/cover; transition: none; } 
+.nav .main_menu>li.mont>a::after { top: calc(100% - 50%); } 
+.nav .main_menu>li:hover>a::after { width: 20px; } 
+/* 호버 이벤트 나중에 다 없애면 이 부분 없애도 되지 않을까..? */
 .nav .main_menu .mont { transform: translateY(0); } 
 .nav .main_menu .mont>a { font-size: 17px; font-weight: 500; color: var(--color-g1); } 
 
@@ -152,9 +153,9 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 /* 모바일용 추가 메뉴 */
-.header .nav .responsive_addmenu {position: absolute; display: block; bottom: 0; left: 0;}
-.nav .responsive_addmenu .addmenu_list>li {padding: 4px;}
-.nav .responsive_addmenu .addmenu_list>li>a {display: inline-block; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px; }
+.header .nav .responsive_addmenu { position: absolute; display: block; bottom: 0; left: 0; } 
+.nav .responsive_addmenu .addmenu_list>li { padding: 4px; } 
+.nav .responsive_addmenu .addmenu_list>li>a { display: inline-block; width: 100%; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px 12px; } 
 
 
 /* Header End */ 
@@ -189,7 +190,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .best .container { position: relative; width: 100%; margin: 0 auto; text-align: center; } 
 .best .product_slider { color: #1d1d1f; } 
 .best .product_slider .slick-track { display: flex; gap: 0; } 
-.best .product_slider .best_itm { position: relative; padding: 0 4px;} 
+.best .product_slider .best_itm { position: relative; padding: 0 4px; } 
 .best .product_slider .slick-list { margin-bottom: 34px; } 
 
 /* 슬라이드 버튼 시작 */
@@ -217,7 +218,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 /* 커스터머 버튼 시작 */
 .best_itm .thumbnail_area .cmlink_btn { position: absolute; top: 1px; right: 0; opacity: 1; visibility: visible; transition: none; } 
-/* .best_itm .thumbnail_area:hover .cmlink_btn { opacity: 1; visibility: visible; }  */
+/* .best_itm .thumbnail_area:hover .cmlink_btn { opacity: 1; visibility: visible; } */
 .best_itm .thumbnail_area .cmlink_btn .addWishlist { padding: 7px; cursor: pointer; } 
 .best_itm .thumbnail_area .cmlink_btn .addWishlist>img { width: 20px; } 
 .best_itm .thumbnail_area .cmlink_btn .addWishlist.plusWish { background: url(../img/icon/icon_wishlist_full.svg) center center/20px no-repeat; } 
@@ -236,5 +237,4 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .custom-dots>li { padding: 4px; border-radius: 0; cursor: pointer; } 
 .custom-dots>li>button { display: block; width: 8px; height: 8px; font-size: 0; border: none; outline: 0; border-radius: 0; cursor: pointer; } 
 .custom-dots>li.slick-active>button { background-color: var(--color-g1); } 
-/* section BEST End */
-}
+/* section BEST End */ } 

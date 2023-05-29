@@ -109,7 +109,7 @@ header { position: relative; z-index: 2; }
 /* 1~4번째 메뉴까지 선택 */
 .nav .main_menu>li>a { position: relative; display: block; padding: 14px 12px 14px 12px; } 
 .topmenu.scroll .nav .main_menu>li>a { padding: 15px 12px 13px 12px; } 
-.nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background-color: var(--color-g1); transition: width 0.25s ease; } 
+.nav .main_menu>li>a::after { content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: block; width: 0; height: 4px; background: var(--color-g1); transition: width 0.25s ease; } 
 .nav .main_menu>li.mont>a::after { top: calc(100% + 1px); } 
 .nav .main_menu>li:hover>a::after { width: calc(100% - 24px); } 
 /* 이부분 원래 >li>a:hover 였는데, li로 바꾸니까 ::after가 유지는 되는데, 뒤쪽 메뉴가 자꾸 겹침 */
