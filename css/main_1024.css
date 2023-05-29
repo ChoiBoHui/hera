@@ -101,14 +101,14 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 .nav .main_menu { display: block; justify-content: center; } 
 .topmenu.scroll .nav .main_menu { padding-top: 0; } 
-.nav .main_menu>li { padding: 4px; } 
+.nav .main_menu>li { padding: 4px;  } 
 /* 메뉴 끊김을 방지하기 위해 gap 대신 padding으로 줬음 */
 /* .nav .main_menu>li~li>a { } */
 .nav .main_menu>li:nth-child(n+1):nth-child(-n+4)>a { font-size: 16px; font-weight: 600; letter-spacing: -0.025rem; color: var(--color-g1); } 
 /* 1~4번째 메뉴까지 선택 */
-.nav .main_menu>li>a { position: relative; display: block; padding: 8px 12px; } 
+.nav .main_menu>li>a { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; } 
 .topmenu.scroll .nav .main_menu>li>a { padding: 8px 12px; } 
-.nav .main_menu>li>a::after { content: ""; position: absolute; top: calc(100% - 50%); left: auto; right: 0; transform: translate(0, -50%); display: block; width: 20px; height: 20px; background: url(../img/icon/btn_next.svg) center center/cover; transition: none; } 
+.nav .main_menu>li>a::after { content: ""; position: static; transform: translate(0, 0); display: inline-block; width: 20px; height: 20px; background: url(../img/icon/btn_next.svg) center center/cover; transition: none; } 
 .nav .main_menu>li.mont>a::after { top: calc(100% - 50%); } 
 .nav .main_menu>li:hover>a::after { width: 20px; } 
 /* 호버 이벤트 나중에 다 없애면 이 부분 없애도 되지 않을까..? */
