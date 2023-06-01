@@ -155,6 +155,7 @@ header { position: relative; z-index: 2; }
 
 /* 모바일용 추가 메뉴 */
 .header .nav .responsive_addmenu { display: none; } 
+.header .nav .menuHandler {display: none;}
 
 /* Header End */
 
