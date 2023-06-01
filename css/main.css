@@ -135,9 +135,9 @@ header { position: relative; z-index: 2; }
 /* 서브메뉴 텍스트 */
 .header .nav .submenu .submenu_header { margin-bottom: 6px; } 
 .header .nav .submenu .submenu_header>a { display: block; padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
-.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li { padding: 4px; } 
-.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a { display: block; font-size: 15px; font-weight: 400; color: #979798; padding: 4px; } 
-.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a:hover { color: var(--color-g1); } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li { padding: 4px; } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a { display: block; font-size: 15px; font-weight: 400; color: #979798; padding: 4px; } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a:hover { color: var(--color-g1); } 
 
 /* 신상 홍보용 배너 */
 .nav .submenu .container .pushMd { width: 282px; margin: 0 52px 0 0; padding: 43px 0 28px 0; } 
@@ -156,6 +156,7 @@ header { position: relative; z-index: 2; }
 /* 모바일용 추가 메뉴 */
 .header .nav .responsive_addmenu { display: none; } 
 .header .nav .menuHandler {display: none;}
+.allCategory {display: none;}
 
 /* Header End */
 

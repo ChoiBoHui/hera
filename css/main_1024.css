@@ -158,14 +158,14 @@ html { overflow-y: hidden; }
 /* 서브메뉴 텍스트 */
 .header .nav .submenu .submenu_header { margin-bottom: 0; } 
 .header .nav .submenu .submenu_header>a { display: block; padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
-.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li { padding: 4px; margin-bottom: 4px; } 
-.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a { display: block; font-size: 16px; font-weight: 400; color: var(--color-g1); padding: 4px; } 
-.header .nav .submenu ul:nth-child(n+2):nth-child(-n+4)>li~li>a:hover { color: var(--color-g1); } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li { padding: 4px; margin-bottom: 4px; } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a { display: block; font-size: 16px; font-weight: 400; color: var(--color-g1); padding: 4px; } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a:hover { color: var(--color-g1); } 
 
 /* 신상 홍보용 배너 */
 .nav .submenu .container .pushMd { width: 100%; margin: 0 0 40px 0; padding: 0 8px; } 
-.nav .submenu .container .pushMd img { width: 100%; height: auto; max-width: 600px; } 
-/* 맥스위드 600은 임시 */
+.nav .submenu .container .pushMd img { width: 100%; height: auto; max-width: 360px; } 
+/* 맥스위드 360은 임시 */
 .nav .submenu .container .pushMd p { font-family: Montserrat; font-weight: 400; letter-spacing: 0; font-size: 15px; text-indent: -1px; padding: 10px 0 14px 0; line-height: 20px; } 
 
 /* 서브메뉴 간격 */
@@ -178,18 +178,21 @@ html { overflow-y: hidden; }
 
 
 /* 모바일용 추가 메뉴 */
-/* 서브메뉴 작업때문에 잠깐 숨겨놓음 */
 .header .nav .responsive_addmenu { position: absolute; display: block; bottom: 10px; left: 8px; } 
 .nav .responsive_addmenu .addmenu_list>li { padding: 4px; } 
 .nav .responsive_addmenu .addmenu_list>li>a { display: inline-block; width: 100%; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px 12px; } 
 
+/* 모바일용 메뉴 핸들러 */
 .header .nav .menuHandler { display: block; } 
 .header .nav .menuHandler .menuClose { position: absolute; top: 15px; right: 16px; padding: 4px; } 
-.header .nav .menuHandler .menuBack { position: absolute; display: none; top: 15px; left: 16px; padding: 4px; } 
-.header .nav .menuHandler .menuBack.on { display: block; } 
+.header .nav .menuHandler .menuBack { position: absolute; top: 15px; left: calc(100% + 16px); padding: 4px; transition: left 0.25s; } 
+.header .nav .menuHandler .menuBack.on { display: block; left: 16px; } 
 .header .nav .menuHandler img { width: 22px; height: 22px; cursor: pointer; padding: 4px; } 
 .header .nav .menuHandler .menuBack img { padding: 2px; } 
 
+/* 모바일용 서브메뉴 전체보기 추가 */
+.allCategory {display: block; padding: 4px; margin-bottom: 4px; margin-bottom: 40px; cursor: pointer;}
+.allCategory>a { padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
 
 /* Header End */ 
 
