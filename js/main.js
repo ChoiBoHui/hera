@@ -90,28 +90,19 @@ $(function () {
         }
     };
 
+    // 모바일 메인 메뉴 클릭 시 서브메뉴 open
     function submenuOpen() {
         let WW = $(window).innerWidth();
-        $(".main_menu>li>a").on('click', function (event) {
-            if (WW < 1200) {
+        if (WW < 1200) {
+            $(".main_menu>li>a").on('click', function (event) {
                 event.preventDefault();
-                $(".main_menu>li>.submenu").addClass("open")
-            } else {
-                $(".main_menu>li>.submenu").removeClass("open")
-            }
-            return;
-        });
+                $(".main_menu>li>.submenu").addClass("open");
+            });
+        } else {
+            $(".main_menu>li>a").off('click');
+            $(".main_menu>li>.submenu").removeClass("open");
+        }
     };
-
-    // function submenuOpen() {
-    //     let WW = $(window).innerWidth();
-    //     $(".main_menu>li>a").on('click', function (event) {
-    //         if (WW < 1200) {
-    //             event.preventDefault();
-    //         }
-    //         // return;
-    //     });
-    // };
 
     // 함수 호출
     headerScrollEvent();
