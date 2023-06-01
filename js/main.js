@@ -97,12 +97,19 @@ $(function () {
             $(".main_menu>li>a").on('click', function (event) {
                 event.preventDefault();
                 $(".main_menu>li>.submenu").addClass("open");
+                $(".header .nav .menuHandler .menuBack").addClass("on");
+            });
+            $(".header .nav .menuHandler .menuBack").on('click', function () {
+                $(".main_menu>li>.submenu").removeClass("open");
             });
         } else {
             $(".main_menu>li>a").off('click');
             $(".main_menu>li>.submenu").removeClass("open");
+            $(".header .nav .menuHandler .menuBack").removeClass("on");
         }
     };
+
+
 
     // 함수 호출
     headerScrollEvent();

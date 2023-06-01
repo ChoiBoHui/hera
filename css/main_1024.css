@@ -184,8 +184,9 @@ html { overflow-y: hidden; }
 .nav .responsive_addmenu .addmenu_list>li>a { display: inline-block; width: 100%; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px 12px; } 
 
 .header .nav .menuHandler { display: block; } 
-.header .nav .menuHandler .menuClose { position: absolute; top: 15px; right: 16px; display: block; padding: 4px; } 
-.header .nav .menuHandler .menuBack { position: absolute; top: 15px; left: 16px; display: block; padding: 4px; } 
+.header .nav .menuHandler .menuClose { position: absolute; top: 15px; right: 16px; padding: 4px; } 
+.header .nav .menuHandler .menuBack { position: absolute; display: none; top: 15px; left: 16px; padding: 4px; } 
+.header .nav .menuHandler .menuBack.on { display: block; } 
 .header .nav .menuHandler img { width: 22px; height: 22px; cursor: pointer; padding: 4px; } 
 .header .nav .menuHandler .menuBack img { padding: 2px; } 
 
