@@ -104,15 +104,14 @@ $(function () {
                 $(".header .nav .menuHandler .menuBack").removeClass("on");
             });
         } else {
-            $('html').css('overflow-y', '');
             $(".main_menu>li>a").off('click');
-            $(".header .nav").removeClass("open");
             $(".main_menu>li>.submenu").removeClass("open");
             $(".header .nav .menuHandler .menuBack").removeClass("on");
-            // $(".gnbCurtain").removeClass("active");
-            // 아.. 왜 이거 안없어지냐고.. 왜 inline이 되는 거냐고 어이없네..
         };
+        // 아래는 responsiveMenu에 적용됐던 부분들인데, resize에 묶어서 넣으려고 여기 넣어둠
+        $('html').css('overflow-y', '');
         $(".gnbCurtain").removeClass("active").css('display', '');
+        $(".header .nav").removeClass("open");
     };
 
     function responsiveMenu() {
