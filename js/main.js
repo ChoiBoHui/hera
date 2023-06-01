@@ -112,6 +112,7 @@ $(function () {
             // $(".gnbCurtain").removeClass("active");
             // 아.. 왜 이거 안없어지냐고.. 왜 inline이 되는 거냐고 어이없네..
         };
+        $(".gnbCurtain").removeClass("active").css('display', '');
     };
 
     function responsiveMenu() {
