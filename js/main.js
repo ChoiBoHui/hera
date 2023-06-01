@@ -104,11 +104,38 @@ $(function () {
                 $(".header .nav .menuHandler .menuBack").removeClass("on");
             });
         } else {
+            $('html').css('overflow-y', '');
             $(".main_menu>li>a").off('click');
+            $(".header .nav").removeClass("open");
             $(".main_menu>li>.submenu").removeClass("open");
             $(".header .nav .menuHandler .menuBack").removeClass("on");
-        }
+            // $(".gnbCurtain").removeClass("active");
+            // 아.. 왜 이거 안없어지냐고.. 왜 inline이 되는 거냐고 어이없네..
+        };
     };
+
+    function responsiveMenu() {
+        $(".menutrigger").on('click', function () {
+            $('html').css('overflow-y', 'hidden');
+            $(".header .nav").addClass("open");
+            $(".gnbCurtain").fadeIn().addClass("active");
+        });
+        $(".menuClose").on('click', function () {
+            $('html').css('overflow-y', '');
+            $(".header .nav").removeClass("open");
+            $(".main_menu>li>.submenu").removeClass("open");
+            $(".header .nav .menuHandler .menuBack").removeClass("on");
+            $(".gnbCurtain").fadeOut().removeClass("active");
+        });
+        $(".gnbCurtain").on('click', function () {
+            $('html').css('overflow-y', '');
+            $(".header .nav").removeClass("open");
+            $(".main_menu>li>.submenu").removeClass("open");
+            $(".header .nav .menuHandler .menuBack").removeClass("on");
+            $(".gnbCurtain").fadeOut().removeClass("active");
+        });
+    };
+
 
 
 
@@ -116,6 +143,7 @@ $(function () {
     headerScrollEvent();
     gnbHoverEvent();
     submenuOpen();
+    responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
     topbannerEvent(); //탑배너는 리사이즈 필요 없음
     searchForm();
     mainVisualSlider();

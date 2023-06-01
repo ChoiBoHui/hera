@@ -1,5 +1,6 @@
 /* 태블릿 용 */
-@media (max-width: 1200px) { html { overflow-x: hidden; width: 100%; } 
+@media (max-width: 1200px) {
+ html { overflow-x: hidden; width: 100%; overflow-y: auto;} 
 body { overflow-x: hidden; width: 100%; } 
 /* .tablet { display: block; } */
 
@@ -90,7 +91,8 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 /* nav Start */
-.header .nav { display: block; position: fixed; right: 0; top: 0; justify-content: center; width: calc(100% - 80px); height: 100%; background: rgba(255, 255, 255, 0.9); padding: 60px 8px 20px 8px; z-index: 2; } 
+.header .nav { display: block; position: fixed; right: -100%; top: 0; justify-content: center; width: calc(100% - 80px); height: 100%; background: rgba(255, 255, 255, 1); padding: 60px 8px 20px 8px; z-index: 2; transition: right 0.25s; } 
+.header .nav.open { right: 0; } 
 /* 메뉴 열렸을때 바깥 bg 블러blur 효과 */
 /* after는 DOM에 위치해 있지 않아 제이쿼리로 선택이 불가능함. => apple사이트에서도 별도의 div를 만들어서 사용하였기에 나도 span태그를 이용해서 넣어줌 */
 /* .header .topmenu.scroll .nav { position: fixed; top: 0; left: 0; right: 0; justify-content: center; } */
@@ -128,12 +130,6 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .menu_fragrance,
 .instagallary,
 .eventmenu { display: none; } 
-/* 나중에 메뉴창이 열리면 스크롤 안되게 막아두는건데 작업중에 불편해서 미리 막아둠 */
-html { overflow-y: hidden; } 
-
-
-
-
 
 
 
@@ -179,8 +175,8 @@ html { overflow-y: hidden; }
 
 /* 모바일용 추가 메뉴 */
 .header .nav .responsive_addmenu { position: absolute; display: block; bottom: 10px; left: 8px; } 
-.nav .responsive_addmenu .addmenu_list>li { padding: 4px; } 
-.nav .responsive_addmenu .addmenu_list>li>a { display: inline-block; width: 100%; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px 12px; } 
+.header .nav .responsive_addmenu .addmenu_list>li { padding: 4px; } 
+.header .nav .responsive_addmenu .addmenu_list>li>a { display: inline-block; width: 100%; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px 12px; } 
 
 /* 모바일용 메뉴 핸들러 */
 .header .nav .menuHandler { display: block; } 
@@ -191,8 +187,8 @@ html { overflow-y: hidden; }
 .header .nav .menuHandler .menuBack img { padding: 2px; } 
 
 /* 모바일용 서브메뉴 전체보기 추가 */
-.allCategory {display: block; padding: 4px; margin-bottom: 4px; margin-bottom: 40px; cursor: pointer;}
-.allCategory>a { padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
+.header .nav .main_menu .allCategory { display: block; padding: 4px; margin-bottom: 4px; margin-bottom: 40px; cursor: pointer; } 
+.header .nav .main_menu .allCategory>a { padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
 
 /* Header End */ 
 
