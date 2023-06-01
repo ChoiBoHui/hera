@@ -101,6 +101,7 @@ $(function () {
             });
             $(".header .nav .menuHandler .menuBack").on('click', function () {
                 $(".main_menu>li>.submenu").removeClass("open");
+                $(".header .nav .menuHandler .menuBack").removeClass("on");
             });
         } else {
             $(".main_menu>li>a").off('click');
