@@ -94,18 +94,20 @@ $(function () {
     function submenuOpen() {
         let WW = $(window).innerWidth();
         if (WW < 1200) {
-            $(".main_menu>li>a").on('click', function (event) {
+            $(".main_menu>li:nth-child(-n+4)>a").on('click', function (event) {
                 event.preventDefault();
-                $(".main_menu>li>.submenu").addClass("open");
-                $(".header .nav .menuHandler .menuBack").addClass("on");
+                if ($(this).parent().has(".submenu").length > 0) {
+                    $(this).parent().addClass("open");
+                    $(".header .nav .menuHandler .menuBack").addClass("on");
+                };
             });
             $(".header .nav .menuHandler .menuBack").on('click', function () {
-                $(".main_menu>li>.submenu").removeClass("open");
+                $(".main_menu>li").removeClass("open");
                 $(".header .nav .menuHandler .menuBack").removeClass("on");
             });
         } else {
             $(".main_menu>li>a").off('click');
-            $(".main_menu>li>.submenu").removeClass("open");
+            $(".main_menu>li").removeClass("open");
             $(".header .nav .menuHandler .menuBack").removeClass("on");
         };
         // 아래는 responsiveMenu에 적용됐던 부분들인데, resize에 묶어서 넣으려고 여기 넣어둠
@@ -113,6 +115,7 @@ $(function () {
         $(".gnbCurtain").removeClass("active").css('display', '');
         $(".header .nav").removeClass("open");
     };
+
 
     function responsiveMenu() {
         $(".menutrigger").on('click', function () {
@@ -123,14 +126,14 @@ $(function () {
         $(".menuClose").on('click', function () {
             $('html').css('overflow-y', '');
             $(".header .nav").removeClass("open");
-            $(".main_menu>li>.submenu").removeClass("open");
+            $(".main_menu>li").removeClass("open");
             $(".header .nav .menuHandler .menuBack").removeClass("on");
             $(".gnbCurtain").fadeOut().removeClass("active");
         });
         $(".gnbCurtain").on('click', function () {
             $('html').css('overflow-y', '');
             $(".header .nav").removeClass("open");
-            $(".main_menu>li>.submenu").removeClass("open");
+            $(".main_menu>li").removeClass("open");
             $(".header .nav .menuHandler .menuBack").removeClass("on");
             $(".gnbCurtain").fadeOut().removeClass("active");
         });

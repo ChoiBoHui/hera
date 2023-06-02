@@ -119,29 +119,14 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 
-
-
-
-
 /* sub menu Start */
-/* 서브메뉴 작업중에만 잠깐 숨겨놓기 */
-.menu_story,
-.menu_skincare,
-.menu_fragrance,
-.instagallary,
-.eventmenu { display: none; } 
-
-
-
-
-
 /* 서브메뉴 공통적용 & hover */
-.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 100%; height: 100%; top: 0; left: 100%; background-color: rgba(255, 255, 255, 1); overflow-y: hidden; overflow-x: hidden; outline: none; transition: left 0.25s; } 
+.nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 100%; height: 100%; top: 0; left: 100%; background-color: rgba(255, 255, 255, 1); overflow-y: hidden; overflow-x: hidden; outline: none; transition: left 0.25s; z-index: 1; } 
 /* submenu 아래로 나오는 블러 효과를 깔끔하게 처리하기위해 서브메뉴에 아웃라인을 추가함 */
 /* submenu background에 slideUp Down 추가 */
 .topmenu.scroll .nav .main_menu .submenu { top: 0; } 
 /* 모바일 서브메뉴 오픈 */
-.nav .main_menu>li .submenu.open { left: 0; } 
+.nav .main_menu>li.open .submenu { left: 0; } 
 
 /* 아래처럼 .container 에 별도로 스타일을 준 이유는 위에 같이 주니까 뒤쪽 메뉴가 겹쳐져서 같이 열림.. */
 .nav .main_menu>li .submenu .container { position: absolute; top: 0; left: 0; right: 0; width: 100%; height: calc(100% - 60px); opacity: 1; transition-property: none; padding: 0 16px; margin-top: 60px; overflow-y: auto; } 
@@ -179,9 +164,9 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .header .nav .responsive_addmenu .addmenu_list>li>a { display: inline-block; width: 100%; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px 12px; } 
 
 /* 모바일용 메뉴 핸들러 */
-.header .nav .menuHandler { display: block; } 
+.header .nav .menuHandler { display: block; }  
 .header .nav .menuHandler .menuClose { position: absolute; top: 15px; right: 16px; padding: 4px; } 
-.header .nav .menuHandler .menuBack { position: absolute; top: 15px; left: calc(100% + 16px); padding: 4px; transition: left 0.25s; } 
+.header .nav .menuHandler .menuBack { position: absolute; top: 15px; left: calc(100% + 16px); padding: 4px; transition: left 0.25s; z-index: 1;} 
 .header .nav .menuHandler .menuBack.on { display: block; left: 16px; } 
 .header .nav .menuHandler img { width: 22px; height: 22px; cursor: pointer; padding: 4px; } 
 .header .nav .menuHandler .menuBack img { padding: 2px; } 
