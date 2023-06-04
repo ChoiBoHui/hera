@@ -159,30 +159,6 @@ $(function () {
         });
     };
 
-
-
-    // 함수 호출
-    headerScrollEvent();
-    gnbHoverEvent();
-    submenuOpen();
-    responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
-    topbannerEvent(); //탑배너는 리사이즈 필요 없음
-    searchForm();
-    srfResponsiveEvent();
-    mainVisualSlider();
-    bestSlider(); //리사이즈 필요 없음
-    snsModal();
-
-    // 리사이즈 됐을 때
-    $(window).on('resize', function () {
-        headerScrollEvent();
-        gnbHoverEvent();
-        submenuOpen();
-        srfResponsiveEvent();
-    });
-
-
-
     // 서치폼 Start
     function searchForm() {
         let gnbSearchField = $('.globalnav_searchfield');
@@ -277,6 +253,30 @@ $(function () {
         // 리사이즈 됐을때 검색창 닫기
         gnbSearchField.removeClass("open");
     };
+
+
+
+    // 함수 호출
+    headerScrollEvent();
+    gnbHoverEvent();
+    submenuOpen();
+    responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
+    topbannerEvent(); //탑배너는 리사이즈 필요 없음
+    searchForm();
+    srfResponsiveEvent();
+    mainVisualSlider();
+    bestSlider(); //리사이즈 필요 없음
+    snsModal();
+
+    // 리사이즈 됐을 때
+    $(window).on('resize', function () {
+        headerScrollEvent();
+        gnbHoverEvent();
+        submenuOpen();
+        srfResponsiveEvent();
+    });
+
+
 
 
     // main_visual 슬라이더 Start

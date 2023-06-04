@@ -182,6 +182,55 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 
+/* section Main_Visual Start */
+.main_visual { margin: 98px 0 116px 0; } 
+.main_visual .container { width: 100%; margin: 0 auto; position: relative; } 
+/* Main_slider Start */
+.main_slider { margin: 34px 0 0 0; } 
+.main_slider .slide { display: block; } 
+.main_slider .itm01 figure { font-size: 0; width: 100%; height: calc(100vh - 200px); background: url(../img/main/main_bg_01.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm02 figure { font-size: 0; width: 100%; height: calc(100vh - 200px); background: url(../img/main/main_bg_02.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm03 figure { font-size: 0; width: 100%; height: calc(100vh - 200px); background: url(../img/main/main_bg_03.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm04 figure { font-size: 0; width: 100%; height: calc(100vh - 200px); background: url(../img/main/main_bg_04.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm05 figure { font-size: 0; width: 100%; height: calc(100vh - 200px); background: url(../img/main/main_bg_05.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
+/* inner Start */
+.main_slider .inner {position: absolute; top: auto; bottom: 0; left: 0; margin-top: 0; } 
+.main_slider .inner .slogan { font-size: 42px; font-weight: 700; letter-spacing: -0.025rem; color: #1d1d1f; margin-bottom: 24px; } 
+.main_slider .inner .slogan.EN { margin-bottom: 20px; } 
+.main_slider .inner .slogan.EN .tit { font-size: 50px; letter-spacing: 0; transform: translateY(-4px); } 
+.main_slider .inner .slogan .sub { margin-top: 9px; } 
+.main_slider .inner p { font-size: 20px; font-weight: 400; letter-spacing: -0.025rem; color: #1d1d1f; margin-bottom: 58px; } 
+
+.main_slider .btn_more { display: none; } 
+/* slide_util Start */
+.main_visual .slide_util { position: absolute; display: flex; font-family: montserrat; font-size: 20px; font-weight: 400; color: #1d1d1f; bottom: 0; left: 0; margin: 0 0 25px 0; } 
+/* slide_pager Start */
+.slide_util .slide_pager { display: flex; align-items: center; padding-right: 8px; } 
+.slide_util .slide_pager .bar_progress { position: relative; display: inline-block; width: 80px; height: 1px; background: #aaa; margin: auto 10px; overflow: hidden; transform: translateY(-1px); } 
+.slide_util .slide_pager .bar_progress .bar_ing { position: absolute; top: 0; left: 0; display: inline-block; width: 0; height: 100%; background: #000; } 
+.slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 4s; } 
+.main_visual .slide_util .slide_pager .current_index { width: 26px; } 
+.main_visual .slide_util .slide_pager .total_index { color:#aaa; } 
+.main_visual .slide_util .switch .pause { display: block; } 
+.main_visual .slide_util .switch.stop .pause { display: none; } 
+.main_visual .slide_util .switch .play { display: none; } 
+.main_visual .slide_util .switch.stop .play { display: block; } 
+.main_visual .slide_util .control_btn { display: flex; } 
+.main_visual .slide_util .control_btn>div { cursor: pointer; } 
+.main_visual .slide_util .control_btn .switch>div { padding: 6px; } 
+.main_visual .slide_util .control_btn>div~div { padding: 6px; } 
+.main_visual .slide_util .control_btn img { vertical-align: inherit; width: 18px; transform: translateY(1px); } 
+/* section Main_Visual End */
+
+
+
+
+
+
+
+
+
+
 
 
 
