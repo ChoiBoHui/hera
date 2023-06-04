@@ -116,7 +116,7 @@ $(function () {
         $(".header .nav").removeClass("open");
     };
 
-
+    // 반응형 메뉴 오픈시 스크롤막기, gnb커튼 작동
     function responsiveMenu() {
         $(".menutrigger").on('click', function () {
             $('html').css('overflow-y', 'hidden');
@@ -139,29 +139,6 @@ $(function () {
         });
     };
 
-
-
-
-    // 함수 호출
-    headerScrollEvent();
-    gnbHoverEvent();
-    submenuOpen();
-    responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
-    topbannerEvent(); //탑배너는 리사이즈 필요 없음
-    searchForm();
-    mainVisualSlider();
-    bestSlider(); //리사이즈 필요 없음
-    snsModal();
-
-    // 리사이즈 됐을 때
-    $(window).on('resize', function () {
-        headerScrollEvent();
-        gnbHoverEvent();
-        submenuOpen();
-    });
-
-
-
     // topbanner 슬라이더 Start
     function topbannerEvent() {
 
@@ -181,6 +158,32 @@ $(function () {
     };
 
 
+
+    // 함수 호출
+    headerScrollEvent();
+    gnbHoverEvent();
+    submenuOpen();
+    responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
+    topbannerEvent(); //탑배너는 리사이즈 필요 없음
+    searchForm();
+    srfResponsiveEvent();
+
+    mainVisualSlider();
+    bestSlider(); //리사이즈 필요 없음
+    snsModal();
+
+    // 리사이즈 됐을 때
+    $(window).on('resize', function () {
+        headerScrollEvent();
+        gnbHoverEvent();
+        submenuOpen();
+        srfResponsiveEvent();
+    });
+
+
+
+
+
     // 서치폼 Start
     function searchForm() {
         let gnbSearchField = $('.globalnav_searchfield');
@@ -193,7 +196,6 @@ $(function () {
             gnbSearchField.addClass("open");
             $('.gnbCurtain').addClass("active");
             searchTextArea.focus();
-            // 지금은 gnbCurtain만 스크롤하면 닫히게 돼 있어서 어긋나는 경우가 있음.
         });
 
         // 서치폼 닫기 버튼
@@ -203,21 +205,6 @@ $(function () {
             gnbSearchField.removeClass("open");
             $('.gnbCurtain').removeClass("active");
         });
-
-        gnbSearchField.on('mouseleave', function () {
-            // 검색필드에서 마우스가 떠났을때
-            // 1) 검색어 입력창 value 초기화 하기
-            // 2) 리셋버튼 삭제하기
-            // 3) 서치필드 클레스 없애기
-            // 4) gnb커튼 클레스 없애기
-            searchTextArea.val('');
-            searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
-            gnbSearchField.removeClass("open");
-            // 서치필드 닫히는거 스르륵 닫히게 수정 할 것!!
-            // 생각해보니까 그러면 리셋버튼도 그냥 addClass, removeClass 써서 작동하게 하면 되지 않을까?
-            $('.gnbCurtain').removeClass("active");
-        });
-        // 검색창이 닫혔다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
 
         searchTextArea.on('focus', function () {
             searchSubmit.addClass('on');
@@ -239,7 +226,6 @@ $(function () {
         });
         // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
 
-
         searchReset.on('click touchstart', function () {
             // alert('초기화!');
             searchTextArea.val('').focus();
@@ -247,6 +233,39 @@ $(function () {
             return false;
         });
         // 리셋 버튼 클릭 시 input value 삭제 후 버튼 숨김
+    };
+
+    // 검색창이 닫혔다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
+    function srfResponsiveEvent() {
+        let gnbSearchField = $('.globalnav_searchfield');
+        let searchTextArea = $('.globalnav_searchfield-input');
+        let searchReset = $('.globalnav_searchfield-reset');
+        let WW = $(window).innerWidth();
+
+        if (WW >= 1200) {
+            gnbSearchField.on('mouseleave', function () {
+                // 검색필드에서 마우스가 떠났을때
+                // 1) 검색어 입력창 value 초기화 하기
+                // 2) 리셋버튼 삭제하기
+                // 3) 서치필드 클레스 없애기
+                // 4) gnb커튼 클레스 없애기
+                searchTextArea.val('');
+                searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
+                gnbSearchField.removeClass("open");
+                // 서치필드 닫히는거 스르륵 닫히게 수정 할 것!!
+                // 생각해보니까 그러면 리셋버튼도 그냥 addClass, removeClass 써서 작동하게 하면 되지 않을까?
+                $('.gnbCurtain').removeClass("active");
+            });
+        } else {
+            // 모바일의 경우, mouseleave 이벤트를 막고 닫기 버튼 클릭 시, 검색어 입력창 및 기타 옵션 모두 초기화
+            gnbSearchField.off('mouseleave');
+            $('.gnbCurtain').on('click', function () {
+                searchTextArea.val('');
+                searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
+                gnbSearchField.removeClass("open");
+                $('.gnbCurtain').removeClass("active");
+            });
+        };
     };
 
 
