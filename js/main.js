@@ -93,6 +93,10 @@ $(function () {
     // 모바일 메인 메뉴 클릭 시 서브메뉴 open
     function submenuOpen() {
         let WW = $(window).innerWidth();
+
+
+
+        // 서브메뉴 열릴때마다 scroll 위치 0으로 만들어야함
         if (WW < 1200) {
             $(".main_menu>li:nth-child(-n+4)>a").on('click', function (event) {
                 event.preventDefault();
@@ -138,29 +142,7 @@ $(function () {
             $(".gnbCurtain").fadeOut().removeClass("active");
         });
     };
-    // 보니까 fadein, out 을 사용하면 resize 할때 gnbCurtain display에 문제가 생김
-
-    // function responsiveMenu() {
-    //     $(".menutrigger").on('click', function () {
-    //         $('html').css('overflow-y', 'hidden');
-    //         $(".header .nav").addClass("open");
-    //         $(".gnbCurtain").addClass("active");
-    //     });
-    //     $(".menuClose").on('click', function () {
-    //         $('html').css('overflow-y', '');
-    //         $(".header .nav").removeClass("open");
-    //         $(".main_menu>li").removeClass("open");
-    //         $(".header .nav .menuHandler .menuBack").removeClass("on");
-    //         $(".gnbCurtain").removeClass("active");
-    //     });
-    //     $(".gnbCurtain").on('click', function () {
-    //         $('html').css('overflow-y', '');
-    //         $(".header .nav").removeClass("open");
-    //         $(".main_menu>li").removeClass("open");
-    //         $(".header .nav .menuHandler .menuBack").removeClass("on");
-    //         $(".gnbCurtain").removeClass("active");
-    //     });
-    // };
+    // 보니까 fadein, out 을 사용하면 resize 할때 gnbCurtain display에 문제가 생김. 그래서 css 에 !important 추가해줬음
 
     // topbanner 슬라이더 Start
     function topbannerEvent() {

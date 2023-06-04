@@ -68,7 +68,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 /* 추천 검색어 */
 .globalnav_searchfield .container { width: 100%; margin: 0 auto; padding: 14px 0 28px 22px; } 
-.globalnav_searchfield .recommend_product { width: 854px; margin: 0 auto; } 
+.globalnav_searchfield .recommend_product { width: 100%; margin: 0 auto; } 
 .globalnav_searchfield .rcmd_title { display: block; color: #bebebf; margin-bottom: 16px; padding-left: 14px; font-size: 15px; font-weight: 400; } 
 .globalnav_searchfield .rcmd_product_list { color: var(--color-g1); } 
 .globalnav_searchfield .rcmd_product_list>li { padding-left: 5px; margin-bottom: 6px; } 
@@ -138,6 +138,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 /* 서브메뉴 텍스트 */
 .header .nav .submenu .submenu_header { margin-bottom: 0; } 
+.nav .menu_story .submenu .submenu_header { margin-bottom: 25px; } 
 .header .nav .submenu .submenu_header>a { display: block; padding: 4px; font-size: 17px; font-weight: 600; color: var(--color-g1); } 
 .header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li { padding: 4px; margin-bottom: 10px; } 
 .header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a { display: block; font-size: 15px; font-weight: 400; color: var(--color-g1); padding: 4px; } 
@@ -153,7 +154,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .nav .submenu .container>ul { width: 100%; padding: 0; margin-bottom: 40px; } 
 
 /* 헤라 스토리 */
-.menu_story .submenu .container .brandSubmenu { display: block; width: 100%; padding: 0; } 
+.menu_story .submenu .container .brandSubmenu { display: block; width: 100%; padding: 9px 0 0 4px; } 
 .menu_story .brandSubmenu { margin-left: 0; } 
 .menu_story .brandSubmenu>* { width: 100%; } 
 
