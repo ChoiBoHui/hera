@@ -138,14 +138,14 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 /* 서브메뉴 텍스트 */
 .header .nav .submenu .submenu_header { margin-bottom: 0; } 
-.header .nav .submenu .submenu_header>a { display: block; padding: 4px; font-size: 16px; font-weight: 700; color: var(--color-g1); } 
-.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li { padding: 4px; margin-bottom: 4px; } 
-.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a { display: block; font-size: 14px; font-weight: 400; color: var(--color-g1); padding: 4px; } 
+.header .nav .submenu .submenu_header>a { display: block; padding: 4px; font-size: 17px; font-weight: 600; color: var(--color-g1); } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li { padding: 4px; margin-bottom: 10px; } 
+.header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a { display: block; font-size: 15px; font-weight: 400; color: var(--color-g1); padding: 4px; } 
 .header .nav .submenu ul:nth-child(n+3):nth-child(-n+5)>li~li>a:hover { color: var(--color-g1); } 
 
 /* 신상 홍보용 배너 */
 .nav .submenu .container .pushMd { width: 100%; margin: 0 0 40px 0; padding: 0 8px; } 
-.nav .submenu .container .pushMd img { width: 100%; height: auto; max-width: 360px; } 
+.nav .submenu .container .pushMd img { width: 100%; height: auto; max-width: 480px; } 
 /* 맥스위드 360은 임시 */
 .nav .submenu .container .pushMd p { font-family: Montserrat; font-weight: 400; letter-spacing: 0; font-size: 15px; text-indent: -1px; padding: 10px 0 14px 0; line-height: 20px; } 
 
@@ -173,7 +173,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 /* 모바일용 서브메뉴 전체보기 추가 */
 .header .nav .main_menu .allCategory { display: block; padding: 4px; margin-bottom: 4px; margin-bottom: 40px; cursor: pointer; } 
-.header .nav .main_menu .allCategory>a { padding: 4px; font-size: 16px; font-weight: 600; color: var(--color-g1); } 
+.header .nav .main_menu .allCategory>a { padding: 4px; font-size: 17px; font-weight: 600; color: var(--color-g1); } 
 
 /* Header End */ 
 
