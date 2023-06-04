@@ -93,15 +93,13 @@ $(function () {
     // 모바일 메인 메뉴 클릭 시 서브메뉴 open
     function submenuOpen() {
         let WW = $(window).innerWidth();
-
-
-
-        // 서브메뉴 열릴때마다 scroll 위치 0으로 만들어야함
         if (WW < 1200) {
             $(".main_menu>li:nth-child(-n+4)>a").on('click', function (event) {
                 event.preventDefault();
                 if ($(this).parent().has(".submenu").length > 0) {
                     $(this).parent().addClass("open");
+                    $(this).closest('li').find('.container').scrollTop(0);
+                    // 같은 부모를 둔 .submenu의 스크롤을 초기화
                     $(".header .nav .menuHandler .menuBack").addClass("on");
                 };
             });
