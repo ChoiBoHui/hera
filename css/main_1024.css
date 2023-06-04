@@ -214,7 +214,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 .main_visual .slide_util .slide_pager .current_index { width: 26px; } 
 .main_visual .slide_util .slide_pager .total_index { color:#aaa; } 
-.main_visual .slide_util .slide_pager .total_index::before { content: "/"; display: inline-block; color:#aaa; margin-right: 8px; font-size: 12px; } 
+.main_visual .slide_util .slide_pager .total_index::before { content: "/"; display: inline-block; color:#aaa; margin-right: 5px; font-size: 12px; } 
 
 
 
