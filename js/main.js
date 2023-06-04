@@ -112,7 +112,7 @@ $(function () {
         };
         // 아래는 responsiveMenu에 적용됐던 부분들인데, resize에 묶어서 넣으려고 여기 넣어둠
         $('html').css('overflow-y', '');
-        $(".gnbCurtain").removeClass("active").css('display', '');
+        $(".gnbCurtain").removeClass("active");
         $(".header .nav").removeClass("open");
     };
 
@@ -138,10 +138,32 @@ $(function () {
             $(".gnbCurtain").fadeOut().removeClass("active");
         });
     };
+    // 보니까 fadein, out 을 사용하면 resize 할때 gnbCurtain display에 문제가 생김
+
+    // function responsiveMenu() {
+    //     $(".menutrigger").on('click', function () {
+    //         $('html').css('overflow-y', 'hidden');
+    //         $(".header .nav").addClass("open");
+    //         $(".gnbCurtain").addClass("active");
+    //     });
+    //     $(".menuClose").on('click', function () {
+    //         $('html').css('overflow-y', '');
+    //         $(".header .nav").removeClass("open");
+    //         $(".main_menu>li").removeClass("open");
+    //         $(".header .nav .menuHandler .menuBack").removeClass("on");
+    //         $(".gnbCurtain").removeClass("active");
+    //     });
+    //     $(".gnbCurtain").on('click', function () {
+    //         $('html').css('overflow-y', '');
+    //         $(".header .nav").removeClass("open");
+    //         $(".main_menu>li").removeClass("open");
+    //         $(".header .nav .menuHandler .menuBack").removeClass("on");
+    //         $(".gnbCurtain").removeClass("active");
+    //     });
+    // };
 
     // topbanner 슬라이더 Start
     function topbannerEvent() {
-
         $('.banner_slider').slick({
             arrows: false,
             autoplay: true,
@@ -191,11 +213,17 @@ $(function () {
         let searchReset = $('.globalnav_searchfield-reset');
         let searchClose = $('.globalnav_searchfield-close');
         let searchSubmit = $('.globalnav_searchfield-submit');
+        let WW = $(window).innerWidth();
 
         $('.search_icon_area').on('click', function () {
             gnbSearchField.addClass("open");
             $('.gnbCurtain').addClass("active");
             searchTextArea.focus();
+            if (WW < 1200) {
+                $('html').css('overflow-y', 'hidden');
+            } else {
+                $('html').css('overflow-y', '');
+            }
         });
 
         // 서치폼 닫기 버튼
@@ -204,6 +232,8 @@ $(function () {
             searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
             gnbSearchField.removeClass("open");
             $('.gnbCurtain').removeClass("active");
+            // 반응형일 때만 작동
+            $('html').css('overflow-y', '');
         });
 
         searchTextArea.on('focus', function () {
@@ -264,8 +294,11 @@ $(function () {
                 searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
                 gnbSearchField.removeClass("open");
                 $('.gnbCurtain').removeClass("active");
+                $('html').css('overflow-y', '');
             });
         };
+        // 리사이즈 됐을때 검색창 닫기
+        gnbSearchField.removeClass("open");
     };
 
 
