@@ -1,6 +1,5 @@
 /* 태블릿 용 */
-@media (max-width: 1200px) {
- html { overflow-x: hidden; width: 100%; overflow-y: auto;} 
+@media (max-width: 1200px) { html { overflow-x: hidden; width: 100%; overflow-y: auto; } 
 body { overflow-x: hidden; width: 100%; } 
 /* .tablet { display: block; } */
 
@@ -76,7 +75,6 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 /* search form End */
 
 
-
 /* topbanner Start */
 .topbanner { display: block; height: 38px; background-color: var(--color-g1); color: #fff; font-size: 14px; font-weight: 300; padding: 12px 0; } 
 .topbanner .container { position: relative; display: block; width: 100%; margin: 0 auto; text-align: center; } 
@@ -86,8 +84,6 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .topbanner .slide_util .area_left { position: absolute; top: calc(50% - 8px); left: calc(100% - 50% - 296px); cursor: pointer; } 
 .topbanner .slide_util .area_right { position: absolute; top: calc(50% - 8px); right: calc(100% - 50% - 296px); cursor: pointer; } */
 /* topbanner End */
-
-
 
 
 /* nav Start */
@@ -118,7 +114,6 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .nav .main_menu .mont>a { font-size: 17px; font-weight: 500; color: var(--color-g1); } 
 
 
-
 /* sub menu Start */
 /* 서브메뉴 공통적용 & hover */
 .nav .main_menu>li .submenu { position: absolute; width: 100%; max-height: 100%; height: 100%; top: 0; left: 100%; background-color: rgba(255, 255, 255, 1); overflow-y: hidden; overflow-x: hidden; outline: none; transition: left 0.25s; z-index: 1; } 
@@ -132,8 +127,6 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .nav .main_menu>li .submenu .container { position: absolute; top: 0; left: 0; right: 0; width: 100%; height: calc(100% - 60px); opacity: 1; transition-property: none; padding: 0 16px; margin-top: 60px; overflow-y: auto; } 
 .nav .main_menu>li.active .submenu .container { opacity: 1; } 
 .nav .main_menu>li.active .submenu { max-height: 100vh; outline: none; } 
-/* hover 아니고 제이쿼리 통해서 클레스 붙여서 메뉴 열리게 수정 */
-
 
 
 /* 서브메뉴 텍스트 */
@@ -165,9 +158,9 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .header .nav .responsive_addmenu .addmenu_list>li>a { display: inline-block; width: 100%; font-size: 14px; font-weight: 400; letter-spacing: -0.025rem; color: var(--color-g1); padding: 4px 12px; } 
 
 /* 모바일용 메뉴 핸들러 */
-.header .nav .menuHandler { display: block; }  
+.header .nav .menuHandler { display: block; } 
 .header .nav .menuHandler .menuClose { position: absolute; top: 15px; right: 16px; padding: 4px; } 
-.header .nav .menuHandler .menuBack { position: absolute; top: 15px; left: calc(100% + 16px); padding: 4px; transition: left 0.25s; z-index: 1;} 
+.header .nav .menuHandler .menuBack { position: absolute; top: 15px; left: calc(100% + 16px); padding: 4px; transition: left 0.25s; z-index: 1; } 
 .header .nav .menuHandler .menuBack.on { display: block; left: 16px; } 
 .header .nav .menuHandler img { width: 22px; height: 22px; cursor: pointer; padding: 4px; } 
 .header .nav .menuHandler .menuBack img { padding: 2px; } 

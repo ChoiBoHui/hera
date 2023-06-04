@@ -169,7 +169,6 @@ $(function () {
     topbannerEvent(); //탑배너는 리사이즈 필요 없음
     searchForm();
     srfResponsiveEvent();
-
     mainVisualSlider();
     bestSlider(); //리사이즈 필요 없음
     snsModal();
@@ -181,8 +180,6 @@ $(function () {
         submenuOpen();
         srfResponsiveEvent();
     });
-
-
 
 
 
@@ -327,8 +324,6 @@ $(function () {
     // main_visual 슬라이더 End
 
 
-
-
     // best 슬라이더 Start
     function bestSlider() {
         $('.best .product_slider').slick({
@@ -396,7 +391,6 @@ $(function () {
         });
     };
     // best 슬라이더 End
-
 
 
     // snsModal Start
