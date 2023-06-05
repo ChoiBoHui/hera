@@ -249,8 +249,10 @@ $(function () {
                 $('html').css('overflow-y', '');
             });
         };
+
         // 리사이즈 됐을때 검색창 닫기
         gnbSearchField.removeClass("open");
+        // gnb 커튼 리사이즈 됐을때 닫히는건 다른데 포함돼 있음.
     };
 
 
@@ -261,9 +263,9 @@ $(function () {
     submenuOpen();
     responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
     topbannerEvent(); //탑배너는 리사이즈 필요 없음
-    searchForm();
+    searchForm(); //리사이즈 필요한 부분 아래 함수로 따로 만들었음
     srfResponsiveEvent();
-    mainVisualSlider();
+    mainVisualSlider(); //리사이즈 필요 없음
     bestSlider(); //리사이즈 필요 없음
     snsModal();
 
