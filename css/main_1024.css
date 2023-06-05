@@ -43,7 +43,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 /* search form Start */ 
-.globalnav_searchfield { position: fixed; opacity: 0; visibility: hidden; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 1); z-index: 2; } 
+.globalnav_searchfield { position: fixed; opacity: 0; visibility: hidden; top: 0; bottom: 0; left: 0; right: 0; background: rgba(255, 255, 255, 1); z-index: 2; } 
 .globalnav_searchfield.open { opacity: 1; visibility: visible; } 
 /* 나중에 제이쿼리로 서치폼 클릭하면 열리는 부분 */
 /* .header .topmenu.scroll .globalnav_searchfield { top: 0; } */

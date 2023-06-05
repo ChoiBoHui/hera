@@ -218,6 +218,7 @@ $(function () {
             gnbSearchField.addClass("open");
             $('.gnbCurtain').addClass("active");
 
+            // 크로스 브라우징 검색창 이슈!!
             if (WW >= 1200) {
                 $('html').css('overflow-y', '');
                 $('body').css('overflow-y', '');
