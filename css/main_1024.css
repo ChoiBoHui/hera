@@ -194,12 +194,12 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .main_slider .itm04 figure { font-size: 0; width: 100%; height: calc(100vh - 160px); background: url(../img/main/main_bg_04.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
 .main_slider .itm05 figure { font-size: 0; width: 100%; height: calc(100vh - 160px); background: url(../img/main/main_bg_05.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
 /* inner Start */
-.main_slider .inner {position: absolute; top: auto; bottom: 0; left: 0; margin-top: 0; padding: 24px; z-index: 1; } 
-.main_slider .inner .slogan { font-size: 28px; font-weight: 700; letter-spacing: -0.025rem; color: #fff; margin-bottom: 24px; } 
+.main_slider .inner {position: absolute; top: auto; bottom: 0; left: 0; width: calc(100% - 80px); margin-top: 0; padding: 24px; z-index: 1; } 
+.main_slider .inner .slogan { font-size: 28px; font-weight: 500; letter-spacing: -0.025rem; color: #fff; margin-bottom: 24px; } 
 .main_slider .inner .slogan.EN { margin-bottom: 20px; } 
 .main_slider .inner .slogan.EN .tit { font-size: 28px; letter-spacing: 0; transform: translateY(-4px); } 
 .main_slider .inner .slogan .sub { margin-top: 9px; } 
-.main_slider .inner p { font-size: 16px; font-weight: 400; letter-spacing: -0.025rem; color: #f8f8f9; margin-bottom: 0; } 
+.main_slider .inner p { font-size: 16px; font-weight: 300; letter-spacing: -0.025rem; color: #f8f8f9; margin-bottom: 0; line-height: 18px; } 
 
 .main_slider .btn_more { display: none; } 
 /* slide_util Start */
@@ -212,9 +212,9 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .slide_util .slide_pager .bar_progress.on .bar_ing { width: 100%; transition: 4s; }  */
 
 
-.main_visual .slide_util .slide_pager .current_index { width: 26px; } 
+.main_visual .slide_util .slide_pager .current_index { width: auto; } 
 .main_visual .slide_util .slide_pager .total_index { color:#aaa; } 
-.main_visual .slide_util .slide_pager .total_index::before { content: "/"; display: inline-block; color:#aaa; margin-right: 5px; font-size: 12px; } 
+.main_visual .slide_util .slide_pager .total_index::before { content: "/"; display: inline-block; color:#aaa; margin: 0 5px; font-size: 12px; } 
 
 
 
@@ -231,7 +231,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 
 /* 모바일용 효과 추가 */
-.main_visual .main_slider .slide figure::before { content: ""; font-size: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent 50%,#000); opacity: 0.65;}
+.main_visual .main_slider .slide figure::before { content: ""; font-size: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent 70%,#000); opacity: 0.5;}
 /* 이거 백그라운드의 before로 넣어주면 될듯..? */
 
 
