@@ -190,11 +190,11 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .main_slider .slide { display: block; } 
 
 
-.main_slider .itm01 figure { font-size: 0; width: 100%; height: calc(100vh - 160px); background: url(../img/main/main_bg_01.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm02 figure { font-size: 0; width: 100%; height: calc(100vh - 160px); background: url(../img/main/main_bg_02.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm03 figure { font-size: 0; width: 100%; height: calc(100vh - 160px); background: url(../img/main/main_bg_03.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm04 figure { font-size: 0; width: 100%; height: calc(100vh - 160px); background: url(../img/main/main_bg_04.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
-.main_slider .itm05 figure { font-size: 0; width: 100%; height: calc(100vh - 160px); background: url(../img/main/main_bg_05.jpg) center center/cover no-repeat; margin: 0 60px 0 0; } 
+.main_slider .itm01 figure { font-size: 0; width: 100%; height: calc(100vh - 180px); background: url(../img/main/main_bg_01.jpg) center center/cover no-repeat; margin: 0 0 0 0; } 
+.main_slider .itm02 figure { font-size: 0; width: 100%; height: calc(100vh - 180px); background: url(../img/main/main_bg_02.jpg) center center/cover no-repeat; margin: 0 0 0 0; } 
+.main_slider .itm03 figure { font-size: 0; width: 100%; height: calc(100vh - 180px); background: url(../img/main/main_bg_03.jpg) center center/cover no-repeat; margin: 0 0 0 0; } 
+.main_slider .itm04 figure { font-size: 0; width: 100%; height: calc(100vh - 180px); background: url(../img/main/main_bg_04.jpg) center center/cover no-repeat; margin: 0 0 0 0; } 
+.main_slider .itm05 figure { font-size: 0; width: 100%; height: calc(100vh - 180px); background: url(../img/main/main_bg_05.jpg) center center/cover no-repeat; margin: 0 0 0 0; } 
 
 
 /* inner Start */
