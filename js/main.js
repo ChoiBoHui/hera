@@ -166,18 +166,6 @@ $(function () {
         let searchReset = $('.globalnav_searchfield-reset');
         let searchClose = $('.globalnav_searchfield-close');
         let searchSubmit = $('.globalnav_searchfield-submit');
-        let WW = $(window).innerWidth();
-
-        $('.search_icon_area').on('click', function () {
-            gnbSearchField.addClass("open");
-            $('.gnbCurtain').addClass("active");
-            searchTextArea.focus();
-            if (WW < 1200) {
-                $('html').css('overflow-y', 'hidden');
-            } else {
-                $('html').css('overflow-y', '');
-            }
-        });
 
         // 서치폼 닫기 버튼
         searchClose.on('click', function () {
@@ -185,6 +173,7 @@ $(function () {
             searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
             gnbSearchField.removeClass("open");
             $('.gnbCurtain').removeClass("active");
+
             // 반응형일 때만 작동
             $('html').css('overflow-y', '');
         });
@@ -195,8 +184,8 @@ $(function () {
         searchTextArea.on('blur', function () {
             searchSubmit.removeClass('on');
         });
-        // submit 버튼 조작
 
+        // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
         searchTextArea.on('keyup focus', function () {
             searchReset.removeAttr("disabled", "aria-hidden = true").css({ opacity: '1', visibility: 'visible' });
             // console.log(searchTextArea.val());
@@ -207,15 +196,14 @@ $(function () {
                 searchReset.removeAttr("disabled", "aria-hidden = true").css({ opacity: '1', visibility: 'visible' });
             }
         });
-        // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
 
+        // 리셋 버튼 클릭 시 input value 삭제 후 버튼 숨김
         searchReset.on('click touchstart', function () {
             // alert('초기화!');
             searchTextArea.val('').focus();
             searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
             return false;
         });
-        // 리셋 버튼 클릭 시 input value 삭제 후 버튼 숨김
     };
 
     // 검색창이 닫혔다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
@@ -224,6 +212,17 @@ $(function () {
         let searchTextArea = $('.globalnav_searchfield-input');
         let searchReset = $('.globalnav_searchfield-reset');
         let WW = $(window).innerWidth();
+
+        $('.search_icon_area').on('click', function () {
+            gnbSearchField.addClass("open");
+            $('.gnbCurtain').addClass("active");
+            searchTextArea.focus();
+            if (WW >= 1200) {
+                $('html').css('overflow-y', '');
+            } else {
+                $('html').css('overflow-y', 'hidden');
+            };
+        });
 
         if (WW >= 1200) {
             gnbSearchField.on('mouseleave', function () {
