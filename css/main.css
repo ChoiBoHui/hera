@@ -169,11 +169,15 @@ header { position: relative; z-index: 2; }
 /* Main_slider Start */
 .main_slider { margin: 34px 0 0 0; } 
 .main_slider .slide { display: flex; } 
-.main_slider .itm01 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_01.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+
+
+/* .main_slider .itm01 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_01.jpg) center center/contain no-repeat; margin: 0 60px 0 0; }  */
 .main_slider .itm02 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_02.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
 .main_slider .itm03 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_03.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
 .main_slider .itm04 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_04.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
 .main_slider .itm05 figure { font-size: 0; width: 558px; height: 744px; background: url(../img/main/main_bg_05.jpg) center center/contain no-repeat; margin: 0 60px 0 0; } 
+
+
 /* inner Start */
 .main_slider .inner { margin-top: 256px; } 
 .main_slider .inner .slogan { font-size: 42px; font-weight: 700; letter-spacing: -0.025rem; color: #1d1d1f; margin-bottom: 24px; } 
