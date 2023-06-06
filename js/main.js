@@ -286,8 +286,6 @@ $(function () {
                 // });
                 // searchTextArea.focus();
             };
-
-
         });
 
         if (WW >= 1200) {
@@ -318,8 +316,10 @@ $(function () {
         };
 
         // 리사이즈 됐을때 검색창 닫기
-        // gnbSearchField.removeClass("open");
         // gnb 커튼 리사이즈 됐을때 닫히는건 다른데 포함돼 있음.
+        // gnbSearchField.removeClass("open");
+        // 줜나 이거 하나도 필요없음 괜히 이거 넣었다가 android에서 키보드 올라오니까 자꾸 닫혀서 하루죙일 헤맸음.. 진짜 개뽝친다..
+
     };
 
 
