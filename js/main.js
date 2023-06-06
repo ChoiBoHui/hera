@@ -358,12 +358,16 @@ $(function () {
     bestSlider(); //리사이즈 필요 없음
     snsModal();
 
+    newsSlider();
+
     // 리사이즈 됐을 때
     $(window).on('resize', function () {
         headerScrollEvent();
         gnbHoverEvent();
         submenuOpen();
         srfResponsiveEvent();
+
+        newsSlider();
     });
 
 
@@ -500,6 +504,23 @@ $(function () {
     };
     // snsModal End
 
+
+    function newsSlider() {
+        let WW = $(window).innerWidth();
+        if (WW >= 1200) {
+            $('.new .product_detail .product_img').slick("unslick");
+        } else {
+            $('.new .product_detail .product_img').slick({
+                arrows: false,
+                autoplay: false,
+                dots: true,
+                dotsClass: 'custom-dots',
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+        };
+    };
 
 
 
