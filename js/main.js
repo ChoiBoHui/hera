@@ -106,13 +106,6 @@ $(function () {
         };
     };
 
-
-
-
-
-
-
-
     // 메뉴 호버 Start   
     function gnbHoverEvent() {
         let WW = $(window).innerWidth();
@@ -258,38 +251,59 @@ $(function () {
     };
 
     // 검색창이 닫혔다가 다시 창이 열릴때 검색어 입력창 및 기타 옵션 모두 초기화
+    function srfScrollIssue() {
+        let gnbSearchField = $('.globalnav_searchfield');
+        let searchTextArea = $('.globalnav_searchfield-input');
+        let WW = $(window).innerWidth();
+
+        // 모바일에서 검색창 켰을때 뒤쪽 화면 스크롤 막기위한 최선의 선택...
+        // 대신 입력 후 화면이 최상단으로 올라감.. (이건 애플도 나이키도 그럼..)
+        // 그리고 키보드 입력중에 빠르게 스크롤하면 스크롤이 되긴함.. 근데 또 손 때면 스크롤 안됨..
+        if (WW >= 1200) {
+            searchTextArea.off('focus');
+            // $(window).off('resize');
+            // let keyboardArea = $('.keyboardArea');
+
+            // searchTextArea.on('focus', function () {
+            //     window.scrollTo({ top: 0, behavior: 'smooth' });
+            // });
+
+            // $(window).on('resize', function () {
+            //     let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
+            //     gnbSearchField.css('padding-bottom', keyboardHeight + 'px');
+            // });
+
+            // // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
+            // $(window).trigger('resize');
+            // // 여기까지 스크롤 막기
+        } else {
+            let keyboardArea = $('.keyboardArea');
+
+            searchTextArea.on('focus', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            $(window).on('resize', function () {
+                let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
+                gnbSearchField.css('padding-bottom', keyboardHeight + 'px');
+            });
+
+            // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
+            $(window).trigger('resize');
+            // 여기까지 스크롤 막기
+        };
+    };
+
     function srfResponsiveEvent() {
         let gnbSearchField = $('.globalnav_searchfield');
         let searchTextArea = $('.globalnav_searchfield-input');
         let searchReset = $('.globalnav_searchfield-reset');
         let WW = $(window).innerWidth();
 
-
-        // 모바일에서 검색창 켰을때 뒤쪽 화면 스크롤 막기위한 최선의 선택...
-        // 대신 입력 후 화면이 최상단으로 올라감.. (이건 애플도 나이키도 그럼..)
-        // 그리고 키보드 입력중에 빠르게 스크롤하면 스크롤이 되긴함.. 근데 또 손 때면 스크롤 안됨..
-        let keyboardArea = $('.keyboardArea');
-
-        searchTextArea.on('focus', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        $(window).on('resize', function () {
-            let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
-            gnbSearchField.css('padding-bottom', keyboardHeight + 'px');
-        });
-
-        // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
-        $(window).trigger('resize');
-        // 여기까지 스크롤 막기
-
-
-
         $('.search_icon_area').on('click', function () {
             gnbSearchField.addClass("open");
             $('.gnbCurtain').addClass("active");
 
-            // 크로스 브라우징 검색창 이슈!!
             if (WW >= 1200) {
                 $('html').css('overflow-y', '');
                 $('body').css('overflow-y', '');
@@ -300,12 +314,6 @@ $(function () {
                 $('body').css('overflow-y', 'hidden');
                 // searchTextArea.removeAttr("autofocus");
                 searchTextArea.blur();
-
-                // searchTextArea.on('focus', function () {
-                //     $('html').css('overflow-y', 'hidden');
-                //     $('body').css('overflow-y', 'hidden');
-                // });
-                // searchTextArea.focus();
             };
         });
 
@@ -337,7 +345,6 @@ $(function () {
         };
 
 
-
         // 리사이즈 됐을때 검색창 닫기
         // gnb 커튼 리사이즈 됐을때 닫히는건 다른데 포함돼 있음.
         // gnbSearchField.removeClass("open");
@@ -359,12 +366,17 @@ $(function () {
     bestSlider(); //리사이즈 필요 없음
     snsModal();
 
+
+    srfScrollIssue();
+
     // 리사이즈 됐을 때
     $(window).on('resize', function () {
         headerScrollEvent();
         gnbHoverEvent();
         submenuOpen();
         srfResponsiveEvent();
+
+        srfScrollIssue();
     });
 
 
