@@ -50,7 +50,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 /* 스크롤돼서 탑배너 없을때 위치 top */
 .globalnav_searchfield .input_area { position: relative; display: flex; width: 100%; justify-content: center; padding: 25px 0 25px 0; margin: 0 auto; } 
 /* 검색어 입력창 */
-.globalnav_searchfield-input { width: calc(100% - 48px); height: 46px; color: #bebebf; background-color: #f8f8f9; border-radius: 23px; font-size: 15px; font-weight: 500; font-family: apple; outline: none; border: none; padding-left: 38px; margin-top: 56px; } 
+.globalnav_searchfield-input { width: calc(100% - 48px); height: 46px; color: #bebebf; background-color: #f8f8f9; border-radius: 23px; font-size: 15px; font-weight: 500; font-family: apple; outline: none; border: none; padding-left: 38px; margin-top: 56px; padding-bottom: 0 !important; } 
 .globalnav_searchfield-input:focus { border: 1px solid #1d1d1f; background-color: #fff; color: var(--color-g1); } 
 
 /* 검색결과 지우기 */
@@ -322,7 +322,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .new { color: #1d1d1f; border-bottom: 1px solid #e5e5e5; padding-bottom: 120px; } 
 .new .container { width: 100%; margin: 0 auto; text-align: center; padding: 0 24px; } 
 .new .product_detail { display: flex; flex-direction: column-reverse; gap: 30px; } 
-.new .product_detail .product_img {display: flex; gap: 10px; overflow-x: scroll; width: 100%; padding-bottom: 8px;} 
+.new .product_detail .product_img {display: flex; gap: 10px; overflow-x: scroll; width: 100%;} 
 .new .product_detail .product_img img { width: calc(100% - 40px); } 
 
 
