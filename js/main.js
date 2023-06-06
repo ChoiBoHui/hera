@@ -280,11 +280,10 @@ $(function () {
                 // searchTextArea.removeAttr("autofocus");
                 searchTextArea.blur();
 
-                // 여기 추가됨
-                searchTextArea.on('focus', function () {
-                    $('html').css('overflow-y', 'hidden');
-                    $('body').css('overflow-y', 'hidden');
-                });
+                // searchTextArea.on('focus', function () {
+                //     $('html').css('overflow-y', 'hidden');
+                //     $('body').css('overflow-y', 'hidden');
+                // });
                 // searchTextArea.focus();
             };
 
