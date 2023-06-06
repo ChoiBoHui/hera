@@ -102,7 +102,7 @@ $(function () {
             $(".nav .main_menu>li").off('scroll');
             $('.globalnav_searchfield').off('scroll');
 
-        }
+        };
         // 위에는 새로고침 했을 때!
         // 아래는 스크롤 이벤트
 
@@ -166,7 +166,7 @@ $(function () {
         } else {
             $(".main_menu>li").off('mouseenter mouseleave').removeClass("active");
             $(".gnbCurtain").removeClass("active");
-        }
+        };
     };
 
     // 모바일 메인 메뉴 클릭 시 서브메뉴 open
@@ -254,8 +254,8 @@ $(function () {
             $('.gnbCurtain').removeClass("active");
 
             // 반응형일 때만 작동
-            $('html').css('overflow-y', '');
-            $('body').css('overflow-y', '');
+            // $('html').css('overflow-y', '');
+            // $('body').css('overflow-y', '');
         });
 
         searchTextArea.on('focus', function () {
@@ -299,13 +299,13 @@ $(function () {
 
             // 크로스 브라우징 검색창 이슈!!
             if (WW >= 1200) {
-                $('html').css('overflow-y', '');
-                $('body').css('overflow-y', '');
+                // $('html').css('overflow-y', '');
+                // $('body').css('overflow-y', '');
                 // searchTextArea.attr('autofocus', 'autofocus');
                 searchTextArea.focus();
             } else {
-                $('html').css('overflow-y', 'hidden');
-                $('body').css('overflow-y', 'hidden');
+                // $('html').css('overflow-y', 'hidden');
+                // $('body').css('overflow-y', 'hidden');
                 // searchTextArea.removeAttr("autofocus");
                 searchTextArea.blur();
             };
@@ -333,8 +333,8 @@ $(function () {
                 searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
                 gnbSearchField.removeClass("open");
                 $('.gnbCurtain').removeClass("active");
-                $('html').css('overflow-y', '');
-                $('body').css('overflow-y', '');
+                // $('html').css('overflow-y', '');
+                // $('body').css('overflow-y', '');
             });
         };
 
