@@ -266,7 +266,8 @@ header { position: relative; z-index: 2; }
 .new { color: #1d1d1f; border-bottom: 1px solid #e5e5e5; padding-bottom: 120px; } 
 .new .container { width: 1200px; margin: 0 auto; text-align: center; } 
 .new .product_detail { display: flex; gap: 30px; } 
-.new .product_detail figure { display: flex; gap: 30px; } 
+.new .product_detail .product_img { display: flex; gap: 30px;} 
+.new .product_detail .product_img img { width: 100%; } 
 .new .product_detail .product_info { text-align: left; flex: 1; margin: auto 0; letter-spacing: -0.025rem; transform: translateY(-2px); } 
 .new .product_detail .product_info h3 { font-size: 28px; font-weight: 700; line-height: 35px; margin: 0 0 19px 0; letter-spacing: -0.04rem; } 
 .new .product_detail .product_info img { display: inline-block; margin: 0 0 5px 0; } 

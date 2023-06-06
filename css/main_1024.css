@@ -315,15 +315,10 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .new { color: #1d1d1f; border-bottom: 1px solid #e5e5e5; padding-bottom: 120px; } 
 .new .container { width: 100%; margin: 0 auto; text-align: center; padding: 0 24px; } 
 .new .product_detail { display: flex; flex-direction: column-reverse; gap: 30px; } 
-.new .product_detail figure { display: flex; gap: 30px; overflow-x: scroll; width: 100%; }
+.new .product_detail .product_img {display: flex; gap: 30px; overflow-x: scroll; width: 100%; } 
+.new .product_detail .product_img img { width: 100%; } 
 /* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
-/* .new .product_detail figure::-webkit-scrollbar { display: none; } */
-.new .product_detail figure { 
-    /* -ms-overflow-style: none; */
-    /* 인터넷 익스플로러 */
-    /* scrollbar-width: none; */
-    /* 파이어폭스 */ 
-}
+
 
 
 .new .product_detail .product_info { text-align: left; flex: 1; margin: auto 0; letter-spacing: -0.025rem; transform: translateY(-2px); } 
