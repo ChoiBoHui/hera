@@ -350,22 +350,22 @@ $(function () {
     responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
     topbannerEvent(); //탑배너는 리사이즈 필요 없음
     searchForm(); //리사이즈 필요한 부분 아래 함수로 따로 만들었음
+    srfScrollIssue();
     srfResponsiveEvent();
     mainVisualSlider(); //리사이즈 필요 없음
     bestSlider(); //리사이즈 필요 없음
     snsModal();
 
 
-    srfScrollIssue();
 
     // 리사이즈 됐을 때
     $(window).on('resize', function () {
         headerScrollEvent();
         gnbHoverEvent();
         submenuOpen();
+        srfScrollIssue();
         srfResponsiveEvent();
 
-        srfScrollIssue();
     });
 
 
