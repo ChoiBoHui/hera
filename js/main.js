@@ -79,9 +79,9 @@ $(function () {
                 };
 
                 // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
-                $(".gnbCurtain").removeClass("active")
-                $(".nav .main_menu>li").removeClass("active")
-                $('.globalnav_searchfield').removeClass("open");
+                // $(".gnbCurtain").removeClass("active")
+                // $(".nav .main_menu>li").removeClass("active")
+                // $('.globalnav_searchfield').removeClass("open");
             });
         } else {
             $(window).on('scroll', function () {
@@ -98,9 +98,9 @@ $(function () {
             // $(".main_menu>li").off('mouseenter mouseleave').removeClass("active");
             // 위에 코드는 밑에 사용한 이벤트 off 예시로 참고하기위해서 주석으로 넣어둠.. (포폴제출전에 삭제해야함)
 
-            $(".gnbCurtain").off('scroll');
-            $(".nav .main_menu>li").off('scroll');
-            $('.globalnav_searchfield').off('scroll');
+            // $(".gnbCurtain").off('scroll');
+            // $(".nav .main_menu>li").off('scroll');
+            // $('.globalnav_searchfield').off('scroll');
 
         };
         // 위에는 새로고침 했을 때!
