@@ -255,7 +255,7 @@ $(function () {
 
             // 반응형일 때만 작동
             $('html').css('overflow-y', '');
-            $('body').css('position', '');
+            $('body').css('overflow-y', '');
         });
 
         searchTextArea.on('focus', function () {
@@ -300,12 +300,12 @@ $(function () {
             // 크로스 브라우징 검색창 이슈!!
             if (WW >= 1200) {
                 $('html').css('overflow-y', '');
-                $('body').css('position', '');
+                $('body').css('overflow-y', '');
                 // searchTextArea.attr('autofocus', 'autofocus');
                 searchTextArea.focus();
             } else {
                 $('html').css('overflow-y', 'hidden');
-                $('body').css('position', 'fixed');
+                $('body').css('overflow-y', 'hidden');
                 // searchTextArea.removeAttr("autofocus");
                 searchTextArea.blur();
             };
@@ -334,7 +334,7 @@ $(function () {
                 gnbSearchField.removeClass("open");
                 $('.gnbCurtain').removeClass("active");
                 $('html').css('overflow-y', '');
-                $('body').css('position', '');
+                $('body').css('overflow-y', '');
             });
         };
 
