@@ -5,63 +5,142 @@ $(function () {
     console.log("[window 이벤트를 최초 실행합니다!]");
 
     //스크롤 시 메뉴 변경
+    // function headerScrollEvent() {
+    //     let WW = $(window).innerWidth();
+
+    //     if (WW >= 1200) {
+    //         const topmenu = $('.header .topmenu');
+    //         let sch = $(window).scrollTop();
+    //         if (sch > 100) {
+    //             topmenu.addClass('scroll');
+    //         } else {
+    //             topmenu.removeClass('scroll');
+    //         }
+
+    //         // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
+    //         $(".gnbCurtain").removeClass("active")
+    //         $(".nav .main_menu>li").removeClass("active")
+    //         $('.globalnav_searchfield').removeClass("open");
+
+    //     } else {
+    //         const topmenu = $('.header .topmenu');
+    //         let sch = $(window).scrollTop();
+    //         if (sch > 38) {
+    //             topmenu.addClass('scroll');
+    //         } else {
+    //             topmenu.removeClass('scroll');
+    //         }
+    //     }
+    //     // 위에는 새로고침 했을 때!
+    //     // 아래는 스크롤 이벤트
+
+    //     $(window).on('scroll', function () {
+    //         let WW = $(window).innerWidth();
+
+    //         if (WW >= 1200) {
+    //             const topmenu = $('.header .topmenu');
+    //             let sch = $(window).scrollTop();
+    //             if (sch > 100) {
+    //                 topmenu.addClass('scroll');
+    //             } else {
+    //                 topmenu.removeClass('scroll');
+    //             }
+
+    //             // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
+    //             $(".gnbCurtain").removeClass("active")
+    //             $(".nav .main_menu>li").removeClass("active")
+    //             $('.globalnav_searchfield').removeClass("open");
+
+    //         } else {
+    //             const topmenu = $('.header .topmenu');
+    //             let sch = $(window).scrollTop();
+    //             if (sch > 38) {
+    //                 topmenu.addClass('scroll');
+    //             } else {
+    //                 topmenu.removeClass('scroll');
+    //             }
+    //         }
+    //     });
+    // };
+
+
+    // 스크롤 이벤트 핸들러 수정
     function headerScrollEvent() {
         let WW = $(window).innerWidth();
 
         if (WW >= 1200) {
-            const topmenu = $('.header .topmenu');
-            let sch = $(window).scrollTop();
-            if (sch > 100) {
-                topmenu.addClass('scroll');
-            } else {
-                topmenu.removeClass('scroll');
-            }
-
-            // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
-            $(".gnbCurtain").removeClass("active")
-            $(".nav .main_menu>li").removeClass("active")
-            $('.globalnav_searchfield').removeClass("open");
-
-        } else {
-            const topmenu = $('.header .topmenu');
-            let sch = $(window).scrollTop();
-            if (sch > 38) {
-                topmenu.addClass('scroll');
-            } else {
-                topmenu.removeClass('scroll');
-            }
-        }
-        // 위에는 새로고침 했을 때!
-        // 아래는 스크롤 이벤트
-
-        $(window).on('scroll', function () {
-            let WW = $(window).innerWidth();
-
-            if (WW >= 1200) {
+            $(window).on('scroll', function () {
                 const topmenu = $('.header .topmenu');
                 let sch = $(window).scrollTop();
                 if (sch > 100) {
                     topmenu.addClass('scroll');
                 } else {
                     topmenu.removeClass('scroll');
-                }
+                };
 
                 // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
                 $(".gnbCurtain").removeClass("active")
                 $(".nav .main_menu>li").removeClass("active")
                 $('.globalnav_searchfield').removeClass("open");
-
-            } else {
+            });
+        } else {
+            $(window).on('scroll', function () {
                 const topmenu = $('.header .topmenu');
                 let sch = $(window).scrollTop();
                 if (sch > 38) {
                     topmenu.addClass('scroll');
                 } else {
                     topmenu.removeClass('scroll');
-                }
-            }
-        });
+                };
+            });
+
+            // 모바일 스크롤 이벤트 꺼주기(이유 : 아이폰과 안드로이드에서 input type: text에 입력하기위해 키보드가 나타났을때 작동하는 방식이 다름. ios의 경우 가상요소를 생성해 막아둔 스크롤이 움직임... 최적화 방법 찾는중..)
+            // $(".main_menu>li").off('mouseenter mouseleave').removeClass("active");
+            // 위에 코드는 밑에 사용한 이벤트 off 예시로 참고하기위해서 주석으로 넣어둠.. (포폴제출전에 삭제해야함)
+
+            $(".gnbCurtain").off('scroll');
+            $(".nav .main_menu>li").off('scroll');
+            $('.globalnav_searchfield').off('scroll');
+
+        }
+        // 위에는 새로고침 했을 때!
+        // 아래는 스크롤 이벤트
+
+        // $(window).on('scroll', function () {
+        //     let WW = $(window).innerWidth();
+
+        //     if (WW >= 1200) {
+        //         const topmenu = $('.header .topmenu');
+        //         let sch = $(window).scrollTop();
+        //         if (sch > 100) {
+        //             topmenu.addClass('scroll');
+        //         } else {
+        //             topmenu.removeClass('scroll');
+        //         }
+
+        //         // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
+        //         $(".gnbCurtain").removeClass("active")
+        //         $(".nav .main_menu>li").removeClass("active")
+        //         $('.globalnav_searchfield').removeClass("open");
+
+        //     } else {
+        //         const topmenu = $('.header .topmenu');
+        //         let sch = $(window).scrollTop();
+        //         if (sch > 38) {
+        //             topmenu.addClass('scroll');
+        //         } else {
+        //             topmenu.removeClass('scroll');
+        //         }
+        //     }
+        // });
     };
+
+
+
+
+
+
+
 
     // 메뉴 호버 Start   
     function gnbHoverEvent() {
