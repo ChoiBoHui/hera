@@ -313,8 +313,19 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 /* section NEW Start */
 .new { color: #1d1d1f; border-bottom: 1px solid #e5e5e5; padding-bottom: 120px; } 
-.new .container { width: 100%; margin: 0 auto; text-align: center; } 
+.new .container { width: 100%; margin: 0 auto; text-align: center; padding: 0 24px; } 
 .new .product_detail { display: flex; flex-direction: column-reverse; gap: 30px; } 
+.new .product_detail figure { display: flex; gap: 30px; overflow-x: scroll; width: 100%; }
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+/* .new .product_detail figure::-webkit-scrollbar { display: none; } */
+.new .product_detail figure { 
+    /* -ms-overflow-style: none; */
+    /* 인터넷 익스플로러 */
+    /* scrollbar-width: none; */
+    /* 파이어폭스 */ 
+}
+
+
 .new .product_detail .product_info { text-align: left; flex: 1; margin: auto 0; letter-spacing: -0.025rem; transform: translateY(-2px); } 
 .new .product_detail .product_info h3 { font-size: 28px; font-weight: 700; line-height: 35px; margin: 0 0 19px 0; letter-spacing: -0.04rem; } 
 .new .product_detail .product_info img { display: inline-block; margin: 0 0 5px 0; } 
@@ -323,13 +334,8 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .new .product_detail .product_info .product_txt { font-size: 16px; font-weight: 400; color: #565658; line-height: 23px; margin: 0 0 61px 0; } 
 .new .product_detail .product_info .btn_more { display: inline-block; background: #fff; padding: 10px 17px 7px 19px; border: 1px solid #1d1d1f; color: #1d1d1f; transition: 0.3s; } 
 .new .product_detail .product_info .btn_more:hover { background: #1d1d1f; border: 1px solid #1d1d1f; color: #fff; } 
-.new .product_detail img { flex: 1; } 
 .product_info .product_name::before { content: "NEW"; display: inline-block; top: 10px; left: 10px; font-family: montserrat; letter-spacing: -0.02rem; font-size: 14px; font-weight: 500; color: #fff; background-color: var(--color-g1); padding: 1px 3px 1px 3px; margin-right: 8px; transform: translateY(-1px); } 
 /* section NEW End */
-
-
-
-
 
 
 
