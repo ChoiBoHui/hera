@@ -261,21 +261,10 @@ $(function () {
         // 그리고 키보드 입력중에 빠르게 스크롤하면 스크롤이 되긴함.. 근데 또 손 때면 스크롤 안됨..
         if (WW >= 1200) {
             searchTextArea.off('focus');
-            // $(window).off('resize');
-            // let keyboardArea = $('.keyboardArea');
-
-            // searchTextArea.on('focus', function () {
-            //     window.scrollTo({ top: 0, behavior: 'smooth' });
-            // });
-
+            gnbSearchField.css('padding-bottom', '0px');
             // $(window).on('resize', function () {
-            //     let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
-            //     gnbSearchField.css('padding-bottom', keyboardHeight + 'px');
-            // });
 
-            // // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
-            // $(window).trigger('resize');
-            // // 여기까지 스크롤 막기
+            // });
         } else {
             let keyboardArea = $('.keyboardArea');
 
@@ -283,10 +272,10 @@ $(function () {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            $(window).on('resize', function () {
-                let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
-                gnbSearchField.css('padding-bottom', keyboardHeight + 'px');
-            });
+            //$(window).on('resize', function () {
+            let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
+            gnbSearchField.css('padding-bottom', keyboardHeight + 'px');
+            //});
 
             // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
             $(window).trigger('resize');
