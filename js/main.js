@@ -262,7 +262,8 @@ $(function () {
         let gnbSearchField = $('.globalnav_searchfield');
         let searchTextArea = $('.globalnav_searchfield-input');
         let searchReset = $('.globalnav_searchfield-reset');
-        let input_area = $('.input_area');
+        // let input_area = $('.input_area');
+        let globalnav_searchfield = $('.globalnav_searchfield');
         let WW = $(window).innerWidth();
 
 
@@ -277,7 +278,7 @@ $(function () {
 
         $(window).on('resize', function () {
             let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
-            input_area.css('padding-bottom', keyboardHeight + 'px');
+            globalnav_searchfield.css('padding-bottom', keyboardHeight + 'px');
         });
 
         // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
