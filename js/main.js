@@ -307,7 +307,8 @@ $(function () {
                 $('html').css('overflow-y', 'hidden');
                 $('body').css('overflow-y', 'hidden');
                 // searchTextArea.removeAttr("autofocus");
-                searchTextArea.blur();
+                // searchTextArea.blur();
+                searchTextArea.focus();
             };
         });
 
