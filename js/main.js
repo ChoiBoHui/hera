@@ -62,6 +62,7 @@ $(function () {
     //         }
     //     });
     // };
+    // 아래 핸들러 수정 원본 코드
 
 
     // 스크롤 이벤트 핸들러 수정
@@ -79,9 +80,9 @@ $(function () {
                 };
 
                 // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
-                // $(".gnbCurtain").removeClass("active")
-                // $(".nav .main_menu>li").removeClass("active")
-                // $('.globalnav_searchfield').removeClass("open");
+                $(".gnbCurtain").removeClass("active")
+                $(".nav .main_menu>li").removeClass("active")
+                $('.globalnav_searchfield').removeClass("open");
             });
         } else {
             $(window).on('scroll', function () {
@@ -98,41 +99,11 @@ $(function () {
             // $(".main_menu>li").off('mouseenter mouseleave').removeClass("active");
             // 위에 코드는 밑에 사용한 이벤트 off 예시로 참고하기위해서 주석으로 넣어둠.. (포폴제출전에 삭제해야함)
 
-            // $(".gnbCurtain").off('scroll');
-            // $(".nav .main_menu>li").off('scroll');
-            // $('.globalnav_searchfield').off('scroll');
+            $(".gnbCurtain").off('scroll');
+            $(".nav .main_menu>li").off('scroll');
+            $('.globalnav_searchfield').off('scroll');
 
         };
-        // 위에는 새로고침 했을 때!
-        // 아래는 스크롤 이벤트
-
-        // $(window).on('scroll', function () {
-        //     let WW = $(window).innerWidth();
-
-        //     if (WW >= 1200) {
-        //         const topmenu = $('.header .topmenu');
-        //         let sch = $(window).scrollTop();
-        //         if (sch > 100) {
-        //             topmenu.addClass('scroll');
-        //         } else {
-        //             topmenu.removeClass('scroll');
-        //         }
-
-        //         // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
-        //         $(".gnbCurtain").removeClass("active")
-        //         $(".nav .main_menu>li").removeClass("active")
-        //         $('.globalnav_searchfield').removeClass("open");
-
-        //     } else {
-        //         const topmenu = $('.header .topmenu');
-        //         let sch = $(window).scrollTop();
-        //         if (sch > 38) {
-        //             topmenu.addClass('scroll');
-        //         } else {
-        //             topmenu.removeClass('scroll');
-        //         }
-        //     }
-        // });
     };
 
 
@@ -307,9 +278,17 @@ $(function () {
                 $('html').css('overflow-y', 'hidden');
                 $('body').css('overflow-y', 'hidden');
                 // searchTextArea.removeAttr("autofocus");
-                // searchTextArea.blur();
-                searchTextArea.focus();
+                searchTextArea.blur();
+
+                // 여기 추가됨
+                searchTextArea.on('focus', function () {
+                    $('html').css('overflow-y', 'hidden');
+                    $('body').css('overflow-y', 'hidden');
+                });
+                // searchTextArea.focus();
             };
+
+
         });
 
         if (WW >= 1200) {
