@@ -225,8 +225,8 @@ $(function () {
             $('.gnbCurtain').removeClass("active");
 
             // 반응형일 때만 작동
-            // $('html').css('overflow-y', '');
-            // $('body').css('overflow-y', '');
+            $('html').css('overflow-y', '');
+            $('body').css('overflow-y', '');
         });
 
         searchTextArea.on('focus', function () {
@@ -264,19 +264,40 @@ $(function () {
         let searchReset = $('.globalnav_searchfield-reset');
         let WW = $(window).innerWidth();
 
+
+        // 추가됨!
+        let searchInput = $('.globalnav_searchfield-input');
+        let keyboardArea = $('#keyboardArea');
+
+
+        searchInput.on('focus', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        $(window).on('resize', function () {
+            var keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
+            gnbSearchField.css('padding-bottom', keyboardHeight + 'px');
+        });
+
+        // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
+        $(window).trigger('resize');
+
+
+
+
         $('.search_icon_area').on('click', function () {
             gnbSearchField.addClass("open");
             $('.gnbCurtain').addClass("active");
 
             // 크로스 브라우징 검색창 이슈!!
             if (WW >= 1200) {
-                // $('html').css('overflow-y', '');
-                // $('body').css('overflow-y', '');
+                $('html').css('overflow-y', '');
+                $('body').css('overflow-y', '');
                 // searchTextArea.attr('autofocus', 'autofocus');
                 searchTextArea.focus();
             } else {
-                // $('html').css('overflow-y', 'hidden');
-                // $('body').css('overflow-y', 'hidden');
+                $('html').css('overflow-y', 'hidden');
+                $('body').css('overflow-y', 'hidden');
                 // searchTextArea.removeAttr("autofocus");
                 searchTextArea.blur();
 
@@ -310,10 +331,12 @@ $(function () {
                 searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
                 gnbSearchField.removeClass("open");
                 $('.gnbCurtain').removeClass("active");
-                // $('html').css('overflow-y', '');
-                // $('body').css('overflow-y', '');
+                $('html').css('overflow-y', '');
+                $('body').css('overflow-y', '');
             });
         };
+
+
 
         // 리사이즈 됐을때 검색창 닫기
         // gnb 커튼 리사이즈 됐을때 닫히는건 다른데 포함돼 있음.
