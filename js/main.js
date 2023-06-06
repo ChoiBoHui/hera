@@ -265,7 +265,9 @@ $(function () {
         let WW = $(window).innerWidth();
 
 
-        // 추가됨!
+        // 모바일에서 검색창 켰을때 뒤쪽 화면 스크롤 막기위한 최선의 선택...
+        // 대신 입력 후 화면이 최상단으로 올라감.. (이건 애플도 나이키도 그럼..)
+        // 그리고 키보드 입력중에 빠르게 스크롤하면 스크롤이 되긴함.. 근데 또 손 때면 스크롤 안됨..
         let searchInput = $('.globalnav_searchfield-input');
         let keyboardArea = $('#keyboardArea');
 
