@@ -81,6 +81,7 @@
   font-size: inherit;
   font-weight: inherit;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 
 a {
