@@ -48,3 +48,73 @@
 /* 제품 소개 시작 */
 .productArea .product_title { font-size: 15px; font-weight: 700; line-height: 22px; word-break: keep-all; width: 230px; margin: 0 auto 22px auto; letter-spacing: -0.025rem; } 
 .productArea .productLink { display: block; width: 278px; border: 1px solid #1d1d1f; font-size: 16px; font-weight: 300; padding: 11px 0 8px 0; letter-spacing: -0.025rem; } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿 용 */
+@media (max-width: 793px) { html { overflow-x: hidden; width: 100%; } 
+body { overflow-x: hidden; width: 100%; } 
+
+
+
+.modal { display: block; width: 100%; height: auto; overflow: auto; } 
+.leftArea { width: 100%; } 
+.rightArea { width: 100%; } 
+
+
+
+/* leftArea Start */
+
+/* sns 슬라이더 */
+.snsArea .snsSlider { width: 378px; height: 378px; margin-bottom: 37px; } 
+
+/* 네비게이션 dots 커스텀 */
+.sns-modal-custom-dots { margin-top: 12px; display: flex; justify-content: center; } 
+.sns-modal-custom-dots>li { padding: 3px; border-radius: 0; cursor: pointer; } 
+.sns-modal-custom-dots>li>button { display: block; width: 6px; height: 6px; font-size: 0; border: none; outline: 0; border-radius: 0; cursor: pointer; } 
+.sns-modal-custom-dots>li.slick-active>button { background-color: #1d1d1f; } 
+
+/* sns 인포 시작 */
+.snsArea .sns_info { color: #424245; } 
+.snsArea .sns_info .sns_id { font-size: 12px; font-weight: 300; margin-bottom: 8px; } 
+.snsArea .sns_info .sns_text {display: none;} 
+
+
+
+/* rightArea Start */
+.productArea { text-align: center; } 
+.productArea .product_info { display: block; cursor: pointer; width: 278px; margin: 0 auto; } 
+
+/* 썸네일 시작 */
+.productArea .product_thumbnail { position: relative; width: 278px; margin-bottom: 16px; background-color: #f8f8f8; } 
+
+/* 커스터머 버튼 시작 */
+.productArea .product_thumbnail .cmlink_btn { position: absolute; top: 1px; right: 0; opacity: 0; visibility: hidden; transition: 0.3s; } 
+.productArea .product_thumbnail:hover .cmlink_btn { opacity: 1; visibility: visible; } 
+.productArea .product_thumbnail .cmlink_btn .addWishlist { padding: 7px; cursor: pointer; } 
+.productArea .product_thumbnail .cmlink_btn .addWishlist>img { width: 20px; } 
+.productArea .product_thumbnail .cmlink_btn .addWishlist.plusWish { background: url(../img/icon/icon_wishlist_full.svg) center center/20px no-repeat; } 
+
+/* 제품 소개 시작 */
+.productArea .product_title { font-size: 15px; font-weight: 700; line-height: 22px; word-break: keep-all; width: 230px; margin: 0 auto 22px auto; letter-spacing: -0.025rem; } 
+.productArea .productLink { display: block; width: 278px; border: 1px solid #1d1d1f; font-size: 16px; font-weight: 300; padding: 11px 0 8px 0; letter-spacing: -0.025rem; } 
+
+
+
+
+
+}
