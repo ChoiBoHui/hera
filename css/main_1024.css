@@ -170,7 +170,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .header .nav .main_menu .allCategory>a { padding: 4px; font-size: 17px; font-weight: 600; color: var(--color-g1); } 
 
 /* 서치폼 모바일용 추가 */
-.keyboardArea { position: fixed; bottom: 0; left: 0; width: 100%; height: 50px; background-color: #f1f1f1; } 
+.keyboardArea { position: fixed; bottom: 0; left: 0; width: 100%; height: 50px; background-color: #fff; } 
 
 /* Header End */ 
 

@@ -268,9 +268,9 @@ $(function () {
         } else {
             let keyboardArea = $('.keyboardArea');
 
-            searchTextArea.on('focus', function () {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+            // searchTextArea.on('focus', function () {
+            //     window.scrollTo({ top: 0, behavior: 'smooth' });
+            // });
 
             //$(window).on('resize', function () {
             let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
@@ -279,7 +279,7 @@ $(function () {
 
             // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
             // $(window).trigger('resize');
-            // 오류!!
+            // 오류!! 키보드 영역 높이를 왜 위에 표시해야하는거죠...?
             // 여기까지 스크롤 막기
         };
     };
