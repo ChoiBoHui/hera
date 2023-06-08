@@ -278,7 +278,8 @@ $(function () {
             //});
 
             // 초기화 시 키보드 영역의 높이를 계산하여 입력 필드 위에 표시
-            $(window).trigger('resize');
+            // $(window).trigger('resize');
+            // 오류!!
             // 여기까지 스크롤 막기
         };
     };
