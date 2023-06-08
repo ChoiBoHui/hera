@@ -268,9 +268,9 @@ $(function () {
         } else {
             let keyboardArea = $('.keyboardArea');
 
-            // searchTextArea.on('focus', function () {
-            //     window.scrollTo({ top: 0, behavior: 'smooth' });
-            // });
+            searchTextArea.on('focus', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
 
             //$(window).on('resize', function () {
             let keyboardHeight = window.innerHeight - keyboardArea.outerHeight();
