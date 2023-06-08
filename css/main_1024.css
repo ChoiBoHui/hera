@@ -362,15 +362,15 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 /* section LATEST ARTICLES Start */
 .articles { padding: 116px 0 114px 0; } 
 .articles .container { width: 100%; margin: 0 auto; text-align: center; padding: 0 24px; } 
-.contents_box { display: flex; gap: 60px; flex-direction: column; } 
-.contents_box figure { overflow: hidden; width: 100%; margin-bottom: 24px; } 
+.contents_box { display: flex; gap: 80px; flex-direction: column; } 
+.contents_box figure { overflow: hidden; width: 100%; margin-bottom: 32px; } 
 .contents_box figure img { transition: none; width: 100%; } 
 .contents_box figure img:hover { scale: 100%; } 
 .contents_box .inner { padding: 0; text-align: center;} 
 .contents_box .inner .title { font-weight: 700; font-size: 28px; letter-spacing: -0.025rem; color: var(--color-g1); margin-bottom: 6px; line-height: 32px; } 
 .contents_box .inner .title.EN { font-weight: 700; font-size: 32px; line-height: 34px; } 
-.contents_box .inner .subtitle { font-family: montserrat; font-weight: 400; font-size: 15px; letter-spacing: 0; color: #979798; margin-bottom: 12px; } 
-.contents_box .inner .intro { font-weight: 400; font-size: 15px; letter-spacing: -0.025rem; color: #424245; } 
+.contents_box .inner .subtitle { font-family: montserrat; font-weight: 400; font-size: 15px; letter-spacing: 0; color: #979798; margin-bottom: 16px; } 
+.contents_box .inner .intro { font-weight: 400; font-size: 16px; letter-spacing: -0.025rem; color: #424245; } 
 /* section LATEST ARTICLES End */
 
 
