@@ -431,6 +431,8 @@ $(function () {
         $('.snsModal .modalCloseBtn').on('click', function () {
             $('.snsModal').fadeOut();
             $('.snsModal').removeClass('open');
+            $('html').css('overflow-y', '');
+            $('body').css('overflow-y', '');
         });
 
         // 모달 오픈
@@ -438,6 +440,8 @@ $(function () {
         $('.snsitm').on('click', function () {
             $('.snsModal').fadeIn();
             $('.snsModal').addClass('open');
+            $('html').css('overflow-y', 'hidden');
+            $('body').css('overflow-y', 'hidden');
         });
     };
     // snsModal End

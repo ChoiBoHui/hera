@@ -67,12 +67,12 @@
 
 /* 태블릿 용 */
 @media (max-width: 793px) { html { overflow-x: hidden; width: 100%; } 
-body { overflow-x: hidden; width: 100%;  max-width: 378px;} 
+body { overflow-x: hidden; width: 100%;  max-width: 378px; margin: 0 auto;} 
 
 
 
 .modal { display: block; width: 100%; height: auto; overflow-x: hidden; overflow-y: auto; } 
-.leftArea { width: 100%; } 
+.leftArea { position: relative; width: 100%; margin-bottom: 60px;} 
 .rightArea { width: 100%; } 
 
 
@@ -83,14 +83,14 @@ body { overflow-x: hidden; width: 100%;  max-width: 378px;}
 .snsArea .snsSlider { width: 100%; max-width: 378px; height: auto; margin: 0 auto; } 
 
 /* 네비게이션 dots 커스텀 */
-.sns-modal-custom-dots { margin-top: 12px; display: flex; justify-content: center; } 
+.sns-modal-custom-dots { margin-top: 12px; display: flex; justify-content: right; } 
 .sns-modal-custom-dots>li { padding: 3px; border-radius: 0; cursor: pointer; } 
 .sns-modal-custom-dots>li>button { display: block; width: 6px; height: 6px; font-size: 0; border: none; outline: 0; border-radius: 0; cursor: pointer; } 
 .sns-modal-custom-dots>li.slick-active>button { background-color: #1d1d1f; } 
 
 /* sns 인포 시작 */
 .snsArea .sns_info { color: #424245; } 
-.snsArea .sns_info .sns_id { font-size: 12px; font-weight: 300; margin-bottom: 8px; } 
+.snsArea .sns_info .sns_id {position: absolute; bottom: 0; left: 0; font-size: 12px; font-weight: 300; margin-bottom: 0; } 
 .snsArea .sns_info .sns_text {display: none;} 
 
 
