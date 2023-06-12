@@ -295,6 +295,7 @@ $(function () {
     mainVisualSlider(); //리사이즈 필요 없음
     bestSlider(); //리사이즈 필요 없음
     snsModal();
+    footerLanguage(); //리사이즈 필요 없음
 
 
 
@@ -446,8 +447,14 @@ $(function () {
     };
     // snsModal End
 
-    // sns모달 뒤쪽 흰커튼 클릭 시 모달 꺼지게 설정해야함
-    // 모달 열렸을때 스크롤 안되게 설정해야함
+    // footer 언어 설정 Start
+    function footerLanguage() {
+        $('.footer .footer_utils .language').on('click', function () {
+            $('.footer .footer_utils .languageLink').slideToggle().toggleClass('open');
+            $(this).toggleClass('open');
+        })
+    };
+    // footer 언어 설정 End
 
 
 });
