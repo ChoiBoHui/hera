@@ -111,7 +111,7 @@ body { overflow-x: hidden; width: 100%;  max-width: 378px; margin: 0 auto;}
 
 /* 제품 소개 시작 */
 .productArea .product_title { font-size: 15px; font-weight: 700; line-height: 22px; word-break: keep-all; width: 100%; margin: 0 auto 22px auto; letter-spacing: -0.025rem; text-align: left; } 
-.productArea .productLink { display: block; width: 100%; border: none; font-size: 16px; font-weight: 300; padding: 11px 0 8px 0; letter-spacing: -0.025rem; background: #1d1d1f; color: #fff; } 
+.productArea .productLink { display: block; width: 100%; border: none; font-size: 16px; font-weight: 300; padding: 10px 0 10px 0; letter-spacing: -0.025rem; background: #1d1d1f; color: #fff; } 
 
 
 
