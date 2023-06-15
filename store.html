@@ -269,18 +269,18 @@
         <main class="main">
             <section class="store">
                 store
-                <div class="map">
-                    <div class="case">
-                        <!-- * 카카오맵 - 지도퍼가기 -->
-                        <!-- 1. 지도 노드 -->
-                        <div id="daumRoughmapContainer1686729169097"
+                <!-- <div class="map">
+                    <div class="case"> -->
+                <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+                <!-- <div id="daumRoughmapContainer1686729169097"
                             class="root_daum_roughmap root_daum_roughmap_landing">
                         </div>
                         <div id="daumRoughmapContainer1686730552873"
                             class="root_daum_roughmap root_daum_roughmap_landing"></div>
                     </div>
-                </div>
-                <div id="map" style="width:100%;height:350px;"></div>
+                </div> -->
+                <div id="map" style="width:640px;height:350px;"></div>
             </section>
         </main>
 
@@ -324,9 +324,12 @@
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
+    <!-- <script src="./js/kakaomap.js"></script> -->
 
     <!-- kakao map 카카오맵 지도 -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	23fc22d7f497a630244919c2783b583c">
+    <!-- 개인 api 들어가 있음, 그래서 설정해둔 도메인이 아니면 작동하지 않음. -->
+    <!-- html파일은 깃허브용으로 들어가 있고, php는 도메인용으로 설정해뒀음 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=db11fca70a817d3ddaf4463e16f1c42a">
     </script>
 
 
@@ -335,30 +338,30 @@
         src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
     <!-- 3. 실행 스크립트 -->
-    <script charset="UTF-8">
+    <!-- <script charset="UTF-8">
         new daum.roughmap.Lander({
             "timestamp": "1686729169097",
             "key": "2f67u",
             "mapWidth": "640",
             "mapHeight": "360"
         }).render();
-    </script>
+    </script> -->
 
     <!-- 3. 실행 스크립트 -->
-    <script charset="UTF-8">
+    <!-- <script charset="UTF-8">
         new daum.roughmap.Lander({
             "timestamp": "1686730552873",
             "key": "2f68o",
             "mapWidth": "640",
             "mapHeight": "360"
         }).render();
-    </script>
+    </script> -->
 
     <!-- 여기아래 마커 이미지 변경 -->
     <script>
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
-                center: new kakao.maps.LatLng(37.54699, 127.09598), // 지도의 중심좌표
+                center: new kakao.maps.LatLng(37.52611, 126.92862), // 지도의 중심좌표
                 level: 4 // 지도의 확대 레벨
             };
 
@@ -370,7 +373,7 @@
 
         // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
         var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-            markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
+            markerPosition = new kakao.maps.LatLng(37.52611, 126.92862); // 마커가 표시될 위치입니다
 
         // 마커를 생성합니다
         var marker = new kakao.maps.Marker({
