@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="40px" height="50px" viewBox="0 0 40 50" enable-background="new 0 0 40 50" xml:space="preserve">
+<path d="M40,20c0,11.046-20,30-20,30S0,31.046,0,20S8.954,0,20,0S40,8.954,40,20z"/>
+<image display="none" overflow="visible" width="176" height="210" xlink:href="../../../4주차_패션 or 코스메틱 사이트(메인)/img/simbol_white.png"  transform="matrix(0.0682 0 0 0.0682 14 12.8408)">
+</image>
+<g display="none">
+	<rect x="14" y="12.841" display="inline" fill="#FFFFFF" width="2.083" height="14.318"/>
+	<rect x="18.958" y="12.841" display="inline" fill="#FFFFFF" width="2.083" height="14.318"/>
+	<rect x="23.917" y="12.841" display="inline" fill="#FFFFFF" width="2.083" height="14.318"/>
+	<g display="inline">
+		<path fill="#FFFFFF" d="M16.083,12.841c0,0-0.248,3.284,0.558,4.802c0.821,1.547,2.789,3.285,2.789,3.285l-0.491,4.891
+			c0,0,0.24-3.128-0.574-4.643c-0.949-1.767-2.845-2.968-2.845-2.968L16.083,12.841z"/>
+		<path fill="#FFFFFF" d="M20.979,13.8c0,0-0.248,3.284,0.558,4.802c0.822,1.547,2.789,3.285,2.789,3.285l-0.409,4.897
+			c0,0,0.157-3.135-0.655-4.649c-0.949-1.767-2.846-2.968-2.846-2.968L20.979,13.8z"/>
+	</g>
+</g>
+<path fill="#FFFFFF" d="M23.917,12.841v8.665c-0.619-0.594-1.79-1.792-2.38-2.903c-0.263-0.496-0.412-1.18-0.496-1.877v-3.885
+	h-2.083v7.645c-0.632-0.612-1.746-1.767-2.317-2.843c-0.347-0.653-0.498-1.634-0.558-2.539v-2.263H14v14.318h2.083v-8.543
+	c0.635,0.492,1.658,1.4,2.282,2.561c0.415,0.772,0.555,1.964,0.594,2.947v1.311c-0.009,0.238-0.02,0.385-0.02,0.385l0.02-0.199
+	v1.539h2.083v-7.537c0.639,0.503,1.619,1.393,2.221,2.514c0.476,0.887,0.618,2.327,0.655,3.37v1.653H26V12.841H23.917z"/>
+</svg>

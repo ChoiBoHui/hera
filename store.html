@@ -280,6 +280,7 @@
                             class="root_daum_roughmap root_daum_roughmap_landing"></div>
                     </div>
                 </div>
+                <div id="map" style="width:100%;height:350px;"></div>
             </section>
         </main>
 
@@ -325,6 +326,10 @@
     <script src="./js/main.js"></script>
 
     <!-- kakao map 카카오맵 지도 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	23fc22d7f497a630244919c2783b583c">
+    </script>
+
+
     <!-- 2. 설치 스크립트 * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다. -->
     <script charset="UTF-8" class="daum_roughmap_loader_script"
         src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
@@ -347,6 +352,34 @@
             "mapWidth": "640",
             "mapHeight": "360"
         }).render();
+    </script>
+
+    <!-- 여기아래 마커 이미지 변경 -->
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(37.54699, 127.09598), // 지도의 중심좌표
+                level: 4 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        var imageSrc = 'http://choibohui.net/backup/hera/img/icon/map_marker.svg', // 마커이미지의 주소입니다    
+            imageSize = new kakao.maps.Size(40, 50), // 마커이미지의 크기입니다
+            imageOption = { offset: new kakao.maps.Point(20, 50) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+            markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition,
+            image: markerImage // 마커이미지 설정 
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);  
     </script>
 
 </body>
