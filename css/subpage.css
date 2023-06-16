@@ -11,7 +11,7 @@
 .storeWrap .storeSearchFrm .storeInputArea:focus { outline: 1px solid #1d1d1f; background-color: #fff; color: var(--color-g1); } 
 .storeWrap .storeSearchFrm .storeSubmit { position: absolute; top: calc(100% - 50%); left: 0; transform: translateY(-50%); background-color: transparent; outline: none; border: none; cursor: pointer; } 
 .storeWrap .storeSearchFrm .storeSubmit::before { content: ""; display: block; background-image: url(../img/icon/icon_search_bebebf.svg); background-size: 20px, 20px; background-repeat: no-repeat; background-position: center; width: 40px; height: 40px; } 
-
+.storeInputArea:focus .storeSubmit::before {background-image: url(../img/icon/icon_search.svg);}
 
 .storeWrap .storeList { height: 510px; overflow: auto; } 
 .storeWrap .storeList li { padding: 18px 16px 16px 40px; border-bottom: 1px solid #e7e7e8; } 
