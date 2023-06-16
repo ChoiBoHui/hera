@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
+$(function () {
     function offlinestore() {
 
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // 클릭한 링크의 data-lat 및 data-lng 값을 가져와서 지도의 중심 좌표로 설정
                 mapOption.center = new kakao.maps.LatLng(lat, lng);
+                markerPosition = new kakao.maps.LatLng(lat, lng);
             });
         };
         // 여기까지
