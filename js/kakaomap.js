@@ -75,6 +75,20 @@ $(document).ready(function () {
         // 지도를 생성합니다
         var map = new kakao.maps.Map(mapContainer.get(0), mapOption);
 
+        var anchors = $('.store_info');
+
+        anchors.click(function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            $(this).addClass("active").siblings().removeClass("active");
+
+            var lat = $(this).data('lat');
+            var lng = $(this).data('lng');
+
+            // 클릭한 링크의 data-lat 및 data-lng 값을 가져와서 지도의 중심 좌표로 설정
+            mapOption.center = new kakao.maps.LatLng(lat, lng);
+            markerPosition = new kakao.maps.LatLng(lat, lng);
+        });
+
         // 마커 이미지 변경
         var imageSrc = 'https://choibohui.github.io/hera/img/icon/map_marker.svg'; // 마커이미지의 주소입니다
         var imageSize = new kakao.maps.Size(40, 50); // 마커이미지의 크기입니다
@@ -94,19 +108,7 @@ $(document).ready(function () {
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
 
-        var anchors = $('.store_info');
 
-        anchors.click(function (event) {
-            event.preventDefault(); // 기본 링크 동작 방지
-            $(this).addClass("active").siblings().removeClass("active");
-
-            var lat = $(this).data('lat');
-            var lng = $(this).data('lng');
-
-            // 클릭한 링크의 data-lat 및 data-lng 값을 가져와서 지도의 중심 좌표로 설정
-            mapOption.center = new kakao.maps.LatLng(lat, lng);
-            markerPosition = new kakao.maps.LatLng(lat, lng);
-        });
     }
 
     // 함수 호출
