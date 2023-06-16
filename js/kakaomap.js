@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // 클릭한 링크의 data-lat 및 data-lng 값을 가져와서 지도의 중심 좌표로 설정
             var newCenter = new kakao.maps.LatLng(lat, lng);
             map.setCenter(newCenter);
+
+            // 마커의 위치도 변경
+            marker.setPosition(newCenter);
         });
     }
 
@@ -30,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
-    var markerPosition = new kakao.maps.LatLng(37.52611, 126.92862); // 마커가 표시될 위치입니다
+    var markerPosition = new kakao.maps.LatLng(37.52611, 126.92862); // 초기 마커의 표시될 위치입니다
 
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
