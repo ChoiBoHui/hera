@@ -13,14 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < anchors.length; i++) {
         anchors[i].addEventListener('click', function (event) {
             event.preventDefault(); // 기본 링크 동작 방지
-            // $(this).parent().addClass("select").siblings().removeClass("active");
-            this.parentNode.classList.add("select");
-            var siblings = Array.from(this.parentNode.parentNode.children);
-            siblings.forEach(function (element) {
-                if (element !== this.parentNode) {
-                    element.classList.remove("select");
-                }
-            });
 
             var lat = parseFloat(this.getAttribute('data-lat'));
             var lng = parseFloat(this.getAttribute('data-lng'));
@@ -32,7 +24,22 @@ document.addEventListener('DOMContentLoaded', function () {
             // 마커의 위치도 변경
             marker.setPosition(newCenter);
         });
-    }
+    };
+
+
+    document.querySelectorAll('.storeList li').forEach(function (item) {
+        item.addEventListener('click', function () {
+            var parent = this.parentNode;
+            parent.classList.add('select');
+
+            var siblings = Array.from(parent.parentNode.children);
+            siblings.forEach(function (sibling) {
+                if (sibling !== parent) {
+                    sibling.classList.remove('select');
+                }
+            });
+        });
+    });
 
     var imageSrc = 'https://choibohui.github.io/hera/img/icon/map_marker.svg'; // 마커이미지의 주소입니다    
     var imageSize = new kakao.maps.Size(40, 50); // 마커이미지의 크기입니다
