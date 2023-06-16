@@ -27,20 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 
-    document.querySelectorAll('.storeList li').forEach(function (item) {
-        item.addEventListener('click', function () {
-            var parent = this.parentNode;
-            parent.classList.add('select');
-
-            var siblings = Array.from(parent.parentNode.children);
-            siblings.forEach(function (sibling) {
-                if (sibling !== parent) {
-                    sibling.classList.remove('select');
-                }
-            });
-        });
-    });
-
     var imageSrc = 'https://choibohui.github.io/hera/img/icon/map_marker.svg'; // 마커이미지의 주소입니다    
     var imageSize = new kakao.maps.Size(40, 50); // 마커이미지의 크기입니다
     var imageOption = { offset: new kakao.maps.Point(20, 25) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
@@ -57,4 +43,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
+
+
+    // 매장 리스트 선택 활성화
+    document.querySelectorAll('.storeList li').forEach(function (item) {
+        item.addEventListener('click', function () {
+            this.classList.add('select');
+
+            var siblings = Array.from(this.parentNode.children);
+            siblings.forEach(function (sibling) {
+                if (sibling !== this) {
+                    sibling.classList.remove('select');
+                }
+            }, this);
+        });
+    });
+
+
+
+
 });
