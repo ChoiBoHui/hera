@@ -1,1 +1,2 @@
-.map {width: 1000px; height: 600px;}
+.store .mapWrap {border: 1px solid #000;}
+.store .map {width: 1000px; height: 600px; }
