@@ -271,13 +271,15 @@
                 <h2>매장찾기</h2>
                 <div class="container">
                     <div class="storeWrap">
-                        <form name="storeSearchFrm" method="get" action="" onsubmit="" autocomplete="off">
-                            <input type="text" placeholder="검색 기능은 구현되지 않았습니다.">
+                        <form name="storeSearchFrm" method="get" action="" onsubmit="" autocomplete="off"
+                            class="storeSearchFrm">
+                            <input type="text" placeholder="검색 기능은 구현되지 않았습니다." class="storeInputArea" autofocus>
+                            <button class="storeSubmit" aria-label="검색어 제출" aria-hidden="true" type="submit"></button>
                         </form>
                         <div class="storeList">
                             <ul>
-                                <li>
-                                    <a href="#" class="store_info select" data-lat="37.5261244" data-lng="126.9284248">
+                                <li class="select">
+                                    <a href="#" class="store_info" data-lat="37.5261244" data-lng="126.9284248">
                                         <div class="title">현대백화점 더현대 서울점</div>
                                         <div class="address">서울특별시 영등포구 여의대로 108 현대백화점 더현대 서울 1층 헤라 매장</div>
                                         <div class="tel">02-3277-0158</div>
