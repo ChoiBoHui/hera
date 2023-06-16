@@ -1,6 +1,6 @@
 .store { text-align: center; } 
-.store .container { width: 1200px; margin: 0 auto; } 
-.store .container .storeWrap { width: 100%; border: 1px solid #ddd; } 
+.store .container { width: 1000px; margin: 0 auto; } 
+.store .container .storeWrap { width: 100%; border: 1px solid #e7e7e8; } 
 
-.store .mapWrap { border: 1px solid #000; } 
-.store .map { width: 1000px; height: 600px; } 
+.store .mapWrap { display: inline-block; border: 1px solid #e7e7e8; } 
+.store .map { width: 640px; height: 600px; } 
