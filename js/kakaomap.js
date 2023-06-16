@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var siblings = Array.from(this.parentNode.parentNode.children);
             siblings.forEach(function (element) {
                 if (element !== this.parentNode) {
-                    element.classList.remove("active");
+                    element.classList.remove("select");
                 }
             });
 
