@@ -20,11 +20,11 @@
 .storeWrap .storeList li .store_info::before { content: ""; position: absolute; top: 15px; left: 10px; display: block; background-image: url(../img/icon/icon_store_bebebf.svg); background-size: 27px 27px; background-repeat: no-repeat; background-position: center; width: 27px; height: 27px; } 
 .storeWrap .storeList li.select .store_info::before { background-image: url(../img/icon/icon_store.svg); } 
 
-.storeWrap .store_info .title { position: relative; display: inline-block; font-size: 18px; font-weight: 700; line-height: 24px; margin-bottom: 8px; } 
-.storeWrap .store_info .title::after { content: ""; position: absolute; bottom: 0; left: 0; display: block; width: 0; height: 1px; background-color: #1d1d1f; transition: 0.25s; } 
+.storeWrap .store_info .title { position: relative; display: inline-block; font-size: 18px; font-weight: 700; line-height: 24px; margin-bottom: 6px; } 
+.storeWrap .store_info .title::after { content: ""; position: absolute; bottom: 1px; left: 0; display: block; width: 0; height: 1px; background-color: #1d1d1f; transition: 0.25s; } 
 .storeWrap li.select .store_info .title::after { width: 100%; } 
-.storeWrap .store_info .address { font-size: 16px; font-weight: 300; line-height: 20px; color: #424245; margin-bottom: 4px; } 
-.storeWrap .store_info .tel { font-size: 16px; font-weight: 300; line-height: 20px; color: #424245; } 
+.storeWrap .store_info .address { font-size: 15px; font-weight: 300; line-height: 19px; color: #424245; margin-bottom: 4px; } 
+.storeWrap .store_info .tel { font-size: 15px; font-weight: 300; line-height: 20px; color: #424245; } 
 
 
 .storeWrap .pagination { width: 100%; height: 44px; text-align: center; line-height: 44px; } 
