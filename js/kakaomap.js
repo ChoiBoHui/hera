@@ -132,15 +132,14 @@ $(function () {
     // };
 
     function storeLink() {
-        $('.storeInfo').click(function (event) {
+        $('.infoText').click(function (event) {
             let windowWidth = $(window).width();
-            let link = $(this).find('.infoText');
 
             if (windowWidth > 768) {
                 // link(event).preventDefault(); // 기본 링크 동작 방지
                 event.preventDefault(); // 기본 링크 동작 방지
             } else {
-                link.off('click');
+                $(this).off('click');
             };
         });
     };

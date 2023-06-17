@@ -38,7 +38,7 @@
 
 
 /* mapWrap Start */
-.store .mapWrap { display: inline-block; width: calc(100% - 360px); } 
+.store .mapWrap { display: block; width: calc(100% - 360px); } 
 
 
 
@@ -85,5 +85,6 @@
  
  
  /* mapWrap Start */
- .store #map {display: none !important;}
+ .store .mapWrap { display: none !important; } 
+ .store .mapWrap #map {display: none !important;}
  }
