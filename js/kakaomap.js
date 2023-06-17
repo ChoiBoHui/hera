@@ -126,7 +126,8 @@ $(function () {
         $(this).siblings().removeClass('select');
     });
 
-    storeSubmit();
+
+
 });
 
 function storeSubmit() {

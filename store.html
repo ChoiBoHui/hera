@@ -271,11 +271,10 @@
                 <h2>매장찾기</h2>
                 <div class="container">
                     <div class="storeWrap">
-                        <form name="storeSearchFrm" method="get" action="" onsubmit="" autocomplete="off"
-                            class="storeSearchFrm">
+                        <form name="storeSearchFrm" method="get" action="" onsubmit="return storeSubmit();"
+                            autocomplete="off" class="storeSearchFrm">
                             <input type="text" placeholder="ex) 백화점, 롯데, 잠실, 면세점" class="storeInputArea" autofocus>
-                            <button class="storeSubmit" aria-label="검색어 제출" aria-hidden="true" type="submit"
-                                onsubmit="return storeSubmit();"></button>
+                            <button class="storeSubmit" aria-label="검색어 제출" aria-hidden="true" type="submit"></button>
                         </form>
                         <div class="storeList">
                             <ul>
