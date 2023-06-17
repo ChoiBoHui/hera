@@ -1,5 +1,5 @@
 .store { text-align: center; margin: 32px 0 120px 0; overflow-x: hidden; } 
-.store .container { width: 1000px; margin: 0 auto; display: flex; border: 1px solid #e7e7e8; } 
+.store .container { width: 1060px; margin: 0 auto; display: flex; border: 1px solid #e7e7e8; } 
 
 /* storeWrap Start */
 .store .container .storeWrap { width: 360px; border-right: 1px solid #e7e7e8; text-align: left; } 
@@ -34,12 +34,34 @@
 
 /* mapWrap Start */
 .store .mapWrap { display: inline-block; } 
-.store .map { width: 640px; height: 600px; } 
+.store .map { width: 700px; height: 600px; } 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 @media (max-width: 1200px){
- .store { text-align: center; margin: 98px 0 120px 0; } 
+ .store { text-align: left; margin: 140px 0 120px 0; } 
+
+
+
+
+
+
+ 
+/* mapWrap Start */
+.store .mapWrap { display: inline-block; } 
+.store .map { width: 640px; height: 600px; } 
  }

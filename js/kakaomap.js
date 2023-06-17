@@ -59,7 +59,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    storeSubmit();
+    function storeSubmit() {
+        alert("검색 기능은 구현되지 않았습니다.");
+        // submit 버튼 작동 확인용
+        // 어차피 창 넘어갈꺼니까 input 값 초기화 안함
 
+        // 이후 액션은 개발자 부분
+        return false;
+    };
 
 
 });
