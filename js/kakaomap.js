@@ -78,7 +78,7 @@ $(function () {
 
         $('.storeInfo').click(function (event) {
             event.preventDefault(); // 기본 링크 동작 방지
-            let infoText = $('.storeInfo>.infoText');
+            let infoText = $(this > '.infoText');
 
             let lat = parseFloat(infoText.data('lat'));
             let lng = parseFloat(infoText.data('lng'));
