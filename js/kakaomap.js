@@ -66,15 +66,17 @@
 
 
 $(function () {
-    let mapContainer = $('#map'); // 지도를 표시할 div 
-    let mapOption = {
-        center: new kakao.maps.LatLng(37.52611, 126.92862), // 지도의 초기 중심좌표
-        level: 4 // 지도의 확대 레벨
-    };
-
-    let map = new kakao.maps.Map(mapContainer.get(0), mapOption); // 지도를 생성합니다
 
     function storeMapData() {
+        let mapContainer = $('#map'); // 지도를 표시할 div 
+        let mapOption = {
+            center: new kakao.maps.LatLng(37.52611, 126.92862), // 지도의 초기 중심좌표
+            level: 4 // 지도의 확대 레벨
+        };
+
+        let map = new kakao.maps.Map(mapContainer.get(0), mapOption); // 지도를 생성합니다
+
+
         $('.storeInfo').on('click', function () {
             const infoTextData = $('.infoText');
             let lat = parseFloat(infoTextData.data('lat'));
