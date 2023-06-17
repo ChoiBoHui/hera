@@ -74,19 +74,11 @@ $(function () {
 
     let map = new kakao.maps.Map(mapContainer.get(0), mapOption); // 지도를 생성합니다
 
-    function storeLink() {
-        $('.store_info').on('click', function (event) {
-            // event.preventDefault(); // 기본 링크 동작 방지
-            let windowWidth = $(window).width();
-            if (windowWidth >= 1200) {
-                event.preventDefault(); // 기본 링크 동작 방지
-            } else {
-                (this).off('click');
-            };
-
-
-            let lat = parseFloat($(this).data('lat'));
-            let lng = parseFloat($(this).data('lng'));
+    function storeMapData() {
+        $('.storeInfo').on('click', function () {
+            const infoTextData = $('.infoText');
+            let lat = parseFloat(infoTextData.data('lat'));
+            let lng = parseFloat(infoTextData.data('lng'));
 
             // 클릭한 링크의 data-lat 및 data-lng 값을 가져와서 지도의 중심 좌표로 설정
             let newCenter = new kakao.maps.LatLng(lat, lng);
@@ -96,8 +88,21 @@ $(function () {
             marker.setPosition(newCenter);
         });
     };
+    storeMapData();
 
+    function storeLink() {
+        $('.infoText').on('click', function (event) {
+            let windowWidth = $(window).width();
+
+            if (windowWidth >= 1200) {
+                event.preventDefault(); // 기본 링크 동작 방지
+            } else {
+                link.off('click');
+            };
+        });
+    };
     storeLink();
+
 
     $(window).resize(function () {
         storeLink();

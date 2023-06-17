@@ -17,17 +17,17 @@
 
 
 .storeWrap .storeList { height: 510px; overflow: auto; } 
-.storeWrap .storeList li { border-bottom: 1px solid #e7e7e8; } 
-.storeWrap .storeList li.select { background-color: #f8f8f9; } 
-.storeWrap .storeList .store_info { position: relative; display: inline-block; padding: 18px 16px 16px 40px; } 
-.storeWrap .storeList li .store_info::before { content: ""; position: absolute; top: 15px; left: 10px; display: block; background-image: url(../img/icon/icon_store_bebebf.svg); background-size: 27px 27px; background-repeat: no-repeat; background-position: center; width: 27px; height: 27px; } 
-.storeWrap .storeList li.select .store_info::before { background-image: url(../img/icon/icon_store.svg); } 
+.storeWrap .storeList .storeInfo { border-bottom: 1px solid #e7e7e8; } 
+.storeWrap .storeList .storeInfo.select { background-color: #f8f8f9; } 
+.storeWrap .storeList .infoText { position: relative; display: inline-block; padding: 18px 16px 16px 40px; } 
+.storeWrap .storeList .storeInfo .infoText::before { content: ""; position: absolute; top: 15px; left: 10px; display: block; background-image: url(../img/icon/icon_store_bebebf.svg); background-size: 27px 27px; background-repeat: no-repeat; background-position: center; width: 27px; height: 27px; } 
+.storeWrap .storeList .storeInfo.select .infoText::before { background-image: url(../img/icon/icon_store.svg); } 
 
-.storeWrap .store_info .title { position: relative; display: inline-block; font-size: 18px; font-weight: 700; line-height: 24px; margin-bottom: 6px; } 
-.storeWrap .store_info .title::after { content: ""; position: absolute; bottom: 1px; left: 0; display: block; width: 0; height: 1px; background-color: #1d1d1f; transition: 0.25s; } 
-.storeWrap li.select .store_info .title::after { width: 100%; } 
-.storeWrap .store_info .address { font-size: 15px; font-weight: 300; line-height: 19px; color: #424245; margin-bottom: 4px; } 
-.storeWrap .store_info .tel { font-size: 15px; font-weight: 300; line-height: 20px; color: #424245; } 
+.storeWrap .infoText .title { position: relative; display: inline-block; font-size: 18px; font-weight: 700; line-height: 24px; margin-bottom: 6px; } 
+.storeWrap .infoText .title::after { content: ""; position: absolute; bottom: 1px; left: 0; display: block; width: 0; height: 1px; background-color: #1d1d1f; transition: 0.25s; } 
+.storeWrap .storeInfo.select .infoText .title::after { width: 100%; } 
+.storeWrap .infoText .address { font-size: 15px; font-weight: 300; line-height: 19px; color: #424245; margin-bottom: 4px; } 
+.storeWrap .infoText .tel { font-size: 15px; font-weight: 300; line-height: 20px; color: #424245; } 
 
 
 .storeWrap .pagination { width: 100%; height: 44px; text-align: center; line-height: 44px; } 
@@ -37,8 +37,6 @@
 
 /* mapWrap Start */
 .store .mapWrap { display: inline-block; width: 100%; } 
-/* .store #map { width: 700px; height: 540px; }  */
-
 
 
 
@@ -70,8 +68,7 @@
 
  
 /* mapWrap Start */
-.store .mapWrap { display: inline-block; width: calc(100% - 360px); } 
-/* .store #map { width: calc(100% - 360px); height: 540px; } */
+.store .mapWrap { display: inline-block; width: calc(100% - 408px); } 
 }
 
 
