@@ -77,8 +77,8 @@ $(function () {
         let map = new kakao.maps.Map(mapContainer.get(0), mapOption); // 지도를 생성합니다
 
 
-        $('.storeInfo').on('click', function () {
-            const infoTextData = $('.storeInfo>.infoText');
+        $('.infoText').on('click', function () {
+            // const infoTextData = $('.infoText');
             let lat = parseFloat(infoTextData.data('lat'));
             let lng = parseFloat(infoTextData.data('lng'));
 
