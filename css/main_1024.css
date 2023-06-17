@@ -440,7 +440,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 
 /* Footer Start */
 .footer { background: var(--color-g1); color: #ededed; } 
-.footer .container { width: 100%; margin: 0 auto; display: flex; text-align: left; justify-content: center; padding: 0 24px; } 
+.footer .container { width: 100%; margin: 0 auto; display: inline-block; text-align: left; justify-content: center; padding: 0 24px; } 
 .footer .logo_footer { margin: 40px auto 30px auto; } 
 .footer .logo_footer a img { width: 100px; } 
 
