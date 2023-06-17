@@ -1,5 +1,7 @@
 .store { text-align: center; margin: 32px 0 120px 0; overflow-x: hidden; } 
-.store .container { width: 1060px; margin: 0 auto; display: flex; border: 1px solid #e7e7e8; } 
+.store .container { width: 1060px; margin: 0 auto; display: flex; } 
+.store .container .borderWrap { border: 1px solid #e7e7e8; } 
+
 
 /* storeWrap Start */
 .store .container .storeWrap { width: 360px; border-right: 1px solid #e7e7e8; text-align: left; } 
@@ -11,7 +13,7 @@
 .storeWrap .storeSearchFrm .storeInputArea:focus { outline: 1px solid #1d1d1f; background-color: #fff; color: var(--color-g1); } 
 .storeWrap .storeSearchFrm .storeSubmit { position: absolute; top: calc(100% - 50%); left: 0; transform: translateY(-50%); background-color: transparent; outline: none; border: none; cursor: pointer; } 
 .storeWrap .storeSearchFrm .storeInputArea::before { content: ""; display: block; background-image: url(../img/icon/icon_search_bebebf.svg); background-size: 20px, 20px; background-repeat: no-repeat; background-position: center; width: 40px; height: 40px; } 
-.storeWrap .storeSearchFrm .storeInputArea:focus::before {background-image: url(../img/icon/icon_search.svg);}
+.storeWrap .storeSearchFrm .storeInputArea:focus::before { background-image: url(../img/icon/icon_search.svg); } 
 
 
 
@@ -55,7 +57,7 @@
 /* 여기 1200 해뒀는데, 나중에는 태블릿 모바일 분리해서 작업할꺼라 1024로 바꿔야함. 헤더랑 푸터 포함돼 있는 main.css에서도 변경해야함 */
 @media (max-width: 1200px){
  .store { text-align: left; margin: 140px 0 120px 0; } 
- .store .container { width: 100%; margin: 0 auto; display: flex; border: 1px solid #e7e7e8; } 
+ .store .container { width: 100%; margin: 0 auto; display: flex; padding: 0 24px; } 
  
  /* storeWrap Start */
  .store .container .storeWrap { width: 360px; border-right: 1px solid #e7e7e8; text-align: left; } 
@@ -68,8 +70,8 @@
 
  
 /* mapWrap Start */
-.store .mapWrap { display: inline-block; width: calc(100% - 408px); } 
-}
+.store .mapWrap { display: inline-block; width: calc(100% - 360px); } 
+ }
 
 
 
