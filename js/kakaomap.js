@@ -76,7 +76,7 @@ $(function () {
 
         let map = new kakao.maps.Map(mapContainer.get(0), mapOption); // 지도를 생성합니다
 
-        $('.store_info').click(function (event) {
+        $('.storeInfo').click(function (event) {
             event.preventDefault(); // 기본 링크 동작 방지
 
             let lat = parseFloat($(this).data('lat'));
@@ -108,7 +108,7 @@ $(function () {
         marker.setMap(map);
 
         // 매장 리스트 선택 활성화
-        $('.storeList li').click(function () {
+        $('.storeList .storeInfo').click(function () {
             $(this).addClass('select');
             $(this).siblings().removeClass('select');
         });
