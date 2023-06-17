@@ -33,8 +33,8 @@
 
 
 /* mapWrap Start */
-.store .mapWrap { display: inline-block; } 
-.store #map { width: 700px; height: 600px; } 
+.store .mapWrap { display: inline-block; width: 100%; } 
+/* .store #map { width: 700px; height: 540px; }  */
 
 
 
@@ -51,9 +51,14 @@
 
 
 
-
+/* 여기 1200 해뒀는데, 나중에는 태블릿 모바일 분리해서 작업할꺼라 1024로 바꿔야함. 헤더랑 푸터 포함돼 있는 main.css에서도 변경해야함 */
 @media (max-width: 1200px){
  .store { text-align: left; margin: 140px 0 120px 0; } 
+ .store .container { width: 100%; margin: 0 auto; display: flex; border: 1px solid #e7e7e8; } 
+ 
+ /* storeWrap Start */
+ .store .container .storeWrap { width: 360px; border-right: 1px solid #e7e7e8; text-align: left; } 
+ 
 
 
 
@@ -62,14 +67,15 @@
 
  
 /* mapWrap Start */
-.store .mapWrap { display: inline-block; } 
-.store #map { width: 640px; height: 600px; } 
- }
+.store .mapWrap { display: inline-block; width: calc(100% - 360px); } 
+/* .store #map { width: calc(100% - 360px); height: 540px; } */
+}
 
 
 
- @media (max-width: 768) { 
- 
+ @media (max-width: 768){
+ .store { text-align: left; margin: 140px 0 120px 0; } 
+ .store .container { width: 100%; margin: 0 auto; display: flex; border: 1px solid #e7e7e8; padding: 0 24px; } 
  
  
  
