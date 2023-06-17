@@ -75,7 +75,7 @@ $(function () {
     let map = new kakao.maps.Map(mapContainer.get(0), mapOption); // 지도를 생성합니다
 
     function storeLink() {
-        $('.store_info').click(function (event) {
+        $('.store_info').on('click', function (event) {
             // event.preventDefault(); // 기본 링크 동작 방지
             let windowWidth = $(window).width();
             if (windowWidth >= 1200) {
