@@ -116,22 +116,22 @@ $(function () {
     };
     storeMapData();
 
-    function storeLink() {
-        $('.infoText').on('click', function (event) {
-            let windowWidth = $(window).width();
+    // function storeLink() {
+    //     $('.infoText').on('click', function (event) {
+    //         let windowWidth = $(window).width();
 
-            if (windowWidth >= 1200) {
-                event.preventDefault(); // 기본 링크 동작 방지
-            } else {
-                link.off('click');
-            };
-        });
-    };
-    storeLink(); //리사이즈 필요함
+    //         if (windowWidth >= 1200) {
+    //             event.preventDefault(); // 기본 링크 동작 방지
+    //         } else {
+    //             link.off('click');
+    //         };
+    //     });
+    // };
+    // storeLink(); //리사이즈 필요함
 
-    $(window).resize(function () {
-        storeLink();
-    });
+    // $(window).resize(function () {
+    //     storeLink();
+    // });
 
 
 });
