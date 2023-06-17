@@ -149,6 +149,15 @@ $(function () {
         storeLink();
     });
 
+    function changeSubmitIcon() {
+        $('.storeInputArea').on('focus', function () {
+            $('.storeSubmit').addClass('on');
+        });
+        $('.storeInputArea').on('blur', function () {
+            $('.storeSubmit').removeClass('on');
+        });
+    };
+    changeSubmitIcon();
 
 });
 
