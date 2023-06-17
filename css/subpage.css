@@ -55,13 +55,12 @@
 
 
 /* 여기 1200 해뒀는데, 나중에는 태블릿 모바일 분리해서 작업할꺼라 1024로 바꿔야함. 헤더랑 푸터 포함돼 있는 main.css에서도 변경해야함 */
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
 .store { text-align: center; margin: 140px 0 120px 0; overflow-x: hidden; } 
-.store .container { width: 100%; margin: 0 auto; padding: 0 24px;} 
+.store .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
 .store .container .borderWrap { display: flex; border: 1px solid #e7e7e8; } 
  
  
-
 }
 
 
@@ -75,7 +74,7 @@
 
 
  /* 모바일 시작! */
- @media (max-width: 768){
+@media (max-width: 768){
  .store { text-align: left; margin: 140px 0 120px 0; } 
  .store .container { width: 100%; margin: 0 auto; display: flex; border: 1px solid #e7e7e8; padding: 0 24px; } 
  
@@ -86,5 +85,5 @@
  
  
  /* mapWrap Start */
- .store .mapWrap { display: none; } 
-}
+ .store #map {display: none !important;}
+ }
