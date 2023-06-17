@@ -76,8 +76,9 @@ $(function () {
 
         let map = new kakao.maps.Map(mapContainer.get(0), mapOption); // 지도를 생성합니다
 
-        $('.storeInfo').click(function (event) {
-            event.preventDefault(); // 기본 링크 동작 방지
+        // $('.storeInfo').click(function (event) {
+        $('.storeInfo').click(function () {
+            // event.preventDefault(); // 기본 링크 동작 방지
             let infoText = $(this).find('.infoText');
 
             let lat = parseFloat(infoText.data('lat'));
@@ -129,11 +130,25 @@ $(function () {
     //         };
     //     });
     // };
-    // storeLink(); //리사이즈 필요함
 
-    // $(window).resize(function () {
-    //     storeLink();
-    // });
+    function storeLink() {
+        $('.storeInfo').click(function (event) {
+            let windowWidth = $(window).width();
+            let link = $(this).find('.infoText');
+
+            if (windowWidth > 768) {
+                // link(event).preventDefault(); // 기본 링크 동작 방지
+                event.preventDefault(); // 기본 링크 동작 방지
+            } else {
+                link.off('click');
+            };
+        });
+    };
+    storeLink(); //리사이즈 필요함
+
+    $(window).resize(function () {
+        storeLink();
+    });
 
 
 });
