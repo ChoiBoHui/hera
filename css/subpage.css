@@ -34,7 +34,7 @@
 
 /* mapWrap Start */
 .store .mapWrap { display: inline-block; } 
-.store .map { width: 700px; height: 600px; } 
+.store #map { width: 700px; height: 600px; } 
 
 
 
@@ -63,5 +63,5 @@
  
 /* mapWrap Start */
 .store .mapWrap { display: inline-block; } 
-.store .map { width: 640px; height: 600px; } 
+.store #map { width: 640px; height: 600px; } 
  }
