@@ -78,9 +78,10 @@ $(function () {
 
         $('.storeInfo').click(function (event) {
             event.preventDefault(); // 기본 링크 동작 방지
+            let infoText = $('.infoText');
 
-            let lat = parseFloat($(this).data('lat'));
-            let lng = parseFloat($(this).data('lng'));
+            let lat = parseFloat(infoText.data('lat'));
+            let lng = parseFloat(infoText.data('lng'));
 
             // 클릭한 링크의 data-lat 및 data-lng 값을 가져와서 지도의 중심 좌표로 설정
             let newCenter = new kakao.maps.LatLng(lat, lng);
