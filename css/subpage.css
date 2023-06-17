@@ -11,13 +11,13 @@
 .storeWrap .storeSearchFrm .storeInputArea:focus { outline: 1px solid #1d1d1f; background-color: #fff; color: var(--color-g1); } 
 .storeWrap .storeSearchFrm .storeSubmit { position: absolute; top: calc(100% - 50%); left: 0; transform: translateY(-50%); background-color: transparent; outline: none; border: none; cursor: pointer; } 
 .storeWrap .storeSearchFrm .storeSubmit::before { content: ""; display: block; background-image: url(../img/icon/icon_search_bebebf.svg); background-size: 20px, 20px; background-repeat: no-repeat; background-position: center; width: 40px; height: 40px; } 
-.storeInputArea:focus .storeSubmit::before {background-image: url(../img/icon/icon_search.svg);}
+.storeInputArea:focus .storeSubmit::before { background-image: url(../img/icon/icon_search.svg); } 
 
 .storeWrap .storeList { height: 510px; overflow: auto; } 
-.storeWrap .storeList li { padding: 18px 16px 16px 40px; border-bottom: 1px solid #e7e7e8; } 
+.storeWrap .storeList li { border-bottom: 1px solid #e7e7e8; } 
 .storeWrap .storeList li.select { background-color: #f8f8f9; } 
-.storeWrap .storeList .store_info { position: relative; display: inline-block; } 
-.storeWrap .storeList li .store_info::before { content: ""; position: absolute; top: -3px; left: -30px; display: block; background-image: url(../img/icon/icon_store_bebebf.svg); background-size: 28px 28px; background-repeat: no-repeat; background-position: center; width: 28px; height: 28px; } 
+.storeWrap .storeList .store_info { position: relative; display: inline-block; padding: 18px 16px 16px 40px; } 
+.storeWrap .storeList li .store_info::before { content: ""; position: absolute; top: 15px; left: 10px; display: block; background-image: url(../img/icon/icon_store_bebebf.svg); background-size: 27px 27px; background-repeat: no-repeat; background-position: center; width: 27px; height: 27px; } 
 .storeWrap .storeList li.select .store_info::before { background-image: url(../img/icon/icon_store.svg); } 
 
 .storeWrap .store_info .title { position: relative; display: inline-block; font-size: 18px; font-weight: 700; line-height: 24px; margin-bottom: 8px; } 
