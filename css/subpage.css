@@ -65,3 +65,15 @@
 .store .mapWrap { display: inline-block; } 
 .store #map { width: 640px; height: 600px; } 
  }
+
+
+
+ @media (max-width: 768) { 
+ 
+ 
+ 
+ 
+ /* mapWrap Start */
+ .store .mapWrap { display: inline-block; } 
+ .store #map { display: none; } 
+ }

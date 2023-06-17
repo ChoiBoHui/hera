@@ -81,7 +81,7 @@ $(function () {
             if (windowWidth >= 1200) {
                 event.preventDefault(); // 기본 링크 동작 방지
             } else {
-                link.off('click');
+                (this).off('click');
             };
 
 
@@ -125,6 +125,8 @@ $(function () {
         $(this).addClass('select');
         $(this).siblings().removeClass('select');
     });
+
+    storeSubmit();
 });
 
 function storeSubmit() {
@@ -133,5 +135,5 @@ function storeSubmit() {
     // 어차피 창 넘어갈꺼니까 input 값 초기화 안함
 
     // 이후 액션은 개발자 부분
-    // return false;
+    return false;
 };
