@@ -78,7 +78,7 @@ $(function () {
 
 
         $('.storeInfo').on('click', function () {
-            const infoTextData = $('.infoText');
+            const infoTextData = $('.storeInfo>.infoText');
             let lat = parseFloat(infoTextData.data('lat'));
             let lng = parseFloat(infoTextData.data('lng'));
 
