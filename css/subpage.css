@@ -20,7 +20,7 @@
 
 .storeWrap .storeList { height: calc(510px + 44px); overflow: auto; } 
 /* 아래 페이지 네이션 있기 전 높이가 510 */
-.storeWrap .storeList .storeInfo { border-bottom: 1px solid #e7e7e8; } 
+.storeWrap .storeList .storeInfo~.storeInfo { border-top: 1px solid #e7e7e8; } 
 .storeWrap .storeList .storeInfo.select { background-color: #f8f8f9; } 
 .storeWrap .storeList .infoText { position: relative; display: inline-block; padding: 18px 16px 16px 40px; } 
 .storeWrap .storeList .storeInfo .infoText::before { content: ""; position: absolute; top: 15px; left: 10px; display: block; background-image: url(../img/icon/icon_store_bebebf.svg); background-size: 27px 27px; background-repeat: no-repeat; background-position: center; width: 27px; height: 27px; } 
@@ -83,7 +83,7 @@
  /* storeWrap Start */
  .store .container .storeWrap { width: 100%; border-right: none; text-align: left; } 
  
- 
+ .storeWrap .storeList { height: auto; overflow: auto; } 
  
  
  /* mapWrap Start */
