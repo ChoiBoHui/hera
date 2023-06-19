@@ -18,7 +18,8 @@
 
 
 
-.storeWrap .storeList { height: 510px; overflow: auto; } 
+.storeWrap .storeList { height: calc(510px + 44px); overflow: auto; } 
+/* 아래 페이지 네이션 있기 전 높이가 510 */
 .storeWrap .storeList .storeInfo { border-bottom: 1px solid #e7e7e8; } 
 .storeWrap .storeList .storeInfo.select { background-color: #f8f8f9; } 
 .storeWrap .storeList .infoText { position: relative; display: inline-block; padding: 18px 16px 16px 40px; } 
@@ -32,9 +33,14 @@
 .storeWrap .infoText .tel { font-size: 15px; font-weight: 300; line-height: 20px; color: #424245; } 
 
 
-.storeWrap .pagination { width: 100%; height: 44px; text-align: center; line-height: 44px; } 
-
-
+.storeWrap .pagenation { display: none;} 
+/* .storeWrap .pagenation { display: flex; gap: 2px; width: 100%; height: 44px; text-align: center; line-height: 44px; align-items: center; justify-content: center; }  */
+/* .storeWrap .pagenation>a { width: 24px; height: 24px; padding: 4px; } 
+.storeWrap .pagenation .prevPage { margin-right: 8px; } 
+.storeWrap .pagenation .nextPage { margin-left: 8px; } 
+.storeWrap .pagenation>a>img { display: block; width: 16px; height: 16px; } 
+.storeWrap .pagenation ul { display: flex; gap: 6px;} 
+.storeWrap .pagenation ul a { font-size: 14px; padding: 6px; }  */
 
 
 /* mapWrap Start */
@@ -58,8 +64,7 @@
 @media (max-width: 1200px){
  .store { text-align: center; margin: 140px 0 120px 0; overflow-x: hidden; } 
 .store .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
- 
-}
+ }
 
 
 
