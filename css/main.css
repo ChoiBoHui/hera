@@ -1,5 +1,6 @@
 /* * { outline: 1px solid #f00; } */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
+html, body { height: 100%; } 
 
 :root { /* color */
  /* g = gray */
@@ -14,6 +15,7 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .mont { font-family: montserrat; letter-spacing: 0; } 
 
 
+.Wrap { min-height: 100%; position: relative; padding-bottom: 186px; } 
 /* Header Start */
 header { position: relative; z-index: 2; } 
 .header { background-color: #fff; } 
@@ -346,7 +348,7 @@ header { position: relative; z-index: 2; }
 
 
 /* Footer Start */
-.footer { background: var(--color-g1); color: #ededed; } 
+.footer { position: absolute; bottom: 0; width: 100%; background: var(--color-g1); color: #ededed; } 
 .footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
 .footer .logo_footer { margin: 40px auto 30px auto; } 
 .footer .logo_footer a img { width: 100px; } 
@@ -354,10 +356,10 @@ header { position: relative; z-index: 2; }
 .footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
 .footer .footer_utils>li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
 .footer .footer_utils .language { position: relative; cursor: pointer; } 
-.footer .footer_utils .language::after { content: ""; position: absolute; bottom: 4px; right: -17px; display: inline-block; background: url(../img/icon/icon_drop_up.svg) center center / contain no-repeat; width: 9px; height: 9px; cursor: pointer;  rotate: 0deg;}
-.footer .footer_utils .language.open::after { rotate: 180deg; }  
+.footer .footer_utils .language::after { content: ""; position: absolute; bottom: 4px; right: -17px; display: inline-block; background: url(../img/icon/icon_drop_up.svg) center center / contain no-repeat; width: 9px; height: 9px; cursor: pointer; rotate: 0deg; } 
+.footer .footer_utils .language.open::after { rotate: 180deg; } 
 .footer .footer_utils .languageLink { display: none; position: absolute; bottom: 20px; left: 14px; border: 1px solid #424245; text-align: left; padding: 10px; background: var(--color-g1); } 
-.footer .footer_utils .languageLink.open { display: block; }
+.footer .footer_utils .languageLink.open { display: block; } 
 .footer .footer_utils .languageLink>li>a { line-height: 24px; } 
 
 .footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
