@@ -1,4 +1,4 @@
-.store { text-align: center; margin: 32px 0 120px 0; overflow-x: hidden; } 
+.store { text-align: center; margin: 32px 0 120px 0; } 
 .store .container { width: 1060px; margin: 0 auto; } 
 .store .container .borderWrap { display: flex; border: 1px solid #e7e7e8; } 
 

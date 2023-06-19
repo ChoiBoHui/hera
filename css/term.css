@@ -1,15 +1,71 @@
-.term { text-align: center; margin: 32px 0 120px 0; overflow-x: hidden; } 
+:root { /* color */
+    /* g = gray */
+    --color-g1: #1d1d1f; } 
+
+/* .goIndex { } */
+.goIndex a { display: block; padding: 8px; } 
+.goIndex a img { width: 120px; } 
+
+.term { text-align: center; margin: 32px 0 120px 0; } 
 
 
 
 
+
+
+
+
+/* Footer Start */
+.footer { background: var(--color-g1); color: #ededed; } 
+.footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
+.footer .logo_footer { margin: 40px auto 30px auto; } 
+.footer .logo_footer a img { width: 100px; } 
+
+.footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
+.footer .footer_utils>li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
+.footer .footer_utils .language { position: relative; cursor: pointer; } 
+.footer .footer_utils .language::after { content: ""; position: absolute; bottom: 4px; right: -17px; display: inline-block; background: url(../img/icon/icon_drop_up.svg) center center / contain no-repeat; width: 9px; height: 9px; cursor: pointer;  rotate: 0deg;}
+.footer .footer_utils .language.open::after { rotate: 180deg; }  
+.footer .footer_utils .languageLink { display: none; position: absolute; bottom: 20px; left: 14px; border: 1px solid #424245; text-align: left; padding: 10px; background: var(--color-g1); } 
+.footer .footer_utils .languageLink.open { display: block; }
+.footer .footer_utils .languageLink>li>a { line-height: 24px; } 
+
+.footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
+.footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
+/* Footer End */
 
 
 
 @media (max-width: 1200px){
  .term { text-align: center; margin: 140px 0 120px 0; overflow-x: hidden; } 
  .term .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
- }
+
+
+
+
+
+
+
+/* Footer Start */
+.footer { background: var(--color-g1); color: #ededed; } 
+.footer .container { width: 100%; margin: 0 auto; display: inline-block; text-align: left; justify-content: center; padding: 0 24px; } 
+.footer .logo_footer { margin: 40px auto 30px auto; } 
+.footer .logo_footer a img { width: 100px; } 
+
+.footer .footer_utils { display: block; font-size: 13px; font-weight: 100; margin: 0 0 40px 0; } 
+.footer .footer_utils>li { line-height: 24px; } 
+.footer .footer_utils>li~li::before { display: none; } 
+.footer .footer_utils .language { position: relative; cursor: pointer; } 
+.footer .footer_utils .language::after { content: ""; position: absolute; top: 8px; bottom: auto; right: 0; display: inline-block; background: url(../img/icon/icon_drop_up.svg) center center / contain no-repeat; width: 9px; height: 9px; cursor: pointer; rotate: 180deg; } 
+.footer .footer_utils .language.open::after { rotate: 0deg; } 
+.footer .footer_utils .languageLink { display: none; position: static; bottom: 20px; left: 14px; border: 1px solid #424245; text-align: left; padding: 10px; background: var(--color-g1); } 
+.footer .footer_utils .languageLink.open { display: block; } 
+.footer .footer_utils .languageLink>li>a { line-height: 24px; } 
+
+.footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; line-height: 18px; } 
+.footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
+/* Footer End */
+}
  
  
  
@@ -19,11 +75,11 @@
  
  
  
- /* 모바일 시작! */
- @media (max-width: 768px){
+/* 모바일 시작! */
+@media (max-width: 768px){
  .term { text-align: left; margin: 140px 0 120px 0; } 
  .term .container { width: 100%; margin: 0 auto; display: flex; padding: 0 24px; } 
- }
+}
  
  
  
