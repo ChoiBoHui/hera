@@ -26,8 +26,61 @@
         <!-- main Start -->
         <main class="main">
             <section class="term">
-                <h2>약관동의창</h2>
-                <div class="container">콘텐츠 들어갈 영역</div>
+                <h2 aria-label="계속 진행하시려면 아래 권한에 동의해 주세요.">계속 진행하시려면 아래 권한에 동의해 주세요.</h2>
+                <div class="container">
+                    <div class="contents">
+                        <!-- 약관 동의 START -->
+                        <section class="check_all">
+                            <input type="checkbox" id="chkAll" name="chkAll">
+                            <label for="chkAll">
+                                <span class="check_all_txt">헤라 이용약관, 개인정보 수집 및 이용, 위치기반서비스
+                                    이용약관(선택), 프로모션 정보 수신(선택)에 모두 동의합니다.
+                                </span>
+                            </label>
+                        </section>
+                        <section class="terms_service">
+                            <div class="terms_service_txt section_title">
+                                <input type="checkbox" id="termsService" name="del-chk" class="required">
+                                <label for="termsService">
+                                    <a href="" target="_blank">헤라 이용약관</a> 동의
+                                    <span class="necessary">(필수)</span>
+                                </label>
+                            </div>
+                        </section>
+                        <section class="terms_privacy">
+                            <div class="terms_privacy_txt section_title">
+                                <input type="checkbox" id="termsPrivacy" name="del-chk" class="required">
+                                <label for="termsPrivacy">
+                                    <a href="" target="_blank">개인정보 수집 및 이용</a> 동의
+                                    <span class="necessary">(필수)</span>
+                                </label>
+                            </div>
+                        </section>
+                        <section class="terms_location">
+                            <div class="terms_location_txt section_title">
+                                <input type="checkbox" id="termsLocation" name="del-chk">
+                                <label for="termsLocation">
+                                    <a href="" target="_blank">위치기반서비스 이용약관</a> 동의
+                                    <span class="choice">(선택)</span>
+                                </label>
+                            </div>
+                        </section>
+                        <section class="terms_email">
+                            <div class="terms_email_txt section_title">
+                                <input type="checkbox" id="termsEmail" name="del-chk">
+                                <label for="termsEmail">
+                                    <a href="" target="_blank">프로모션 정보 수신</a> 동의
+                                    <span class="choice">(선택)</span>
+                                </label>
+                            </div>
+                        </section>
+                        <!-- 약관 동의 END -->
+                        <section class="btn_area">
+                            <a href="./index.html" class="btn btn_default" role="button">취소</a>
+                            <a href="./join.html" class="btn btn_primary" role="button">확인</a>
+                        </section>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -68,8 +121,7 @@
 
     <!-- script Start -->
     <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/term.js"></script>
 </body>
 
 </html>

@@ -1,22 +1,94 @@
 :root { /* color */
-    /* g = gray */
-    --color-g1: #1d1d1f; } 
+/* g = gray */
+--color-g1: #1d1d1f; } 
 
-/* .goIndex { } */
-.goIndex a { display: block; padding: 8px; } 
+html, body { height: 100%; } 
+.Wrap {min-height: 100%; position: relative;}
+
+.blind { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0); } 
+input { position: absolute; top: 12px; left: 0; width: 1px; height: 1px; } 
+label { cursor: pointer; } 
+
+header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); } 
+
+/* header Start */
+.goIndex { text-align: left; margin: 30px 0; } 
+.goIndex a { display: inline-block; padding: 8px; } 
 .goIndex a img { width: 120px; } 
-
-.term { text-align: center; margin: 32px 0 120px 0; } 
-
+/* header End */
 
 
+/* Main term Start */
+.term { text-align: left; margin: 40px 0 120px 0; } 
+.term h2 { font-size: 32px; font-weight: 100; line-height: 34px; margin-bottom: 30px; } 
 
 
 
+
+
+
+
+
+/* 들고온구간 */
+
+/* 공통 적용 */
+.section_title { position: relative; display: block; padding-left: 29px; font-size: 16px; font-weight: 700; line-height: 23px; cursor: pointer; color: #333; margin-top: 26px; } 
+
+.article_title { font-size: 12px; line-height: 16px; font-weight: 700; color: #666; padding-bottom: 8px; } 
+.necessary { display: inline-block; font-size: 12px; font-weight: 700; color: var(--color-g1); } 
+.choice { display: inline-block; font-size: 12px; font-weight: 400; color: #979798; } 
+
+/* 체크박스 기본 예시 */
+.check_all { position: relative; border-bottom: 1px solid #e7e7e8; padding-bottom: 27px; } 
+.check_all .check_all_txt { display: block; font-size: 16px; font-weight: 700; line-height: 23px; color: #333; cursor: pointer; text-decoration: underline; padding-left: 34px; } 
+.check_all input[type='checkbox']::before { content: ""; position: absolute; top: 0; left: -2px; width: 24px; height: 24px; margin-top: -14px; background: url(../img/icon/icon_check_off_24.svg) no-repeat; background-size: 24px, 24px; cursor: pointer; } 
+.check_all input[type='checkbox']:checked::before { background: url(../img/icon/icon_check_on_24.svg); cursor: pointer; } 
+
+/* 01_네이버 이용약관 동의 */
+.section_title input[type='checkbox']::before { content: ""; position: absolute; top: -3px; left: -2px; width: 22px; height: 22px; margin-top: -10px; background: url(../img/icon/icon_check_off_22.svg) no-repeat; background-size: 22px, 22px; cursor: pointer; } 
+.section_title input[type='checkbox']:checked::before { background: url(../img/icon/icon_check_on_22.svg); cursor: pointer; } 
+.section_title label a { text-decoration: underline; } 
+
+/* 02_개인정보 수집 및 이용 동의 */
+.terms_privacy { position: relative; } 
+.child_guide { position: absolute; top: 0; right: 0; padding: 6px 8px 8px 8px; border: 1px solid #08a600; background: #fff; text-align: center; font-size: 12px; color: #08a600; } 
+
+/* 03_위치기반서비스 이용약관 동의 */
+
+
+/* 04_프로모션 수신 동의 */
+
+
+/* 버튼 START */
+.btn_area { display: flex; justify-content: flex-end; gap: 10px; margin: 50px 0 20px 0; } 
+.btn_area .btn { display: block; font-size: 16px; font-weight: 400; text-align: center; cursor: pointer; padding: 14px 24px 10px 24px; color: #1d1d1f; background: #fff; border: 1px solid #1d1d1f; } 
+.btn_area .btn_primary { background: #1d1d1f; color: #fff; border: none; padding: 15px 24px 10px 24px; } 
+
+/* Main END */
+
+/* 들고온구간끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main term End */
 
 
 /* Footer Start */
-.footer { background: var(--color-g1); color: #ededed; } 
+.footer {position: absolute; bottom: 0; width: 100%; background: var(--color-g1); color: #ededed; } 
 .footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
 .footer .logo_footer { margin: 40px auto 30px auto; } 
 .footer .logo_footer a img { width: 100px; } 
@@ -24,10 +96,10 @@
 .footer .footer_utils { display: flex; font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
 .footer .footer_utils>li~li::before { content: ""; display: inline-block; width: 1px; height: 9px; background: #5c5c5c; margin: auto 10px; } 
 .footer .footer_utils .language { position: relative; cursor: pointer; } 
-.footer .footer_utils .language::after { content: ""; position: absolute; bottom: 4px; right: -17px; display: inline-block; background: url(../img/icon/icon_drop_up.svg) center center / contain no-repeat; width: 9px; height: 9px; cursor: pointer;  rotate: 0deg;}
-.footer .footer_utils .language.open::after { rotate: 180deg; }  
+.footer .footer_utils .language::after { content: ""; position: absolute; bottom: 4px; right: -17px; display: inline-block; background: url(../img/icon/icon_drop_up.svg) center center / contain no-repeat; width: 9px; height: 9px; cursor: pointer; rotate: 0deg; } 
+.footer .footer_utils .language.open::after { rotate: 180deg; } 
 .footer .footer_utils .languageLink { display: none; position: absolute; bottom: 20px; left: 14px; border: 1px solid #424245; text-align: left; padding: 10px; background: var(--color-g1); } 
-.footer .footer_utils .languageLink.open { display: block; }
+.footer .footer_utils .languageLink.open { display: block; } 
 .footer .footer_utils .languageLink>li>a { line-height: 24px; } 
 
 .footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; } 
@@ -36,9 +108,8 @@
 
 
 
-@media (max-width: 1200px){
- .term { text-align: center; margin: 140px 0 120px 0; overflow-x: hidden; } 
- .term .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
+@media (max-width: 1200px) { header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); padding: 0 24px; } 
+ /* .term { margin: 140px 0 120px 0; } */
 
 
 
@@ -47,7 +118,7 @@
 
 
 /* Footer Start */
-.footer { background: var(--color-g1); color: #ededed; } 
+.footer {position: static; background: var(--color-g1); color: #ededed; } 
 .footer .container { width: 100%; margin: 0 auto; display: inline-block; text-align: left; justify-content: center; padding: 0 24px; } 
 .footer .logo_footer { margin: 40px auto 30px auto; } 
 .footer .logo_footer a img { width: 100px; } 
@@ -64,22 +135,5 @@
 
 .footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; line-height: 18px; } 
 .footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
-/* Footer End */
-}
- 
- 
- 
- 
- 
- 
- 
- 
- 
-/* 모바일 시작! */
-@media (max-width: 768px){
- .term { text-align: left; margin: 140px 0 120px 0; } 
- .term .container { width: 100%; margin: 0 auto; display: flex; padding: 0 24px; } 
-}
- 
- 
+/* Footer End */ } 
  
