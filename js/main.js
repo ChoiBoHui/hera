@@ -231,12 +231,14 @@ $(function () {
 
         $('.search_icon_area').on('click', function () {
             gnbSearchField.addClass("open");
-            $('.gnbCurtain').addClass("active");
+            // $('.gnbCurtain').addClass("active");
 
             if (WW >= 1200) {
                 $('html').css('overflow-y', '');
                 $('body').css('overflow-y', '');
                 // searchTextArea.attr('autofocus', 'autofocus');
+                let headerHiehgt = $(".header").innerHeight();
+                $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
                 searchTextArea.focus();
             } else {
                 $('html').css('overflow-y', 'hidden');
