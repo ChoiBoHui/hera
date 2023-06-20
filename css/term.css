@@ -8,15 +8,16 @@ label { cursor: pointer; }
 
 header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); } 
 
+
 /* header Start */
-.goIndex { text-align: left; margin: 30px 0; } 
+.goIndex { text-align: left; margin: 40px 0; } 
 .goIndex a { display: inline-block; padding: 8px; } 
 .goIndex a img { width: 120px; } 
 /* header End */
 
 
 /* Main term Start */
-.term { text-align: left; margin: 40px 0 120px 0; } 
+.term { text-align: left; margin: 0 0 160px 0; } 
 .term h2 { font-size: 32px; font-weight: 100; line-height: 34px; margin-bottom: 30px; } 
 
 
@@ -106,10 +107,14 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 
 
 @media (max-width: 1200px){
- .Wrap { min-height: 100%; position: static; padding-bottom: 0; } 
  header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); padding: 0 24px; } 
  /* .term { margin: 140px 0 120px 0; } */
 
+/* header Start */
+.goIndex { text-align: left; margin: 30px 0; } 
+.goIndex a { display: inline-block; padding: 8px; transform: translateX(-8px);} 
+.goIndex a img { width: 99px; } 
+/* header End */
 
 
 

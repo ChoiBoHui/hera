@@ -20,7 +20,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; }
 .header h1 { position: static; top: 0; left: 0; transform: translateX(0); margin: 0; flex-grow: 1; z-index: 1; } 
 .header .topmenu.scroll h1 { top: 0; left: 0; transform: translateX(0); margin: 0; } 
 .header h1 a { display: inline-block; padding: 8px; margin: 0; } 
-.header h1 a img { width: auto; height: 18px; } 
+.header h1 a img { width: 99px; height: 18px; } 
 
 /* customer_menu Start */
 .header .customer_menu { display: flex; gap: 2px; margin: 0; } 
