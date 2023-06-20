@@ -1,6 +1,5 @@
 /* * { outline: 1px solid #f00; } */
 /* * { background-color: rgba(0, 0, 0, 0.08); } */
-html, body { height: 100%; } 
 
 :root { /* color */
  /* g = gray */
@@ -15,7 +14,6 @@ section h2 { font-family: montserrat; font-size: 32px; font-weight: 700; letter-
 .mont { font-family: montserrat; letter-spacing: 0; } 
 
 
-.Wrap { min-height: 100%; position: relative; padding-bottom: 186px; } 
 /* Header Start */
 header { position: relative; z-index: 2; } 
 .header { background-color: #fff; } 
@@ -348,7 +346,7 @@ header { position: relative; z-index: 2; }
 
 
 /* Footer Start */
-.footer { position: absolute; bottom: 0; width: 100%; background: var(--color-g1); color: #ededed; } 
+.footer {width: 100%; background: var(--color-g1); color: #ededed; } 
 .footer .container { width: 1200px; margin: 0 auto; display: flex; text-align: center; justify-content: center; } 
 .footer .logo_footer { margin: 40px auto 30px auto; } 
 .footer .logo_footer a img { width: 100px; } 
