@@ -271,17 +271,18 @@
                 <h2>로그인</h2>
                 <div class="container">
                     <div class="title">아모레퍼시픽 뷰티포인트 통합회원 아이디로 로그인해주세요.</div>
-                    <form name="loginfrm" method="post" action="" onsubmit="return loginCheck();" autocomplete="off">
+                    <form class="loginfrm" id="loginfrm" name="loginfrm" method="post" action=""
+                        onsubmit="return loginCheck();" autocomplete="off">
                         <div class="loginArea">
-                            <div>
+                            <div class="account_name">
                                 <label for="account_name_field">아이디</label>
                                 <input class="account_name_field" type="text" id="account_name_field"
                                     name="account_name_field">
                             </div>
-                            <div>
-                                <span class="skills">
+                            <div class="account_password">
+                                <!-- <span class="skills">
                                     <i class="show_pass">icon</i>
-                                </span>
+                                </span> -->
                                 <label for="account_password_field">비밀번호</label>
                                 <input class="account_password_field" type="password" id="account_password_field"
                                     name="account_password_field">
