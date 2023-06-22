@@ -5,7 +5,7 @@ $(function () {
     console.log("[window 이벤트를 최초 실행합니다!]");
 
     // 스크롤 이벤트 핸들러 수정
-    function headerScrollEvent() {
+    function navHeaderScrollEvent() {
         let WW = $(window).innerWidth();
 
         if (WW >= 1200) {
@@ -21,7 +21,6 @@ $(function () {
                 // 서브메뉴가 열려 있을 때 스크롤하면 닫히게
                 $(".gnbCurtain").removeClass("active")
                 $(".nav .main_menu>li").removeClass("active")
-                $('.globalnav_searchfield').removeClass("open");
             });
         } else {
             $(window).on('scroll', function () {
@@ -38,9 +37,9 @@ $(function () {
             // $(".main_menu>li").off('mouseenter mouseleave').removeClass("active");
             // 위에 코드는 밑에 사용한 이벤트 off 예시로 참고하기위해서 주석으로 넣어둠.. (포폴제출전에 삭제해야함)
 
-            $(".gnbCurtain").off('scroll');
-            $(".nav .main_menu>li").off('scroll');
-            $('.globalnav_searchfield').off('scroll');
+            // $(".gnbCurtain").off('scroll');
+            // $(".nav .main_menu>li").off('scroll');
+            // $('.globalnav_searchfield').off('scroll');
 
         };
     };
@@ -149,24 +148,12 @@ $(function () {
         let searchClose = $('.globalnav_searchfield-close');
         let searchSubmit = $('.globalnav_searchfield-submit');
 
-        // 서치폼 닫기 버튼
-        searchClose.on('click', function () {
-            searchTextArea.val('');
-            searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
-            gnbSearchField.removeClass("open");
-            $('.gnbCurtain').removeClass("active");
-
-            // 반응형일 때만 작동
-            $('html').css('overflow-y', '');
-            $('body').css('overflow-y', '');
-        });
-
-        searchTextArea.on('focus', function () {
-            searchSubmit.addClass('on');
-        });
-        searchTextArea.on('blur', function () {
-            searchSubmit.removeClass('on');
-        });
+        // searchTextArea.on('focus', function () {
+        //     searchSubmit.addClass('on');
+        // });
+        // searchTextArea.on('blur', function () {
+        //     searchSubmit.removeClass('on');
+        // });
 
         // 검색어 입력창에 포커스 됐거나 텍스트가 입력됐을때 리셋 버튼 조작
         searchTextArea.on('keyup focus', function () {
@@ -227,26 +214,94 @@ $(function () {
         let gnbSearchField = $('.globalnav_searchfield');
         let searchTextArea = $('.globalnav_searchfield-input');
         let searchReset = $('.globalnav_searchfield-reset');
+        let searchClose = $('.globalnav_searchfield-close');
+        let searchSubmit = $('.globalnav_searchfield-submit');
         let WW = $(window).innerWidth();
+
+        // 서치폼 검색 아이콘 변경
+        // 이거 근데 아래 검색창 이슈 작업하면서 리사이즈가 안되는 함수에 뒀을때는 리사이즈 해버리면 작동 하지 않는것을 발견함. 근데 왜그런지는 아직 모르겠음.
+        searchTextArea.on('focus', function () {
+            searchSubmit.addClass('on');
+        });
+        searchTextArea.on('blur', function () {
+            searchSubmit.removeClass('on');
+        });
+
+        // gnbSearchField.removeClass('open'); 관련 이슈 선택지 1번
+        // $(window).on('scroll', function () {
+        //     if ($(window).width() >= 1200) {
+        //         if (gnbSearchField.hasClass('open')) {
+        //             gnbSearchField.removeClass('open');
+        //         }
+        //     }
+        // });
+
+        // if ($(window).width() >= 1200) {
+        //     $(window).trigger('scroll');
+        //     searchTextArea.off('focus');
+
+        // } else {
+        //     $(window).off('scroll.gnbSearchField');
+
+        //     searchTextArea.on('focus', function () {
+        //         window.scrollTo({ top: 0, behavior: 'auto' });
+        //     });
+        // };
+
+
+        // gnbSearchField.removeClass('open'); 관련 이슈 선택지 2번
+        // 스크롤 이벤트를 리사이즈 이벤트에서 불러 핸들링함
+        // 윈도우 스크롤 이벤트 핸들러
+        function handleWindowScroll() {
+            if ($(window).width() >= 1200) {
+                gnbSearchField.removeClass('open');
+            }
+        };
+
+        // 윈도우 리사이즈 이벤트 핸들러
+        function handleWindowResize() {
+            if ($(window).width() < 1200) {
+                $(window).off('scroll', handleWindowScroll);
+            } else {
+                $(window).on('scroll', handleWindowScroll);
+            }
+        };
+        // 초기 실행
+        $(window).on('scroll', handleWindowScroll);
+        $(window).on('resize', handleWindowResize);
+        // 검색창 오류 관련 수정 여기까지
 
         $('.search_icon_area').on('click', function () {
             gnbSearchField.addClass("open");
             // $('.gnbCurtain').addClass("active");
 
             if (WW >= 1200) {
-                $('html').css('overflow-y', '');
-                $('body').css('overflow-y', '');
+                $('html, body').css('overflow-y', '');
                 // searchTextArea.attr('autofocus', 'autofocus');
                 let headerHiehgt = $(".header").innerHeight();
                 $(".gnbCurtain").addClass("active").css('top', headerHiehgt);
                 searchTextArea.focus();
             } else {
-                $('html').css('overflow-y', 'hidden');
-                $('body').css('overflow-y', 'hidden');
+                $('html, body').css('overflow-y', 'hidden');
                 // searchTextArea.removeAttr("autofocus");
-                searchTextArea.blur();
+                searchTextArea.focus();
             };
         });
+
+
+        // 서치폼 닫기 버튼
+        searchClose.on('click', function () {
+            searchTextArea.val('');
+            searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
+            gnbSearchField.removeClass("open");
+            $('.gnbCurtain').removeClass("active");
+
+            // 반응형일 때만 작동
+            if (WW < 1200) {
+                $('html, body').css('overflow-y', '');
+            }
+        });
+
 
         if (WW >= 1200) {
             gnbSearchField.on('mouseleave', function () {
@@ -270,8 +325,7 @@ $(function () {
                 searchReset.attr("disabled", "aria-hidden = true").css({ opacity: '0', visibility: 'hidden' });
                 gnbSearchField.removeClass("open");
                 $('.gnbCurtain').removeClass("active");
-                $('html').css('overflow-y', '');
-                $('body').css('overflow-y', '');
+                $('html, body').css('overflow-y', '');
             });
         };
 
@@ -286,7 +340,7 @@ $(function () {
 
 
     // 함수 호출
-    headerScrollEvent();
+    navHeaderScrollEvent();
     gnbHoverEvent();
     submenuOpen();
     responsiveMenu(); //모바일 전용 메뉴라 리사이즈 필요 없음
@@ -303,7 +357,7 @@ $(function () {
 
     // 리사이즈 됐을 때
     $(window).on('resize', function () {
-        headerScrollEvent();
+        navHeaderScrollEvent();
         gnbHoverEvent();
         submenuOpen();
         srfScrollIssue();
