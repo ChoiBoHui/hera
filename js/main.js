@@ -536,3 +536,7 @@ function check() {
     return false;
     // 폼태그 for, name이 하는 일을 확실하게 복습 할 것!!
 };
+
+function loginCheck() {
+    // 로그인 페이지 폼태그 관련
+};
