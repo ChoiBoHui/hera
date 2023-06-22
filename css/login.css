@@ -1,14 +1,25 @@
-.sectionLogin { text-align: center; margin: 32px 0 120px 0;  } 
+:root { /* color */
+ /* g = gray */
+ --color-g1: #1d1d1f; } 
+ 
+.blind { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0); } 
+ /* input { position: absolute; top: 12px; left: 0; width: 1px; height: 1px; } */
+label { cursor: pointer; } 
+main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); } 
+ 
+
+ 
+ 
+/* Main sectionLogin Start */
+.sectionLogin { text-align: center; margin: 60px 0 120px 0; } 
+.sectionLogin h2 { font-family: apple; } 
 
 
 
-
-
-
-
-@media (max-width: 1200px){
- .sectionLogin { text-align: center; margin: 140px 0 120px 0;  } 
- .sectionLogin .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
+@media (max-width: 1200px) {main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); padding: 0 24px; } 
+.sectionLogin { text-align: center; margin: 140px 0 120px 0; } 
+.sectionLogin h2 { font-family: apple; font-size: 28px; } 
+.sectionLogin .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
  }
  
  
@@ -19,11 +30,8 @@
  
  
  
- /* 모바일 시작! */
- @media (max-width: 768px){
- .sectionLogin { text-align: left; margin: 140px 0 120px 0; } 
- .sectionLogin .container { width: 100%; margin: 0 auto; display: flex; padding: 0 24px; } 
- }
+/* 모바일 시작! */
+/* @media (max-width: 768px) {}*/
  
  
  

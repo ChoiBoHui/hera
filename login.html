@@ -274,16 +274,15 @@
                     <form name="loginfrm" method="post" action="" onsubmit="return loginCheck();" autocomplete="off">
                         <div class="loginArea">
                             <div>
-                                <span>
-                                    <label for="account_name_field">아이디</label>
-                                </span>
+                                <label for="account_name_field">아이디</label>
                                 <input class="account_name_field" type="text" id="account_name_field"
                                     name="account_name_field">
                             </div>
                             <div>
-                                <span>
-                                    <label for="account_password_field">비밀번호</label>
+                                <span class="skills">
+                                    <i class="show_pass">icon</i>
                                 </span>
+                                <label for="account_password_field">비밀번호</label>
                                 <input class="account_password_field" type="password" id="account_password_field"
                                     name="account_password_field">
                             </div>
@@ -292,13 +291,26 @@
                                     checked>
                                 <label for="save_id_check">아이디 저장</label>
                             </div>
-
-                            <button class="sign_in" aria-label="로그인" aria-hidden="true" type="submit"></button>
+                            <button class="sign_in" aria-label="로그인" aria-hidden="true" type="submit">로그인</button>
                         </div>
                     </form>
-
-                    <div>
-                        <a href="./term.html">회원가입</a>
+                    <div class="link">
+                        <a href="">아이디 찾기</a>
+                        <a href="">비밀번호 찾기</a>
+                        <div>
+                            <a href="./term.html">회원가입</a>
+                        </div>
+                    </div>
+                    <div class="login_sns">
+                        <div class="title">SNS 계정으로 로그인</div>
+                        <div class="loginSnsLink">
+                            <div class="kakaoLink">
+                                <a href="">카카오 로그인</a>
+                            </div>
+                            <div class="naverLink">
+                                <a href="">네이버 로그인</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
