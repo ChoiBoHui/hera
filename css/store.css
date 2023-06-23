@@ -86,6 +86,7 @@
  /* storeWrap Start */
  .store .container .storeWrap { width: 100%; border-right: none; text-align: left; } 
  .storeWrap .storeSearchFrm { position: relative; padding: 0 24px; margin-bottom: 24px; }
+ .storeWrap .storeSearchFrm .storeSubmit { position: absolute; top: calc(100% - 50%); left: 26px; transform: translateY(-50%); background-color: transparent; outline: none; border: none; cursor: pointer; width: 40px; height: 40px; } 
  
  .storeWrap .storeList { height: auto; overflow: auto; border-top: 1px solid #e7e7e8; border-bottom: 1px solid #e7e7e8; } 
  
