@@ -15,21 +15,24 @@ main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); }
 .sectionLogin h2 { font-family: apple; font-size: 34px; font-weight: 600; } 
 .sectionLogin .container .title { font-size: 15px; font-weight: 400; margin-bottom: 30px; color: #424245; } 
 
+.sectionLogin .loginfrm { margin-bottom: 40px; } 
 
 .sectionLogin .account_name,
 .sectionLogin .account_password { position: relative; margin-bottom: 10px; } 
 
 .sectionLogin .account_name label,
-.sectionLogin .account_password label { position: absolute; top: 50%; left: 40px; transform: translateY(-33%); } 
+.sectionLogin .account_password label { position: absolute; background: #fff; padding: 4px; top: 13px; left: 14px; font-size: 14px; transition: 0.25s; color: #424245; cursor: text; } 
+.sectionLogin .account_name label.on,
+.sectionLogin .account_password label.on { top: -9px; font-size: 13px; color: #1d1d1f; } 
+.sectionLogin .account_name label.off,
+.sectionLogin .account_password label.off { top: -9px; font-size: 13px;  color: #979798; } 
 
 .sectionLogin .account_name_field,
-.sectionLogin .account_password_field { width: calc(100% - 48px); font-size: 18px; height: 46px; padding: 0px 16px; border-radius: 0; outline: none; border: 1px solid #1d1d1f; } 
+.sectionLogin .account_password_field { width: 100%; font-size: 15px; height: 46px; padding: 0px 16px; border-radius: 0; outline: none; border: 1px solid #e5e5e5; } 
+.sectionLogin .account_name_field.focus,
+.sectionLogin .account_password_field.focus { border: 1px solid #1d1d1f; } 
 
-.sign_in { background: #1d1d1f; width: calc(100% - 48px); font-size: 18px; height: 46px; border-radius: 0; outline: none; border: none; color: #fff; padding: 0 16px; } 
-
-
-
-
+.sign_in { background: #1d1d1f; width: 100%; font-family: apple; font-size: 16px; font-weight: 400; height: 46px; border-radius: 0; outline: none; border: none; color: #fff; padding: 0 16px; cursor: pointer; } 
 
 
 
@@ -48,7 +51,11 @@ main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); }
 
 
 
-@media (max-width: 1200px) { main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); padding: 0 24px; } 
+
+
+
+
+@media (max-width: 1200px) { main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); } 
 .sectionLogin { text-align: center; margin: 140px 0 120px 0; } 
 .sectionLogin h2 { font-family: apple; font-size: 30px; font-weight: 600; } 
 .sectionLogin .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
@@ -63,7 +70,11 @@ main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); }
  
  
 /* 모바일 시작! */
-/* @media (max-width: 768px) { } */
+@media (max-width: 768px) { main { width: 100%; max-width: 100%; margin: 0 auto; color: var(--color-g1); } 
+.sectionLogin { text-align: left; margin: 140px 0 120px 0; } 
+.sectionLogin h2 { font-family: apple; font-size: 30px; font-weight: 600; } 
+.sectionLogin .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
+ }
  
  
  
