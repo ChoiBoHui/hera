@@ -106,6 +106,15 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 
 
 
+/* 푸터 하단고정 */
+body { position: relative; } 
+html,
+body { height: 100vh; } 
+.Wrap { min-height: 100%; margin-bottom: -186px; padding-bottom: 186px; } 
+footer { position: absolute; bottom: 0; } 
+
+
+
 @media (max-width: 1200px){
  header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); padding: 0 24px; } 
  /* .term { margin: 140px 0 120px 0; } */
@@ -139,5 +148,11 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 
 .footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; line-height: 18px; } 
 .footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
-/* Footer End */ } 
+/* Footer End */ 
+
+/* 푸터 하단고정 */
+html,
+body { height: auto; } 
+.Wrap { margin-bottom: 0; padding-bottom: 0; } 
+footer { position: static; } } 
  
