@@ -35,12 +35,13 @@ let count = 0;
 function loginCheck() {
     let joinPlease = $('.joinPlease');
     let findPW = $('.findPW');
+    let fakeBox = $('.fakeBox');
 
     //변수 증가
     count = count + 1;
     console.log(count);
     if (count == 1) {
-        findPW.addClass("O-O")
+        // findPW.addClass("O-O")
         joinPlease.addClass("clickPlease")
     } else if (count == 2) {
         joinPlease.addClass("hey")
@@ -52,6 +53,7 @@ function loginCheck() {
         }, delay)
 
     } else if (count == 3) {
+        fakeBox.addClass("O-O")
         joinPlease.addClass("fxxkingLogin")
     } else if (count == 4) {
         joinPlease.addClass("fxxkYou")

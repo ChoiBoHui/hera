@@ -14,7 +14,7 @@ main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); }
 .sectionLogin { text-align: center; margin: 60px 0 120px 0; } 
 .sectionLogin h2 { font-family: apple; font-size: 34px; font-weight: 600; } 
 .sectionLogin .container { position: relative; } 
-.sectionLogin .container .titleInfo { font-size: 15px; font-weight: 400; margin-bottom: 30px; color: #424245; } 
+.sectionLogin .container .titleInfo { font-size: 15px; font-weight: 400; margin-bottom: 30px; color: #424245; line-height: 20px; } 
 
 .sectionLogin .loginfrm { margin-bottom: 40px; } 
 
@@ -48,18 +48,21 @@ main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); }
 .sign_in { background: #1d1d1f; width: 100%; font-family: apple; font-size: 16px; font-weight: 400; height: 46px; border-radius: 0; outline: none; border: none; color: #fff; padding: 0 16px; cursor: pointer; } 
 
 
-.link { display: flex; gap: 60px; justify-content: center; } 
+.link { position: relative; display: flex; gap: 60px; justify-content: center; } 
 .link a { font-size: 14px; font-weight: 400; padding: 4px; width: 86px; } 
 .link a:not(:last-child)::after { content: ""; display: inline-block; width: 1px; height: 10px; background: #e5e5e5; transform: translateX(36px); } 
 
 
 /* 회원가입 클릭 유도 */
-.findPW.O-O { margin-right: 146px; } 
+.fakeBox { display: none; font-size: 14px; font-weight: 400; padding: 4px; width: 86px; color: #fff; } 
+.fakeBox.O-O { display: inline-block; } 
+/* .findPW.O-O { margin-right: 146px; } */
 .joinPlease { transition: scale 0.25s; } 
-.joinPlease.clickPlease { position: absolute; top: 297px; left: 333px; scale: 110%; } 
+/* .joinPlease.clickPlease { position: absolute; top: 0; left: 333px; scale: 110%; } */
+.joinPlease.clickPlease { scale: 110%; } 
 .joinPlease.hey { scale: 130%; } 
-.joinPlease.fxxkingLogin { position: absolute; width: 460px; background: #000; color: #fff; padding: 16px; left: 0; top: 210px; rotate: 15deg; font-size: 15px; scale: 100%; } 
-.joinPlease.fxxkYou { position: absolute; width: 460px; background: #000; color: #fff; padding: 16px; left: 0; top: 210px; rotate: 0deg; font-size: 15px; transition: rotate 0.25s; } 
+.joinPlease.fxxkingLogin { position: absolute; width: 460px; background: #000; color: #fff; padding: 16px; left: 0; top: -86px; rotate: 15deg; font-size: 15px; scale: 100%; } 
+.joinPlease.fxxkYou { position: absolute; width: 460px; background: #000; color: #fff; padding: 16px; left: 0; top: -86px; rotate: 0deg; font-size: 15px; transition: rotate 0.25s; } 
 
 .joinPlease.vibration { animation: vibration .1s infinite; } 
 @keyframes vibration { 
@@ -122,13 +125,21 @@ footer { position: static; }
 .save_id label { font-size: 15px; margin-left: 24px; } 
 
 
+.link { position: relative; display: flex; gap: 40px; justify-content: center; } 
+.link a { font-size: 14px; font-weight: 400; padding: 4px; width: auto; } 
+.link a:not(:last-child)::after { content: ""; display: inline-block; width: 1px; height: 10px; background: #e5e5e5; transform: translateX(24px); } 
+
+
 /* 회원가입 클릭 유도 */
-.findPW.O-O { margin-right: 146px; } 
+.fakeBox { display: none; font-size: 14px; font-weight: 400; padding: 4px; width: auto; color: #fff; } 
+.fakeBox.O-O { display: inline-block; } 
+/* .findPW.O-O { margin-right: 96px; } */
 .joinPlease { transition: scale 0.25s; text-align: center; } 
-.joinPlease.clickPlease { position: absolute; top: 297px; left: 345px; scale: 110%; } 
+/* .joinPlease.clickPlease { position: absolute; top: 0; left: 345px; scale: 110%; }  */
+.joinPlease.clickPlease {  scale: 110%; } 
 .joinPlease.hey { scale: 130%; } 
-.joinPlease.fxxkingLogin { position: absolute; width: calc(100% - 48px); background: #000; color: #fff; padding: 16px; left: 24px; top: 211px; rotate: 15deg; font-size: 15px; scale: 100%; } 
-.joinPlease.fxxkYou { position: absolute; width: calc(100% - 48px); background: #000; color: #fff; padding: 16px; left: 24px; top: 211px; rotate: 0deg; font-size: 15px; transition: rotate 0.25s; } 
+.joinPlease.fxxkingLogin { position: absolute; width: 100%; background: #000; color: #fff; padding: 16px; left: 0; top: -86px; rotate: 15deg; font-size: 15px; scale: 100%; } 
+.joinPlease.fxxkYou { position: absolute; width: 100%; background: #000; color: #fff; padding: 16px; left: 0; top: -86px; rotate: 0deg; font-size: 15px; transition: rotate 0.25s; } 
  }
  
  
