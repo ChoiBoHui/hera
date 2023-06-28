@@ -95,7 +95,7 @@ footer { position: absolute; bottom: 0; }
 
 @media (max-width: 1200px) { main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); } 
 .sectionLogin { text-align: center; margin: 140px 0 120px 0; } 
-.sectionLogin h2 { font-family: apple; font-size: 30px; font-weight: 600; } 
+.sectionLogin h2 { font-family: apple; font-size: 30px; font-weight: 600; padding-left: 0; } 
 .sectionLogin .container { width: 100%; margin: 0 auto; } 
 
 /* 푸터 하단고정 */
@@ -116,7 +116,7 @@ footer { position: static; }
 /* 모바일 시작! */
 @media (max-width: 768px) { main { width: 100%; max-width: 100%; margin: 0 auto; color: var(--color-g1); } 
 .sectionLogin { text-align: left; margin: 140px 0 120px 0; } 
-.sectionLogin h2 { font-family: apple; font-size: 30px; font-weight: 600; } 
+.sectionLogin h2 { font-family: apple; font-size: 30px; font-weight: 600; padding-left: 24px; } 
 .sectionLogin .container { width: 100%; margin: 0 auto; padding: 0 24px; } 
 
 
@@ -135,8 +135,8 @@ footer { position: static; }
 .fakeBox.O-O { display: inline-block; } 
 /* .findPW.O-O { margin-right: 96px; } */
 .joinPlease { transition: scale 0.25s; text-align: center; } 
-/* .joinPlease.clickPlease { position: absolute; top: 0; left: 345px; scale: 110%; }  */
-.joinPlease.clickPlease {  scale: 110%; } 
+/* .joinPlease.clickPlease { position: absolute; top: 0; left: 345px; scale: 110%; } */
+.joinPlease.clickPlease { scale: 110%; } 
 .joinPlease.hey { scale: 130%; } 
 .joinPlease.fxxkingLogin { position: absolute; width: 100%; background: #000; color: #fff; padding: 16px; left: 0; top: -86px; rotate: 15deg; font-size: 15px; scale: 100%; } 
 .joinPlease.fxxkYou { position: absolute; width: 100%; background: #000; color: #fff; padding: 16px; left: 0; top: -86px; rotate: 0deg; font-size: 15px; transition: rotate 0.25s; } 

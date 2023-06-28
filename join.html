@@ -33,7 +33,7 @@
                 <h2>헤라 회원가입</h2>
                 <div class="container">
                     <form name="joinFrm" class="joinFrm" id="joinFrm" method="post" action=""
-                        onsubmit="return 아직안정해짐();">
+                        onsubmit="return check();">
                         <div class="box">
 
                             <!-- 아이디, 비밀번호 입력 -->
@@ -89,7 +89,7 @@
                             </div>
 
                             <!-- birthday 생년월일 -->
-                            <!-- 달력을 누르면 뜨긴 하는데.. cursor: pointer;를 넣어도 왜 손모양 안생기져...? -->
+                            <!-- 데이터피커 css 제대로 적용할것 -->
                             <div class="join_row join_birthday">
                                 <h3 class="join_title"><label for="birth">생년월일</label></h3>
                                 <div class="bir_wrap">
@@ -103,7 +103,7 @@
 
 
                             <!-- gender 성별 -->
-                            <!-- 라벨 안먹인다.. 왜지..? input의 id가 젠더가 아니라 그런가..? 그러면 input id를 통일시켜서 라벨에 써야할지 라벨에 여러개의 input id를 넣어야할지 고민되는걸..? -->
+                            <!-- 라벨 안먹힌다.. 왜지..? input의 id가 젠더가 아니라 그런가..? 그러면 input id를 통일시켜서 라벨에 써야할지 라벨에 여러개의 input id를 넣어야할지 고민되는걸..? -->
                             <div class="join_row join_gender">
                                 <h3 class="join_title"><label for="gender">성별</label></h3>
                                 <span class="ps_box gender_code" id="gender">
@@ -168,32 +168,13 @@
                                             aria-label="전화번호 입력" class="int" maxlength="16">
                                         <label for="phoneNo" class="lbl"></label>
                                     </span>
-                                    <a href="#" class="btn_verify btn_primary" id="btnSend" role="button">
-                                        <span class="">인증번호 받기</span>
-                                    </a>
                                 </div>
-                                <!-- 아래는 인증번호 받기 버튼 클릭 이후 활성화 -->
-                                <div class="ps_box_disable box_right_space" id="authNoBox">
-                                    <input type="tel" id="authNo" name="authNo" placeholder="인증번호 입력하세요"
-                                        aria-label="인증번호 입력하세요" aria-describedby="wa_verify" class="int" disabled
-                                        maxlength="4">
-                                    <label id="wa_verify" for="authNo" class="lbl">
-                                        <span class="wa_blind">인증받은 후 인증번호를 입력해야 합니다.</span>
-                                        <span class="input_code" id="authNoCode" style="display:none;"></span>
-                                    </label>
-                                </div>
-                                <span class="error_next_box" id="phoneNoMsg" aria-live="assertive">필수 정보입니다.</span>
-                                <span class="error_next_box green" id="phoneNoMsg" aria-live="assertive">인증번호를
-                                    발송했습니다.(유효시간 30분)<br>인증번호가 오지
-                                    않으면
-                                    입력하신 정보가 정확한지 확인하여 주세요.<br>이미 가입된 번호이거나, 가상전화번호는 인증번호를 받을 수 없습니다.</span>
-                                <span class="error_next_box" id="phoneNoMsg" aria-live="assertive">인증이 필요합니다.</span>
                             </div>
 
                         </div>
                         <!-- 가입하기 버튼 btn -->
                         <div class="btn_area">
-                            <button type="button" class="btn_primary">
+                            <button type="submit" class="btn_primary">
                                 <span>가입하기</span>
                             </button>
                         </div>
