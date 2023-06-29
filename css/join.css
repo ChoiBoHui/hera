@@ -33,7 +33,7 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 .ps_box.focus { border: 1px solid #1d1d1f; } 
 /* 포커스시 이동되는 라벨 */
 .join_title { position: relative; } 
-.join_row.movelabel label { position: absolute; background: #fff; padding: 4px; top: 13px; left: 14px; font-size: 14px; transition: 0.25s; color: #424245; cursor: text; z-index: 1; } 
+.join_row.movelabel label { position: absolute; background: #fff; padding: 4px; top: 13px; left: 14px; font-size: 14px; font-weight: 400; transition: 0.25s; color: #424245; cursor: text; z-index: 1; } 
 .join_row.movelabel label.on { top: -9px; font-size: 13px; color: #1d1d1f; } 
 .join_row.movelabel label.off { top: -9px; font-size: 13px; color: #979798; } 
 
@@ -88,7 +88,7 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 
 /* 버튼 START */
 .btn_area { display: flex; gap: 10px; margin: 30px 0 20px 0; } 
-.btn_area .btn_primary { display: block; flex: 1; font-size: 18px; font-weight: 500; text-align: center; cursor: pointer; padding: 13px 0 15px 0; color: #fff; background: #03c75a; border: none; } 
+.btn_area .btn_primary { display: block; flex: 1; font-size: 16px; font-weight: 400; font-family: apple; text-align: center; cursor: pointer; padding: 13px 0 12px 0; color: #fff; background: #1d1d1f; border: none; } 
 /* Main END */
 
 

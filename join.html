@@ -110,17 +110,14 @@
                             <!-- gender 성별 -->
                             <!-- 라벨 안먹힌다.. 왜지..? input의 id가 젠더가 아니라 그런가..? 그러면 input id를 통일시켜서 라벨에 써야할지 라벨에 여러개의 input id를 넣어야할지 고민되는걸..? -->
                             <div class="join_row join_gender">
-                                <h3 class="join_title"><label for="gender">성별</label></h3>
+                                <h3 class="join_title"><label for="gender">쇼핑 기본 설정</label></h3>
                                 <span class="ps_box gender_code" id="gender">
                                     <!-- 기존 ps_box 스타일에서 다른 부분들은 gender_code 로 덮었음 -->
-                                    <label for="male">
-                                        <input id="male" type="radio" value="M" name="gender">남성
-                                    </label>
                                     <label for="female">
-                                        <input id="female" type="radio" value="F" name="gender">여성
+                                        <input id="female" type="radio" value="F" name="gender">여성용
                                     </label>
-                                    <label for="unknown">
-                                        <input id="unknown" type="radio" value="U" name="gender">선택 안함
+                                    <label for="male">
+                                        <input id="male" type="radio" value="M" name="gender">남성용
                                     </label>
                                 </span>
                                 <span class="error_next_box" id="genderMsg" aria-live="assertive">필수 정보입니다.</span>
