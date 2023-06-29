@@ -18,6 +18,7 @@ main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); }
 
 .sectionLogin .loginfrm { margin-bottom: 40px; } 
 
+/* input 창 디자인인데,.. 인풋에는 스타일 권장 안한데서 겉에 다시 박스 싸야함TT */
 .sectionLogin .account_name,
 .sectionLogin .account_password { position: relative; } 
 .sectionLogin .account_name { margin-bottom: 10px; } 

@@ -1,10 +1,10 @@
 :root { /* color */
-    /* g = gray */
-    --color-g1: #1d1d1f; } 
+ /* g = gray */
+ --color-g1: #1d1d1f; } 
 
 
 .blind, .wa_blind { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0); } 
-/* input { position: absolute; top: 12px; left: 0; width: 1px; height: 1px; }  */
+/* input { position: absolute; top: 12px; left: 0; width: 1px; height: 1px; } */
 label { cursor: pointer; } 
 
 header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color-g1); } 
@@ -28,13 +28,21 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 /* 제일 바깥쪽 스판 박스(안에 인풋을 넣기 위해 한겹 싸는 스타일 박스) */
 /* 선택항목 타이틀 옆 (선택) 텍스트 */
 .terms_choice { font-size: 12px; font-weight: 400; color: #8e8e8e; } 
-.ps_box { display: block; position: relative; width: 100%; border: solid 1px #dadada; padding: 10px 110px 10px 14px; background: #fff; box-sizing: border-box; /* vertical-align: top; */ } 
+/* 인풋 겉 박스 스타일 */
+.ps_box { display: block; position: relative; width: 100%; font-size: 15px; height: 46px; padding: 8px 110px 8px 16px; border-radius: 0; outline: none; border: 1px solid #e5e5e5; } 
+.ps_box.focus { border: 1px solid #1d1d1f; } 
+/* 포커스시 이동되는 라벨 */
+.join_title { position: relative; } 
+.join_row.movelabel label { position: absolute; background: #fff; padding: 4px; top: 13px; left: 14px; font-size: 14px; transition: 0.25s; color: #424245; cursor: text; z-index: 1; } 
+.join_row.movelabel label.on { top: -9px; font-size: 13px; color: #1d1d1f; } 
+.join_row.movelabel label.off { top: -9px; font-size: 13px; color: #979798; } 
+
 /* 포커스된 박스 보더 컬러 그린으로 체인지 */
 .ps_box.focus { border: 1px solid #1d1d1f; } 
 /* ps_box 중에서도 우측 공간이 없는 인풋 타입 박스 */
 .box_right_space { padding-right: 14px; box-sizing: border-box; } 
 /* 바깥쪽 span 안에 들어가있는 인풋 박스 */
-.int { display: block; position: relative; width: 100%; height: 29px; padding-right: 25px; line-height: 29px; border: none; background: transparent; font-size: 15px; box-sizing: border-box; outline: 0; cursor: text; text-decoration: none; } 
+.int { display: block; position: relative; width: 100%; height: 28px; line-height: 28px; border: none; background: transparent; font-size: 15px; box-sizing: border-box; outline: 0; cursor: text; text-decoration: none; } 
 /* 커서 text 해뒀는데, 아닌 경우도 있어서 각각 수정 필요함! */
 /* 박스 하단에 뜨는 메세지 */
 .error_next_box { display: block; margin: 9px 0 -2px; font-size: 12px; line-height: 14px; color: red; } 
@@ -43,16 +51,12 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 .sel { width: 98.4%; /* 우측 끝 아이콘들 라인 맞추기 위해서 */ height: 29px; font-size: 15px; line-height: 18px; color: #000; border: none; border-radius: 0; } 
 
 /* 아이디 */
-.step_url { position: absolute; top: 16px; right: 13px; font-size: 15px; line-height: 18px; color: #8e8e8e; } 
+.step_url { position: absolute; top: 14px; right: 13px; font-size: 15px; line-height: 18px; color: #8e8e8e; } 
 
 
 /* 비밀번호 */
 /* 비밀번호 가능 여부 txt */
-.lbl { display: block; position: absolute; top: 50%; left: 0; padding: 0 14px; width: 100%; margin-top: -9px; line-height: 18px; color: #8e8e8e; } 
-.lbl .step_txt { display: inline-block; position: absolute; top: 0; right: 52px; font-size: 12px; } 
-/* 비밀번호 아이콘 */
-.ps_box.int_pass:after, .ps_box.int_pass_check:after { content: ''; display: inline-block; position: absolute; top: 50%; right: 13px; width: 24px; height: 24px; margin-top: -12px; background-image: url(../img/join/m_icon_pw_step.png); background-repeat: no-repeat; background-position: 0 0; background-size: 125px 75px; cursor: pointer; } 
-.ps_box .lbl { left: 0; padding: 0 14px; width: 100%; box-sizing: border-box; display: block; position: absolute; top: 50%; left: 14px; margin-top: -9px; font-size: 15px; line-height: 18px; color: #8e8e8e; z-index: 9; } 
+.pwCondition {font-size: 12px; font-weight: 400; line-height: 16px; color: #8e8e8e;}
 
 /* 비밀번호 재확인 */
 .ps_box.int_pass_check:after { background-position: -27px 0; } 
@@ -69,7 +73,7 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 /* 성별 */
 .gender_code { display: block; width: 100%; } 
 .gender_code input { position: inherit; top: 0; left: inherit; width: 12px; height: 29px; vertical-align: middle; margin-right: 6px; } 
-.gender_code label~label { margin-left: 20px; }
+.gender_code label~label { margin-left: 20px; } 
 
 
 /* 본인 확인 이메일 */
@@ -165,7 +169,7 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 
 .footer .low_footer p { font-size: 13px; font-weight: 100; margin: 0 0 10px 0; line-height: 18px; } 
 .footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
-/* Footer End */ }
+/* Footer End */ } 
  
  
  
@@ -177,9 +181,9 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
  
 /* 모바일 시작! */
 @media (max-width: 768px){
-.join { text-align: left; margin: 140px 0 120px 0; } 
+ .join { text-align: left; margin: 140px 0 120px 0; } 
 .join .container { width: 100%; margin: 0 auto; display: flex; padding: 0 24px; } 
-}
+ }
  
  
  
