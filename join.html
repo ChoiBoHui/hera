@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="./css/main_1024.css"> -->
     <link rel="stylesheet" href="./css/join.css">
     <link rel="icon" type="image/png" href="./img/az/favicon.png" />
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="./css/datepicker_custom.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+        integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 
 <body>
@@ -46,7 +52,7 @@
                                     <input type="text" id="id" name="id" class="int" title="ID" maxlength="20">
                                     <span class="step_url">@amore.com</span>
                                 </span>
-                                <span class="error_next_box" id="idMsg" aria-live="assertive"></span>
+                                <span class="error_next_box"></span>
                                 <div class="idCondition condition_box">
                                     <div class="condition1">
                                         <span></span>최소 5자 이상, 최대 20자
@@ -65,14 +71,14 @@
                                     <h3 class="join_title">
                                         <label for="pswd1">비밀번호</label>
                                     </h3>
-                                    <span class="ps_box int_pass" id="pswd1Img">
+                                    <span class="ps_box int_pass">
                                         <input type="password" id="pswd1" name="pswd1" class="int" title="비밀번호 입력"
                                             aria-describedby="pswd1Msg" maxlength="20">
                                     </span>
-                                    <span class="error_next_box" id="pswd1Msg" aria-live="assertive"></span>
+                                    <span class="error_next_box"></span>
                                     <div class="pwCondition condition_box">
                                         <div class="condition1">
-                                            <span></span>최소 8자 이상, 최대 16자
+                                            <span></span>최소 8자
                                         </div>
                                         <div class="condition2">
                                             <span></span>알파벳 대문자 및 소문자 조합, 그리고 최소 1개
@@ -92,8 +98,7 @@
                                         <span id="pswd2Blind" class="wa_blind">설정하려는 비밀번호가 맞는지 확인하기 위해 다시 입력
                                             해주세요.</span>
                                     </span>
-                                    <span class="error_next_box" id="pswd2Msg" aria-live="assertive">비밀번호가 일치하지
-                                        않습니다.</span>
+                                    <span class="error_next_box"></span>
                                 </div>
                             </div>
 
@@ -116,7 +121,10 @@
                                 <h3 class="join_title"><label for="birth">생년월일</label></h3>
                                 <div class="bir_wrap">
                                     <span class="ps_box">
-                                        <input type="date" id="birth" class="int">
+                                        <!-- <input type="date" id="birth" class="int datepicker"> -->
+                                        <input type="text" type="text" class="datepicker" data-language="en"
+                                            data-multiple-dates="3" data-multiple-dates-separator=", "
+                                            data-position="top left">
                                     </span>
                                 </div>
                                 <span class="error_next_box" id="birthdayMsg" aria-live="assertive">태어난 년도 4자리를 정확하게
@@ -240,6 +248,14 @@
     <!-- script Start -->
     <script src="./js/jquery-1.12.4.min.js"></script>
     <!-- <script src="./js/slick.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/join.js"></script>
 </body>
 
