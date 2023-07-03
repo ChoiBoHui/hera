@@ -2,8 +2,9 @@ $(function () {
 
     // input 포커스 이벤트
     function inputFocusEvent() {
-        let joinAreaLabel = $('.movelabel .join_title label');
-        let joinAreaInput = $('.movelabel .ps_box input');
+        // let joinAreaLabel = $('.movelabel .join_title label');
+        // let joinAreaInput = $('.movelabel .ps_box input');
+        let joinAreaInput = $('.ps_box input');
 
         // 검색어에 값이 있을때
         joinAreaInput.on('focus', function () {
@@ -149,10 +150,8 @@ $(function () {
     sectionPw();
 
     function joinDatepicker() {
-        $('.datepicker').datepicker();
-        $.datepicker.setDefaults({
+        $('.datepicker').datepicker({
             dateFormat: 'yy-mm-dd',
-            // maxDate: new Date('2017-12-31'),
             prevText: '이전 달',
             nextText: '다음 달',
             monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
@@ -164,15 +163,18 @@ $(function () {
             showMonthAfterYear: true, // 월- 년 순서가아닌 년도 - 월 순서
             changeYear: true, //option값 년 선택 가능
             changeMonth: true, //option값  월 선택 가능
-            showOn: "both", //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시        
-            buttonImage:
-                "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif", //버튼 이미지 경로
+            showOn: "both", //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
+            // buttonImage: "../img/join/calendar.svg", //버튼 이미지 경로
+            buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif", //버튼 이미지 경로
             buttonImageOnly: true, //버튼 이미지만 깔끔하게 보이게함
             buttonText: "선택", //버튼 호버 텍스트
             yearSuffix: '년',
             // minDate: "-5Y", //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-            minDate: new Date('1996-12-01'),
-            maxDate: "+5y", //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+            // maxDate: "+5y", //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+            // minDate: new Date('1996-12-01'),
+            minDate: '-100y',
+            maxDate: 0, //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+            yearRange: 'c-100:c+0', // 년도 선택 셀렉트박스를 현재 년도에서 이전, 이후로 얼마의 범위를 표시할것인가.
         });
         //초기값을 오늘 날짜로 설정해줘야 합니다.
         $(".datepicker").datepicker("setDate", "today"); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
