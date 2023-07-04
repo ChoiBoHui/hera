@@ -1,5 +1,15 @@
 $(function () {
 
+
+    // footer 언어 설정 Start
+    function footerLanguage() {
+        $('.footer .footer_utils .language').on('click', function () {
+            $('.footer .footer_utils .languageLink').slideToggle().toggleClass('open');
+            $(this).toggleClass('open');
+        })
+    }; footerLanguage();
+    // footer 언어 설정 End
+
     // input 포커스 이벤트
     function inputFocusEvent() {
         // let joinAreaLabel = $('.movelabel .join_title label');
@@ -42,6 +52,7 @@ $(function () {
             checkLength();
             checkCharacter();
         });
+
 
         function checkId() {
             if (id.val() === "") {
@@ -177,168 +188,87 @@ $(function () {
             yearRange: 'c-100:c+0', // 년도 선택 셀렉트박스를 현재 년도에서 이전, 이후로 얼마의 범위를 표시할것인가.
         });
         //초기값을 오늘 날짜로 설정해줘야 합니다.
-        $(".datepicker").datepicker("setDate", "today"); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        // $(".datepicker").datepicker("setDate", "today"); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
     };
     joinDatepicker();
-
-    //주민번호 확인 함수
-    function check_jumin() {
-        let jumins3 = $("#pnum").val() + $("#nnum").val();
-        //주민등록번호 생년월일 전달
-
-        let fmt = RegExp(/^\d{6}[1234]\d{6}$/)  //포멧 설정
-        let buf = new Array(13);
-
-        //주민번호 유효성 검사
-        if (!fmt.test(jumins3)) {
-            alert("주민등록번호 형식에 맞게 입력해주세요");
-            $("#pnum").focus();
-            return false;
-        }
-
-        //주민번호 존재 검사
-        for (let i = 0; i < buf.length; i++) {
-            buf[i] = parseInt(jumins3.charAt(i));
-        }
-
-        let multipliers = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5];// 밑에 더해주는 12자리 숫자들 
-        let sum = 0;
-
-        for (let i = 0; i < 12; i++) {
-            sum += (buf[i] *= multipliers[i]);// 배열끼리12번 돌면서 
-        }
-
-        if ((11 - (sum % 11)) % 10 != buf[12]) {
-            alert("잘못된 주민등록번호 입니다.");
-            $("#pnum").focus();
-            return false;
-        }
-
-        let birthYear = (jumins3.charAt(6) <= "2") ? "19" : "20";
-        birthYear += $("#pnum").val().substr(0, 2);
-        let birthMonth = $("#pnum").val().substr(2, 2);
-        let birthDate = $("#pnum").val().substr(4, 2);
-        let birth = new Date(birthYear, birthMonth, birthDate);
-
-
-        $("#year").val(birthYear);
-        $("#month").val(birthMonth);
-        $("#day").val(birthDate);
-    };
-    // check_jumin();
-
-
 
 
 });
 
 
+function checkJoin() {
 
-// 일단 긁어온거라서 아직 뭔지 확인 안했음
-// function check() {
-//     let getIntro = $("#intro").val().replace(/\s|/gi, '');
-//     let hobbyCheck = false;
-//     let getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-//     let getCheck = RegExp(/^[a-zA-Z0-9]{4,12}$/);
-//     let getName = RegExp(/^[가-힣]+$/);
-//     let fmt = RegExp(/^\d{6}[1234]\d{6}$/); //형식 설정
-//     let buf = new Array(13); //주민등록번호 배열
+    let idCharacterPattern = /^[a-zA-Z0-9_-]{5,20}$/;
+    let pwCharacterPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()]).{8,}$/;
+
+    const idVal = $("#id").val();
+    const pw1Val = $("#pswd1").val();
+    const pw2Val = $("#pswd2").val();
+    const nameVal = $("#name").val();
+    const birthVal = $("#birth").val();
+    // const genderVal = $("#gender").val();
+    const phoneNoVal = $("#phoneNo").val();
 
 
-//     //아이디 공백 확인
-//     if ($("#tbID").val() == "") {
-//         alert("아이디 입력바람");
-//         $("#tbID").focus();
-//         return false;
-//     }
 
-//     //이름의 유효성 검사
-//     if (!getCheck.test($("#tbID").val())) {
-//         alert("형식에 맞게 입력해주세요");
-//         $("#tbID").val("");
-//         $("#tbID").focus();
-//         return false;
-//     }
+    // 아이디 검수
+    if (!idVal) {
+        alert("아이디를 입력해 주세요.");
+        $("#id").focus();
+        return false;
+    }
+    if (!idCharacterPattern.test(idVal)) {
+        alert("아이디는 5자 이상, 영문, 숫자와 특수기호( _ ),( - )만 사용할 수 있습니다.");
+        $("#id").focus();
+        return false;
+    }
 
-//     //비밀번호
-//     if (!getCheck.test($("#tbPwd").val())) {
-//         alert("형식에 맞춰서 PW를 입력해줘용");
-//         $("#tbPwd").val("");
-//         $("#tbPwd").focus();
-//         return false;
-//     }
+    // 비밀번호 1차 검수
+    if (!pw1Val) {
+        alert("비밀번호를 입력해 주세요.");
+        $("#pswd1").focus();
+        return false;
+    }
+    if (!pwCharacterPattern.test(pw1Val)) {
+        alert("비밀번호는 8자 이상, 영문 소문자, 대문자, 숫자, 특수문자를 모두 포함해야 합니다.");
+        $("#pswd1").focus();
+        return false;
+    }
+    // 비밀번호 2차 검수
+    if (!pw2Val) {
+        alert("재확인 비밀번호를 입력해 주세요.");
+        $("#pswd2").focus();
+        return false;
+    }
+    if (pw1Val !== pw2Val) {
+        alert("비밀번호가 같지 않습니다. 다시 입력해주세요.");
+        $("#pswd2").focus();
+        return false;
+    }
 
-//     //아이디랑 비밀번호랑 같은지
-//     if ($("#tbID").val() == ($("#tbPwd").val())) {
-//         alert("비밀번호가 ID와 똑같으면 안!대!");
-//         $("#tbPwd").val("");
-//         $("#tbPwd").focus();
-//     }
+    // 이름 검수
+    if (!nameVal) {
+        alert("이름을 입력해 주세요.");
+        $("#name").focus();
+        return false;
+    }
 
-//     //비밀번호 똑같은지
-//     if ($("#tbPwd").val() != ($("#cpass").val())) {
-//         alert("비밀번호가 틀렸네용.");
-//         $("#tbPwd").val("");
-//         $("#cpass").val("");
-//         $("#tbPwd").focus();
-//         return false;
-//     }
+    // 생년월일 검수
+    if (!birthVal) {
+        alert("생년월일을 입력해 주세요.");
+        $("#birth").focus();
+        return false;
+    }
 
-//     //이메일 공백 확인
-//     if ($("#mail").val() == "") {
-//         alert("이메일을 입력해주세요");
-//         $("#mail").focus();
-//         return false;
-//     }
+    // 휴대전화 검수
+    if (!phoneNoVal) {
+        alert("휴대전화 번호를 입력해 주세요.");
+        $("#phoneNo").focus();
+        return false;
+    }
 
-//     //이메일 유효성 검사
-//     if (!getMail.test($("#mail").val())) {
-//         alert("이메일형식에 맞게 입력해주세요")
-//         $("#mail").val("");
-//         $("#mail").focus();
-//         return false;
-//     }
+    alert("헤라의 회원이 되신 걸 환영합니다!");
+    window.location.href = "./index.html";
+    return false;
 
-//     //이름 유효성
-//     if (!getName.test($("#name").val())) {
-//         alert("이름 똑띠 쓰세용");
-//         $("#name").val("");
-//         $("#name").focus();
-//         return false;
-//     }
-
-//     //주민번호
-//     if (($("#id_num").val() == "") || ($("#id_num_back").val() == "")) {
-//         alert("주민등록번호를 입력해주세요");
-//         $("#id_num").focus();
-//         return false;
-//     }
-
-//     if (check_jumin() == false) {
-//         return false;
-//     }
-
-//     //관심분야
-//     for (let i = 0; i < $('[name="hobby[]"]').length; i++) {
-//         if ($('input:checkbox[name="hobby[]"]').eq(i).is(":checked") == true) {
-//             hobbyCheck = true;
-//             break;
-//         }
-//     }
-
-//     if (!hobbyCheck) {
-//         alert("하나이상 관심분야를 체크해 주세요");
-//         return false;
-//     }
-
-//     //자기소개란 유효성 검사
-//     //공백이 있다면 안됨.
-//     if (getIntro == "") {
-//         alert("자기소개를 입력해주세요");
-//         $("#intro").val("");
-//         $("#intro").focus();
-//         return false;
-//     }
-
-//     return true;
-// }
+};

@@ -71,7 +71,7 @@
 
  .inp:focus { outline: none; background-color: #eee; } 
 
- .ui-datepicker-trigger { cursor: pointer; transform: translateY(-1px); } 
+ .ui-datepicker-trigger { cursor: pointer; transform: translateY(-2px); } 
 
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next { display: none; } 

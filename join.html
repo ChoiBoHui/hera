@@ -39,7 +39,7 @@
                 <h2>헤라 회원가입</h2>
                 <div class="container">
                     <form name="joinFrm" class="joinFrm" id="joinFrm" method="post" action=""
-                        onsubmit="return check();">
+                        onsubmit="return checkJoin();">
                         <div class="box">
 
                             <!-- 아이디, 비밀번호 입력 -->
@@ -122,27 +122,23 @@
                                 <div class="bir_wrap">
                                     <span class="ps_box">
                                         <!-- <input type="date" id="birth" class="int datepicker"> -->
-                                        <input type="text" type="text" class="datepicker int" data-language="en"
+                                        <input type="text" id="birth" class="datepicker int" data-language="en"
                                             data-multiple-dates="3" data-multiple-dates-separator=", "
-                                            data-position="top left">
-                                        <!-- <img class="ui-datepicker-trigger"
-                                            src="http://jqueryui.com/resources/demos/datepicker/images/calendar.gif"
-                                            alt="선택" title="선택"> -->
+                                            data-position="top left" placeholder="YYYY-MM-DD">
                                     </span>
                                 </div>
-                                <span class="error_next_box" id="birthdayMsg" aria-live="assertive">태어난 년도 4자리를 정확하게
-                                    입력하세요.</span>
+                                <!-- <span class="error_next_box" id="birthdayMsg" aria-live="assertive">태어난 년도 4자리를 정확하게
+                                    입력하세요.</span> -->
                             </div>
 
 
                             <!-- gender 성별 -->
-                            <!-- 라벨 안먹힌다.. 왜지..? input의 id가 젠더가 아니라 그런가..? 그러면 input id를 통일시켜서 라벨에 써야할지 라벨에 여러개의 input id를 넣어야할지 고민되는걸..? -->
                             <div class="join_row join_gender">
                                 <h3 class="join_title"><label for="gender">쇼핑 기본 설정</label></h3>
                                 <span class="ps_box gender_code" id="gender">
                                     <!-- 기존 ps_box 스타일에서 다른 부분들은 gender_code 로 덮었음 -->
                                     <label for="female">
-                                        <input id="female" type="radio" value="F" name="gender"><span>여성용</span>
+                                        <input id="female" type="radio" value="F" name="gender" checked><span>여성용</span>
                                     </label>
                                     <label for="male">
                                         <input id="male" type="radio" value="M" name="gender"><span>남성용</span>
@@ -167,8 +163,7 @@
                                 </span>
                             </div>
 
-                            <!-- email 휴대전화 -->
-                            <!-- 얘는 라벨이 하난데.... 표시할껀 여러개고.. 그럼 걍 진짜 전화번호 입력만 하는건가.. -->
+                            <!-- 휴대전화 -->
                             <div class="join_row join_mobile">
                                 <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
                                 <!-- 지역번호 셀렉타입 / 전화번호 입력은 인풋타입 -->
@@ -195,7 +190,8 @@
                                 <div class="int_mobile_area">
                                     <span class="ps_box int_mobile">
                                         <input type="tel" id="phoneNo" name="phoneNo" placeholder="전화번호 입력"
-                                            aria-label="전화번호 입력" class="int" maxlength="16">
+                                            aria-label="전화번호 입력" class="int" maxlength="16"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                                     </span>
                                 </div>
                             </div>
@@ -257,8 +253,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
         integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
     <script src="./js/join.js"></script>
 </body>
 
