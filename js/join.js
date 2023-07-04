@@ -165,7 +165,7 @@ $(function () {
             changeMonth: true, //option값  월 선택 가능
             showOn: "both", //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
             // buttonImage: "../img/join/calendar.svg", //버튼 이미지 경로
-            buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif", //버튼 이미지 경로
+            buttonImage: "http://choibohui.net/backup/hera/img/join/icon_calendar.svg", //버튼 이미지 경로
             buttonImageOnly: true, //버튼 이미지만 깔끔하게 보이게함
             buttonText: "선택", //버튼 호버 텍스트
             yearSuffix: '년',

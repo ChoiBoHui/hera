@@ -80,6 +80,7 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 .gender_code input { position: inherit; top: 0; left: inherit; width: 12px; height: 29px; vertical-align: middle; margin-right: 6px; }
 .gender_code label {font-size: 15px;} 
 .gender_code label~label { margin-left: 20px; } 
+.gender_code label span {display: inline-block; transform: translateY(2px);}
 
 
 /* 본인 확인 이메일 */
