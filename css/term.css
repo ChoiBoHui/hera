@@ -104,7 +104,7 @@ header, main { width: 100%; max-width: 460px; margin: 0 auto; color: var(--color
 .footer .copyright { font-size: 12px; font-weight: 100; color: #9b9b9b; margin: 0 0 40px 0; } 
 
 .footer .sns_link { position: absolute; top: 50%; right: 0; transform: translateY(-50%); display: flex; gap: 19px; } 
-.footer .sns_link li a { font-family: xeicon; font-size: 26px; color: ededed; } 
+.footer .sns_link li a { font-family: xeicon; font-size: 26px; } 
 /* Footer End */
 
 

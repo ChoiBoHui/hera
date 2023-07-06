@@ -371,7 +371,7 @@ header { position: relative; z-index: 2; }
 
 
 .footer .sns_link { position: absolute; top: 50%; right: 0; transform: translateY(-50%); display: flex; gap: 19px; } 
-.footer .sns_link li a { font-family: xeicon; font-size: 26px; color: ededed; } 
+.footer .sns_link li a { font-family: xeicon; font-size: 26px; } 
 /* Footer End */
 
 
