@@ -152,9 +152,11 @@ $(function () {
     function changeSubmitIcon() {
         $('.storeInputArea').on('focus', function () {
             $('.storeSubmit').addClass('on');
+            $('.storeInputBox').addClass('focus');
         });
         $('.storeInputArea').on('blur', function () {
             $('.storeSubmit').removeClass('on');
+            $('.storeInputBox').removeClass('focus');
         });
     };
     changeSubmitIcon();

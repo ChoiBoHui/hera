@@ -216,15 +216,18 @@ $(function () {
         let searchReset = $('.globalnav_searchfield-reset');
         let searchClose = $('.globalnav_searchfield-close');
         let searchSubmit = $('.globalnav_searchfield-submit');
+        let input_box = $('.globalnav_searchfield .input_box');
         let WW = $(window).innerWidth();
 
         // 서치폼 검색 아이콘 변경
         // 이거 근데 아래 검색창 이슈 작업하면서 리사이즈가 안되는 함수에 뒀을때는 리사이즈 해버리면 작동 하지 않는것을 발견함. 근데 왜그런지는 아직 모르겠음.
         searchTextArea.on('focus', function () {
             searchSubmit.addClass('on');
+            input_box.addClass('focus');
         });
         searchTextArea.on('blur', function () {
             searchSubmit.removeClass('on');
+            input_box.removeClass('focus');
         });
 
         // gnbSearchField.removeClass('open'); 관련 이슈 선택지 1번

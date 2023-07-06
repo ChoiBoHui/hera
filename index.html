@@ -67,16 +67,18 @@
                                         <form name="searchfrm" method="get" action="" onsubmit="return check();"
                                             autocomplete="off">
                                             <div class="input_area">
-                                                <input type="text" id="searchInput" class="globalnav_searchfield-input"
-                                                    name="searchInput" for="searchInput" placeholder="검색어를 입력해 주세요."
-                                                    aria-label="">
-                                                <!-- js에서 검색창이 열렸을 때 autofocus 되게끔 설정해야함 -->
-                                                <input type="hidden" class="globalnav_searchfield-src" name="src"
-                                                    value="">
-                                                <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
-                                                    type="button"></button>
-                                                <button class="globalnav_searchfield-submit" aria-label="검색어 제출"
-                                                    aria-hidden="true" type="submit"></button>
+                                                <div class="input_box">
+                                                    <input type="text" id="searchInput"
+                                                        class="globalnav_searchfield-input" name="searchInput"
+                                                        for="searchInput" placeholder="검색어를 입력해 주세요." aria-label="">
+                                                    <!-- js에서 검색창이 열렸을 때 autofocus 되게끔 설정해야함 -->
+                                                    <input type="hidden" class="globalnav_searchfield-src" name="src"
+                                                        value="">
+                                                    <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
+                                                        type="button"></button>
+                                                    <button class="globalnav_searchfield-submit" aria-label="검색어 제출"
+                                                        aria-hidden="true" type="submit"></button>
+                                                </div>
                                                 <div class="globalnav_searchfield-close">닫기</div>
                                                 <!-- 회원가입 할때 썼던 방법으로 캡션이나 라벨 같은거 적용할 것 -->
                                             </div>
@@ -688,10 +690,16 @@
                     <h2>NEW FROM HERA</h2>
                     <div class="product_detail">
                         <div class="product_info">
-                            <h3>처음 바른 피부결 그대로<br />가볍고 실키하게</h3>
+                            <h3>
+                                <div>처음 바른 피부결 그대로</div>
+                                <div>가볍고 실키하게</div>
+                            </h3>
                             <div class="product_name">센슈얼 피팅 글로우 틴트</div>
                             <div class="product_en">Sensual Fitting Glow Tint</div>
-                            <p class="product_txt">레이어링에 따라 달라지는 무드로 그날 그날 기분에 맞는<br />립 메이크업 룩을 연출해보세요.</p>
+                            <div class="product_txt">
+                                <div>레이어링에 따라 달라지는 무드로 그날 그날 기분에 맞는</div>
+                                <div>립 메이크업 룩을 연출해보세요.</div>
+                            </div>
                             <a href="" class="btn_more">자세히 보기</a>
                         </div>
                         <figure class="product_img">

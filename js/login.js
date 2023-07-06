@@ -4,16 +4,18 @@ $(function () {
     loginLabel();
     function loginLabel() {
         let loginAreaLabel = $('.loginArea label');
-        let loginAreaInput = $('.loginArea input');
+        let loginAreaInput = $('.loginArea .text_field');
 
 
         // 검색어에 값이 있을때
         loginAreaInput.on('focus', function () {
             $(this).siblings('label').removeClass('off').addClass('on');
-            $(this).addClass('focus');
+            $(this).closest(".loginInputBox").addClass('focus');
         });
 
         loginAreaInput.on('blur', function () {
+            $(this).closest(".loginInputBox").removeClass('focus');
+
             if ($(this).val().length == 0) {
                 $(this).siblings('label').removeClass('on').removeClass('off');
                 $(this).removeClass('focus');

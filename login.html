@@ -100,18 +100,23 @@
                                         <form name="searchfrm" method="get" action="" onsubmit="return check();"
                                             autocomplete="off">
                                             <div class="input_area">
-                                                <input type="text" id="searchInput" class="globalnav_searchfield-input"
-                                                    name="searchInput" for="searchInput" placeholder="검색어를 입력해 주세요."
-                                                    aria-label="">
-                                                <input type="hidden" class="globalnav_searchfield-src" name="src"
-                                                    value="">
-                                                <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
-                                                    type="button"></button>
-                                                <button class="globalnav_searchfield-submit" aria-label="검색어 제출"
-                                                    aria-hidden="true" type="submit"></button>
+                                                <div class="input_box">
+                                                    <input type="text" id="searchInput"
+                                                        class="globalnav_searchfield-input" name="searchInput"
+                                                        for="searchInput" placeholder="검색어를 입력해 주세요." aria-label="">
+                                                    <!-- js에서 검색창이 열렸을 때 autofocus 되게끔 설정해야함 -->
+                                                    <input type="hidden" class="globalnav_searchfield-src" name="src"
+                                                        value="">
+                                                    <button class="globalnav_searchfield-reset" aria-label="검색 결과 지우기"
+                                                        type="button"></button>
+                                                    <button class="globalnav_searchfield-submit" aria-label="검색어 제출"
+                                                        aria-hidden="true" type="submit"></button>
+                                                </div>
                                                 <div class="globalnav_searchfield-close">닫기</div>
+                                                <!-- 회원가입 할때 썼던 방법으로 캡션이나 라벨 같은거 적용할 것 -->
                                             </div>
                                         </form>
+                                        <!-- 추가됨! -->
                                         <div class="keyboardArea"></div>
                                         <div class="container">
                                             <div class="recommend_product">
@@ -312,18 +317,18 @@
                     <form class="loginfrm" id="loginfrm" name="loginfrm" method="post" action=""
                         onsubmit="return loginCheck();" autocomplete="off">
                         <div class="loginArea">
-                            <div class="account_name">
+                            <div class="account_name loginInputBox">
                                 <label for="account_name_field">아이디</label>
-                                <input class="account_name_field" type="text" id="account_name_field"
+                                <input class="account_name_field text_field" type="text" id="account_name_field"
                                     name="account_name_field">
                             </div>
-                            <div class="account_password">
+                            <div class="account_password loginInputBox">
                                 <!-- <span class="skills">
                                     <i class="show_pass">icon</i>
                                 </span> -->
                                 <label for="account_password_field">비밀번호</label>
-                                <input class="account_password_field" type="password" id="account_password_field"
-                                    name="account_password_field">
+                                <input class="account_password_field text_field" type="password"
+                                    id="account_password_field" name="account_password_field">
                             </div>
                             <div class="save_id">
                                 <input class="save_id_check" type="checkbox" id="save_id_check" name="save_id_check"
