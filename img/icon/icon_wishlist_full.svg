@@ -3,7 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<path fill="#1D1D1F" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-	M20.117,30.912L9.512,20.469c-2.643-2.603-2.643-6.824,0-9.428c2.644-2.604,6.931-2.604,9.575,0l1.031,1.016l0.796-0.784
-	c2.643-2.604,6.93-2.604,9.574,0c2.644,2.603,2.644,6.825,0,9.427L20.117,30.912z"/>
+<path fill="#1D1D1F" d="M20.058,34L20.058,34c-0.272,0-0.532-0.111-0.721-0.307L7.539,21.426c-3.385-3.52-3.385-9.244,0-12.763
+	C9.191,6.946,11.391,6,13.732,6c2.341,0,4.541,0.946,6.192,2.664l0.135,0.14l0.022-0.023c1.649-1.715,3.851-2.661,6.19-2.661
+	c2.342,0,4.541,0.945,6.189,2.662c3.383,3.518,3.383,9.245,0.001,12.766L20.779,33.693C20.59,33.891,20.329,34,20.058,34z"/>
 </svg>
